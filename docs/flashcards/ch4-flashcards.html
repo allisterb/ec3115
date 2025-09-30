@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Chapter 4 Flashcards</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 800px;
+            max-width: 90vw;
+            height: 500px;
+            perspective: 1000px;
+        }
+        .flashcard {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+        .flashcard.active {
+            display: block;
+        }
+        .flashcard.is-flipped {
+            transform: rotateY(180deg);
+        }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card-front {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+        }
+        .card-back {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            transform: rotateY(180deg);
+            font-size: 0.95em;
+        }
+        .card-question {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .card-answer {
+            text-align: left;
+        }
+        .source {
+            font-size: 0.8em;
+            color: #555;
+            margin-top: 15px;
+            align-self: flex-start;
+            width: 100%;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 800px;
+            max-width: 90vw;
+            margin-top: 20px;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .nav-btn:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+        .card-counter {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115: Money Supply & Monetary Standards</h1>
+
+    <div class="slideshow-container" id="slideshow">
+        <!-- Flashcards will be injected here by JS -->
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn">Previous</button>
+        <div class="card-counter" id="counter"></div>
+        <button class="nav-btn" id="nextBtn">Next</button>
+    </div>
+
+    <script>
+    const flashcardData = [
+        { q: "What are the three key players whose actions determine the money supply?", a: "The determination of the money supply depends on the actions and interactions between three key players: 1. The central bank (CB), 2. The banking system (commercial banks), and 3. Depositors (the public).", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 2" },
+        { q: "Distinguish between 'inside money' and 'outside money'.", a: "'Outside money' (or high-powered money/monetary base) is money created by the central bank. 'Inside money' is money created by the private banking system itself, primarily through making loans.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 2" },
+        { q: "What is the Monetary Base (MB or H)?", a: "The Monetary Base is the sum of currency in the hands of the public (C) and the total reserves held by the banking system (R). It represents the total liabilities of the central bank. Formula: \(MB = C + R\)", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 4-5; McCallum, B. T. (1989), p. 56" },
+        { q: "How does a central bank typically change the monetary base?", a: "The main method is through open market operations. An open market purchase (buying government bonds from banks) increases reserves and thus increases the monetary base. An open market sale (selling bonds to banks) decreases reserves and the monetary base.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 8" },
+        { q: "What is the immediate effect of an open market purchase of $10bn on the central bank's balance sheet?", a: "The central bank's assets (government bonds) increase by $10bn, and its liabilities (commercial banks' reserves) also increase by $10bn. The monetary base rises by the same amount.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 10" },
+        { q: "What is fractional reserve banking?", a: "It is a system where banks are required to hold only a small fraction of their deposits as reserves and can lend out the rest. This system allows for the creation of money by the banking system.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 11" },
+        { q: "What determines the reserve ratio (r) for a commercial bank?", a: "The reserve ratio is determined by two main factors: 1. Regulatory reserve requirements set by the central bank (e.g., 10% of deposits in the US). 2. The bank's own policy on holding excess reserves as a precaution against withdrawals.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 12; McCallum, B. T. (1989), p. 58" },
+        { q: "Describe the first step of money creation after a central bank buys a bond from a commercial bank.", a: "The central bank's purchase increases the commercial bank's reserves. With no immediate change in its deposits, the bank's actual reserve ratio now exceeds its desired/required ratio, creating excess reserves.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 13" },
+        { q: "Why does a bank with excess reserves want to lend them out?", a: "Reserves typically earn no interest. Holding them is costly for a profit-seeking bank because of the forgone interest income that could have been earned by making a loan. This opportunity cost incentivizes lending.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 14; McCallum, B. T. (1989), p. 58" },
+        { q: "What is the 're-lending cycle'?", a: "It's the process of money creation. An initial increase in reserves leads one bank to lend. The loan proceeds are deposited in a second bank, which then has excess reserves to lend. This bank lends, creating a deposit in a third bank, and so on. This chain reaction creates a multiple expansion of deposits.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 18" },
+        { q: "What is the simple deposit multiplier?", a: "The simple deposit multiplier is the multiple by which deposits increase for a given increase in reserves, assuming no currency leakage. Its formula is \(1/r\), where \(r\) is the reserve ratio. It represents the maximum possible expansion.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 22" },
+        { q: "Why is the simple deposit multiplier considered 'simple'?", a: "It does not account for the effects of the public's decision to hold currency. It assumes all loan proceeds are redeposited into the banking system, which is unrealistic.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 22" },
+        { q: "How do the public's currency holdings affect the money creation process?", a: "When a loan is made and the borrower (or subsequent recipient) decides to hold some of the funds as currency instead of depositing it, that amount 'leaks' from the re-lending cycle. This reduces the amount of reserves available for the next bank to lend, weakening the multiplier effect.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 26-27" },
+        { q: "What is the formula for the more sophisticated money multiplier (m)?", a: "The money multiplier is given by \(m = \frac{c + 1}{c + r}\), where \(c\) is the public's currency-deposit ratio and \(r\) is the banks' reserve ratio.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 30; McCallum, B. T. (1989), p. 56" },
+        { q: "How does an increase in the reserve ratio (r) affect the money multiplier (m)?", a: "An increase in \(r\) increases the denominator of the multiplier formula, which decreases the value of \(m\). This is because banks must hold more reserves and can lend out a smaller fraction of each deposit, weakening the re-lending cycle.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 30" },
+        { q: "How does an increase in the currency-deposit ratio (c) affect the money multiplier (m)?", a: "An increase in \(c\) increases both the numerator and the denominator. However, since \(r < 1\), the denominator increases proportionally more, causing the value of \(m\) to decrease. This reflects a greater leakage of funds from the banking system into public hands.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 31" },
+        { q: "What is the 'zero-profit condition' in a simple model of a competitive banking market?", a: "It is a condition where economic profits are driven to zero. In a simple model with no other costs, this implies that the interest rate earned on loans (\(i_L\)) must equal the interest rate paid on deposits (\(i_D\)). The credit spread (\(i_L - i_D\)) is zero.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 37" },
+        { q: "How does a mandatory reserve ratio affect the zero-profit condition?", a: "It acts like a tax on lending. Since a fraction (r) of deposits must be held as non-interest-bearing reserves, the bank must charge a higher loan rate to compensate. The condition becomes \(i_L(1-r) = i_D\), which implies a positive credit spread where \(i_L > i_D\).", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 43-45" },
+        { q: "Under what condition would an increase in the reserve ratio lead to an expansion of the money supply?", a: "This counter-intuitive result occurs if loan demand is highly inelastic. In this case, the 'lending tax' effect (which reduces deposits) is very small. The dominant effect is the increase in the deposit rate needed to attract funds, which could lead to an overall increase in total deposits.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 47" },
+        { q: "What is the essential function of a financial intermediary, according to Tobin?", a: "To satisfy simultaneously the portfolio preferences of borrowers and lenders. Lenders want safe, liquid assets of stable money value, while borrowers want to expand their holdings of real assets beyond their own net worth.", s: "McCallum, B. T. (1989), p. 27" },
+        { q: "List three reasons why intermediation is able to transform the nature of assets.", a: "1. Administrative economy and expertise in lending. 2. Reduction of risk per dollar of lending by pooling independent risks (diversification). 3. Government guarantees (e.g., deposit insurance) that assure solvency and liquidity.", s: "McCallum, B. T. (1989), p. 27" },
+        { q: "On a bank's balance sheet, what are the main items on the Assets side?", a: "The main assets are Reserves (TR), which include vault cash and deposits at the central bank, and Loans (LB), which are interest-earning assets. Physical assets are also included.", s: "McCallum, B. T. (1989), p. 57" },
+        { q: "On a bank's balance sheet, what are the main items on the Liabilities side?", a: "The main liability is Deposits (D). Other liabilities include Borrowed Reserves (BR) from the central bank's discount window. The balancing item is Net Worth.", s: "McCallum, B. T. (1989), p. 57" },
+        { q: "What is the relationship between the money stock (M) and high-powered money (H)?", a: "The money stock is a multiple of high-powered money, expressed as \(M = m \times H\), where m is the money multiplier. The multiplier itself is a function of the currency-deposit ratio (c) and the reserve-deposit ratio (r).", s: "McCallum, B. T. (1989), p. 56, 59" },
+        { q: "What is a 'monetary instrument' or 'operating instrument'?", a: "It is a variable that the policy authority (central bank) manipulates more-or-less directly in an attempt to exert indirect control over some other 'target' variable, such as the money stock or inflation.", s: "McCallum, B. T. (1989), p. 64" },
+        { q: "What are the two primary monetary instruments a central bank can use to target the money stock?", a: "The central bank can use: 1. A high-powered money instrument (setting H and letting the market determine the interest rate R). 2. An interest rate instrument (setting R and supplying whatever H is needed to maintain it).", s: "McCallum, B. T. (1989), p. 64" },
+        { q: "Under what conditions is a high-powered money (H) instrument superior to an interest rate (R) instrument for controlling the money stock?", a: "The H-instrument is superior when the primary source of unpredictability or shocks is in the money demand function. By fixing H, the stable money supply curve helps to pin down the money stock, even if money demand fluctuates.", s: "McCallum, B. T. (1989), p. 65-71" },
+        { q: "Under what conditions is an interest rate (R) instrument superior to a high-powered money (H) instrument for controlling the money stock?", a: "The R-instrument is superior when the primary source of unpredictability is in the money supply function (i.e., the multiplier is unstable). By fixing R, the central bank can better accommodate shocks to the multiplier and achieve a more stable money stock.", s: "McCallum, B. T. (1989), p. 65-71" },
+        { q: "What is a commodity-money system?", a: "In its purest form, it is a system where the medium of exchange is a good that would be valuable even if not used as money (e.g., gold). The value of money (inverse of the price level) is determined by the supply and demand for this commodity.", s: "McCallum, B. T. (1989), p. 22-23" },
+        { q: "What is a fiat-money system?", a: "A system where the circulating medium (e.g., paper notes) has no intrinsic value and does not represent a claim on any valuable commodity. Its value is based on social convention and government decree ('fiat'), and its supply is artificially controlled by a monetary authority.", s: "McCallum, B. T. (1989), p. 23" },
+        { q: "What is the 'mint par of exchange' under a gold standard?", a: "It is the ratio of the gold content of one currency to that of another. For example, if the pound sterling is defined as 113 grains of gold and the US dollar as 23.22 grains, the mint par is 113 / 23.22 ≈ $4.8665 per pound.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 35" },
+        { q: "What are 'gold points' (or specie points)?", a: "They are the upper and lower limits of the exchange rate's fluctuation around the mint par. The limits are determined by the cost of shipping gold between two countries. It would be cheaper to ship gold than to exchange currency at a rate outside these points.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 36" },
+        { q: "What is a 'gold bullion standard'?", a: "A monetary system where gold coins no longer circulate, and banknotes can only be exchanged for large gold bars (bullion), often by specified groups only. It's a more managed version of the gold standard than a specie standard.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 28 (Table 2.2)" },
+        { q: "What is a 'gold-exchange standard'?", a: "A system where a country maintains its currency's value by pegging it to, and holding reserves of, a foreign currency that is itself convertible into gold. It creates an indirect link to gold.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 28 (Table 2.2)" },
+        { q: "What was the key feature of the Bretton Woods system?", a: "It was a 'fixed-but-adjustable' exchange rate system. Currencies were pegged to the US dollar, which was convertible to gold at $35/ounce. Countries were expected to maintain this peg, but could adjust it to correct a 'fundamental disequilibrium'.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 39" },
+        { q: "What is a primary resource cost of a commodity money standard?", a: "A major deficiency is the cost of tying up a valuable commodity for monetary use. It requires real resources (labor, capital) to mine the commodity just to have it serve as a medium of exchange, often stored in vaults.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 34" },
+        { q: "How does fractional-reserve banking economize on the resource costs of a commodity standard?", a: "By holding only a fraction of deposits as gold reserves, banks allow the total quantity of money (including deposits) to be much larger than the stock of gold. This provides monetary services to society at a lower cost than a 100% reserve system.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 34" },
+        { q: "What is the 'inconsistent quartet' in international monetary arrangements?", a: "It refers to four desirable but mutually incompatible goals: 1. Fixed exchange rates, 2. Free international trade, 3. Monetary autonomy (independent monetary policy), and 4. Free capital movements. At best, only three of the four can be achieved simultaneously.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 41" },
+        { q: "How did the Bretton Woods system attempt to resolve the 'inconsistent quartet'?", a: "It sacrificed free capital movements. The architects envisaged that official controls on capital flows would allow countries to maintain both fixed exchange rates and monetary autonomy to pursue domestic policy goals.", s: "Lewis, M.K., & Mizen, P.D. (2000), p. 41" },
+        { q: "What is 'bimetallism'?", a: "A monetary system where the monetary unit is defined in terms of two metals (e.g., gold and silver) at a legally fixed ratio. The mint stands ready to coin either metal at this fixed price.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 28, 31" },
+        { q: "What problem does Gresham's Law ('bad money drives out good') create for a bimetallic system?", a: "If the legal mint ratio between gold and silver differs from the world market ratio, the metal that is undervalued at the mint ('good money') will be hoarded or exported, while the metal that is overvalued at the mint ('bad money') will be the one that circulates. The system effectively becomes a monometallic standard.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 31" },
+        { q: "What is the role of 'risk pooling' for a financial intermediary?", a: "By holding a large, diversified portfolio of loans, an intermediary reduces its overall risk. The failure of any single loan is unlikely to threaten the solvency of the entire institution, making the intermediary's liabilities (like deposits) much safer than any individual loan it holds.", s: "McCallum, B. T. (1989), p. 27" },
+        { q: "Why is a bank deposit a liability to the bank but an asset to the depositor?", a: "For the depositor, the deposit is an asset—a claim on the bank for currency. For the bank, the deposit is a liability—a legal obligation to pay the depositor currency on demand.", s: "McCallum, B. T. (1989), p. 57" },
+        { q: "What is the opportunity cost for a commercial bank of holding reserves?", a: "The opportunity cost is the interest income the bank forgoes by holding non-interest-bearing reserves instead of using those funds to make interest-earning loans or purchase other securities.", s: "McCallum, B. T. (1989), p. 58" },
+        { q: "If the reserve ratio is 20% and the currency-deposit ratio is 30%, what is the money multiplier?", a: "Using the formula \(m = \frac{c + 1}{c + r}\): \(m = \frac{0.3 + 1}{0.3 + 0.2} = \frac{1.3}{0.5} = 2.6\).", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 30" },
+        { q: "If the money multiplier is 4, what change in the monetary base is needed to increase the money supply by $200 billion?", a: "Since \(\Delta M = m \times \Delta MB\), we have \(\Delta MB = \frac{\Delta M}{m} = \frac{$200B}{4} = $50B\). The central bank must increase the monetary base by $50 billion.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 27" },
+        { q: "What is the 'price-specie-flow' mechanism?", a: "This was David Hume's theory of automatic adjustment under the gold standard. A country with a trade surplus would receive gold, increasing its money supply and price level. A deficit country would lose gold, decreasing its money supply and prices. These price changes would automatically correct the trade imbalance.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 36" },
+        { q: "Why did the 'inconsistent quartet' lead to the breakdown of the Bretton Woods system?", a: "Countries were increasingly unwilling to sacrifice domestic policy goals (monetary autonomy) for exchange rate stability. As capital controls were liberalized, speculators could bet against fixed parities. This combination of monetary autonomy, fixed rates, and growing capital mobility proved unsustainable.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 42" },
+        { q: "What is the difference between the money stock and money supply behavior?", a: "The 'money stock' refers to the quantity of money in existence at a point in time. 'Money supply behavior' refers to the actions of banks and other institutions whose liabilities are part of the money stock, i.e., the process of money creation.", s: "McCallum, B. T. (1989), p. 55" },
+        { q: "What are 'excess reserves'?", a: "Excess reserves are reserves held by a bank above the legally required minimum. They are held as a precaution against unexpected withdrawals but have an opportunity cost in the form of forgone interest.", s: "McCallum, B. T. (1989), p. 58" },
+        { q: "If a bank receives a new deposit of $500 and the reserve ratio is 10%, what is the maximum amount of a new loan it can make?", a: "The bank must hold 10% of $500, which is $50, as required reserves. The remaining $450 are excess reserves, which is the maximum amount it can lend out.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 15-16" },
+        { q: "What is the effect on the money supply if a depositor withdraws cash from their bank account and holds it as currency?", a: "This action increases the currency-deposit ratio (c). It removes reserves from the banking system, stopping the re-lending cycle for that amount. The money multiplier decreases, and for a given monetary base, the total money supply will contract.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 26-27" },
+        { q: "What is the primary asset of most central banks?", a: "The primary assets of most central banks are their holdings of government securities (bonds) and foreign exchange reserves.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 9" },
+        { q: "Why is a bank loan an asset for the bank but a liability for the borrower?", a: "For the bank, the loan is an asset because it represents a stream of future income (interest and principal payments). For the borrower, the loan is a liability because it is a debt that must be repaid.", s: "McCallum, B. T. (1989), p. 57" },
+        { q: "What is the 'credit spread'?", a: "The credit spread is the difference between the interest rate banks charge on loans and the interest rate they pay on deposits. It is a primary source of bank profitability.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 37" },
+        { q: "How does a central bank use an 'interest rate instrument'?", a: "The central bank commits to maintaining a target interest rate (like the federal funds rate). It does this by standing ready to buy or sell government bonds in whatever quantities are necessary to keep the market rate at its target, thereby supplying reserves on demand.", s: "McCallum, B. T. (1989), p. 64-65" },
+        { q: "What is 'symmetallism'?", a: "Proposed by Marshall, it's a system where the monetary unit is defined as a physical combination of two metals (e.g., a bar containing 1 ounce of gold and 15 ounces of silver). Unlike bimetallism, the relative price of the two metals can vary.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 28, 33" },
+        { q: "What is a 'tabular standard' or 'compensated dollar'?", a: "A system proposed by Fisher where the gold content of the dollar would be periodically adjusted to offset changes in the price level of a basket of goods. The goal is to stabilize the purchasing power of money, not its value in terms of gold.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 33" },
+        { q: "Why is the money multiplier almost always greater than 1 in a fractional reserve system?", a: "Because the reserve ratio (r) is less than 1. The process of re-lending deposits means that the total money created will be a multiple of the initial injection of reserves.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 19" },
+        { q: "If the central bank lowers the required reserve ratio, what happens to a commercial bank's excess reserves?", a: "Lowering the required reserve ratio instantly transforms some of the bank's required reserves into excess reserves. This gives the bank more funds that it can lend out, stimulating money creation.", s: "McCallum, B. T. (1989), p. 59" },
+        { q: "What is the relationship between the currency-deposit ratio (c) and the money multiplier (m)?", a: "It is an inverse relationship. As the public chooses to hold more currency relative to deposits (c increases), the money multiplier (m) decreases because there are greater leakages from the re-lending cycle.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 31" },
+        { q: "What is the relationship between the reserve ratio (r) and the money multiplier (m)?", a: "It is an inverse relationship. As banks hold a larger fraction of deposits as reserves (r increases), the money multiplier (m) decreases because a smaller portion of each deposit is lent out in the re-lending cycle.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 30" },
+        { q: "What is the 'discount window'?", a: "The discount window is a facility at the central bank where commercial banks can go to borrow reserves. The interest rate on these loans is called the discount rate. These are known as 'borrowed reserves'.", s: "McCallum, B. T. (1989), p. 57" },
+        { q: "Why is a bank's Net Worth also called its 'capital'?", a: "Net Worth or capital represents the owners' financial stake in the bank. Crucially, it serves as a buffer or cushion to absorb losses on the asset side of the balance sheet, protecting depositors from insolvency.", s: "McCallum, B. T. (1989), p. 57-58" },
+        { q: "What is the 'price of money' according to a monetarist like Milton Friedman?", a: "The 'price of money' is the inverse of the general price level (1/P). It represents what a unit of money can buy in terms of real goods and services.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 16" },
+        { q: "What is the 'price of money' according to a Keynesian?", a: "The 'price of money' is the interest rate. It represents the opportunity cost of holding money—the interest forgone by not holding an alternative, interest-bearing asset.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 16" },
+        { q: "What is the key difference between the money multiplier and the simple deposit multiplier?", a: "The money multiplier (m = (c+1)/(c+r)) incorporates the public's decision to hold currency (the currency-deposit ratio, c), while the simple deposit multiplier (1/r) ignores it.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 27" },
+        { q: "If the reserve ratio is 15% and the currency-deposit ratio is 25%, what is the money multiplier?", a: "Using the formula \(m = \frac{c + 1}{c + r}\): \(m = \frac{0.25 + 1}{0.25 + 0.15} = \frac{1.25}{0.40} = 3.125\).", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 30" },
+        { q: "What is the effect on the money supply if the central bank sells $50 million in bonds and the money multiplier is 3?", a: "An open market sale decreases the monetary base by $50 million. The change in the money supply is \(\Delta M = m \times \Delta MB = 3 \times (-$50M) = -$150M\). The money supply contracts by $150 million.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 27" },
+        { q: "Why is a bank's ability to perform maturity transformation a source of 'financial fragility'?", a: "It creates a mismatch between the maturity of assets (long-term) and liabilities (short-term). This exposes the bank to liquidity risk: a sudden, large demand for withdrawals by depositors cannot be met by immediately calling in long-term loans, potentially leading to a bank run or failure.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 16" },
+        { q: "What is the 'market-clearing condition' in a simple model of the banking market?", a: "It is the condition that the supply of loanable funds from deposits must equal the demand for loans. In a simple model, this means Deposits = Loans.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 37" },
+        { q: "How does a reserve requirement (r*) modify the market-clearing condition for banks?", a: "With a reserve requirement, only a fraction (1-r*) of deposits is available to be lent out. The market-clearing condition becomes the supply of *effective* deposits equals the demand for loans: \(D(1-r*) = L\).", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 42" },
+        { q: "What is the 'litmus test' Friedman proposed to distinguish between monetarist and non-monetarist views?", a: "The test is the answer to the question, 'What is the price of money?'. A monetarist answers 'the inverse of the price level,' stressing money as a unique asset. A non-monetarist (Keynesian) answers 'the interest rate,' stressing credit markets.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 16" },
+        { q: "What is the primary function of money that is unique to it and not shared by other assets?", a: "The primary unique function of money is as a medium of exchange. While other assets can serve as a store of value, money is the one asset that is generally acceptable as payment for goods and services.", s: "McCallum, B. T. (1989), p. 18" },
+        { q: "What is the 'currency-deposit ratio' (c)?", a: "It is the ratio of the amount of currency the public chooses to hold (C) to the amount of deposits they hold in the banking system (D). Formula: \(c = C/D\). It is a behavioral ratio determined by the public.", s: "McCallum, B. T. (1989), p. 56" },
+        { q: "What is the 'reserve-deposit ratio' (r or rr)?", a: "It is the ratio of the total reserves a bank holds (TR) to its total deposits (D). It is composed of the required reserve ratio and the excess reserve ratio. Formula: \(r = TR/D\).", s: "McCallum, B. T. (1989), p. 56" },
+        { q: "If the money multiplier is 2.5 and the money supply is $1,000 billion, what is the size of the monetary base?", a: "Since \(M = m \times MB\), the monetary base is \(MB = M / m = $1000B / 2.5 = $400B\).", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 27" },
+        { q: "Why is a bank deposit considered 'inside money'?", a: "Because it is a liability of a private financial institution (the bank) that is held as an asset by another private agent (the depositor). For the private sector as a whole, the asset and liability cancel out. 'Outside money' (the monetary base) is a net asset for the private sector.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 2" },
+        { q: "What is the effect on the money multiplier if the central bank eliminates all reserve requirements (r=0)?", a: "If r=0, the multiplier becomes \(m = (c+1)/c = 1 + 1/c\). The multiplier would be at its maximum value for any given currency-deposit ratio, but it would not be infinite because currency leakage (c) still constrains the process.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 30" },
+        { q: "What is the 'inconvenience' that theories of the transactions demand for money focus on?", a: "They focus on the costs and inconveniences of exchanging non-money assets for money to make purchases. Holding money reduces these 'shoe-leather' costs and asset exchange costs, but comes at the opportunity cost of forgone interest.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 14" },
+        { q: "What is the 'store of value' function of money?", a: "It is the function of money that allows individuals to save purchasing power from the time income is received until the time it is spent. It enables a person to buy later than they sell.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 11" },
+        { q: "Why is money considered the most 'liquid' of all assets?", a: "Liquidity has several dimensions, and money (cash) excels at all of them: it is the most marketable (readily accepted), its nominal value is perfectly predictable, it is reversible (value in payment is the same as on receipt), and it is highly divisible.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 12" },
+        { q: "What is money's 'buffer stock' role?", a: "This concept, emphasized by Friedman, sees money as a 'temporary abode of purchasing power' that bridges the gap between receipts and expenditures. It acts as a buffer to absorb the shocks of non-synchronization between income and spending.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 12" },
+        { q: "What is the primary sector of the financial system in the Currency School-Banking School debate context?", a: "The primary sector is the monetary authorities—the central government and the central bank—which provide the primary liquidity or base money (e.g., gold or central bank notes) used as a reserve asset by the banking system.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 15" },
+        { q: "What is the secondary sector of the financial system?", a: "The secondary sector is the commercial banking system, which accepts deposits and makes loans. Its liabilities (deposits) form a major part of the money supply.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 15" },
+        { q: "What was the core argument of the Banking School regarding money supply control?", a: "The Banking School argued that the money supply is endogenous, expanding and contracting in line with the needs of trade (i.e., the demand for credit). They believed no simple proportionality exists between the primary money (reserves) and the broader money supply created by banks.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 15-16" },
+        { q: "What was the core argument of the Currency School regarding money supply control?", a: "The Currency School argued that control over the primary money (the monetary base) gave the authorities effective control over the secondary money created by banks, often via a stable multiplier. They advocated for rules to constrain the issuance of both primary and secondary money.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 15" },
+        { q: "If a bank has $200M in assets and $180M in liabilities, what is its net worth?", a: "Net Worth = Assets - Liabilities. So, Net Worth = $200M - $180M = $20M.", s: "McCallum, B. T. (1989), p. 57" },
+        { q: "If the money multiplier is 3 and the central bank wants to decrease the money supply by $60B, what open market operation should it conduct?", a: "It should conduct an open market sale of bonds. The size of the sale (change in the monetary base) would be \(\Delta MB = \Delta M / m = -$60B / 3 = -$20B\). It should sell $20 billion worth of bonds.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 27" },
+        { q: "What is the 'unit of account' function of money?", a: "It is the function of money that provides a common measure of value, allowing the values of diverse goods and services to be compared. It simplifies economic calculation and transmits information.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 6" },
+        { q: "Why is a stable value important for money's function as a unit of account?", a: "If the value of the unit of account fluctuates wildly (i.e., during high inflation), it becomes a poor measuring rod, creating confusion and making economic calculation and contracting for the future very difficult.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 7" },
+        { q: "What is the 'standard of deferred payment' function of money?", a: "This is the function of money that allows contracts to be written for future payments (e.g., loans). By denominating future debts in money, it simplifies contracting compared to specifying repayment in a bundle of goods and services.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 7" },
+        { q: "What is the key trade-off in the Baumol-Tobin model of money demand?", a: "The trade-off is between the transaction cost of converting interest-bearing assets into money and the opportunity cost (forgone interest) of holding money.", s: "McCallum, B. T. (1989), p. 49" },
+        { q: "What is the 'neutral' level of the money supply in the simple banking model from the lectures?", a: "It is the equilibrium level of deposits (and thus money) that would exist in a competitive banking market with no reserve requirements, where the credit spread is zero.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 39" },
+        { q: "What are the two effects of imposing a mandatory reserve ratio in the banking model from the lectures?", a: "Effect 1: The deposit rate increases to attract more funds, which tends to increase the total supply of deposits. Effect 2: The 'lending tax' effect raises the loan rate, which decreases the demand for loans and thus decreases equilibrium deposits.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 43, 45" },
+        { q: "What determines which of the two effects of a reserve ratio increase will dominate?", a: "The overall outcome depends on the interest elasticity of loan demand. If demand is inelastic, the first effect (higher deposit rates) dominates and deposits may rise. If demand is elastic, the second effect ('lending tax') dominates and deposits will fall.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 46-48" },
+        { q: "What is 'dollarization'?", a: "It is a process where a foreign currency (like the US dollar) replaces a country's domestic currency, serving as the unit of account, medium of exchange, and store of value. This often happens in countries with a history of hyperinflation and lack of confidence in the local currency.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 8" },
+        { q: "Why does the use of money increase competition compared to a barter economy?", a: "In a money economy, all buyers of a specific good (e.g., bread) are in the same market, creating a large, competitive group. In a barter economy, buyers would be fragmented into many small groups based on what good they have to offer in exchange (wine, shoes, etc.), reducing competition.", s: "Lewis, M. K., & Mizen, P. D. (2000), p. 9" },
+        { q: "What is the 'classical dichotomy'?", a: "It is the theoretical separation between the real side of the economy (relative prices, output, employment) and the monetary side (nominal prices, money supply). In this view, money is a 'veil' that determines the price level but does not affect real outcomes.", s: "EC3115 - Monetary Economics Unit E Lectures, Slide 62" },
+        { q: "What is Patinkin's 'real balance effect'?", a: "It is the idea that changes in the price level affect households' real wealth by changing the real value of their money holdings (M/P). This change in real wealth affects their spending on goods, creating a bridge between the monetary and real sides of the economy and challenging the classical dichotomy.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 65-66" },
+        { q: "How does the real balance effect resolve the inconsistency in the classical model?", a: "It explains how a change in the money supply affects the goods market. An increase in M raises real balances (M/P), which increases demand for goods. This excess demand for goods then drives up the price level, which in turn reduces real balances back to their equilibrium level, restoring equilibrium in both the money and goods markets.", s: "EC3115 - Monetary Economics Unit E Lectures, Slides 66-67" }
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const slideshow = document.getElementById('slideshow');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const counter = document.getElementById('counter');
+        let currentIndex = 0;
+
+        // Create and inject flashcard elements
+        flashcardData.forEach((data, index) => {
+            const card = document.createElement('div');
+            card.className = 'flashcard';
+            card.id = `card-${index}`;
+            card.innerHTML = `
+                <div class="card-face card-front">
+                    <p class="card-question">${data.q}</p>
+                </div>
+                <div class="card-face card-back">
+                    <div class="card-answer">
+                        <p>${data.a}</p>
+                        <p class="source">Source: ${data.s}</p>
+                    </div>
+                </div>
+            `;
+            slideshow.appendChild(card);
+        });
+
+        const flashcards = document.querySelectorAll('.flashcard');
+
+        function updateSlideshow() {
+            flashcards.forEach((card, index) => {
+                card.classList.remove('active');
+                if (index === currentIndex) {
+                    card.classList.add('active');
+                }
+            });
+            counter.textContent = `Card ${currentIndex + 1} of ${flashcards.length}`;
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === flashcards.length - 1;
+            // Ensure card is not flipped when navigating
+            flashcards[currentIndex].classList.remove('is-flipped');
+            // Re-render MathJax for the new card
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        slideshow.addEventListener('click', function(event) {
+            const card = event.target.closest('.flashcard');
+            if (card) {
+                card.classList.toggle('is-flipped');
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < flashcards.length - 1) {
+                currentIndex++;
+                updateSlideshow();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlideshow();
+            }
+        });
+
+        // Initial setup
+        updateSlideshow();
+    });
+    </script>
+</body>
+</html>

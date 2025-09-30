@@ -1,3 +1,3 @@
 ## Quizzes
 
-*   [The Supply of Money and Monetary Standards](./quiz4-mc.html)
+*   [The Supply of Money and Monetary Standards](./ch4-quiz-mc.html)
