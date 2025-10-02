@@ -89,790 +89,862 @@
     <h1>EC3115 Monetary Economics</h1>
     <h2>Quiz: The Supply of Money and Monetary Standards</h2>
 
-    <div class="question" data-correct="C">
-        <p><b>1. Which of the following is a primary role of financial intermediaries?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q1" value="A"> A. Setting national interest rates.</label>
-            <label><input type="radio" name="q1" value="B"> B. Printing currency.</label>
-            <label><input type="radio" name="q1" value="C"> C. Reducing information and transaction costs for savers and borrowers.</label>
-            <label><input type="radio" name="q1" value="D"> D. Enforcing fiscal policy.</label>
+    <div class="quiz-container">
+        <!-- Question 1 -->
+        <div class="question" id="q1" data-correct="C">
+            <p><b>1. Which of the following is a primary role of financial intermediaries?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Setting national interest rates.</label>
+                <label><input type="radio" name="q1" value="B"> B. Printing currency.</label>
+                <label><input type="radio" name="q1" value="C"> C. Reducing information and transaction costs for savers and borrowers.</label>
+                <label><input type="radio" name="q1" value="D"> D. Enforcing fiscal policy.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Financial intermediaries, like banks, exist to lower the costs associated with financial transactions. They achieve economies of scale in gathering information about borrowers and pooling the funds of many savers, making the process of lending and borrowing more efficient than direct lending.</p>
+            </div>
         </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Financial intermediaries, like banks, exist to lower the costs associated with financial transactions. They achieve economies of scale in gathering information about borrowers and pooling the funds of many savers, making the process of lending and borrowing more efficient than direct lending.</p>
+
+        <!-- Question 2 -->
+        <div class="question" id="q2" data-correct="B">
+            <p><b>2. On a commercial bank's balance sheet, where are customer deposits recorded?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A. As an asset.</label>
+                <label><input type="radio" name="q2" value="B"> B. As a liability.</label>
+                <label><input type="radio" name="q2" value="C"> C. As net worth.</label>
+                <label><input type="radio" name="q2" value="D"> D. They are not recorded on the balance sheet.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Deposits are liabilities for a bank because they represent money that the bank owes to its customers. The customers can demand this money back at any time (in the case of demand deposits).</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" id="q3" data-correct="B">
+            <p><b>3. Maturity transformation is a key function of banks. What does it involve?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. Converting foreign currency into domestic currency.</label>
+                <label><input type="radio" name="q3" value="B"> B. Using short-term liabilities (like deposits) to fund long-term assets (like loans).</label>
+                <label><input type="radio" name="q3" value="C"> C. Changing the interest rate on a loan after it has matured.</label>
+                <label><input type="radio" name="q3" value="D"> D. Ensuring all assets and liabilities mature on the same date.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Maturity transformation is the practice of borrowing money on shorter timeframes than it is lent out. Banks accept deposits that are available on demand (short-term) and use these funds to make loans for longer periods (e.g., mortgages). This is crucial for financing long-term investment projects in the economy.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" id="q4" data-correct="B">
+            <p><b>4. How does a central bank typically increase the monetary base?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A. By increasing income taxes.</label>
+                <label><input type="radio" name="q4" value="B"> B. By conducting an open market purchase of government bonds.</label>
+                <label><input type="radio" name="q4" value="C"> C. By directly ordering commercial banks to create more loans.</label>
+                <label><input type="radio" name="q4" value="D"> D. By decreasing the reserve requirement.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> An open market purchase involves the central bank buying government bonds from commercial banks. The central bank pays for these bonds by crediting the commercial banks' reserve accounts, which directly increases the reserves (R) in the banking system and thus the monetary base (H = C + R).</p>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" id="q5" data-correct="C">
+            <p><b>5. If the central bank imposes a mandatory reserve ratio, how does this affect a commercial bank's ability to create money?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. It has no effect on money creation.</label>
+                <label><input type="radio" name="q5" value="B"> B. It enhances money creation by increasing bank profits.</label>
+                <label><input type="radio" name="q5" value="C"> C. It restricts money creation by requiring banks to hold a fraction of deposits as non-loanable reserves.</label>
+                <label><input type="radio" name="q5" value="D"> D. It forces the bank to stop accepting deposits.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> A mandatory reserve ratio requires banks to hold a certain percentage of their deposits in reserve, which cannot be lent out. This limits the amount of new money that can be created from each new deposit, thereby constraining the overall money supply.</p>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question" id="q6" data-correct="B">
+            <p><b>6. On a commercial bank's balance sheet, loans made to customers are considered:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> A. Liabilities</label>
+                <label><input type="radio" name="q6" value="B"> B. Assets</label>
+                <label><input type="radio" name="q6" value="C"> C. Equity</label>
+                <label><input type="radio" name="q6" value="D"> D. Expenses</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Loans are assets for a bank because they represent a claim on future income. The bank earns interest on these loans, making them a primary source of revenue.</p>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question" id="q7" data-correct="B">
+            <p><b>7. Why must a bank's balance sheet always balance?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> A. It is a legal requirement set by the government.</label>
+                <label><input type="radio" name="q7" value="B"> B. Because assets are defined as the sum of liabilities and net worth (equity).</label>
+                <label><input type="radio" name="q7" value="C"> C. Because banks are not allowed to make a profit.</label>
+                <label><input type="radio" name="q7" value="D"> D. It only balances at the end of the fiscal year.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The balance sheet is based on the fundamental accounting equation: Assets = Liabilities + Net Worth. This is an identity; it must hold true by definition. Assets represent the uses of funds, while liabilities and net worth represent the sources of funds.</p>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question" id="q8" data-correct="A">
+            <p><b>8. The money multiplier is given by the formula \(m = \frac{1+c}{c+r}\). A decrease in the reserve-deposit ratio (r) will:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> A. Increase the money multiplier.</label>
+                <label><input type="radio" name="q8" value="B"> B. Decrease the money multiplier.</label>
+                <label><input type="radio" name="q8" value="C"> C. Have no effect on the money multiplier.</label>
+                <label><input type="radio" name="q8" value="D"> D. Make the money multiplier equal to 1.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The reserve-deposit ratio (r) is in the denominator of the money multiplier formula. A lower 'r' means that banks hold a smaller fraction of deposits in reserve and can lend out a larger portion. This leads to a larger expansion of deposits for each unit of monetary base, thus increasing the money multiplier.</p>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question" id="q9" data-correct="B">
+            <p><b>9. What is 'high-powered money'?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> A. The total value of all loans made by commercial banks.</label>
+                <label><input type="radio" name="q9" value="B"> B. The sum of currency in circulation and commercial bank reserves held at the central bank.</label>
+                <label><input type="radio" name="q9" value="C"> C. Deposits that earn a high rate of interest.</label>
+                <label><input type="radio" name="q9" value="D"> D. The portion of the money supply used in international trade.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> High-powered money, also known as the monetary base (H), consists of the liabilities of the central bank. It is the sum of currency held by the public (C) and the reserves of commercial banks (R). It is called 'high-powered' because a change in H can lead to a multiplied change in the total money supply (M).</p>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question" id="q10" data-correct="B">
+            <p><b>10. Which of the following best describes the 'insurance' role of a financial intermediary?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> A. Selling life insurance policies to customers.</label>
+                <label><input type="radio" name="q10" value="B"> B. Guaranteeing a rate of return to depositors by pooling the risk of many different loans.</label>
+                <label><input type="radio" name="q10" value="C"> C. Insuring the bank's physical building against damage.</label>
+                <label><input type="radio" name="q10" value="D"> D. Providing government-backed deposit insurance.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> By making many different loans, a bank diversifies its risk. This allows it to offer depositors a stable, predictable rate of return, effectively insuring them against the risk of any single borrower defaulting. The risk is pooled and managed by the intermediary.</p>
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question" id="q11" data-correct="B">
+            <p><b>11. In the context of the money multiplier \(m = \frac{1+c}{c+r}\), an increase in the public's preference for holding currency over deposits (an increase in 'c') will:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> A. Increase the money multiplier.</label>
+                <label><input type="radio" name="q11" value="B"> B. Decrease the money multiplier.</label>
+                <label><input type="radio" name="q11" value="C"> C. Leave the money multiplier unchanged.</label>
+                <label><input type="radio" name="q11" value="D"> D. Increase the monetary base.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> When the currency-deposit ratio (c) increases, it means more money is held by the public as cash rather than being deposited in banks. This reduces the amount of reserves in the banking system available for lending, weakening the re-lending cycle and thus decreasing the money multiplier.</p>
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question" id="q12" data-correct="B">
+            <p><b>12. A 'fiat money' system is one where the money:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A"> A. Is backed by a physical commodity like gold.</label>
+                <label><input type="radio" name="q12" value="B"> B. Has value because the government declares it to be legal tender.</label>
+                <label><input type="radio" name="q12" value="C"> C. Can only be used for government transactions.</label>
+                <label><input type="radio" name="q12" value="D"> D. Is issued by a private company, like Fiat.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Fiat money has no intrinsic value and is not convertible into a commodity. Its value comes from social convention and the government's decree ('fiat') that it must be accepted as a means of payment.</p>
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question" id="q13" data-correct="B">
+            <p><b>13. What is the primary reason that maturity transformation is considered a risky activity for banks?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> A. It is expensive to administer.</label>
+                <label><input type="radio" name="q13" value="B"> B. It can lead to a mismatch between the liquidity of assets and liabilities, creating vulnerability to bank runs.</label>
+                <label><input type="radio" name="q13" value="C"> C. It violates central bank regulations.</label>
+                <label><input type="radio" name="q13" value="D"> D. It reduces the bank's profitability.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Banks fund long-term, illiquid assets (loans) with short-term, liquid liabilities (deposits). If a large number of depositors demand their money back at once (a bank run), the bank may not be able to liquidate its long-term assets quickly enough to meet these demands, leading to insolvency.</p>
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question" id="q14" data-correct="C">
+            <p><b>14. If a central bank sells government bonds on the open market, what is the immediate effect on the banking system?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> A. Commercial bank reserves increase.</label>
+                <label><input type="radio" name="q14" value="B"> B. The monetary base expands.</label>
+                <label><input type="radio" name="q14" value="C"> C. Commercial bank reserves decrease.</label>
+                <label><input type="radio" name="q14" value="D"> D. The money multiplier increases.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> An open market sale involves the central bank selling bonds to commercial banks. The banks pay for these bonds with their reserves, which are held at the central bank. This action directly reduces the quantity of reserves (R) in the banking system, contracting the monetary base.</p>
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question" id="q15" data-correct="C">
+            <p><b>15. Which of the following is an example of a bank's asset?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> A. Demand deposits</label>
+                <label><input type="radio" name="q15" value="B"> B. Shareholder equity</label>
+                <label><input type="radio" name="q15" value="C"> C. Mortgage loans</label>
+                <label><input type="radio" name="q15" value="D"> D. Savings accounts</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Mortgage loans are assets for the bank because they represent a stream of future income from the borrower's repayments. Deposits are liabilities, and equity is the owners' stake.</p>
+            </div>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question" id="q16" data-correct="B">
+            <p><b>16. Under a commodity money standard, like the gold standard, the value of money is ultimately determined by:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> A. The central bank's interest rate policy.</label>
+                <label><input type="radio" name="q16" value="B"> B. The supply and demand for the underlying commodity (e.g., gold).</label>
+                <label><input type="radio" name="q16" value="C"> C. The level of government debt.</label>
+                <label><input type="radio" name="q16" value="D"> D. A vote by the public.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> In a commodity money system, the value of the monetary unit is tied to the value of a specific commodity. Therefore, factors affecting the supply of that commodity (like new discoveries) or the demand for it (for both monetary and non-monetary uses) determine its value and, by extension, the price level.</p>
+            </div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question" id="q17" data-correct="B">
+            <p><b>17. Why do banks exist, rather than savers lending directly to borrowers?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> A. Direct lending is illegal.</label>
+                <label><input type="radio" name="q17" value="B"> B. Banks can overcome problems of asymmetric information and high transaction costs.</label>
+                <label><input type="radio" name="q17" value="C"> C. Borrowers do not trust individual savers.</label>
+                <label><input type="radio" name="q17" value="D"> D. Savers do not have enough money to lend.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Banks specialize in gathering information to assess the creditworthiness of borrowers (overcoming asymmetric information) and can pool the funds of many small savers to make large loans (achieving economies of scale), making the overall process far more efficient than direct lending.</p>
+            </div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question" id="q18" data-correct="B">
+            <p><b>18. If the required reserve ratio is 10% and a bank has $1,000 in deposits, what is the minimum amount of reserves it must hold?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> A. $10</label>
+                <label><input type="radio" name="q18" value="B"> B. $100</label>
+                <label><input type="radio" name="q18" value="C"> C. $900</label>
+                <label><input type="radio" name="q18" value="D"> D. $1,000</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The required reserves are calculated as the required reserve ratio multiplied by the total deposits. In this case, 10% of $1,000 is $100.</p>
+            </div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question" id="q19" data-correct="C">
+            <p><b>19. The monetary base (H) is defined as:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> A. Deposits (D) + Loans (L)</label>
+                <label><input type="radio" name="q19" value="B"> B. Currency (C) + Deposits (D)</label>
+                <label><input type="radio" name="q19" value="C"> C. Currency (C) + Reserves (R)</label>
+                <label><input type="radio" name="q19" value="D"> D. Reserves (R) + Loans (L)</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The monetary base (H), or high-powered money, consists of the liabilities of the central bank. It is composed of currency in the hands of the public (C) and the reserves of the banking system (R).</p>
+            </div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question" id="q20" data-correct="B">
+            <p><b>20. If banks decide to hold more excess reserves, what happens to the money multiplier?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> A. It increases.</label>
+                <label><input type="radio" name="q20" value="B"> B. It decreases.</label>
+                <label><input type="radio" name="q20" value="C"> C. It remains the same.</label>
+                <label><input type="radio" name="q20" value="D"> D. It becomes zero.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Holding more excess reserves means the reserve-deposit ratio (r) increases. Since 'r' is in the denominator of the money multiplier formula \(m = \frac{1+c}{c+r}\), an increase in 'r' will cause the value of the multiplier to decrease.</p>
+            </div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question" id="q21" data-correct="C">
+            <p><b>21. Which concept explains why a small increase in the monetary base can lead to a much larger increase in the money supply?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> A. The law of diminishing returns</label>
+                <label><input type="radio" name="q21" value="B"> B. The velocity of money</label>
+                <label><input type="radio" name="q21" value="C"> C. The money multiplier effect</label>
+                <label><input type="radio" name="q21" value="D"> D. The real balance effect</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The money multiplier effect describes the process of deposit creation in a fractional-reserve banking system. An initial increase in reserves allows a bank to lend, creating a new deposit at another bank, which in turn can lend a portion of that, and so on, leading to a multiplied expansion of the total money supply.</p>
+            </div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question" id="q22" data-correct="B">
+            <p><b>22. The 'credit spread' refers to:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="A"> A. The physical distance between a bank and its borrowers.</label>
+                <label><input type="radio" name="q22" value="B"> B. The difference between the interest rate a bank charges on loans and the rate it pays on deposits.</label>
+                <label><input type="radio" name="q22" value="C"> C. The time it takes for a loan to be approved.</label>
+                <label><input type="radio" name="q22" value="D"> D. The variety of credit cards a bank offers.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The credit spread is a primary source of a bank's profit. It is the margin between the interest earned on its assets (loans) and the interest paid on its liabilities (deposits).</p>
+            </div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question" id="q23" data-correct="C">
+            <p><b>23. In a competitive banking market with no reserve requirements or operating costs, what would you expect the credit spread to be?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="A"> A. Very high</label>
+                <label><input type="radio" name="q23" value="B"> B. Equal to the market interest rate</label>
+                <label><input type="radio" name="q23" value="C"> C. Zero</label>
+                <label><input type="radio" name="q23" value="D"> D. Negative</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> In a perfectly competitive market, banks would compete for depositors by raising deposit rates and for borrowers by lowering loan rates. This competition would drive the credit spread to zero, where profits are also zero (Loan Rate = Deposit Rate).</p>
+            </div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question" id="q24" data-correct="C">
+            <p><b>24. How does imposing a mandatory, non-interest-bearing reserve requirement affect the credit spread?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q24" value="A"> A. It forces the spread to become negative.</label>
+                <label><input type="radio" name="q24" value="B"> B. It has no effect on the spread.</label>
+                <label><input type="radio" name="q24" value="C"> C. It forces the spread to widen (loan rate > deposit rate).</label>
+                <label><input type="radio" name="q24" value="D"> D. It forces the spread to become zero.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Reserves are assets that earn no interest. To compensate for this loss of potential income, banks must charge a higher rate on their loans than they pay on deposits to remain profitable. This creates a positive credit spread, where \(i_L > i_D\).</p>
+            </div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question" id="q25" data-correct="D">
+            <p><b>25. Which of the following is NOT a component of the monetary base (H)?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q25" value="A"> A. Currency held by the public</label>
+                <label><input type="radio" name="q25" value="B"> B. Commercial bank deposits at the central bank</label>
+                <label><input type="radio" name="q25" value="C"> C. Vault cash held by commercial banks</label>
+                <label><input type="radio" name="q25" value="D"> D. Deposits held by the public at commercial banks</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The monetary base (H) consists of central bank liabilities. Public deposits at commercial banks are liabilities of the commercial banks, not the central bank. They are a component of the broader money supply (M), but not the monetary base (H).</p>
+            </div>
+        </div>
+
+        <!-- Question 26 -->
+        <div class="question" id="q26" data-correct="B">
+            <p><b>26. The process of financial intermediaries pooling funds from many small savers to make large loans is an example of:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q26" value="A"> A. Maturity transformation</label>
+                <label><input type="radio" name="q26" value="B"> B. Economies of scale</label>
+                <label><input type="radio" name="q26" value="C"> C. Risk aversion</label>
+                <label><input type="radio" name="q26" value="D"> D. Monetary policy</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> A single saver may not have enough funds to finance a large project like a factory. By collecting (pooling) deposits from thousands of savers, a bank achieves economies of scale and can make large-scale loans that would otherwise be impossible.</p>
+            </div>
+        </div>
+
+        <!-- Question 27 -->
+        <div class="question" id="q27" data-correct="C">
+            <p><b>27. If the money multiplier is 2.5, a $10 billion increase in the monetary base will lead to what change in the money supply?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q27" value="A"> A. A $4 billion increase.</label>
+                <label><input type="radio" name="q27" value="B"> B. A $10 billion increase.</label>
+                <label><input type="radio" name="q27" value="C"> C. A $25 billion increase.</label>
+                <label><input type="radio" name="q27" value="D"> D. A $2.5 billion increase.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The change in the money supply is the money multiplier multiplied by the change in the monetary base. \(\Delta M = m \times \Delta H\). So, \(2.5 \times \$10 \text{ billion} = \$25 \text{ billion}\).</p>
+            </div>
+        </div>
+
+        <!-- Question 28 -->
+        <div class="question" id="q28" data-correct="B">
+            <p><b>28. Why is the service of 'maturity transformation' important for an economy?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q28" value="A"> A. It ensures that all savers are also long-term investors.</label>
+                <label><input type="radio" name="q28" value="B"> B. It allows for the financing of long-term investment projects using funds from savers who prefer to keep their funds liquid.</label>
+                <label><input type="radio" name="q28" value="C"> C. It guarantees that banks will never face a bank run.</label>
+                <label><input type="radio" name="q28" value="D"> D. It eliminates interest rate risk for borrowers.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Many productive investments (like building infrastructure or factories) require long-term financing. However, most savers prefer to have ready access to their funds. Banks bridge this gap by transforming liquid, short-term deposits into illiquid, long-term loans, thereby facilitating crucial economic investment.</p>
+            </div>
+        </div>
+
+        <!-- Question 29 -->
+        <div class="question" id="q29" data-correct="B">
+            <p><b>29. The total money supply (M) is defined as:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q29" value="A"> A. Currency (C) + Reserves (R)</label>
+                <label><input type="radio" name="q29" value="B"> B. Currency (C) + Deposits (D)</label>
+                <label><input type="radio" name="q29" value="C"> C. Reserves (R) + Deposits (D)</label>
+                <label><input type="radio" name="q29" value="D"> D. The Monetary Base (H) / money multiplier (m)</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The most common basic measure of the money supply (M1) is the sum of currency in the hands of the public (C) and checkable deposits held at financial institutions (D).</p>
+            </div>
+        </div>
+
+        <!-- Question 30 -->
+        <div class="question" id="q30" data-correct="B">
+            <p><b>30. Under the gold standard, what was the role of the 'gold points'?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q30" value="A"> A. The number of gold coins a person owned.</label>
+                <label><input type="radio" name="q30" value="B"> B. The upper and lower limits within which the exchange rate could fluctuate without causing physical gold shipments.</label>
+                <label><input type="radio" name="q30" value="C"> C. Geographic locations where gold was discovered.</label>
+                <label><input type="radio" name="q30" value="D"> D. The interest rate paid on gold deposits.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The gold points were determined by the mint parity exchange rate plus or minus the costs of shipping gold between two countries. If the market exchange rate moved outside these points, it became profitable for arbitrageurs to ship gold, which would push the exchange rate back within the band.</p>
+            </div>
+        </div>
+
+        <!-- Question 31 -->
+        <div class="question" id="q31" data-correct="C">
+            <p><b>31. Which entity's choices primarily determine the currency-deposit ratio (c)?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q31" value="A"> A. The central bank</label>
+                <label><input type="radio" name="q31" value="B"> B. Commercial banks</label>
+                <label><input type="radio" name="q31" value="C"> C. The public</label>
+                <label><input type="radio" name="q31" value="D"> D. The government treasury</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The currency-deposit ratio (c = C/D) reflects the preferences of the public for holding their money as physical currency versus depositing it in the banking system. It is a behavioral variable dependent on public habits and confidence.</p>
+            </div>
+        </div>
+
+        <!-- Question 32 -->
+        <div class="question" id="q32" data-correct="A">
+            <p><b>32. Which entity's choices primarily determine the reserve-deposit ratio (r)?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q32" value="A"> A. The central bank and commercial banks</label>
+                <label><input type="radio" name="q32" value="B"> B. The public</label>
+                <label><input type="radio" name="q32" value="C"> C. The government treasury</label>
+                <label><input type="radio" name="q32" value="D"> D. Foreign investors</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The reserve-deposit ratio (r = R/D) is determined by two main factors: the mandatory reserve requirement set by the central bank, and the amount of excess reserves that commercial banks choose to hold for precautionary reasons.</p>
+            </div>
+        </div>
+
+        <!-- Question 33 -->
+        <div class="question" id="q33" data-correct="B">
+            <p><b>33. If a bank has $500 in reserves and $2,000 in deposits, what is its reserve ratio?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q33" value="A"> A. 20%</label>
+                <label><input type="radio" name="q33" value="B"> B. 25%</label>
+                <label><input type="radio" name="q33" value="C"> C. 40%</label>
+                <label><input type="radio" name="q33" value="D"> D. 50%</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The reserve ratio is calculated as Total Reserves / Total Deposits. In this case, $500 / $2,000 = 0.25, or 25%.</p>
+            </div>
+        </div>
+
+        <!-- Question 34 -->
+        <div class="question" id="q34" data-correct="B">
+            <p><b>34. An 'open market operation' is the purchase or sale of:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q34" value="A"> A. Stocks and shares by the public.</label>
+                <label><input type="radio" name="q34" value="B"> B. Government bonds by the central bank.</label>
+                <label><input type="radio" name="q34" value="C"> C. Real estate by commercial banks.</label>
+                <label><input type="radio" name="q34" value="D"> D. Foreign currency by the government.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Open market operations are the primary tool used by central banks to influence the monetary base. By buying or selling government bonds to/from the banking system, the central bank can inject or withdraw reserves.</p>
+            </div>
+        </div>
+
+        <!-- Question 35 -->
+        <div class="question" id="q35" data-correct="B">
+            <p><b>35. If the currency-deposit ratio (c) is 0.2 and the reserve-deposit ratio (r) is 0.1, what is the value of the money multiplier (m)?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q35" value="A"> A. 3.0</label>
+                <label><input type="radio" name="q35" value="B"> B. 4.0</label>
+                <label><input type="radio" name="q35" value="C"> C. 5.0</label>
+                <label><input type="radio" name="q35" value="D"> D. 10.0</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Using the formula \(m = \frac{1+c}{c+r}\), we get \(m = \frac{1+0.2}{0.2+0.1} = \frac{1.2}{0.3} = 4.0\).</p>
+            </div>
+        </div>
+
+        <!-- Question 36 -->
+        <div class="question" id="q36" data-correct="B">
+            <p><b>36. A bank's 'net worth' or 'equity' is calculated as:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q36" value="A"> A. Assets + Liabilities</label>
+                <label><input type="radio" name="q36" value="B"> B. Assets - Liabilities</label>
+                <label><input type="radio" name="q36" value="C"> C. Assets / Liabilities</label>
+                <label><input type="radio" name="q36" value="D"> D. The total value of its deposits</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Net worth represents the owners' stake in the bank. It is the residual value remaining after subtracting liabilities (what the bank owes) from its assets (what the bank owns). Assets = Liabilities + Net Worth.</p>
+            </div>
+        </div>
+
+        <!-- Question 37 -->
+        <div class="question" id="q37" data-correct="B">
+            <p><b>37. The introduction of a mandatory reserve ratio can be viewed as a 'tax' on bank lending because:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q37" value="A"> A. Banks must pay a direct tax on their reserves to the government.</label>
+                <label><input type="radio" name="q37" value="B"> B. It forces banks to hold a portion of their assets in a non-interest-bearing form (reserves), reducing potential income.</label>
+                <label><input type="radio" name="q37" value="C"> C. It increases the interest rate banks must pay on deposits.</label>
+                <label><input type="radio" name="q37" value="D"> D. It is explicitly labeled as a tax in banking law.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> By requiring banks to hold reserves that typically earn no interest, the central bank forces them to forgo the interest they could have earned by lending that money out. This implicit cost functions like a tax on the bank's operations.</p>
+            </div>
+        </div>
+
+        <!-- Question 38 -->
+        <div class="question" id="q38" data-correct="A">
+            <p><b>38. If the public decides to withdraw cash from their bank accounts and hold more currency, what is the initial impact on the money supply (M) and the monetary base (H)?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q38" value="A"> A. M is unchanged, H is unchanged.</label>
+                <label><input type="radio" name="q38" value="B"> B. M falls, H falls.</label>
+                <label><input type="radio" name="q38" value="C"> C. M is unchanged, H falls.</label>
+                <label><input type="radio" name="q38" value="D"> D. M falls, H is unchanged.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Correct Answer:</b> A</p>
+                <p><b>Explanation:</b> This is a tricky point. Initially, this is just a change in the composition of both M and H, not their total size. For M (M=C+D), Currency (C) rises and Deposits (D) fall by the exact same amount, so M is unchanged. For H (H=C+R), Currency (C) rises and bank Reserves (R) fall by the exact same amount, so H is also unchanged. However, this action increases the currency-deposit ratio 'c', which will cause the money multiplier to fall, leading to a subsequent contraction of the money supply through the re-lending process.</p>
+            </div>
+        </div>
+
+        <!-- Question 39 -->
+        <div class="question" id="q39" data-correct="C">
+            <p><b>39. The 'lender of last resort' is a function of:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q39" value="A"> A. The largest commercial bank.</label>
+                <label><input type="radio" name="q39" value="B"> B. The government's treasury department.</label>
+                <label><input type="radio" name="q39" value="C"> C. The central bank.</label>
+                <label><input type="radio" name="q39" value="D"> D. The international monetary fund.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The central bank acts as the lender of last resort, providing liquidity to solvent but illiquid banks during a financial crisis to prevent bank failures and systemic collapse.</p>
+            </div>
+        </div>
+
+        <!-- Question 40 -->
+        <div class="question" id="q40" data-correct="D">
+            <p><b>40. Which of the following would cause the money supply to expand?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q40" value="A"> A. An increase in the required reserve ratio.</label>
+                <label><input type="radio" name="q40" value="B"> B. An open market sale of bonds by the central bank.</label>
+                <label><input type="radio" name="q40" value="C"> C. A decision by the public to hold more currency relative to deposits.</label>
+                <label><input type="radio" name="q40" value="D"> D. A decrease in the required reserve ratio.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> A decrease in the required reserve ratio lowers 'r', which increases the money multiplier. This means banks can lend out a larger fraction of deposits, leading to a greater expansion of the money supply for a given monetary base.</p>
+            </div>
+        </div>
+
+        <!-- Question 41 -->
+        <div class="question" id="q41" data-correct="C">
+            <p><b>41. The 'unit of account' function of money refers to its role as:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q41" value="A"> A. A physical item used to make payments.</label>
+                <label><input type="radio" name="q41" value="B"> B. A way to transfer purchasing power into the future.</label>
+                <label><input type="radio" name="q41" value="C"> C. A common measure used to state prices and record debts.</label>
+                <label><input type="radio" name="q41" value="D"> D. An asset that is guaranteed to increase in value.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The unit of account function provides a common denominator for measuring the value of goods and services. It simplifies commerce by eliminating the need to calculate relative prices for every pair of goods, as in a barter system.</p>
+            </div>
+        </div>
+
+        <!-- Question 42 -->
+        <div class="question" id="q42" data-correct="C">
+            <p><b>42. In a fractional-reserve banking system, the total amount of deposits will always be:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q42" value="A"> A. Less than the amount of reserves.</label>
+                <label><input type="radio" name="q42" value="B"> B. Equal to the amount of reserves.</label>
+                <label><input type="radio" name="q42" value="C"> C. A multiple of the amount of reserves.</label>
+                <label><input type="radio" name="q42" value="D"> D. Unrelated to the amount of reserves.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Because banks hold only a fraction of deposits as reserves and lend out the rest, the process of lending and re-depositing creates a total volume of deposits that is a multiple of the initial reserves in the system.</p>
+            </div>
+        </div>
+
+        <!-- Question 43 -->
+        <div class="question" id="q43" data-correct="B">
+            <p><b>43. Why is a credit card not considered money in the same way as currency or a debit card transaction?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q43" value="A"> A. Because it is made of plastic.</label>
+                <label><input type="radio" name="q43" value="B"> B. Because using it is a form of borrowing, and the payment is deferred, not final.</label>
+                <label><input type="radio" name="q43" value="C"> C. Because it can only be used at certain stores.</label>
+                <label><input type="radio" name="q43" value="D"> D. Because it has a high interest rate.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> A credit card transaction creates a loan from the issuing bank. The actual settlement of the debt (the final payment) happens later when you pay your credit card bill, typically using money from a deposit account. Therefore, the card itself is a means of deferring payment, not the final means of payment (money).</p>
+            </div>
+        </div>
+
+        <!-- Question 44 -->
+        <div class="question" id="q44" data-correct="C">
+            <p><b>44. If the central bank wants to contract the money supply, it should:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q44" value="A"> A. Buy government bonds.</label>
+                <label><input type="radio" name="q44" value="B"> B. Lower the reserve requirement.</label>
+                <label><input type="radio" name="q44" value="C"> C. Sell government bonds.</label>
+                <label><input type="radio" name="q44" value="D"> D. Encourage banks to lend more.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Selling government bonds (an open market sale) withdraws reserves from the banking system. This reduces the monetary base, which, via the money multiplier, leads to a larger contraction in the overall money supply.</p>
+            </div>
+        </div>
+
+        <!-- Question 45 -->
+        <div class="question" id="q45" data-correct="B">
+            <p><b>45. The existence of financial intermediaries improves economic efficiency by:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q45" value="A"> A. Guaranteeing that no one ever loses money.</label>
+                <label><input type="radio" name="q45" value="B"> B. Channeling funds from those with a surplus to those with a shortage.</label>
+                <label><input type="radio" name="q45" value="C"> C. Eliminating the need for a central bank.</label>
+                <label><input type="radio" name="q45" value="D"> D. Setting prices for all goods and services.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The core function of financial intermediaries is to facilitate the flow of funds from savers (who have excess funds) to borrowers (who have productive investment opportunities). This allocation of capital to its most productive uses is essential for economic growth.</p>
+            </div>
+        </div>
+
+        <!-- Question 46 -->
+        <div class="question" id="q46" data-correct="B">
+            <p><b>46. If a bank's assets are $100 million and its net worth is $10 million, what are its liabilities?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q46" value="A"> A. $110 million</label>
+                <label><input type="radio" name="q46" value="B"> B. $90 million</label>
+                <label><input type="radio" name="q46" value="C"> C. $10 million</label>
+                <label><input type="radio" name="q46" value="D"> D. $100 million</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The balance sheet identity is Assets = Liabilities + Net Worth. Rearranging gives Liabilities = Assets - Net Worth. So, $100 million - $10 million = $90 million.</p>
+            </div>
+        </div>
+
+        <!-- Question 47 -->
+        <div class="question" id="q47" data-correct="B">
+            <p><b>47. What is the key difference between a 'gold specie standard' and a 'gold bullion standard'?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q47" value="A"> A. The bullion standard uses silver instead of gold.</label>
+                <label><input type="radio" name="q47" value="B"> B. Under a specie standard gold coins circulate, while under a bullion standard convertibility is only for large bullion bars.</label>
+                <label><input type="radio" name="q47" value="C"> C. The specie standard is a form of fiat money.</label>
+                <label><input type="radio" name="q47" value="D"> D. There is no difference.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Under a gold specie standard, gold coins are in general circulation and banknotes are convertible into these coins. Under a gold bullion standard, gold coins do not circulate, and convertibility of currency into gold is typically restricted to large transactions for gold bars, often by specified groups.</p>
+            </div>
+        </div>
+
+        <!-- Question 48 -->
+        <div class="question" id="q48" data-correct="C">
+            <p><b>48. If the money supply (M) is $2,000 billion and the monetary base (H) is $500 billion, what is the value of the money multiplier (m)?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q48" value="A"> A. 0.25</label>
+                <label><input type="radio" name="q48" value="B"> B. 2.0</label>
+                <label><input type="radio" name="q48" value="C"> C. 4.0</label>
+                <label><input type="radio" name="q48" value="D"> D. 5.0</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The relationship is M = m * H. Therefore, the money multiplier (m) can be found by dividing the money supply by the monetary base: m = M / H. So, $2,000 billion / $500 billion = 4.0.</p>
+            </div>
+        </div>
+
+        <!-- Question 49 -->
+        <div class="question" id="q49" data-correct="C">
+            <p><b>49. A primary motivation for banks to engage in maturity transformation is:</b></p>
+            <div class="options">
+                <label><input type="radio" name="q49" value="A"> A. Regulatory requirements force them to do so.</label>
+                <label><input type="radio" name="q49" value="B"> B. It is completely risk-free.</label>
+                <label><input type="radio" name="q49" value="C"> C. It is generally profitable because long-term assets (loans) typically have higher interest rates than short-term liabilities (deposits).</label>
+                <label><input type="radio" name="q49" value="D"> D. It simplifies their accounting procedures.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> The yield curve is typically upward sloping, meaning interest rates on long-term instruments are higher than on short-term ones. By borrowing short (at low rates) and lending long (at high rates), banks can profit from the interest rate differential.</p>
+            </div>
+        </div>
+
+        <!-- Question 50 -->
+        <div class="question" id="q50" data-correct="C">
+            <p><b>50. Which statement best describes the relationship between the monetary base and the money supply?</b></p>
+            <div class="options">
+                <label><input type="radio" name="q50" value="A"> A. The money supply is always smaller than the monetary base.</label>
+                <label><input type="radio" name="q50" value="B"> B. The money supply is equal to the monetary base.</label>
+                <label><input type="radio" name="q50" value="C"> C. The money supply is a multiple of the monetary base.</label>
+                <label><input type="radio" name="q50" value="D"> D. There is no stable relationship between the two.</label>
+            </div>
+            <div class="feedback"></div>
+            <div class="explanation">
+                <p><b>Explanation:</b> Due to the money multiplier effect in a fractional-reserve banking system, the total money supply (M) is a multiple of the monetary base (H). The size of this multiple is determined by the money multiplier (m).</p>
+            </div>
         </div>
     </div>
 
-    <div class="question" data-correct="B">
-        <p><b>2. On a commercial bank's balance sheet, where are customer deposits recorded?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q2" value="A"> A. As an asset.</label>
-            <label><input type="radio" name="q2" value="B"> B. As a liability.</label>
-            <label><input type="radio" name="q2" value="C"> C. As net worth.</label>
-            <label><input type="radio" name="q2" value="D"> D. They are not recorded on the balance sheet.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Deposits are liabilities for a bank because they represent money that the bank owes to its customers. The customers can demand this money back at any time (in the case of demand deposits).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>3. Maturity transformation is a key function of banks. What does it involve?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q3" value="A"> A. Converting foreign currency into domestic currency.</label>
-            <label><input type="radio" name="q3" value="B"> B. Using short-term liabilities (like deposits) to fund long-term assets (like loans).</label>
-            <label><input type="radio" name="q3" value="C"> C. Changing the interest rate on a loan after it has matured.</label>
-            <label><input type="radio" name="q3" value="D"> D. Ensuring all assets and liabilities mature on the same date.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Maturity transformation is the practice of borrowing money on shorter timeframes than it is lent out. Banks accept deposits that are available on demand (short-term) and use these funds to make loans for longer periods (e.g., mortgages). This is crucial for financing long-term investment projects in the economy.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>4. How does a central bank typically increase the monetary base?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q4" value="A"> A. By increasing income taxes.</label>
-            <label><input type="radio" name="q4" value="B"> B. By conducting an open market purchase of government bonds.</label>
-            <label><input type="radio" name="q4" value="C"> C. By directly ordering commercial banks to create more loans.</label>
-            <label><input type="radio" name="q4" value="D"> D. By decreasing the reserve requirement.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> An open market purchase involves the central bank buying government bonds from commercial banks. The central bank pays for these bonds by crediting the commercial banks' reserve accounts, which directly increases the reserves (R) in the banking system and thus the monetary base (H = C + R).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>5. If the central bank imposes a mandatory reserve ratio, how does this affect a commercial bank's ability to create money?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q5" value="A"> A. It has no effect on money creation.</label>
-            <label><input type="radio" name="q5" value="B"> B. It enhances money creation by increasing bank profits.</label>
-            <label><input type="radio" name="q5" value="C"> C. It restricts money creation by requiring banks to hold a fraction of deposits as non-loanable reserves.</label>
-            <label><input type="radio" name="q5" value="D"> D. It forces the bank to stop accepting deposits.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> A mandatory reserve ratio requires banks to hold a certain percentage of their deposits in reserve, which cannot be lent out. This limits the amount of new money that can be created from each new deposit, thereby constraining the overall money supply.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>6. On a commercial bank's balance sheet, loans made to customers are considered:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q6" value="A"> A. Liabilities</label>
-            <label><input type="radio" name="q6" value="B"> B. Assets</label>
-            <label><input type="radio" name="q6" value="C"> C. Equity</label>
-            <label><input type="radio" name="q6" value="D"> D. Expenses</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Loans are assets for a bank because they represent a claim on future income. The bank earns interest on these loans, making them a primary source of revenue.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>7. Why must a bank's balance sheet always balance?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q7" value="A"> A. It is a legal requirement set by the government.</label>
-            <label><input type="radio" name="q7" value="B"> B. Because assets are defined as the sum of liabilities and net worth (equity).</label>
-            <label><input type="radio" name="q7" value="C"> C. Because banks are not allowed to make a profit.</label>
-            <label><input type="radio" name="q7" value="D"> D. It only balances at the end of the fiscal year.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The balance sheet is based on the fundamental accounting equation: Assets = Liabilities + Net Worth. This is an identity; it must hold true by definition. Assets represent the uses of funds, while liabilities and net worth represent the sources of funds.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="A">
-        <p><b>8. The money multiplier is given by the formula \(m = \frac{1+c}{c+r}\). A decrease in the reserve-deposit ratio (r) will:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q8" value="A"> A. Increase the money multiplier.</label>
-            <label><input type="radio" name="q8" value="B"> B. Decrease the money multiplier.</label>
-            <label><input type="radio" name="q8" value="C"> C. Have no effect on the money multiplier.</label>
-            <label><input type="radio" name="q8" value="D"> D. Make the money multiplier equal to 1.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The reserve-deposit ratio (r) is in the denominator of the money multiplier formula. A lower 'r' means that banks hold a smaller fraction of deposits in reserve and can lend out a larger portion. This leads to a larger expansion of deposits for each unit of monetary base, thus increasing the money multiplier.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>9. What is 'high-powered money'?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q9" value="A"> A. The total value of all loans made by commercial banks.</label>
-            <label><input type="radio" name="q9" value="B"> B. The sum of currency in circulation and commercial bank reserves held at the central bank.</label>
-            <label><input type="radio" name="q9" value="C"> C. Deposits that earn a high rate of interest.</label>
-            <label><input type="radio" name="q9" value="D"> D. The portion of the money supply used in international trade.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> High-powered money, also known as the monetary base (H), consists of the liabilities of the central bank. It is the sum of currency held by the public (C) and the reserves of commercial banks (R). It is called 'high-powered' because a change in H can lead to a multiplied change in the total money supply (M).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>10. Which of the following best describes the 'insurance' role of a financial intermediary?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q10" value="A"> A. Selling life insurance policies to customers.</label>
-            <label><input type="radio" name="q10" value="B"> B. Guaranteeing a rate of return to depositors by pooling the risk of many different loans.</label>
-            <label><input type="radio" name="q10" value="C"> C. Insuring the bank's physical building against damage.</label>
-            <label><input type="radio" name="q10" value="D"> D. Providing government-backed deposit insurance.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> By making many different loans, a bank diversifies its risk. This allows it to offer depositors a stable, predictable rate of return, effectively insuring them against the risk of any single borrower defaulting. The risk is pooled and managed by the intermediary.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>11. In the context of the money multiplier \(m = \frac{1+c}{c+r}\), an increase in the public's preference for holding currency over deposits (an increase in 'c') will:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q11" value="A"> A. Increase the money multiplier.</label>
-            <label><input type="radio" name="q11" value="B"> B. Decrease the money multiplier.</label>
-            <label><input type="radio" name="q11" value="C"> C. Leave the money multiplier unchanged.</label>
-            <label><input type="radio" name="q11" value="D"> D. Increase the monetary base.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> When the currency-deposit ratio (c) increases, it means more money is held by the public as cash rather than being deposited in banks. This reduces the amount of reserves in the banking system available for lending, weakening the re-lending cycle and thus decreasing the money multiplier.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>12. A 'fiat money' system is one where the money:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q12" value="A"> A. Is backed by a physical commodity like gold.</label>
-            <label><input type="radio" name="q12" value="B"> B. Has value because the government declares it to be legal tender.</label>
-            <label><input type="radio" name="q12" value="C"> C. Can only be used for government transactions.</label>
-            <label><input type="radio" name="q12" value="D"> D. Is issued by a private company, like Fiat.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Fiat money has no intrinsic value and is not convertible into a commodity. Its value comes from social convention and the government's decree ('fiat') that it must be accepted as a means of payment.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>13. What is the primary reason that maturity transformation is considered a risky activity for banks?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q13" value="A"> A. It is expensive to administer.</label>
-            <label><input type="radio" name="q13" value="B"> B. It can lead to a mismatch between the liquidity of assets and liabilities, creating vulnerability to bank runs.</label>
-            <label><input type="radio" name="q13" value="C"> C. It violates central bank regulations.</label>
-            <label><input type="radio" name="q13" value="D"> D. It reduces the bank's profitability.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Banks fund long-term, illiquid assets (loans) with short-term, liquid liabilities (deposits). If a large number of depositors demand their money back at once (a bank run), the bank may not be able to liquidate its long-term assets quickly enough to meet these demands, leading to insolvency.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>14. If a central bank sells government bonds on the open market, what is the immediate effect on the banking system?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q14" value="A"> A. Commercial bank reserves increase.</label>
-            <label><input type="radio" name="q14" value="B"> B. The monetary base expands.</label>
-            <label><input type="radio" name="q14" value="C"> C. Commercial bank reserves decrease.</label>
-            <label><input type="radio" name="q14" value="D"> D. The money multiplier increases.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> An open market sale involves the central bank selling bonds to commercial banks. The banks pay for these bonds with their reserves, which are held at the central bank. This action directly reduces the quantity of reserves (R) in the banking system, contracting the monetary base.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>15. Which of the following is an example of a bank's asset?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q15" value="A"> A. Demand deposits</label>
-            <label><input type="radio" name="q15" value="B"> B. Shareholder equity</label>
-            <label><input type="radio" name="q15" value="C"> C. Mortgage loans</label>
-            <label><input type="radio" name="q15" value="D"> D. Savings accounts</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Mortgage loans are assets for the bank because they represent a stream of future income from the borrower's repayments. Deposits are liabilities, and equity is the owners' stake.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>16. Under a commodity money standard, like the gold standard, the value of money is ultimately determined by:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q16" value="A"> A. The central bank's interest rate policy.</label>
-            <label><input type="radio" name="q16" value="B"> B. The supply and demand for the underlying commodity (e.g., gold).</label>
-            <label><input type="radio" name="q16" value="C"> C. The level of government debt.</label>
-            <label><input type="radio" name="q16" value="D"> D. A vote by the public.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> In a commodity money system, the value of the monetary unit is tied to the value of a specific commodity. Therefore, factors affecting the supply of that commodity (like new discoveries) or the demand for it (for both monetary and non-monetary uses) determine its value and, by extension, the price level.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>17. Why do banks exist, rather than savers lending directly to borrowers?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q17" value="A"> A. Direct lending is illegal.</label>
-            <label><input type="radio" name="q17" value="B"> B. Banks can overcome problems of asymmetric information and high transaction costs.</label>
-            <label><input type="radio" name="q17" value="C"> C. Borrowers do not trust individual savers.</label>
-            <label><input type="radio" name="q17" value="D"> D. Savers do not have enough money to lend.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Banks specialize in gathering information to assess the creditworthiness of borrowers (overcoming asymmetric information) and can pool the funds of many small savers to make large loans (achieving economies of scale), making the overall process far more efficient than direct lending.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>18. If the required reserve ratio is 10% and a bank has $1,000 in deposits, what is the minimum amount of reserves it must hold?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q18" value="A"> A. $10</label>
-            <label><input type="radio" name="q18" value="B"> B. $100</label>
-            <label><input type="radio" name="q18" value="C"> C. $900</label>
-            <label><input type="radio" name="q18" value="D"> D. $1,000</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The required reserves are calculated as the required reserve ratio multiplied by the total deposits. In this case, 10% of $1,000 is $100.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>19. The monetary base (H) is defined as:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q19" value="A"> A. Deposits (D) + Loans (L)</label>
-            <label><input type="radio" name="q19" value="B"> B. Currency (C) + Deposits (D)</label>
-            <label><input type="radio" name="q19" value="C"> C. Currency (C) + Reserves (R)</label>
-            <label><input type="radio" name="q19" value="D"> D. Reserves (R) + Loans (L)</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The monetary base (H), or high-powered money, consists of the liabilities of the central bank. It is composed of currency in the hands of the public (C) and the reserves of the banking system (R).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>20. If banks decide to hold more excess reserves, what happens to the money multiplier?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q20" value="A"> A. It increases.</label>
-            <label><input type="radio" name="q20" value="B"> B. It decreases.</label>
-            <label><input type="radio" name="q20" value="C"> C. It remains the same.</label>
-            <label><input type="radio" name="q20" value="D"> D. It becomes zero.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Holding more excess reserves means the reserve-deposit ratio (r) increases. Since 'r' is in the denominator of the money multiplier formula \(m = \frac{1+c}{c+r}\), an increase in 'r' will cause the value of the multiplier to decrease.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>21. Which concept explains why a small increase in the monetary base can lead to a much larger increase in the money supply?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q21" value="A"> A. The law of diminishing returns</label>
-            <label><input type="radio" name="q21" value="B"> B. The velocity of money</label>
-            <label><input type="radio" name="q21" value="C"> C. The money multiplier effect</label>
-            <label><input type="radio" name="q21" value="D"> D. The real balance effect</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The money multiplier effect describes the process of deposit creation in a fractional-reserve banking system. An initial increase in reserves allows a bank to lend, creating a new deposit at another bank, which in turn can lend a portion of that, and so on, leading to a multiplied expansion of the total money supply.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>22. The 'credit spread' refers to:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q22" value="A"> A. The physical distance between a bank and its borrowers.</label>
-            <label><input type="radio" name="q22" value="B"> B. The difference between the interest rate a bank charges on loans and the rate it pays on deposits.</label>
-            <label><input type="radio" name="q22" value="C"> C. The time it takes for a loan to be approved.</label>
-            <label><input type="radio" name="q22" value="D"> D. The variety of credit cards a bank offers.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The credit spread is a primary source of a bank's profit. It is the margin between the interest earned on its assets (loans) and the interest paid on its liabilities (deposits).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>23. In a competitive banking market with no reserve requirements or operating costs, what would you expect the credit spread to be?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q23" value="A"> A. Very high</label>
-            <label><input type="radio" name="q23" value="B"> B. Equal to the market interest rate</label>
-            <label><input type="radio" name="q23" value="C"> C. Zero</label>
-            <label><input type="radio" name="q23" value="D"> D. Negative</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> In a perfectly competitive market, banks would compete for depositors by raising deposit rates and for borrowers by lowering loan rates. This competition would drive the credit spread to zero, where profits are also zero (Loan Rate = Deposit Rate).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>24. How does imposing a mandatory, non-interest-bearing reserve requirement affect the credit spread?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q24" value="A"> A. It forces the spread to become negative.</label>
-            <label><input type="radio" name="q24" value="B"> B. It has no effect on the spread.</label>
-            <label><input type="radio" name="q24" value="C"> C. It forces the spread to widen (loan rate > deposit rate).</label>
-            <label><input type="radio" name="q24" value="D"> D. It forces the spread to become zero.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Reserves are assets that earn no interest. To compensate for this loss of potential income, banks must charge a higher rate on their loans than they pay on deposits to remain profitable. This creates a positive credit spread, where \(i_L > i_D\).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="D">
-        <p><b>25. Which of the following is NOT a component of the monetary base (H)?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q25" value="A"> A. Currency held by the public</label>
-            <label><input type="radio" name="q25" value="B"> B. Commercial bank deposits at the central bank</label>
-            <label><input type="radio" name="q25" value="C"> C. Vault cash held by commercial banks</label>
-            <label><input type="radio" name="q25" value="D"> D. Deposits held by the public at commercial banks</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The monetary base (H) consists of central bank liabilities. Public deposits at commercial banks are liabilities of the commercial banks, not the central bank. They are a component of the broader money supply (M), but not the monetary base (H).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>26. The process of financial intermediaries pooling funds from many small savers to make large loans is an example of:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q26" value="A"> A. Maturity transformation</label>
-            <label><input type="radio" name="q26" value="B"> B. Economies of scale</label>
-            <label><input type="radio" name="q26" value="C"> C. Risk aversion</label>
-            <label><input type="radio" name="q26" value="D"> D. Monetary policy</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> A single saver may not have enough funds to finance a large project like a factory. By collecting (pooling) deposits from thousands of savers, a bank achieves economies of scale and can make large-scale loans that would otherwise be impossible.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>27. If the money multiplier is 2.5, a $10 billion increase in the monetary base will lead to what change in the money supply?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q27" value="A"> A. A $4 billion increase.</label>
-            <label><input type="radio" name="q27" value="B"> B. A $10 billion increase.</label>
-            <label><input type="radio" name="q27" value="C"> C. A $25 billion increase.</label>
-            <label><input type="radio" name="q27" value="D"> D. A $2.5 billion increase.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The change in the money supply is the money multiplier multiplied by the change in the monetary base. \(\Delta M = m \times \Delta H\). So, \(2.5 \times \$10 \text{ billion} = \$25 \text{ billion}\).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>28. Why is the service of 'maturity transformation' important for an economy?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q28" value="A"> A. It ensures that all savers are also long-term investors.</label>
-            <label><input type="radio" name="q28" value="B"> B. It allows for the financing of long-term investment projects using funds from savers who prefer to keep their funds liquid.</label>
-            <label><input type="radio" name="q28" value="C"> C. It guarantees that banks will never face a bank run.</label>
-            <label><input type="radio" name="q28" value="D"> D. It eliminates interest rate risk for borrowers.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Many productive investments (like building infrastructure or factories) require long-term financing. However, most savers prefer to have ready access to their funds. Banks bridge this gap by transforming liquid, short-term deposits into illiquid, long-term loans, thereby facilitating crucial economic investment.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>29. The total money supply (M) is defined as:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q29" value="A"> A. Currency (C) + Reserves (R)</label>
-            <label><input type="radio" name="q29" value="B"> B. Currency (C) + Deposits (D)</label>
-            <label><input type="radio" name="q29" value="C"> C. Reserves (R) + Deposits (D)</label>
-            <label><input type="radio" name="q29" value="D"> D. The Monetary Base (H) / money multiplier (m)</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The most common basic measure of the money supply (M1) is the sum of currency in the hands of the public (C) and checkable deposits held at financial institutions (D).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>30. Under the gold standard, what was the role of the 'gold points'?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q30" value="A"> A. The number of gold coins a person owned.</label>
-            <label><input type="radio" name="q30" value="B"> B. The upper and lower limits within which the exchange rate could fluctuate without causing physical gold shipments.</label>
-            <label><input type="radio" name="q30" value="C"> C. Geographic locations where gold was discovered.</label>
-            <label><input type="radio" name="q30" value="D"> D. The interest rate paid on gold deposits.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The gold points were determined by the mint parity exchange rate plus or minus the costs of shipping gold between two countries. If the market exchange rate moved outside these points, it became profitable for arbitrageurs to ship gold, which would push the exchange rate back within the band.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>31. Which entity's choices primarily determine the currency-deposit ratio (c)?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q31" value="A"> A. The central bank</label>
-            <label><input type="radio" name="q31" value="B"> B. Commercial banks</label>
-            <label><input type="radio" name="q31" value="C"> C. The public</label>
-            <label><input type="radio" name="q31" value="D"> D. The government treasury</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The currency-deposit ratio (c = C/D) reflects the preferences of the public for holding their money as physical currency versus depositing it in the banking system. It is a behavioral variable dependent on public habits and confidence.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="A">
-        <p><b>32. Which entity's choices primarily determine the reserve-deposit ratio (r)?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q32" value="A"> A. The central bank and commercial banks</label>
-            <label><input type="radio" name="q32" value="B"> B. The public</label>
-            <label><input type="radio" name="q32" value="C"> C. The government treasury</label>
-            <label><input type="radio" name="q32" value="D"> D. Foreign investors</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The reserve-deposit ratio (r = R/D) is determined by two main factors: the mandatory reserve requirement set by the central bank, and the amount of excess reserves that commercial banks choose to hold for precautionary reasons.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>33. If a bank has $500 in reserves and $2,000 in deposits, what is its reserve ratio?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q33" value="A"> A. 20%</label>
-            <label><input type="radio" name="q33" value="B"> B. 25%</label>
-            <label><input type="radio" name="q33" value="C"> C. 40%</label>
-            <label><input type="radio" name="q33" value="D"> D. 50%</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The reserve ratio is calculated as Total Reserves / Total Deposits. In this case, $500 / $2,000 = 0.25, or 25%.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>34. An 'open market operation' is the purchase or sale of:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q34" value="A"> A. Stocks and shares by the public.</label>
-            <label><input type="radio" name="q34" value="B"> B. Government bonds by the central bank.</label>
-            <label><input type="radio" name="q34" value="C"> C. Real estate by commercial banks.</label>
-            <label><input type="radio" name="q34" value="D"> D. Foreign currency by the government.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Open market operations are the primary tool used by central banks to influence the monetary base. By buying or selling government bonds to/from the banking system, the central bank can inject or withdraw reserves.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>35. If the currency-deposit ratio (c) is 0.2 and the reserve-deposit ratio (r) is 0.1, what is the value of the money multiplier (m)?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q35" value="A"> A. 3.0</label>
-            <label><input type="radio" name="q35" value="B"> B. 4.0</label>
-            <label><input type="radio" name="q35" value="C"> C. 5.0</label>
-            <label><input type="radio" name="q35" value="D"> D. 10.0</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Using the formula \(m = \frac{1+c}{c+r}\), we get \(m = \frac{1+0.2}{0.2+0.1} = \frac{1.2}{0.3} = 4.0\).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>36. A bank's 'net worth' or 'equity' is calculated as:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q36" value="A"> A. Assets + Liabilities</label>
-            <label><input type="radio" name="q36" value="B"> B. Assets - Liabilities</label>
-            <label><input type="radio" name="q36" value="C"> C. Assets / Liabilities</label>
-            <label><input type="radio" name="q36" value="D"> D. The total value of its deposits</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Net worth represents the owners' stake in the bank. It is the residual value remaining after subtracting liabilities (what the bank owes) from its assets (what the bank owns). Assets = Liabilities + Net Worth.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>37. The introduction of a mandatory reserve ratio can be viewed as a 'tax' on bank lending because:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q37" value="A"> A. Banks must pay a direct tax on their reserves to the government.</label>
-            <label><input type="radio" name="q37" value="B"> B. It forces banks to hold a portion of their assets in a non-interest-bearing form (reserves), reducing potential income.</label>
-            <label><input type="radio" name="q37" value="C"> C. It increases the interest rate banks must pay on deposits.</label>
-            <label><input type="radio" name="q37" value="D"> D. It is explicitly labeled as a tax in banking law.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> By requiring banks to hold reserves that typically earn no interest, the central bank forces them to forgo the interest they could have earned by lending that money out. This implicit cost functions like a tax on the bank's operations.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="A">
-        <p><b>38. If the public decides to withdraw cash from their bank accounts and hold more currency, what is the initial impact on the money supply (M) and the monetary base (H)?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q38" value="A"> A. M is unchanged, H is unchanged.</label>
-            <label><input type="radio" name="q38" value="B"> B. M falls, H falls.</label>
-            <label><input type="radio" name="q38" value="C"> C. M is unchanged, H falls.</label>
-            <label><input type="radio" name="q38" value="D"> D. M falls, H is unchanged.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Correct Answer:</b> A</p>
-            <p><b>Explanation:</b> This is a tricky point. Initially, this is just a change in the composition of both M and H, not their total size. For M (M=C+D), Currency (C) rises and Deposits (D) fall by the exact same amount, so M is unchanged. For H (H=C+R), Currency (C) rises and bank Reserves (R) fall by the exact same amount, so H is also unchanged. However, this action increases the currency-deposit ratio 'c', which will cause the money multiplier to fall, leading to a subsequent contraction of the money supply through the re-lending process.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>39. The 'lender of last resort' is a function of:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q39" value="A"> A. The largest commercial bank.</label>
-            <label><input type="radio" name="q39" value="B"> B. The government's treasury department.</label>
-            <label><input type="radio" name="q39" value="C"> C. The central bank.</label>
-            <label><input type="radio" name="q39" value="D"> D. The international monetary fund.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The central bank acts as the lender of last resort, providing liquidity to solvent but illiquid banks during a financial crisis to prevent bank failures and systemic collapse.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="D">
-        <p><b>40. Which of the following would cause the money supply to expand?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q40" value="A"> A. An increase in the required reserve ratio.</label>
-            <label><input type="radio" name="q40" value="B"> B. An open market sale of bonds by the central bank.</label>
-            <label><input type="radio" name="q40" value="C"> C. A decision by the public to hold more currency relative to deposits.</label>
-            <label><input type="radio" name="q40" value="D"> D. A decrease in the required reserve ratio.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> A decrease in the required reserve ratio lowers 'r', which increases the money multiplier. This means banks can lend out a larger fraction of deposits, leading to a greater expansion of the money supply for a given monetary base.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>41. The 'unit of account' function of money refers to its role as:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q41" value="A"> A. A physical item used to make payments.</label>
-            <label><input type="radio" name="q41" value="B"> B. A way to transfer purchasing power into the future.</label>
-            <label><input type="radio" name="q41" value="C"> C. A common measure used to state prices and record debts.</label>
-            <label><input type="radio" name="q41" value="D"> D. An asset that is guaranteed to increase in value.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The unit of account function provides a common denominator for measuring the value of goods and services. It simplifies commerce by eliminating the need to calculate relative prices for every pair of goods, as in a barter system.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>42. In a fractional-reserve banking system, the total amount of deposits will always be:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q42" value="A"> A. Less than the amount of reserves.</label>
-            <label><input type="radio" name="q42" value="B"> B. Equal to the amount of reserves.</label>
-            <label><input type="radio" name="q42" value="C"> C. A multiple of the amount of reserves.</label>
-            <label><input type="radio" name="q42" value="D"> D. Unrelated to the amount of reserves.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Because banks hold only a fraction of deposits as reserves and lend out the rest, the process of lending and re-depositing creates a total volume of deposits that is a multiple of the initial reserves in the system.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>43. Why is a credit card not considered money in the same way as currency or a debit card transaction?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q43" value="A"> A. Because it is made of plastic.</label>
-            <label><input type="radio" name="q43" value="B"> B. Because using it is a form of borrowing, and the payment is deferred, not final.</label>
-            <label><input type="radio" name="q43" value="C"> C. Because it can only be used at certain stores.</label>
-            <label><input type="radio" name="q43" value="D"> D. Because it has a high interest rate.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> A credit card transaction creates a loan from the issuing bank. The actual settlement of the debt (the final payment) happens later when you pay your credit card bill, typically using money from a deposit account. Therefore, the card itself is a means of deferring payment, not the final means of payment (money).</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>44. If the central bank wants to contract the money supply, it should:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q44" value="A"> A. Buy government bonds.</label>
-            <label><input type="radio" name="q44" value="B"> B. Lower the reserve requirement.</label>
-            <label><input type="radio" name="q44" value="C"> C. Sell government bonds.</label>
-            <label><input type="radio" name="q44" value="D"> D. Encourage banks to lend more.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Selling government bonds (an open market sale) withdraws reserves from the banking system. This reduces the monetary base, which, via the money multiplier, leads to a larger contraction in the overall money supply.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>45. The existence of financial intermediaries improves economic efficiency by:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q45" value="A"> A. Guaranteeing that no one ever loses money.</label>
-            <label><input type="radio" name="q45" value="B"> B. Channeling funds from those with a surplus to those with a shortage.</label>
-            <label><input type="radio" name="q45" value="C"> C. Eliminating the need for a central bank.</label>
-            <label><input type="radio" name="q45" value="D"> D. Setting prices for all goods and services.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The core function of financial intermediaries is to facilitate the flow of funds from savers (who have excess funds) to borrowers (who have productive investment opportunities). This allocation of capital to its most productive uses is essential for economic growth.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>46. If a bank's assets are $100 million and its net worth is $10 million, what are its liabilities?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q46" value="A"> A. $110 million</label>
-            <label><input type="radio" name="q46" value="B"> B. $90 million</label>
-            <label><input type="radio" name="q46" value="C"> C. $10 million</label>
-            <label><input type="radio" name="q46" value="D"> D. $100 million</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The balance sheet identity is Assets = Liabilities + Net Worth. Rearranging gives Liabilities = Assets - Net Worth. So, $100 million - $10 million = $90 million.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="B">
-        <p><b>47. What is the key difference between a 'gold specie standard' and a 'gold bullion standard'?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q47" value="A"> A. The bullion standard uses silver instead of gold.</label>
-            <label><input type="radio" name="q47" value="B"> B. Under a specie standard gold coins circulate, while under a bullion standard convertibility is only for large bullion bars.</label>
-            <label><input type="radio" name="q47" value="C"> C. The specie standard is a form of fiat money.</label>
-            <label><input type="radio" name="q47" value="D"> D. There is no difference.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Under a gold specie standard, gold coins are in general circulation and banknotes are convertible into these coins. Under a gold bullion standard, gold coins do not circulate, and convertibility of currency into gold is typically restricted to large transactions for gold bars, often by specified groups.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>48. If the money supply (M) is $2,000 billion and the monetary base (H) is $500 billion, what is the value of the money multiplier (m)?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q48" value="A"> A. 0.25</label>
-            <label><input type="radio" name="q48" value="B"> B. 2.0</label>
-            <label><input type="radio" name="q48" value="C"> C. 4.0</label>
-            <label><input type="radio" name="q48" value="D"> D. 5.0</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The relationship is M = m * H. Therefore, the money multiplier (m) can be found by dividing the money supply by the monetary base: m = M / H. So, $2,000 billion / $500 billion = 4.0.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>49. A primary motivation for banks to engage in maturity transformation is:</b></p>
-        <div class="options">
-            <label><input type="radio" name="q49" value="A"> A. Regulatory requirements force them to do so.</label>
-            <label><input type="radio" name="q49" value="B"> B. It is completely risk-free.</label>
-            <label><input type="radio" name="q49" value="C"> C. It is generally profitable because long-term assets (loans) typically have higher interest rates than short-term liabilities (deposits).</label>
-            <label><input type="radio" name="q49" value="D"> D. It simplifies their accounting procedures.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> The yield curve is typically upward sloping, meaning interest rates on long-term instruments are higher than on short-term ones. By borrowing short (at low rates) and lending long (at high rates), banks can profit from the interest rate differential.</p>
-        </div>
-    </div>
-
-    <div class="question" data-correct="C">
-        <p><b>50. Which statement best describes the relationship between the monetary base and the money supply?</b></p>
-        <div class="options">
-            <label><input type="radio" name="q50" value="A"> A. The money supply is always smaller than the monetary base.</label>
-            <label><input type="radio" name="q50" value="B"> B. The money supply is equal to the monetary base.</label>
-            <label><input type="radio" name="q50" value="C"> C. The money supply is a multiple of the monetary base.</label>
-            <label><input type="radio" name="q50" value="D"> D. There is no stable relationship between the two.</label>
-        </div>
-        <button onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-        <div class="explanation">
-            <p><b>Explanation:</b> Due to the money multiplier effect in a fractional-reserve banking system, the total money supply (M) is a multiple of the monetary base (H). The size of this multiple is determined by the money multiplier (m).</p>
-        </div>
-    </div>
+    <button id="clear-answers">Clear All Answers</button>
 
     <script>
-        function checkAnswer(button) {
-            const questionDiv = button.closest('.question');
-            const correctAnswer = questionDiv.getAttribute('data-correct');
-            const feedbackDiv = questionDiv.querySelector('.feedback');
-            const explanationDiv = questionDiv.querySelector('.explanation');
-            const selectedOption = questionDiv.querySelector('input[type="radio"]:checked');
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizContainer = document.querySelector('.quiz-container');
+            const clearButton = document.getElementById('clear-answers');
+            const cookieName = 'ec3115_quiz_answers_mc';
 
-            // Clear previous feedback
-            feedbackDiv.style.display = 'none';
-            feedbackDiv.textContent = '';
+            const correctAnswers = {
+                q1: 'C', q2: 'B', q3: 'B', q4: 'B', q5: 'C', q6: 'B', q7: 'B', q8: 'A', q9: 'B', q10: 'B',
+                q11: 'B', q12: 'B', q13: 'B', q14: 'C', q15: 'C', q16: 'B', q17: 'B', q18: 'B', q19: 'C', q20: 'B',
+                q21: 'C', q22: 'B', q23: 'C', q24: 'C', q25: 'D', q26: 'B', q27: 'C', q28: 'B', q29: 'B', q30: 'B',
+                q31: 'C', q32: 'A', q33: 'B', q34: 'B', q35: 'B', q36: 'B', q37: 'B', q38: 'A', q39: 'C', q40: 'D',
+                q41: 'C', q42: 'C', q43: 'B', q44: 'C', q45: 'B', q46: 'B', q47: 'B', q48: 'C', q49: 'C', q50: 'C'
+            };
 
-            if (!selectedOption) {
-                feedbackDiv.textContent = "Please select an answer first.";
-                feedbackDiv.className = 'feedback incorrect';
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = `; expires=${date.toUTCString()}`;
+                }
+                document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=Lax`;
+            }
+
+            function showFeedback(questionDiv, userAnswer) {
+                const questionId = questionDiv.id;
+                const correctAnswer = correctAnswers[questionId];
+                const feedbackDiv = questionDiv.querySelector('.feedback');
+                const explanationDiv = questionDiv.querySelector('.explanation');
+
                 feedbackDiv.style.display = 'block';
-                return;
+                explanationDiv.style.display = 'block';
+
+                if (userAnswer === correctAnswer) {
+                    feedbackDiv.textContent = "Correct!";
+                    feedbackDiv.className = 'feedback correct';
+                } else {
+                    feedbackDiv.textContent = `Incorrect. The correct answer is ${correctAnswer}.`;
+                    feedbackDiv.className = 'feedback incorrect';
+                }
             }
 
-            const userAnswer = selectedOption.value;
-
-            if (userAnswer === correctAnswer) {
-                feedbackDiv.textContent = "Correct!";
-                feedbackDiv.className = 'feedback correct';
-            } else {
-                feedbackDiv.textContent = `Incorrect. The correct answer is ${correctAnswer}`;
-                feedbackDiv.className = 'feedback incorrect';
+            function saveAnswers() {
+                const answers = {};
+                document.querySelectorAll('.question').forEach(q => {
+                    const selected = q.querySelector(`input[name="${q.id}"]:checked`);
+                    if (selected) {
+                        answers[q.id] = selected.value;
+                    }
+                });
+                setCookie(cookieName, JSON.stringify(answers), 7);
             }
-            
-            feedbackDiv.style.display = 'block';
-            explanationDiv.style.display = 'block';
-        }
+
+            function loadAnswers() {
+                const savedAnswers = getCookie(cookieName);
+                if (!savedAnswers) return;
+
+                try {
+                    const answers = JSON.parse(savedAnswers);
+                    for (const questionId in answers) {
+                        const selectedValue = answers[questionId];
+                        const option = document.querySelector(`input[name="${questionId}"][value="${selectedValue}"]`);
+                        if (option) {
+                            option.checked = true;
+                            const questionDiv = document.getElementById(questionId);
+                            showFeedback(questionDiv, selectedValue);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Error parsing saved answers:", e);
+                    setCookie(cookieName, '', -1); // Clear corrupted cookie
+                }
+            }
+
+            quizContainer.addEventListener('change', function(event) {
+                if (event.target.type === 'radio') {
+                    const questionDiv = event.target.closest('.question');
+                    showFeedback(questionDiv, event.target.value);
+                    saveAnswers();
+                }
+            });
+
+            clearButton.addEventListener('click', () => {
+                if (confirm('Are you sure you want to clear all your saved answers?')) {
+                    setCookie(cookieName, '', -1);
+                    window.location.reload();
+                }
+            });
+
+            // Initial load of answers and feedback
+            loadAnswers();
+        });
     </script>
+</body>
+</html>
 
 </body>
 </html>
