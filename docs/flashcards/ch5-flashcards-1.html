@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Chapter 5 Flashcards: Classical Theory</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 80vw;
+            max-width: 700px;
+            height: 400px;
+            perspective: 1000px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .flashcards-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .flashcard {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .back {
+            transform: rotateY(180deg);
+            font-size: 1.2rem;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .back .source {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 0.8rem;
+            color: #888;
+            font-style: italic;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .nav-btn, .flip-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover, .flip-btn:hover {
+            background-color: #0056b3;
+        }
+        .card-counter {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 - Chapter 5 Flashcards: Classical Theory</h1>
+
+    <div class="slideshow-container">
+        <div class="flashcards-wrapper">
+
+            <div class="flashcard">
+                <div class="front">Define the 'neutrality of money'.</div>
+                <div class="back">Money is said to be 'neutral' if a change in its nominal quantity affects only nominal variables (like the absolute price level and money wages) but has no effect on real variables such as output, employment, relative prices, and the real rate of interest.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf; palgrave_p262-277.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the core proposition of the crude Quantity Theory of Money?</div>
+                <div class="back">The core proposition is that an exogenous change in the supply of money causes a proportionate change in the absolute price level.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">State the Equation of Exchange.</div>
+                <div class="back">The Equation of Exchange is \(MV \equiv PT\), where:<br><b>M</b> = Stock of money<br><b>V</b> = Velocity of circulation<br><b>P</b> = Average price level<br><b>T</b> = Volume of transactions<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the Cambridge cash-balance equation?</div>
+                <div class="back">The Cambridge equation is \(M = kPY\), where M is the stock of money, P is the price level, Y is real income, and k is the proportion of income that people choose to hold as cash balances.<div class="source">Source: harris_p30-52.pdf; mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How are velocity (V) and the Cambridge k related?</div>
+                <div class="back">In the context of the income version of the quantity theory (MV=PY), the Cambridge k is the reciprocal of the income velocity of circulation. That is, \(k = 1/V\).<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the Classical Dichotomy?</div>
+                <div class="back">The Classical Dichotomy is the theoretical separation of the real and monetary sectors of the economy. It proposes that real variables (like output and relative prices) are determined by real factors, while nominal variables (like the absolute price level) are determined by monetary factors alone.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf; mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Explain the concept of money as a 'veil'.</div>
+                <div class="back">In classical theory, money is seen as a 'veil' that covers the real workings of the economy. It facilitates transactions but does not fundamentally affect real outcomes like production, consumption, or relative prices. The real economy is thought to operate independently of the quantity of money.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">State Walras' Law.</div>
+                <div class="back">Walras' Law states that the sum of the values of excess demands across all markets in an economy must identically be equal to zero. \(\sum_{i=1}^{n} p_i ED_i = 0\)<div class="source">Source: harris_p30-52.pdf; EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the primary implication of Walras' Law in a general equilibrium system with 'n' markets?</div>
+                <div class="back">The primary implication is that if \(n-1\) markets are in equilibrium (i.e., have zero excess demand), then the nth market must also be in equilibrium. This means the market-clearing equations are not independent.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What was Don Patinkin's fundamental criticism of the Classical Dichotomy?</div>
+                <div class="back">Patinkin argued that the Classical Dichotomy was logically inconsistent. The classical model determined relative prices in the real sector and the absolute price level in the monetary sector, but Walras' Law implies these two sectors are interdependent, creating a contradiction.<div class="source">Source: harris_p30-52.pdf; mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Define the 'real balance effect'.</div>
+                <div class="back">The real balance effect (or Pigou effect) states that the real value of money balances (M/P) is a component of wealth. Therefore, a change in the price level (P) affects real wealth, which in turn influences consumption and the demand for goods.<div class="source">Source: harris_p30-52.pdf; mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does the real balance effect resolve the inconsistency in the classical model?</div>
+                <div class="back">It provides a direct link between the monetary sector (the price level P) and the real sector (demand for goods). By making the demand for goods dependent on real balances (M/P), it invalidates the Homogeneity Postulate and ensures the absolute price level is determinate within a consistent general equilibrium framework.<div class="source">Source: harris_p30-52.pdf; mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'homogeneity postulate' in the context of classical theory?</div>
+                <div class="back">The homogeneity postulate asserts that the demand for goods is homogeneous of degree zero in money prices and the absolute price level. This means that a proportionate change in all money prices (leaving relative prices unchanged) will not affect the quantity of goods demanded.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why is the absolute price level indeterminate in a pure barter Walrasian model?</div>
+                <div class="back">Because the demand and supply for goods depend only on relative prices. Any set of absolute prices that maintains the same equilibrium relative prices is a valid solution. The system can only determine \(n-1\) relative prices, not \(n\) absolute prices.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does Patinkin's model demonstrate the invalidity of Say's Law as an identity?</div>
+                <div class="back">In Patinkin's model, an increase in real balances (e.g., from a fall in P) causes an excess demand for goods. Since the excess demand for all goods is no longer identically zero, there can be a general glut or shortage of goods, which means Say's Law (that aggregate supply equals aggregate demand) does not hold as an identity, only as an equilibrium condition.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the monetary base (or high-powered money)?</div>
+                <div class="back">The monetary base (H) is the sum of currency in circulation (C) and the reserves held by commercial banks at the central bank (R). It represents the total liabilities of the central bank. \(H = C + R\)<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How do the monetary authorities influence the money supply by changing the monetary base?</div>
+                <div class="back">The primary method is through open market operations. By buying government securities from commercial banks, the central bank increases bank reserves, thereby expanding the monetary base and allowing for a multiplied expansion of the money supply. Selling securities has the opposite effect.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Explain the role of the required reserve ratio in the money creation process.</div>
+                <div class="back">The required reserve ratio is the fraction of deposits that banks must hold as reserves and cannot lend out. A lower reserve ratio allows banks to lend a larger portion of each deposit, which increases the money multiplier and leads to a larger total money supply for a given monetary base.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the money multiplier?</div>
+                <div class="back">The money multiplier is the ratio of the total money supply (M) to the monetary base (H). It shows the amount by which the money supply changes for a one-unit change in the monetary base. Its value depends on the currency-deposit ratio and the reserve-deposit ratio.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In the Cambridge equation \(M = kPY\), what factors determine the value of 'k'?</div>
+                <div class="back">The value of 'k' (the desired proportion of income to be held as money) is determined by institutional factors, such as the payment habits of the community (e.g., frequency of wage payments), the efficiency of the banking system, and the general level of confidence.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Distinguish between the 'transactions' and 'cash-balance' approaches to the quantity theory.</div>
+                <div class="back">The transactions approach (Fisher) emphasizes money as a medium of exchange and focuses on the flow of money in transactions (MV=PT). The cash-balance approach (Cambridge) emphasizes money as a store of value and focuses on the stock of money people desire to hold (M=kPY).<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is a 'Walrasian auctioneer'?</div>
+                <div class="back">The Walrasian auctioneer is a fictional entity in general equilibrium theory. The auctioneer calls out a set of prices, gathers information on supply and demand from all market participants, and adjusts prices until all markets clear simultaneously. No trade occurs until equilibrium prices are found.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the process of 'tâtonnement'?</div>
+                <div class="back">'Tâtonnement' (French for 'groping') is the trial-and-error process, managed by the Walrasian auctioneer, of adjusting prices to find the general equilibrium set of prices where supply equals demand in all markets.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In the classical system, what determines the real rate of interest?</div>
+                <div class="back">The real rate of interest is determined by real factors, specifically the interaction of the economy's productivity (which determines the demand for investment funds) and thrift (which determines the supply of savings).<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why does a change in the money supply not affect the real interest rate in the classical model?</div>
+                <div class="back">Due to the classical dichotomy and neutrality of money. A change in the money supply only affects the price level. The real interest rate is determined by real factors (productivity and thrift) which are assumed to be independent of the quantity of money.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the difference between Say's Law and Walras' Law?</div>
+                <div class="back">Say's Law ("supply creates its own demand") refers to the aggregate of goods markets, stating there can be no general glut of goods. Walras' Law is more general, stating that the sum of excess demands across ALL markets (including money and bonds) must be zero. Walras' Law allows for a general glut of goods, provided it is matched by an excess demand for money.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">According to Patinkin, why is the real balance effect the 'sine qua non' of monetary theory?</div>
+                <div class="back">Patinkin claimed it was the 'sine qua non' (an essential condition) because, in his view, it was the only mechanism that could logically integrate the monetary and real sectors, resolve the classical dichotomy's inconsistency, and provide a determinate theory of the absolute price level within a Walrasian framework.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is 'inside money' versus 'outside money'?</div>
+                <div class="back">'Outside money' is a net asset to the private sector, typically created by the government (e.g., fiat currency). 'Inside money' is created within the private sector and is simultaneously an asset for one agent and a liability for another (e.g., a commercial bank deposit.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Does the real balance effect operate with 'inside money'?</div>
+                <div class="back">This is a point of debate. If inside money is considered, a fall in the price level increases the real value of assets for creditors but also increases the real value of liabilities for debtors. If these effects cancel out, there is no net real balance effect for the private sector as a whole. However, if there are distributional effects, it might still operate.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'direct mechanism' of monetary transmission in classical theory?</div>
+                <div class="back">The direct mechanism refers to the effect of a change in the money supply directly on spending. If individuals find themselves with excess money balances, they spend them directly on goods and services, bidding up the price level until equilibrium is restored.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'indirect mechanism' of monetary transmission?</div>
+                <div class="back">The indirect mechanism works through the interest rate. An increase in the money supply first leads to an increase in loanable funds, which lowers the market rate of interest. This stimulates investment demand, which in turn increases aggregate demand and the price level.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'natural rate of interest' in Wicksell's theory?</div>
+                <div class="back">The natural rate of interest is the rate that equates the supply of savings with the demand for investment and corresponds to the marginal productivity of capital. It is the rate consistent with a stable price level.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'market rate of interest' in Wicksell's theory?</div>
+                <div class="back">The market rate of interest is the actual rate charged by banks on loans. The cumulative process of inflation or deflation begins when the market rate diverges from the natural rate.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What happens if the market rate of interest is below the natural rate?</div>
+                <div class="back">If the market rate is below the natural rate, investment demand will exceed savings. Entrepreneurs will borrow to invest, expanding aggregate demand. This leads to a cumulative process of inflation as long as the market rate remains below the natural rate.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'loanable funds' theory of the interest rate?</div>
+                <div class="back">The loanable funds theory states that the interest rate is determined by the demand for and supply of loanable funds. The supply comes from savings and any increase in the money supply, while the demand comes from investment and any desire to hoard money.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does a change in the price level affect the demand for goods in a model with a real balance effect?</div>
+                <div class="back">An increase in the price level (P) reduces real money balances (M/P), which reduces households' real wealth. This negative wealth effect causes a decrease in the demand for goods. Conversely, a decrease in P increases real wealth and increases the demand for goods.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'currency-deposit ratio'?</div>
+                <div class="back">The currency-deposit ratio (C/D) is the ratio of the amount of currency the public wishes to hold to the amount of demand deposits they wish to hold in commercial banks. It is a key determinant of the money multiplier.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does an increase in the public's desire to hold currency affect the money supply?</div>
+                <div class="back">An increase in the currency-deposit ratio (more currency held relative to deposits) reduces the money multiplier. This is because funds held as currency by the public cannot be used by banks as reserves to support a larger volume of deposits. Therefore, it reduces the overall money supply for a given monetary base.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is a 'fiat money' system?</div>
+                <div class="back">A fiat money system is one where the money is not convertible into a commodity like gold. Its value is based on government decree ('fiat') and its general acceptance by the public for transactions.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In the classical model, what ensures that the economy operates at full employment?</div>
+                <div class="back">The classical model assumes full flexibility of wages and prices. In the labor market, any unemployment would cause real wages to fall until the demand for labor equals the supply of labor, thus restoring full employment.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is a 'numéraire' good?</div>
+                <div class="back">A numéraire is a good used as a unit of account, in terms of which the prices of all other goods are expressed. In a barter model, any good can be chosen as the numéraire. In a monetary economy, money serves as the numéraire.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why was the classical dichotomy considered an 'invalid dichotomy' by Patinkin?</div>
+                <div class="back">Because it led to a contradiction. The excess demand for money derived from the real sector (via Walras' Law) was a function of relative prices only, while the excess demand for money from the quantity theory was a function of the absolute price level. These two functions for the same variable were inconsistent.<div class="source">Source: harris_p30-52.pdf; mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the role of the budget constraint in deriving Walras' Law?</div>
+                <div class="back">Walras' Law is derived by aggregating the budget constraints of all individuals in the economy. Since each individual's planned expenditure must equal the value of their initial endowments (and income), the sum of all excess demands, valued at the going prices, must be zero for the economy as a whole.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">If money is neutral, can monetary policy have any real effects?</div>
+                <div class="back">In a strictly neutral model, monetary policy has no long-run real effects. However, many classical economists, including Hume, acknowledged that in the short run, during the transition period after a monetary change, there could be temporary real effects on output and employment due to lags in price adjustment.<div class="source">Source: palgrave_p262-277.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'real bills doctrine'?</div>
+                <div class="back">The real bills doctrine was a theory of banking which argued that as long as banks lend only against short-term, self-liquidating commercial loans (real bills), they could not over-issue money or cause inflation. This was opposed by quantity theorists like Ricardo.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What was the Currency School vs. Banking School debate about?</div>
+                <div class="back">The Currency School argued that the total money supply (including banknotes) should be rigidly tied to the country's gold reserves to prevent inflation. The Banking School argued that as long as banks followed the 'real bills doctrine', the money supply would adjust to the 'needs of trade' and would not be inflationary.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does the real balance effect ensure the stability of the price level?</div>
+                <div class="back">If the price level falls below its equilibrium, real balances increase, creating an excess demand for goods, which pushes prices back up. If the price level rises above equilibrium, real balances fall, creating an excess supply of goods, which pushes prices back down.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In a simple model with goods and money, if the goods market is in equilibrium, what does Walras' Law tell us about the money market?</div>
+                <div class="back">If the goods market is in equilibrium (excess demand for goods is zero), Walras' Law implies that the money market must also be in equilibrium (excess demand for money is zero).<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is meant by 'money illusion'?</div>
+                <div class="back">Money illusion is the tendency of people to think of currency in nominal, rather than real, terms. An individual is free of money illusion if their economic decisions depend on relative prices and real wealth, not on the absolute level of money prices.<div class="source">Source: palgrave_p262-277.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does the neutrality of money relate to the homogeneity postulate?</div>
+                <div class="back">The (invalid) homogeneity postulate, which states that demand for goods is unaffected by a change in the absolute price level, is a key reason why money is neutral in the flawed classical model. It breaks the link between money and real decisions. Patinkin showed that abandoning this postulate via the real balance effect was necessary for a consistent model, which still ultimately featured long-run neutrality.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'price-specie-flow mechanism'?</div>
+                <div class="back">This is David Hume's theory of international adjustment under a gold standard. A country with a trade surplus receives gold (specie), which increases its money supply and price level. This makes its goods more expensive, reducing exports and increasing imports, thus automatically correcting the surplus. The reverse happens for a deficit country.<div class="source">Source: mizen-pages-4.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the difference between a 'stock' and a 'flow' variable?</div>
+                <div class="back">A stock variable is measured at a specific point in time (e.g., the money supply, wealth). A flow variable is measured over a period of time (e.g., income, investment, transactions per year).<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Is the Fisher equation (MV=PT) a stock or flow equation?</div>
+                <div class="back">It is a flow equation. It relates the flow of money payments (MV) over a period to the flow of transactions (PT) over the same period.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Is the Cambridge equation (M=kPY) a stock or flow equation?</div>
+                <div class="back">It is a stock equation. It relates the stock of money people desire to hold (M) at a point in time to the flow of income (PY) over a period. It represents a demand to hold a stock of assets.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is a 'commodity money' standard?</div>
+                <div class="back">A commodity money standard is a monetary system where the value of the monetary unit is fixed in terms of a specific commodity, such as gold or silver. The money itself may be made of the commodity or be freely convertible into it.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is 'Gresham's Law'?</div>
+                <div class="back">Gresham's Law is the principle that "bad money drives out good". In a bimetallic system, if the official mint ratio of two metals (e.g., gold and silver) differs from the market ratio, the overvalued metal ("bad money") will remain in circulation while the undervalued metal ("good money") will be hoarded or exported.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is 'bimetallism'?</div>
+                <div class="back">Bimetallism is a monetary standard where the monetary unit is defined in terms of fixed quantities of two different metals, typically gold and silver, with a fixed official price ratio between them.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does an open market purchase of bonds by the central bank affect bank reserves?</div>
+                <div class="back">When the central bank buys bonds from commercial banks, it pays for them by crediting the reserve accounts of those banks. This directly increases the total amount of reserves in the banking system.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'discount rate' (or 'bank rate')?</div>
+                <div class="back">The discount rate is the interest rate at which commercial banks can borrow money directly from the central bank. Lowering the discount rate can encourage banks to borrow more reserves, potentially increasing the money supply.<div class="source">Source: mizen-pages-4.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In the classical model, if the money supply doubles, what happens to the price level and real output in the long run?</div>
+                <div class="back">Due to the neutrality of money, a doubling of the money supply will lead to a doubling of the price level in the long run, with no change in real output.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why did Patinkin argue that utility should depend on real, not nominal, money balances?</div>
+                <div class="back">Because rational individuals are free of money illusion. Their satisfaction comes from the purchasing power of their money (real balances), not the nominal number of units. Holding nominal balances in the utility function would imply that individuals' welfare changes with a pure currency reform, which is irrational.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'Archibald-Lipsey critique' of Patinkin's real balance effect?</div>
+                <div class="back">Archibald and Lipsey argued that the real balance effect is only a temporary, short-run phenomenon. While an initial monetary injection creates a temporary wealth effect, the subsequent rise in prices will eventually return real balances to their original level, meaning there is no permanent real balance effect on demand. Long-run neutrality is restored.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is a 'general glut'?</div>
+                <div class="back">A 'general glut' refers to a situation of excess supply across all (or most) commodity markets simultaneously. According to Say's Law, this is impossible in a barter economy. In a monetary economy, it is possible if it is matched by an excess demand for money.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does the introduction of interest-bearing bonds affect the analysis of money neutrality?</div>
+                <div class="back">The presence of bonds as an alternative asset to money complicates the analysis. The effects of a monetary change will depend on how it affects the relative returns of money, bonds, and real capital, potentially leading to non-neutral outcomes even in the long run (e.g., Tobin's portfolio-crowding effect).<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'cumulative process' described by Wicksell?</div>
+                <div class="back">It is the dynamic process of inflation (or deflation) that occurs when the market rate of interest is held below (or above) the natural rate. The discrepancy creates a persistent excess demand (or supply) for goods and loans, leading to a sustained rise (or fall) in the price level.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What are the two key assumptions of the crude Quantity Theory of Money?</div>
+                <div class="back">1. The velocity of circulation (V) is stable or constant, determined by institutional factors.<br>2. The volume of transactions (T) or real output (Y) is fixed at the full-employment level, determined by real factors.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In the classical model, what is the effect of a change in government spending financed by taxes?</div>
+                <div class="back">In a simple classical model, it would have no effect on total output (which is fixed at full employment). It would simply reallocate resources from private use (consumption and investment) to public use, a phenomenon known as 'crowding out'.<div class="source">Source: General Classical Principles</div></div>
+            </div>
+
+
+            <div class="flashcard">
+                <div class="front">How does the concept of 'utility maximization' relate to the demand for goods?</div>
+                <div class="back">In microeconomic theory, the demand curve for a good is derived from the process of an individual maximizing their utility (satisfaction) subject to their budget constraint. The demand for each good depends on its price, the prices of other goods, and the individual's income.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why does the demand for money have a 'proportional effect' on the price level in the quantity theory?</div>
+                <div class="back">In the equation \(P = (1/kY)M\), if k (desired cash holdings) and Y (real income) are assumed to be constant, then the price level P is directly and strictly proportional to the money supply M.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'law of one price'?</div>
+                <div class="back">The law of one price states that in the absence of trade barriers and transaction costs, identical goods will sell for the same price in different markets when expressed in a common currency. It is a foundation for the theory of purchasing power parity.<div class="source">Source: General Economic Principles</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does the real balance effect provide a theory of aggregate demand?</div>
+                <div class="back">The real balance effect implies a downward-sloping aggregate demand curve. A lower price level increases real wealth (via higher real balances), which stimulates consumption spending, thus increasing the aggregate quantity of goods and services demanded.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'reserve-deposit ratio'?</div>
+                <div class="back">The reserve-deposit ratio (R/D) is the fraction of total deposits that a bank holds as reserves. This includes both required reserves and any excess reserves the bank chooses to hold. It is a key determinant of the money multiplier.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What happens to the money supply if banks decide to hold more excess reserves?</div>
+                <div class="back">If banks hold more excess reserves, the reserve-deposit ratio increases. This means they are lending out a smaller fraction of their deposits. This reduces the money multiplier and, for a given monetary base, leads to a contraction of the total money supply.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'full-bodied' money?</div>
+                <div class="back">'Full-bodied' money is a form of commodity money where the value of the material it is made from (e.g., the gold in a gold coin) is equal to its face value as money.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is 'fiduciary money'?</div>
+                <div class="back">Fiduciary money, or fiat money, is money that is not backed by a physical commodity. Its value comes from the trust ('fiducia' in Latin) that it will be accepted as a medium of exchange. Modern paper currency is fiduciary money.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In a pure exchange economy, what does an individual's budget constraint represent?</div>
+                <div class="back">It represents the limit on their consumption. The total value of the goods an individual demands cannot exceed the total value of the goods they are endowed with.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why is the demand for money in the classical model (pre-Patinkin) homogeneous of degree one in prices?</div>
+                <div class="back">This is a misunderstanding. The excess demand for goods was homogeneous of degree zero in prices. Via Walras' Law, this implied the excess demand for money was homogeneous of degree one in prices. This was the source of the inconsistency Patinkin identified, as the QTM implies a non-homogeneous demand function.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'transmission mechanism' of monetary policy?</div>
+                <div class="back">The transmission mechanism is the process through which monetary policy decisions (e.g., a change in the money supply or interest rates) affect the broader economy, influencing variables like aggregate demand, output, and inflation.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is a 'liquidity trap'?</div>
+                <div class="back">A liquidity trap is a situation, described by Keynes, where monetary policy becomes ineffective because the interest rate is so low that people are willing to hold any amount of extra money rather than buy bonds. The speculative demand for money becomes perfectly elastic.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">Why can't the nominal interest rate be significantly negative?</div>
+                <div class="back">Because cash offers a risk-free nominal return of zero. If bonds or bank deposits offered a significantly negative interest rate, people would simply choose to hold cash instead, earning a higher (zero) return.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'speculative motive' for holding money?</div>
+                <div class="back">The speculative motive, introduced by Keynes, is the desire to hold money in anticipation of a fall in the price of other assets, like bonds. If one expects interest rates to rise (and thus bond prices to fall), holding cash avoids a capital loss.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'transactions motive' for holding money?</div>
+                <div class="back">The transactions motive is the need to hold money as a medium of exchange to bridge the gap between the receipt of income and making expenditures.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'precautionary motive' for holding money?</div>
+                <div class="back">The precautionary motive is the desire to hold money to provide for unforeseen contingencies that require sudden expenditure or to take advantage of unexpected opportunities.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does a fractional reserve banking system create money?</div>
+                <div class="back">Banks are only required to hold a fraction of their deposits as reserves. They lend out the rest. When a loan is made, it is typically deposited in another bank, which in turn keeps a fraction in reserve and lends out the rest. This process of re-lending creates new deposits and thus new money, in a multiple of the original deposit.<div class="source">Source: palgrave_p33-39.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">In the quantity theory, what happens to the price level if the volume of transactions (T) doubles, ceteris paribus?</div>
+                <div class="back">According to the equation \(P = MV/T\), if the volume of transactions (T) doubles while M and V remain constant, the price level (P) will be halved.<div class="source">Source: EC3115 - Ch 5 Classical theory-1.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'gold standard'?</div>
+                <div class="back">The gold standard is a monetary system where a country's standard currency unit is defined as a fixed quantity of gold. The currency is freely convertible into gold at that fixed price, and there are no restrictions on the import or export of gold.<div class="source">Source: mizen-pages-2.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What are 'gold points' under the gold standard?</div>
+                <div class="back">'Gold points' are the upper and lower limits to the fluctuation of the foreign exchange rate between two countries on the gold standard. The limits are determined by the mint parity exchange rate plus or minus the costs of shipping gold between the two countries. If the exchange rate moves beyond the gold points, it becomes profitable to ship gold instead of using the foreign exchange market.<div class="source">Source: mizen-pages-4.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'gold export point'?</div>
+                <div class="back">The gold export point is the exchange rate at which it becomes cheaper to settle a foreign debt by shipping gold out of the country rather than buying foreign currency. It represents the lower bound for the domestic currency's value.<div class="source">Source: mizen-pages-4.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'gold import point'?</div>
+                <div class="back">The gold import point is the exchange rate at which it becomes more profitable for a foreign debtor to ship gold into the country to be exchanged for domestic currency rather than selling their own currency on the foreign exchange market. It represents the upper bound for the domestic currency's value.<div class="source">Source: mizen-pages-4.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">If money is neutral, why did Hume believe an increasing money supply was "favourable to industry"?</div>
+                <div class="back">Hume argued that in the short-run "interval or intermediate situation" between the injection of new money and the full rise in the price level, the money circulates and stimulates economic activity and production before all prices have had a chance to adjust upwards.<div class="source">Source: palgrave_p262-277.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'forced saving' argument for non-neutrality?</div>
+                <div class="back">This argument suggests that inflation, caused by a monetary expansion, can redistribute income from wage-earners (who are assumed to save less) to profit-earners (who are assumed to save and invest more). This 'forces' an increase in the economy's overall saving and investment rate, affecting the real capital stock and thus having a real effect.<div class="source">Source: palgrave_p262-277.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">How does Patinkin's model with the real balance effect still result in long-run neutrality?</div>
+                <div class="back">Although an initial increase in the money supply causes a temporary real balance effect (increasing demand for goods), this excess demand pushes up the price level. The price level will continue to rise until it has increased in the same proportion as the money supply. At this point, real balances (M/P) are restored to their original level, and all real variables return to their initial equilibrium values.<div class="source">Source: harris_p30-52.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the 'classical theory of interest'?</div>
+                <div class="back">The classical theory of interest, also known as the loanable funds theory, posits that the real rate of interest is determined by the intersection of the supply of loanable funds (from saving) and the demand for loanable funds (for investment). It is a real phenomenon.<div class="source">Source: mizen-pages-3.pdf</div></div>
+            </div>
+
+            <div class="flashcard">
+                <div class="front">What is the role of 'expectations' in the classical model?</div>
+                <div class="back">In the simpler versions of the classical model, expectations are not explicitly modeled or are assumed to be static. However, in more sophisticated versions (like Wicksell's or Fisher's), expectations about future prices or interest rates play a crucial role in explaining short-run deviations from neutrality and the dynamics of the business cycle.<div class="source">Source: palgrave_p262-277.pdf</div></div>
+            </div>
+            
+            <div class="flashcard">
+                <div class="front">What is the Fisher Effect?</div>
+                <div class="back">The Fisher Effect states that the nominal interest rate (i) is the sum of the real interest rate (r) and the expected inflation rate (\(\pi^e\)). \(i = r + \pi^e\). In the long run, a change in the expected inflation rate will cause a one-for-one change in the nominal interest rate, leaving the real interest rate unaffected.<div class="source">Source: palgrave_p262-277.pdf</div></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="nav-btn" id="prevBtn">&laquo; Previous</button>
+        <span class="card-counter" id="cardCounter">1 / 100</span>
+        <button class="nav-btn" id="nextBtn">Next &raquo;</button>
+    </div>
+    <button class="flip-btn" id="flipBtn">Flip Card</button>
+
+    <script>
+        const wrapper = document.querySelector('.flashcards-wrapper');
+        const flashcards = document.querySelectorAll('.flashcard');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const flipBtn = document.getElementById('flipBtn');
+        const cardCounter = document.getElementById('cardCounter');
+
+        let currentIndex = 0;
+        const totalCards = flashcards.length;
+
+        function updateCounter() {
+            cardCounter.textContent = `${currentIndex + 1} / ${totalCards}`;
+        }
+
+        function goToCard(index) {
+            // Unflip the current card before moving
+            if (flashcards[currentIndex].classList.contains('flipped')) {
+                flashcards[currentIndex].classList.remove('flipped');
+            }
+            currentIndex = index;
+            wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateCounter();
+        }
+
+        function flipCard() {
+            flashcards[currentIndex].classList.toggle('flipped');
+        }
+
+        flashcards.forEach(card => {
+            card.addEventListener('click', flipCard);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const newIndex = (currentIndex - 1 + totalCards) % totalCards;
+            goToCard(newIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const newIndex = (currentIndex + 1) % totalCards;
+            goToCard(newIndex);
+        });
+
+        flipBtn.addEventListener('click', flipCard);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            } else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                e.preventDefault(); // Prevent space from scrolling
+                flipCard();
+            }
+        });
+
+        updateCounter();
+    </script>
+
+</body>
+</html>
