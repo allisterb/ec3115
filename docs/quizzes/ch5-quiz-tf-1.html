@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Classical Theory Quiz (True/False)</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        .quiz-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .explanation {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            border-left: 5px solid;
+        }
+        .explanation.correct {
+            border-color: #28a745;
+        }
+        .explanation.incorrect {
+            border-color: #dc3545;
+        }
+        .explanation-text {
+            font-style: italic;
+        }
+        .source {
+            font-size: 0.8em;
+            color: #555;
+            margin-top: 10px;
+        }
+        #clear-answers {
+            padding: 10px 15px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #clear-answers:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115: Classical Theory</h1>
+    <h2>True/False Quiz</h2>
+    <p>Select an answer for each question. Your progress will be saved automatically. You can clear your answers at any time using the button at the bottom.</p>
+
+    <div class="quiz-container">
+
+        <!-- Question 1 -->
+        <div class="question-block" id="q1">
+            <p class="question-text">1. True or False: The principle of 'neutrality of money' states that a change in the money supply has no effect on any economic variables, either real or nominal.</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="T"> True</label>
+                <label><input type="radio" name="q1" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp1">
+                <p class="explanation-text">False. Neutrality of money means a change in the money supply affects nominal variables (like the absolute price level) but does not affect real variables (like output, relative prices, or the real interest rate) in the long run.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'neutrality of money', p. 17.</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-block" id="q2">
+            <p class="question-text">2. True or False: The Cambridge equation, \(M = kPY\), treats the demand for money as a flow of transactions over a period.</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="T"> True</label>
+                <label><input type="radio" name="q2" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp2">
+                <p class="explanation-text">False. The Cambridge approach treats the demand for money as a demand to hold a stock of assets ('money sitting'). It is the Fisherian transactions version (MV=PT) that focuses on money as a flow ('money on the wing').</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 62.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-block" id="q3">
+            <p class="question-text">3. True or False: The classical dichotomy posits that real variables and nominal variables are determined simultaneously in a single, unified system.</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="T"> True</label>
+                <label><input type="radio" name="q3" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp3">
+                <p class="explanation-text">False. The dichotomy is the very idea that the system can be split into two separate parts: a real sector that determines all real variables and relative prices, and a monetary sector that separately determines the absolute price level.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 63.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-block" id="q4">
+            <p class="question-text">4. True or False: Walras' Law is derived from the principle that individual households must satisfy their budget constraints.</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="T"> True</label>
+                <label><input type="radio" name="q4" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp4">
+                <p class="explanation-text">True. Walras' Law is the macroeconomic aggregation of individual budget constraints. Since each individual's planned sources of funds must equal their planned uses, the sum of the values of all excess demands across the entire economy must be identically zero.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 53.</p>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-block" id="q5">
+            <p class="question-text">5. True or False: Patinkin's real balance effect invalidates the long-run neutrality of money.</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="T"> True</label>
+                <label><input type="radio" name="q5" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp5">
+                <p class="explanation-text">False. While the real balance effect invalidates the classical dichotomy by linking the real and monetary sectors, Patinkin's model preserves the long-run neutrality of money. A change in the money supply still leads to a proportionate change in prices, leaving all real variables unchanged in the final equilibrium.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 66.</p>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-block" id="q6">
+            <p class="question-text">6. True or False: An increase in the required reserve ratio increases the money multiplier.</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="T"> True</label>
+                <label><input type="radio" name="q6" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp6">
+                <p class="explanation-text">False. A higher reserve ratio means banks must hold a larger fraction of deposits as reserves, reducing the amount they can lend out. This weakens the re-lending cycle and decreases the money multiplier.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 251.</p>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-block" id="q7">
+            <p class="question-text">7. True or False: The homogeneity postulate states that the demand for goods is homogeneous of degree one in money prices.</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="T"> True</label>
+                <label><input type="radio" name="q7" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp7">
+                <p class="explanation-text">False. The postulate states that the demand functions for goods are homogeneous of degree zero in money prices and the absolute price level. This means that a proportionate change in all nominal prices has no effect on the quantity of goods demanded.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 56.</p>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-block" id="q8">
+            <p class="question-text">8. True or False: In the classical model, the interest rate is primarily a monetary phenomenon.</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="T"> True</label>
+                <label><input type="radio" name="q8" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp8">
+                <p class="explanation-text">False. In the classical model, the interest rate is a real variable determined in the loanable funds market by the real forces of productivity (investment demand) and thrift (saving).</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 69.</p>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-block" id="q9">
+            <p class="question-text">9. True or False: The inconsistency Patinkin found in the classical model arises because it has too few equations to solve for the number of unknowns.</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="T"> True</label>
+                <label><input type="radio" name="q9" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp9">
+                <p class="explanation-text">False. The model is actually identified and determinate (it has enough equations). The problem is not the number of equations but their internal logical inconsistency, specifically between the two different excess demand functions for money implied by the real and monetary sectors.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 76.</p>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-block" id="q10">
+            <p class="question-text">10. True or False: The real balance effect is also known as the Pigou effect.</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="T"> True</label>
+                <label><input type="radio" name="q10" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp10">
+                <p class="explanation-text">True. The aggregate demand function for goods that includes the real balance effect is also known as a consumption function based on the Pigou Effect, which posits that consumption is a function of real wealth, including real money balances.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 72.</p>
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question-block" id="q11">
+            <p class="question-text">11. True or False: According to the quantity theory, a country's domestic happiness depends on having the largest possible quantity of money.</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="T"> True</label>
+                <label><input type="radio" name="q11" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp11">
+                <p class="explanation-text">False. As David Hume stated, 'it is of no manner of consequence, with regard to the domestic happiness of a state, whether money be in a greater or less quantity.' What matters for stimulating industry is that the quantity of money is kept increasing.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'neutrality of money', p. 18.</p>
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question-block" id="q12">
+            <p class="question-text">12. True or False: The Cambridge 'k' is the mathematical reciprocal of the Fisherian transactions velocity 'V'.</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="T"> True</label>
+                <label><input type="radio" name="q12" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp12">
+                <p class="explanation-text">True. If \(M=kPY\) and \(MV=PY\), then \(kPYV = PY\), which simplifies to \(kV=1\) or \(k=1/V\). The proportion of income held as money is the reciprocal of the income velocity of money.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 50.</p>
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question-block" id="q13">
+            <p class="question-text">13. True or False: The classical dichotomy was first proven to be invalid by John Maynard Keynes.</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="T"> True</label>
+                <label><input type="radio" name="q13" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp13">
+                <p class="explanation-text">False. While Keynes questioned the classical system, it was Don Patinkin who provided the rigorous mathematical proof that the classical dichotomy, as formulated in a Walrasian system, was logically inconsistent.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 73.</p>
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question-block" id="q14">
+            <p class="question-text">14. True or False: In a Walrasian system, the auctioneer is a market participant who trades to maximize profit.</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="T"> True</label>
+                <label><input type="radio" name="q14" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp14">
+                <p class="explanation-text">False. The auctioneer is a hypothetical, external coordinator who does not participate in trade and has no personal economic motive. Their function is simply to find the market-clearing set of prices.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 54.</p>
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question-block" id="q15">
+            <p class="question-text">15. True or False: The real balance effect relies on the assumption that individuals suffer from money illusion.</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="T"> True</label>
+                <label><input type="radio" name="q15" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp15">
+                <p class="explanation-text">False. The real balance effect is a consequence of rational behavior in the absence of money illusion. Illusion-free individuals react to changes in their real wealth, and a change in the price level alters the real value of their money holdings, thus affecting their behavior.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'neutrality of money', p. 17.</p>
+            </div>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question-block" id="q16">
+            <p class="question-text">16. True or False: An open market purchase of bonds by the central bank decreases commercial bank reserves.</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="T"> True</label>
+                <label><input type="radio" name="q16" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp16">
+                <p class="explanation-text">False. An open market purchase means the central bank buys bonds from commercial banks and pays for them by crediting the banks' reserve accounts. This action increases their reserves.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 251.</p>
+            </div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question-block" id="q17">
+            <p class="question-text">17. True or False: The concept of 'superneutrality' is a weaker condition than the concept of 'neutrality'.</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="T"> True</label>
+                <label><input type="radio" name="q17" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp17">
+                <p class="explanation-text">False. Superneutrality is a stronger condition. Neutrality refers to a one-time change in the level of money, while superneutrality refers to a change in the rate of growth of money, which is a more demanding condition for real variables to remain unaffected.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'neutrality of money', p. 19.</p>
+            </div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question-block" id="q18">
+            <p class="question-text">18. True or False: In the classical model, a change in technology that increases real output (T) will, ceteris paribus, lead to a lower price level (P).</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="T"> True</label>
+                <label><input type="radio" name="q18" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp18">
+                <p class="explanation-text">True. According to the quantity equation \(P = MV/T\), if the money supply (M) and velocity (V) are constant, an increase in the volume of transactions or real output (T) must lead to a decrease in the price level (P).</p>
+                <p class="source">Source: Subject Guide, Ch 5, p. 58.</p>
+            </div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question-block" id="q19">
+            <p class="question-text">19. True or False: The classical dichotomy implies that the absolute price level is determinate in the real sector of the economy.</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="T"> True</label>
+                <label><input type="radio" name="q19" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp19">
+                <p class="explanation-text">False. The dichotomy implies the opposite: the real sector determines only relative prices, while the absolute price level is indeterminate within the real sector alone and must be determined in the monetary sector.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 74.</p>
+            </div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question-block" id="q20">
+            <p class="question-text">20. True or False: Patinkin's analysis showed that a consistent classical model could not include Walras' Law.</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="T"> True</label>
+                <label><input type="radio" name="q20" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp20">
+                <p class="explanation-text">False. Patinkin's analysis relied on Walras' Law to show the inconsistency. The problem was not Walras' Law itself, but the combination of it with the Homogeneity Postulate in the goods markets and a non-homogeneous Quantity Theory equation for the money market.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 58-59.</p>
+            </div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question-block" id="q21">
+            <p class="question-text">21. True or False: The 'indirect transmission mechanism' of monetary policy works by changing the price of goods directly.</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="T"> True</label>
+                <label><input type="radio" name="q21" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp21">
+                <p class="explanation-text">False. The indirect mechanism works via the interest rate. A change in the money supply affects the loanable funds market, which changes the interest rate, which in turn affects investment and then, indirectly, the price of goods.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 66.</p>
+            </div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question-block" id="q22">
+            <p class="question-text">22. True or False: In the Cambridge cash-balance approach, the demand for money is insensitive to institutional factors like payment frequency.</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="T"> True</label>
+                <label><input type="radio" name="q22" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp22">
+                <p class="explanation-text">False. The parameter 'k' (the desired proportion of income to hold as cash) is determined precisely by such institutional factors. For example, a shift to less frequent paydays would increase the average money balances people need to hold, increasing 'k'.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 50.</p>
+            </div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question-block" id="q23">
+            <p class="question-text">23. True or False: The existence of a real balance effect means that money is no longer neutral in the long run.</p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="T"> True</label>
+                <label><input type="radio" name="q23" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp23">
+                <p class="explanation-text">False. The real balance effect is the mechanism that ensures long-run neutrality is restored. After a monetary shock, it is the change in real balances that drives price level adjustments, which continue until real balances and all other real variables return to their initial equilibrium values.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 66.</p>
+            </div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question-block" id="q24">
+            <p class="question-text">24. True or False: According to Walras' Law, if there is an excess demand for money, there must be an excess supply of goods.</p>
+            <div class="options">
+                <label><input type="radio" name="q24" value="T"> True</label>
+                <label><input type="radio" name="q24" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp24">
+                <p class="explanation-text">True. If \(ED_{money} > 0\), then to satisfy the identity \(\sum ED_{goods} + ED_{money} = 0\), it must be that \(\sum ED_{goods} < 0\), which means there is an aggregate excess supply of goods.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 57.</p>
+            </div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question-block" id="q25">
+            <p class="question-text">25. True or False: A central bank can increase the money supply by raising the required reserve ratio.</p>
+            <div class="options">
+                <label><input type="radio" name="q25" value="T"> True</label>
+                <label><input type="radio" name="q25" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp25">
+                <p class="explanation-text">False. Raising the required reserve ratio forces banks to hold more reserves per dollar of deposits, which reduces their ability to lend and contracts the money multiplier, thereby decreasing the money supply.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 251.</p>
+            </div>
+        </div>
+
+        <!-- Question 26 -->
+        <div class="question-block" id="q26">
+            <p class="question-text">26. True or False: The 'direct transmission mechanism' operates through changes in the interest rate.</p>
+            <div class="options">
+                <label><input type="radio" name="q26" value="T"> True</label>
+                <label><input type="radio" name="q26" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp26">
+                <p class="explanation-text">False. The direct mechanism posits that excess money balances are spent directly on goods, causing prices to rise. The indirect mechanism is the one that operates through the interest rate and the loanable funds market.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 65-66.</p>
+            </div>
+        </div>
+
+        <!-- Question 27 -->
+        <div class="question-block" id="q27">
+            <p class="question-text">27. True or False: In the classical view, the velocity of money is determined primarily by the money supply.</p>
+            <div class="options">
+                <label><input type="radio" name="q27" value="T"> True</label>
+                <label><input type="radio" name="q27" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp27">
+                <p class="explanation-text">False. Velocity (V, or its inverse k) is assumed to be determined by stable, real institutional factors, such as payment habits and the efficiency of the payments system, not by the quantity of money itself.</p>
+                <p class="source">Source: Subject Guide, Ch 5, p. 59.</p>
+            </div>
+        </div>
+
+        <!-- Question 28 -->
+        <div class="question-block" id="q28">
+            <p class="question-text">28. True or False: The analysis by Archibald and Lipsey showed that Patinkin's real balance effect was incorrect.</p>
+            <div class="options">
+                <label><input type="radio" name="q28" value="T"> True</label>
+                <label><input type="radio" name="q28" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp28">
+                <p class="explanation-text">False. Their analysis did not show the effect was incorrect; rather, it showed that the effect was transitory. The initial impact on real demand exists, but it dies out as prices adjust, restoring long-run neutrality.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 84.</p>
+            </div>
+        </div>
+
+        <!-- Question 29 -->
+        <div class="question-block" id="q29">
+            <p class="question-text">29. True or False: A key feature of the Walrasian general equilibrium model is that it assumes prices are sticky.</p>
+            <div class="options">
+                <label><input type="radio" name="q29" value="T"> True</label>
+                <label><input type="radio" name="q29" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp29">
+                <p class="explanation-text">False. The Walrasian model assumes perfectly flexible prices that adjust through the tâtonnement process to ensure all markets clear.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 52-53.</p>
+            </div>
+        </div>
+
+        <!-- Question 30 -->
+        <div class="question-block" id="q30">
+            <p class="question-text">30. True or False: The 'natural rate of interest' is the rate that equates the supply and demand for money.</p>
+            <div class="options">
+                <label><input type="radio" name="q30" value="T"> True</label>
+                <label><input type="radio" name="q30" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp30">
+                <p class="explanation-text">False. The natural rate of interest is the real rate that equates the supply of saving with the demand for investment (loanable funds). The rate that equates money supply and demand is the market rate of interest.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 67.</p>
+            </div>
+        </div>
+
+        <!-- Question 31 -->
+        <div class="question-block" id="q31">
+            <p class="question-text">31. True or False: The Fisher equation \(MV=PT\) is a behavioral theory, not an identity.</p>
+            <div class="options">
+                <label><input type="radio" name="q31" value="T"> True</label>
+                <label><input type="radio" name="q31" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp31">
+                <p class="explanation-text">False. The equation itself is an identity or a truism; the total value of money spent must equal the total value of transactions. It becomes a theory (the Quantity Theory) only when specific behavioral assumptions are made about its components (e.g., V and T are constant).</p>
+                <p class="source">Source: Subject Guide, Ch 5, p. 58.</p>
+            </div>
+        </div>
+
+        <!-- Question 32 -->
+        <div class="question-block" id="q32">
+            <p class="question-text">32. True or False: In the classical model, a change in people's desire to save (thrift) will affect the real interest rate.</p>
+            <div class="options">
+                <label><input type="radio" name="q32" value="T"> True</label>
+                <label><input type="radio" name="q32" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp32">
+                <p class="explanation-text">True. In the loanable funds framework, the real interest rate is determined by the real forces of thrift (which determines the supply of savings) and productivity (which determines the demand for investment). A change in the desire to save will shift the supply curve for loanable funds and change the equilibrium real interest rate.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 69.</p>
+            </div>
+        </div>
+
+        <!-- Question 33 -->
+        <div class="question-block" id="q33">
+            <p class="question-text">33. True or False: Patinkin's model showed that a consistent monetary model must abandon Walras' Law.</p>
+            <div class="options">
+                <label><input type="radio" name="q33" value="T"> True</label>
+                <label><input type="radio" name="q33" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp33">
+                <p class="explanation-text">False. Patinkin's model retained Walras' Law. It abandoned the Homogeneity Postulate and Say's Law Identity by introducing the real balance effect, which made the model internally consistent while still obeying Walras' Law.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 63-65.</p>
+            </div>
+        </div>
+
+        <!-- Question 34 -->
+        <div class="question-block" id="q34">
+            <p class="question-text">34. True or False: The 'money multiplier' is the ratio of the money supply to the monetary base.</p>
+            <div class="options">
+                <label><input type="radio" name="q34" value="T"> True</label>
+                <label><input type="radio" name="q34" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp34">
+                <p class="explanation-text">True. The money multiplier (m) is defined as the ratio of the total money stock (M) to the stock of high-powered money or the monetary base (H or MB). It is given by the identity \(m = M/H\).</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 251.</p>
+            </div>
+        </div>
+
+        <!-- Question 35 -->
+        <div class="question-block" id="q35">
+            <p class="question-text">35. True or False: The short-run non-neutrality of money implies that the classical dichotomy holds even in the short run.</p>
+            <div class="options">
+                <label><input type="radio" name="q35" value="T"> True</label>
+                <label><input type="radio" name="q35" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp35">
+                <p class="explanation-text">False. Short-run non-neutrality means that monetary changes affect real variables (like output) in the short run. This is a direct contradiction of the classical dichotomy, which requires the real and monetary sectors to be separate.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'neutrality of money', p. 18.</p>
+            </div>
+        </div>
+
+        <!-- Question 36 -->
+        <div class="question-block" id="q36">
+            <p class="question-text">36. True or False: In a Walrasian barter economy, it is logically impossible to have a 'general glut' (an excess supply of all goods).</p>
+            <div class="options">
+                <label><input type="radio" name="q36" value="T"> True</label>
+                <label><input type="radio" name="q36" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp36">
+                <p class="explanation-text">True. In a barter economy, Say's Law holds as an identity. The act of supplying one good is simultaneously the act of demanding another. Therefore, an excess supply of one good must be matched by an excess demand for another, making a general glut impossible.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 56.</p>
+            </div>
+        </div>
+
+        <!-- Question 37 -->
+        <div class="question-block" id="q37">
+            <p class="question-text">37. True or False: The real balance effect is necessary for the absolute price level to be determinate in a model with an interest-bearing asset like bonds.</p>
+            <div class="options">
+                <label><input type="radio" name="q37" value="T"> True</label>
+                <label><input type="radio" name="q37" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp37">
+                <p class="explanation-text">False. Harry Johnson (1962) argued that once an interest-bearing asset exists, the interest rate itself can provide the link between the real and monetary sectors, ensuring the price level is determinate even without a real balance effect on consumption.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 90.</p>
+            </div>
+        </div>
+
+        <!-- Question 38 -->
+        <div class="question-block" id="q38">
+            <p class="question-text">38. True or False: The 'homogeneity postulate' is a key assumption in Patinkin's corrected classical model.</p>
+            <div class="options">
+                <label><input type="radio" name="q38" value="T"> True</label>
+                <label><input type="radio" name="q38" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp38">
+                <p class="explanation-text">False. The entire point of introducing the real balance effect was to discard the homogeneity postulate. By making demand for goods dependent on real balances, the demand functions are no longer homogeneous of degree zero in prices.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 63.</p>
+            </div>
+        </div>
+
+        <!-- Question 39 -->
+        <div class="question-block" id="q39">
+            <p class="question-text">39. True or False: The 'natural rate of unemployment' can be permanently reduced through expansionary monetary policy.</p>
+            <div class="options">
+                <label><input type="radio" name="q39" value="T"> True</label>
+                <label><input type="radio" name="q39" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp39">
+                <p class="explanation-text">False. The natural rate hypothesis posits that the natural rate is determined by real, structural factors. Monetary policy can only cause temporary deviations from this rate through unanticipated inflation. In the long run, unemployment returns to its natural rate.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 258.</p>
+            </div>
+        </div>
+
+        <!-- Question 40 -->
+        <div class="question-block" id="q40">
+            <p class="question-text">40. True or False: The 'real bills doctrine' provides a strong theoretical basis for controlling inflation.</p>
+            <div class="options">
+                <label><input type="radio" name="q40" value="T"> True</label>
+                <label><input type="radio" name="q40" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp40">
+                <p class="explanation-text">False. The doctrine is flawed. As Ricardo and Wicksell showed, if the bank's discount rate is below the natural rate of return on capital, lending against 'real bills' can lead to an unlimited and inflationary expansion of credit and money.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 68.</p>
+            </div>
+        </div>
+
+        <!-- Question 41 -->
+        <div class="question-block" id="q41">
+            <p class="question-text">41. True or False: In the classical view, a higher real interest rate encourages saving.</p>
+            <div class="options">
+                <label><input type="radio" name="q41" value="T"> True</label>
+                <label><input type="radio" name="q41" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp41">
+                <p class="explanation-text">True. The real interest rate is the reward for saving (thrift). A higher real interest rate increases the return on saving, providing a greater incentive for individuals to postpone consumption and supply more loanable funds.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 69.</p>
+            </div>
+        </div>
+
+        <!-- Question 42 -->
+        <div class="question-block" id="q42">
+            <p class="question-text">42. True or False: The 'Arrow-Debreu' model of general equilibrium provides a central role for money as a medium of exchange.</p>
+            <div class="options">
+                <label><input type="radio" name="q42" value="T"> True</label>
+                <label><input type="radio" name="q42" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp42">
+                <p class="explanation-text">False. A major critique of the standard Arrow-Debreu model is that it has no role for money as a medium of exchange. With a complete set of markets for all goods across all time periods and states of nature, all transactions can be arranged at the beginning of time, eliminating the need for a medium of exchange.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 92.</p>
+            </div>
+        </div>
+
+        <!-- Question 43 -->
+        <div class="question-block" id="q43">
+            <p class="question-text">43. True or False: The 'homogeneity postulate' and the 'neutrality of money' are identical concepts.</p>
+            <div class="options">
+                <label><input type="radio" name="q43" value="T"> True</label>
+                <label><input type="radio" name="q43" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp43">
+                <p class="explanation-text">False. The homogeneity postulate is an assumption about the form of demand functions (that they depend only on relative prices). Neutrality of money is a conclusion about the long-run effect of a change in the money supply. While the postulate is used in some flawed arguments for neutrality, they are distinct concepts.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 54-56.</p>
+            </div>
+        </div>
+
+        <!-- Question 44 -->
+        <div class="question-block" id="q44">
+            <p class="question-text">44. True or False: A key contribution of Patinkin was to show that the classical model was indeterminate in the absolute price level.</p>
+            <div class="options">
+                <label><input type="radio" name="q44" value="T"> True</label>
+                <label><input type="radio" name="q44" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp44">
+                <p class="explanation-text">True. Patinkin showed that the classical barter model (with the homogeneity postulate) could determine relative prices but not the absolute price level. Adding the quantity theory made the model determinate but inconsistent. His final, corrected model was both determinate and consistent.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 74.</p>
+            </div>
+        </div>
+
+        <!-- Question 45 -->
+        <div class="question-block" id="q45">
+            <p class="question-text">45. True or False: The money multiplier is independent of the behavior of commercial banks.</p>
+            <div class="options">
+                <label><input type="radio" name="q45" value="T"> True</label>
+                <label><input type="radio" name="q45" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp45">
+                <p class="explanation-text">False. The money multiplier depends crucially on the reserve-deposit ratio (r), which is influenced by banks' decisions about how much excess reserves to hold. Therefore, the multiplier is partly determined by bank behavior.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 251.</p>
+            </div>
+        </div>
+
+        <!-- Question 46 -->
+        <div class="question-block" id="q46">
+            <p class="question-text">46. True or False: In the classical model, an increase in the money supply leads to a permanent increase in real wealth.</p>
+            <div class="options">
+                <label><input type="radio" name="q46" value="T"> True</label>
+                <label><input type="radio" name="q46" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp46">
+                <p class="explanation-text">False. Due to the neutrality of money, an increase in the nominal money supply (M) leads to a proportional increase in the price level (P). This leaves real money balances (M/P) and therefore real wealth unchanged in the long run.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 66.</p>
+            </div>
+        </div>
+
+        <!-- Question 47 -->
+        <div class="question-block" id="q47">
+            <p class="question-text">47. True or False: The 'rational expectations hypothesis' strengthens the case for active, discretionary monetary policy to stabilize the economy.</p>
+            <div class="options">
+                <label><input type="radio" name="q47" value="T"> True</label>
+                <label><input type="radio" name="q47" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp47">
+                <p class="explanation-text">False. It weakens the case. The hypothesis suggests that any systematic, predictable policy will be anticipated by rational agents and incorporated into their behavior, rendering the policy ineffective at changing real outcomes. Only unpredictable 'surprise' policy has real effects, which is not a sound basis for stabilization.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'neutrality of money', p. 19.</p>
+            </div>
+        </div>
+
+        <!-- Question 48 -->
+        <div class="question-block" id="q48">
+            <p class="question-text">48. True or False: The 'price-specie-flow mechanism' is an example of the indirect transmission mechanism.</p>
+            <div class="options">
+                <label><input type="radio" name="q48" value="T"> True</label>
+                <label><input type="radio" name="q48" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp48">
+                <p class="explanation-text">False. The price-specie-flow mechanism is a classic example of the direct transmission mechanism. A flow of specie (money) directly alters the domestic money supply, which then directly affects the price level through spending on goods.</p>
+                <p class="source">Source: Palgrave Dictionary of Money and Finance, 'quantity theory of money', p. 255.</p>
+            </div>
+        </div>
+
+        <!-- Question 49 -->
+        <div class="question-block" id="q49">
+            <p class="question-text">49. True or False: In a Walrasian system, there are always exactly as many independent equations as there are unknowns to be solved.</p>
+            <div class="options">
+                <label><input type="radio" name="q49" value="T"> True</label>
+                <label><input type="radio" name="q49" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp49">
+                <p class="explanation-text">False. In a system with n markets, there are n excess demand equations, but due to Walras' Law, only n-1 of them are independent. This is sufficient to solve for the n-1 relative prices, but not the absolute price level.</p>
+                <p class="source">Source: Mizen & Lewis (2000), p. 74.</p>
+            </div>
+        </div>
+
+        <!-- Question 50 -->
+        <div class="question-block" id="q50">
+            <p class="question-text">50. True or False: The real balance effect requires real balances to be included as an argument in the utility function.</p>
+            <div class="options">
+                <label><input type="radio" name="q50" value="T"> True</label>
+                <label><input type="radio" name="q50" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp50">
+                <p class="explanation-text">False. As shown by Lloyd (1962) and discussed by Harris, a real balance effect can exist even if utility depends only on nominal balances. The effect arises from the budget constraint; a change in the price level alters the real value of initial endowments, which affects behavior, regardless of whether real balances are in the utility function itself.</p>
+                <p class="source">Source: Harris, L. (1985). Monetary Theory, p. 85.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button id="clear-answers">Clear All Answers</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizContainer = document.querySelector('.quiz-container');
+            const clearButton = document.getElementById('clear-answers');
+            const cookieName = 'ec3115_quiz_tf_ch5_set1'; // Unique cookie name
+
+            const correctAnswers = {
+                q1: 'F', q2: 'F', q3: 'F', q4: 'T', q5: 'F', q6: 'F', q7: 'F', q8: 'F', q9: 'F', q10: 'T',
+                q11: 'F', q12: 'T', q13: 'F', q14: 'F', q15: 'F', q16: 'F', q17: 'F', q18: 'T', q19: 'F', q20: 'F',
+                q21: 'T', q22: 'F', q23: 'F', q24: 'T', q25: 'F', q26: 'F', q27: 'F', q28: 'T', q29: 'T', q30: 'F',
+                q31: 'T', q32: 'T', q33: 'F', q34: 'T', q35: 'F', q36: 'T', q37: 'F', q38: 'F', q39: 'F', q40: 'C',
+                q41: 'T', q42: 'F', q43: 'F', q44: 'T', q45: 'F', q46: 'F', q47: 'F', q48: 'A', q49: 'A', q50: 'F'
+            };
+
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=Lax`;
+            }
+
+            function showExplanation(questionId, selectedValue) {
+                const explanationDiv = document.getElementById(`exp${questionId.substring(1)}`);
+                if (!explanationDiv) return;
+
+                const correctAnswer = correctAnswers[questionId];
+                const isCorrect = selectedValue === correctAnswer;
+                const explanationTextEl = explanationDiv.querySelector('.explanation-text');
+
+                const oldFeedback = explanationTextEl.querySelector('strong');
+                if (oldFeedback) oldFeedback.remove();
+
+                explanationDiv.classList.remove('correct', 'incorrect');
+
+                if (isCorrect) {
+                    explanationDiv.classList.add('correct');
+                    explanationTextEl.insertAdjacentHTML('afterbegin', '<strong>Correct!</strong> ');
+                } else {
+                    explanationDiv.classList.add('incorrect');
+                    const correctAnswerText = correctAnswer === 'T' ? 'True' : 'False';
+                    explanationTextEl.insertAdjacentHTML('afterbegin', `<strong>Incorrect.</strong> The correct answer is ${correctAnswerText}. `);
+                }
+                explanationDiv.style.display = 'block';
+            }
+
+            function saveState() {
+                const answers = {};
+                document.querySelectorAll('.question-block').forEach(q => {
+                    const selected = q.querySelector(`input[name="${q.id}"]:checked`);
+                    if (selected) {
+                        answers[q.id] = selected.value;
+                    }
+                });
+                setCookie(cookieName, JSON.stringify(answers), 7);
+            }
+
+            function loadState() {
+                const savedAnswers = getCookie(cookieName);
+                if (!savedAnswers) return;
+
+                try {
+                    const answers = JSON.parse(savedAnswers);
+                    for (const questionId in answers) {
+                        const selectedValue = answers[questionId];
+                        const option = document.querySelector(`input[name="${questionId}"][value="${selectedValue}"]`);
+                        if (option) {
+                            option.checked = true;
+                            showExplanation(questionId, selectedValue);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Error parsing saved answers:", e);
+                    setCookie(cookieName, '', -1);
+                }
+            }
+
+            quizContainer.addEventListener('change', function(event) {
+                if (event.target.type === 'radio') {
+                    const questionId = event.target.name;
+                    showExplanation(questionId, event.target.value);
+                    saveState();
+                }
+            });
+
+            clearButton.addEventListener('click', () => {
+                if (confirm('Are you sure you want to clear all your saved answers?')) {
+                    setCookie(cookieName, '', -1);
+                    window.location.reload();
+                }
+            });
+
+            loadState();
+        });
+    </script>
+
+</body>
+</html>
