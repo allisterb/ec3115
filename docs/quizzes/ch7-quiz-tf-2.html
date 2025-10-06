@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Money, Inflation and Welfare - True/False Quiz (Set 2)</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .question-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-left: 5px solid #ccc;
+        }
+        .correct {
+            border-left-color: #4CAF50;
+        }
+        .incorrect {
+            border-left-color: #f44336;
+        }
+        .result {
+            font-weight: bold;
+        }
+        #clear-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 - Money, Inflation and Welfare - True/False Quiz (Set 2)</h1>
+
+    <div id="quiz">
+        <div class="question-container" data-answer="true">
+            <p>1. The ex-ante real interest rate is the nominal interest rate minus the actual, realized inflation rate.</p>
+            <label><input type="radio" name="question0" value="true"> True</label>
+            <label><input type="radio" name="question0" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The ex-ante real interest rate is the nominal interest rate minus the *expected* inflation rate (\(r_t^A = R_t - \pi_{t+1}^e\)). The ex-post real interest rate is the one calculated using the actual, realized inflation rate. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>2. If money is neutral, then it must also be superneutral.</p>
+            <label><input type="radio" name="question1" value="true"> True</label>
+            <label><input type="radio" name="question1" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. Neutrality refers to a one-time change in the money *level* having no real effects. Superneutrality refers to a change in the money *growth rate* having no real effects. A model can be neutral but not superneutral, as is the case in the Mundell-Tobin model where a change in the inflation rate affects the real interest rate. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>3. The area under the demand curve for real money balances represents the total utility individuals derive from holding money.</p>
+            <label><input type="radio" name="question2" value="true"> True</label>
+            <label><input type="radio" name="question2" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. In consumer surplus analysis, the area under the demand curve up to a certain quantity measures the total utility or benefit derived from consuming that quantity. In this context, it represents the total transaction-facilitating services provided by money. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>4. The inflation tax base is the nominal quantity of money in circulation.</p>
+            <label><input type="radio" name="question3" value="true"> True</label>
+            <label><input type="radio" name="question3" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The base for the inflation tax is the level of *real* cash balances (M/P). The revenue from the tax is the product of the tax rate (the rate of inflation) and the tax base (real money balances). Source: Cagan (1956), p. 78.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>5. One of the primary causes of hyperinflation is the government's inability to collect sufficient revenue through traditional taxes.</p>
+            <label><input type="radio" name="question4" value="true"> True</label>
+            <label><input type="radio" name="question4" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. Hyperinflations are typically rooted in severe fiscal problems where the government cannot finance its spending through normal taxation or borrowing, and thus resorts to printing money. This is often exacerbated by war, revolution, or the collapse of the state. Source: Dornbusch (1992).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>6. In the Cagan model, the parameter \(\alpha\) represents the speed at which expectations adjust.</p>
+            <label><input type="radio" name="question5" value="true"> True</label>
+            <label><input type="radio" name="question5" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. In Cagan's model, \(\alpha\) represents the sensitivity of the demand for real balances to the expected rate of inflation. The parameter \(\beta\) is the 'coefficient of expectation' which represents the speed at which expectations adjust to actual inflation. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>7. If the 'reaction index' (αβ) in Cagan's model is less than 1, the price level is considered to be in a stable equilibrium.</p>
+            <label><input type="radio" name="question6" value="true"> True</label>
+            <label><input type="radio" name="question6" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. If \(\alpha\beta < 1\), any deviation of the inflation rate from the rate of monetary growth will be self-correcting. The price level will tend to converge back to its long-run equilibrium path. If \(\alpha\beta > 1\), the inflation becomes self-generating and unstable. Source: Cagan (1956), p. 65.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>8. The Mundell-Tobin effect strengthens the case for the superneutrality of money.</p>
+            <label><input type="radio" name="question7" value="true"> True</label>
+            <label><input type="radio" name="question7" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The Mundell-Tobin effect is the primary channel through which money is *not* superneutral in many growth models. It provides a specific mechanism whereby a change in the inflation rate affects the real interest rate and the capital stock. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>9. The deadweight loss from inflation tax is the reduction in consumer surplus that is not captured as government revenue.</p>
+            <label><input type="radio" name="question8" value="true"> True</label>
+            <label><input type="radio" name="question8" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. The deadweight loss (or excess burden) of any tax is the loss of economic welfare that is not offset by the revenue collected. In the case of inflation, it is the triangular area often labeled 'C' in welfare diagrams, representing the utility lost from holding fewer real balances. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>10. During a hyperinflation, the real value of government revenue from conventional taxes tends to rise due to bracket creep.</p>
+            <label><input type="radio" name="question9" value="true"> True</label>
+            <label><input type="radio" name="question9" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. Due to collection lags, the real value of conventional tax revenue plummets during a hyperinflation. This phenomenon is known as the Olivera-Tanzi effect, and it often worsens the budget deficit, creating a vicious cycle. Source: Dornbusch (1992).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>11. If the real interest rate is 3% and the nominal interest rate is 8%, the expected rate of inflation is 5%.</p>
+            <label><input type="radio" name="question10" value="true"> True</label>
+            <label><input type="radio" name="question10" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. Rearranging the Fisher equation (\(R = r + \pi^e\)), we get \(\pi^e = R - r\). Therefore, \(\pi^e = 8\% - 3\% = 5\%\). Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>12. A policy of steady deflation equal to the real rate of interest would maximize the government's revenue from seigniorage.</p>
+            <label><input type="radio" name="question11" value="true"> True</label>
+            <label><input type="radio" name="question11" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. This policy (Friedman's rule) would maximize social *welfare* by driving the nominal interest rate to zero and inducing people to hold money to the point of full liquidity. It would, however, result in zero (or negative) revenue from seigniorage for the government. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>13. In Cagan's analysis of seven hyperinflations, he found that real cash balances fluctuated violently but tended to fall over the course of the hyperinflation as a whole.</p>
+            <label><input type="radio" name="question12" value="true"> True</label>
+            <label><input type="radio" name="question12" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. Cagan's data showed that while real balances were erratic month-to-month, the overall trend was a dramatic decline, with minimum real balances reaching just a fraction of their initial level, reflecting the 'flight from money'. Source: Cagan (1956), Table 1.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>14. The concept of superneutrality implies that the IS curve is vertical.</p>
+            <label><input type="radio" name="question13" value="true"> True</label>
+            <label><input type="radio" name="question13" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. Superneutrality implies that the real interest rate is independent of the inflation rate. The IS curve depicts the relationship between the interest rate and output. A vertical IS curve would imply that investment and saving are completely insensitive to the real interest rate, which is a different concept. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>15. The revenue from the inflation tax is equal to the rate of inflation multiplied by the stock of real money balances.</p>
+            <label><input type="radio" name="question14" value="true"> True</label>
+            <label><input type="radio" name="question14" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. This is the definition of the revenue from the inflation tax. The inflation rate is the 'tax rate' and the stock of real money balances is the 'tax base'. Source: Mizen (2000), Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>16. All historical hyperinflations have been successfully and permanently stopped by implementing a currency reform alone.</p>
+            <label><input type="radio" name="question15" value="true"> True</label>
+            <label><input type="radio" name="question15" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. Ending a hyperinflation requires a credible and comprehensive program that includes not just a currency reform but, most importantly, a fundamental fiscal reform to eliminate the underlying budget deficit that forces the government to print money. Source: Dornbusch (1992).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>17. In a steady state with positive money growth and inflation, the nominal value of the money stock grows at the same rate as the price level.</p>
+            <label><input type="radio" name="question16" value="true"> True</label>
+            <label><input type="radio" name="question16" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. For real balances (M/P) to be constant in a steady state with zero real income growth, the growth rate of the nominal money stock (M) must equal the growth rate of the price level (P). Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>18. The Fisher equation holds by definition and is therefore always true empirically, ex-post.</p>
+            <label><input type="radio" name="question17" value="true"> True</label>
+            <label><input type="radio" name="question17" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The ex-post relationship \(r_t^P = R_t - \pi_{t+1}\) is a definition. However, the Fisher *effect* or *hypothesis* is that the real rate is independent of inflation and that the nominal rate adjusts one-for-one with expected inflation. This is a testable hypothesis, not a definition, and the empirical evidence on it is mixed, especially in the short run. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>19. The social welfare associated with money is maximized when the private cost of holding it is zero.</p>
+            <label><input type="radio" name="question18" value="true"> True</label>
+            <label><input type="radio" name="question18" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. The private cost of holding money is the nominal interest rate. When this is zero, individuals are induced to hold money up to the point of satiation (full liquidity), where the marginal utility of the last unit of money held is zero. Since the social cost of creating money is also zero, this is the socially optimal outcome. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>20. In the classical model, an increase in the money growth rate causes the real interest rate to rise.</p>
+            <label><input type="radio" name="question19" value="true"> True</label>
+            <label><input type="radio" name="question19" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. In the simple classical model (which is superneutral), a change in the money growth rate has no effect on the real interest rate. In the Mundell-Tobin version, it causes the real interest rate to fall. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>21. One of the puzzles of hyperinflation is the apparent shortage of currency despite the massive increases in the money supply.</p>
+            <label><input type="radio" name="question20" value="true"> True</label>
+            <label><input type="radio" name="question20" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. As prices rise astronomically, the public needs ever-increasing amounts of *nominal* currency to conduct transactions. This demand can outpace the physical ability of the government to print and distribute notes, leading to a perceived 'shortage'. Source: Mizen (2000), Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>22. The demand for real money balances is positively related to the nominal interest rate.</p>
+            <label><input type="radio" name="question21" value="true"> True</label>
+            <label><input type="radio" name="question21" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The demand for real money balances is *negatively* related to the nominal interest rate, as the nominal rate represents the opportunity cost of holding money instead of an interest-bearing asset. Source: McCallum (1989), Chapter 5.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>23. In Cagan's model, the semi-logarithmic form of the money demand function implies that the interest elasticity of demand is not constant.</p>
+            <label><input type="radio" name="question22" value="true"> True</label>
+            <label><input type="radio" name="question22" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. The function \(\ln(M/P) = -\alpha E - \gamma\) has an elasticity of \(-\alpha E\). Since the elasticity depends on the level of the expected inflation rate (E), it is not constant. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>24. The term 'seigniorage' refers to the welfare loss society suffers from inflation.</p>
+            <label><input type="radio" name="question23" value="true"> True</label>
+            <label><input type="radio" name="question23" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. Seigniorage is the real revenue the government obtains from its monopoly power to create money. The welfare loss is the deadweight loss or excess burden associated with the inflation tax. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>25. A government can collect positive revenue from the inflation tax even when inflation is fully and perfectly anticipated.</p>
+            <label><input type="radio" name="question24" value="true"> True</label>
+            <label><input type="radio" name="question24" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. As long as people continue to hold real money balances (the tax base), a positive inflation rate (the tax rate) will generate real revenue for the government, even if the inflation is perfectly anticipated. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>26. If a country's currency is abandoned in favor of a foreign currency (like the US dollar), this is an example of money neutrality.</p>
+            <label><input type="radio" name="question25" value="true"> True</label>
+            <label><input type="radio" name="question25" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. This phenomenon, known as dollarization or currency substitution, is a symptom of the complete breakdown of the domestic monetary system, usually during hyperinflation. It is the opposite of a neutral event; it represents a fundamental failure of domestic monetary policy. Source: Dornbusch (1992).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>27. The cost of holding currency is higher than the cost of holding interest-bearing checkable deposits.</p>
+            <label><input type="radio" name="question26" value="true"> True</label>
+            <label><input type="radio" name="question26" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. The opportunity cost of holding any form of money is the nominal interest rate on an alternative asset like a bond. Since currency pays zero interest, its cost is the full nominal rate. An interest-bearing deposit pays some interest, so its net opportunity cost is the nominal bond rate minus the deposit rate, which is lower. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>28. In the transition to a higher rate of inflation, the price level must jump downwards to reduce real balances to their new, lower equilibrium level.</p>
+            <label><input type="radio" name="question27" value="true"> True</label>
+            <label><input type="radio" name="question27" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. A higher anticipated inflation rate reduces the *demand* for real balances. To bring the market back to equilibrium, the *supply* of real balances (M/P) must fall. For a given nominal money stock M, this requires a one-time *upward* jump in the price level P. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>29. The analysis of hyperinflation suggests that the demand for money, while volatile, is a systematic and predictable function of its opportunity cost.</p>
+            <label><input type="radio" name="question28" value="true"> True</label>
+            <label><input type="radio" name="question28" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. This was a key finding of Cagan's (1956) study. Despite the chaotic economic conditions, he found that the demand for real money balances could be explained remarkably well by a stable function where the main argument was the expected rate of inflation. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>30. If the government finances its deficit by printing money, the resulting inflation is an example of a lump-sum tax.</p>
+            <label><input type="radio" name="question29" value="true"> True</label>
+            <label><input type="radio" name="question29" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The inflation tax is not a lump-sum tax. A lump-sum tax is one that individuals cannot avoid through their actions. Individuals can avoid the inflation tax by reducing their holdings of real money balances. Because it alters behavior, it creates a deadweight loss. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>31. In a steady-state equilibrium, the actual rate of inflation equals the expected rate of inflation.</p>
+            <label><input type="radio" name="question30" value="true"> True</label>
+            <label><input type="radio" name="question30" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. A steady state is a long-run equilibrium where all variables are constant or growing at constant rates, and expectations are fulfilled. Therefore, the expected rate of inflation must equal the actual rate. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>32. The existence of hyperinflation in some countries proves that the quantity theory of money is incorrect.</p>
+            <label><input type="radio" name="question31" value="true"> True</label>
+            <label><input type="radio" name="question31" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. On the contrary, hyperinflations are often cited as the most powerful real-world evidence *for* the quantity theory of money, as they demonstrate a very tight link between massive increases in the money supply and massive increases in the price level. Source: Mizen (2000), Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>33. The 'inflation tax' revenue can be thought of as the change in the nominal money supply required to keep the public's real money balances constant in the face of inflation.</p>
+            <label><input type="radio" name="question32" value="true"> True</label>
+            <label><input type="radio" name="question32" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. To maintain a constant level of real balances (M/P) when prices (P) are rising at rate \(\pi\), the nominal money stock (M) must also grow at rate \(\pi\). This increase in nominal money, \(\pi M\), when deflated by P, gives the real revenue \(\pi (M/P)\), which is the inflation tax. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>34. If money is superneutral, then the real interest rate is unaffected by a change in the level of the money supply.</p>
+            <label><input type="radio" name="question33" value="true"> True</label>
+            <label><input type="radio" name="question33" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. This statement describes neutrality, not superneutrality. Superneutrality is the stronger condition that the real interest rate is unaffected by a change in the *growth rate* of the money supply. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>35. In Cagan's model, a currency reform that is expected to end the hyperinflation would lead to an increase in the demand for real money balances, even if current inflation is still high.</p>
+            <label><input type="radio" name="question34" value="true"> True</label>
+            <label><input type="radio" name="question34" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. Cagan used this argument to explain why real balances were often observed to rise in the final months of hyperinflation, contrary to what his model would predict based on past inflation. The expectation of a future stabilization lowers the expected long-term cost of holding money. Source: Cagan (1956), p. 55.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>36. The optimal rate of inflation from the perspective of maximizing government revenue is zero.</p>
+            <label><input type="radio" name="question35" value="true"> True</label>
+            <label><input type="radio" name="question35" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The revenue-maximizing rate of inflation is positive. At zero inflation, the inflation tax rate is zero, so revenue is zero. Revenue is maximized at the peak of the inflation tax Laffer curve, which occurs at a positive rate of inflation. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>37. If the demand for money is highly inelastic with respect to the nominal interest rate, the welfare cost of a given amount of inflation tax revenue will be relatively low.</p>
+            <label><input type="radio" name="question36" value="true"> True</label>
+            <label><input type="radio" name="question36" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. If money demand is inelastic, a rise in the nominal interest rate will cause only a small reduction in real balances. This means the tax base is not very sensitive to the tax rate, so the deadweight loss (the welfare cost) associated with raising a given amount of revenue will be small. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>38. The Fisher effect describes the negative relationship between inflation and unemployment.</p>
+            <label><input type="radio" name="question37" value="true"> True</label>
+            <label><input type="radio" name="question37" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The Fisher effect describes the positive relationship between the nominal interest rate and the expected inflation rate. The relationship between inflation and unemployment is described by the Phillips Curve. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>39. In a steady-state inflationary equilibrium, nominal GDP grows at the rate of inflation plus the rate of real GDP growth.</p>
+            <label><input type="radio" name="question38" value="true"> True</label>
+            <label><input type="radio" name="question38" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. The growth rate of a product (Nominal GDP = Price Level x Real GDP) is the sum of the growth rates of its components. Therefore, the growth rate of nominal GDP is the inflation rate plus the real GDP growth rate. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>40. The term 'shoe-leather costs' of inflation includes the cost of firms reprinting their menus and catalogues.</p>
+            <label><input type="radio" name="question39" value="true"> True</label>
+            <label><input type="radio" name="question39" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The costs of reprinting menus and price lists are known as 'menu costs'. 'Shoe-leather costs' refer to the transaction costs of managing cash balances more actively during inflation. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>41. If the real interest rate is negative, a lender is paying a borrower in real terms for the privilege of lending money.</p>
+            <label><input type="radio" name="question40" value="true"> True</label>
+            <label><input type="radio" name="question40" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. A negative real interest rate means that the inflation rate is higher than the nominal interest rate. The purchasing power of the money repaid by the borrower is less than the purchasing power of the money originally lent. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>42. The classical model assumes that the velocity of money is constant.</p>
+            <label><input type="radio" name="question41" value="true"> True</label>
+            <label><input type="radio" name="question41" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The classical model assumes that velocity is a stable function of variables like the interest rate. It is the crude quantity theory that assumes velocity is a constant. In the classical model, velocity can change if the arguments in the money demand function change. Source: McCallum (1989), Chapter 5.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>43. A government can use seigniorage to acquire real resources without causing inflation if the demand for real money balances is growing.</p>
+            <label><input type="radio" name="question42" value="true"> True</label>
+            <label><input type="radio" name="question42" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. If real income is growing, the demand for real money balances will also grow. The government can increase the money supply to meet this additional demand without the price level having to rise. This is a non-inflationary source of seigniorage revenue. Source: Dornbusch (1992).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>44. In Cagan's model of hyperinflation, the actual rate of inflation is assumed to be an exogenous variable.</p>
+            <label><input type="radio" name="question43" value="true"> True</label>
+            <label><input type="radio" name="question43" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. In Cagan's model, the rate of inflation (the price level) is the endogenous variable that adjusts to equate the demand for real balances with the supply. The money supply is typically treated as the exogenous variable. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>45. The 'liquidity effect' of a monetary expansion is the initial tendency for interest rates to fall.</p>
+            <label><input type="radio" name="question44" value="true"> True</label>
+            <label><input type="radio" name="question44" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. The liquidity effect is the initial, short-run impact of an increase in the money supply, which, for a given level of money demand, causes the price of bonds to rise and the interest rate to fall. Source: Mizen (2000), Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>46. If a hyperinflation is self-generating (αβ > 1), the rate of inflation will accelerate even if the money supply is held constant.</p>
+            <label><input type="radio" name="question45" value="true"> True</label>
+            <label><input type="radio" name="question45" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. This is the definition of an unstable, self-generating inflation. A rise in prices leads to expectations of further rises, which reduces money demand and bids prices up further, creating a spiral that does not require further monetary injections to continue. Source: Cagan (1956).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>47. The welfare cost of inflation exists even when the inflation is perfectly anticipated.</p>
+            <label><input type="radio" name="question46" value="true"> True</label>
+            <label><input type="radio" name="question46" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. Even if perfectly anticipated, inflation raises the nominal interest rate, which is the opportunity cost of holding money. This causes people to inefficiently economize on their money holdings, which represents a real resource cost (shoe-leather costs). Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>48. The real interest rate can never be negative.</p>
+            <label><input type="radio" name="question47" value="true"> True</label>
+            <label><input type="radio" name="question47" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. The real interest rate can be negative if the rate of inflation is higher than the nominal interest rate. This has occurred historically during periods of high and unexpected inflation. Source: EC3115 Subject Guide, Chapter 7.</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="true">
+            <p>49. Financial innovations that make it easier to economize on money holdings increase the revenue-maximizing rate of inflation.</p>
+            <label><input type="radio" name="question48" value="true"> True</label>
+            <label><input type="radio" name="question48" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>True. Financial innovation makes the demand for money more elastic with respect to inflation (a higher \(\alpha\) in Cagan's model). A more elastic demand curve means that the peak of the inflation tax Laffer curve occurs at a lower rate of inflation. Therefore, the revenue-maximizing rate of inflation is lower. Source: Dornbusch (1992).</p>
+            </div>
+        </div>
+        <div class="question-container" data-answer="false">
+            <p>50. In the classical model, a higher rate of money growth leads to a higher level of real money balances in the steady state.</p>
+            <label><input type="radio" name="question49" value="true"> True</label>
+            <label><input type="radio" name="question49" value="false"> False</label>
+            <div class="result"></div>
+            <div class="explanation">
+                <p><strong>Explanation:</strong></p>
+                <p>False. A higher rate of money growth leads to a higher rate of inflation and a higher nominal interest rate. Since the demand for real money balances is a decreasing function of the nominal interest rate, the new steady-state level of real money balances will be lower. Source: McCallum (1989), Chapter 6.</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="clear-button">Clear Stored Answers</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizContainer = document.getElementById('quiz');
+            const clearButton = document.getElementById('clear-button');
+
+            function showResults(questionContainer, userAnswer) {
+                const correctAnswer = questionContainer.dataset.answer;
+                const resultContainer = questionContainer.querySelector('.result');
+                const explanationContainer = questionContainer.querySelector('.explanation');
+                
+                const isCorrect = (userAnswer === correctAnswer);
+
+                explanationContainer.classList.remove('correct', 'incorrect');
+
+                if (isCorrect) {
+                    resultContainer.textContent = "Correct!";
+                    explanationContainer.classList.add('correct');
+                } else {
+                    resultContainer.textContent = `Incorrect. The correct answer is ${correctAnswer}.`;
+                    explanationContainer.classList.add('incorrect');
+                }
+                explanationContainer.style.display = 'block';
+                MathJax.typesetPromise();
+            }
+
+            function saveAnswer(questionNumber, answer) {
+                document.cookie = `question${questionNumber}=${answer};max-age=31536000;path=/`;
+            }
+
+            function loadAnswers() {
+                const cookies = document.cookie.split('; ');
+                const questionContainers = document.querySelectorAll('.question-container');
+
+                cookies.forEach(cookie => {
+                    const parts = cookie.split('=');
+                    if (parts[0].startsWith('question')) {
+                        const questionNumber = parseInt(parts[0].substring(8));
+                        const answer = parts[1];
+                        
+                        if(questionNumber < questionContainers.length) {
+                            const container = questionContainers[questionNumber];
+                            const radioButtons = container.querySelectorAll('input[type="radio"]');
+                            radioButtons.forEach(radio => {
+                                if (radio.value === answer) {
+                                    radio.checked = true;
+                                    showResults(container, answer);
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+
+            function clearAnswers() {
+                const cookies = document.cookie.split('; ');
+                 cookies.forEach(cookie => {
+                    const eqPos = cookie.indexOf("=");
+                    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                    if (name.startsWith('question')) {
+                        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+                    }
+                });
+                location.reload();
+            }
+
+            quizContainer.addEventListener('change', function(event) {
+                if (event.target.type === 'radio') {
+                    const questionContainer = event.target.closest('.question-container');
+                    const questionNumber = Array.from(quizContainer.children).indexOf(questionContainer);
+                    const userAnswer = event.target.value;
+                    showResults(questionContainer, userAnswer);
+                    saveAnswer(questionNumber, userAnswer);
+                }
+            });
+
+            clearButton.addEventListener('click', clearAnswers);
+
+            loadAnswers();
+        });
+    </script>
+
+</body>
+</html>

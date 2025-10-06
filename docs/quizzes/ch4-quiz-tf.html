@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Money Supply Quiz (True/False)</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        .quiz-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .explanation {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            border-left: 5px solid;
+        }
+        .explanation.correct {
+            border-color: #28a745;
+        }
+        .explanation.incorrect {
+            border-color: #dc3545;
+        }
+        .explanation-text {
+            font-style: italic;
+        }
+        .source {
+            font-size: 0.8em;
+            color: #555;
+            margin-top: 10px;
+        }
+        #clear-answers {
+            padding: 10px 15px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #clear-answers:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115: The Supply of Money and Monetary Standards</h1>
+    <h2>True/False Quiz</h2>
+    <p>Select an answer for each question. Your progress will be saved automatically. You can clear your answers at any time using the button at the bottom.</p>
+
+    <div class="quiz-container">
+
+        <!-- Question 1 -->
+        <div class="question-block" id="q1">
+            <p class="question-text">1. True or False: The essential function of financial intermediaries is to satisfy the portfolio preferences of borrowers, but not necessarily lenders.</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="T"> True</label>
+                <label><input type="radio" name="q1" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp1">
+                <p class="explanation-text">The essential function is to satisfy the preferences of both simultaneously. Lenders wish to hold stable, low-risk assets, while borrowers wish to expand their holdings of real assets beyond their own net worth. Intermediaries bridge this gap.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 27 (citing Tobin, 1963).</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-block" id="q2">
+            <p class="question-text">2. True or False: Maturity transformation involves banks taking on short-term liabilities (like deposits) to fund long-term assets (like loans).</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="T"> True</label>
+                <label><input type="radio" name="q2" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp2">
+                <p class="explanation-text">This is the definition of maturity transformation. It reconciles the different time horizons of savers, who prefer liquidity (short-term), and borrowers, who need funding for longer periods.</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 34.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-block" id="q3">
+            <p class="question-text">3. True or False: On a commercial bank's balance sheet, customer deposits are classified as assets.</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="T"> True</label>
+                <label><input type="radio" name="q3" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp3">
+                <p class="explanation-text">Deposits are a liability for the bank because it is money that the bank owes to its customers.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 57.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-block" id="q4">
+            <p class="question-text">4. True or False: A bank's balance sheet must balance because its net worth is defined as the difference between its assets and liabilities.</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="T"> True</label>
+                <label><input type="radio" name="q4" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp4">
+                <p class="explanation-text">This is correct. The balance sheet is an identity based on the accounting equation: Assets = Liabilities + Net Worth. Net worth is the residual that ensures the two sides are always equal.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 57-58.</p>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-block" id="q5">
+            <p class="question-text">5. True or False: An open market purchase of bonds by the central bank decreases the monetary base.</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="T"> True</label>
+                <label><input type="radio" name="q5" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp5">
+                <p class="explanation-text">An open market purchase involves the central bank buying bonds and paying for them by increasing the reserves of commercial banks. This action increases the central bank's liabilities (reserves), thereby increasing the monetary base.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 10.</p>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-block" id="q6">
+            <p class="question-text">6. True or False: The money multiplier (m) is smaller when the public decides to hold more currency relative to deposits.</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="T"> True</label>
+                <label><input type="radio" name="q6" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp6">
+                <p class="explanation-text">When the public holds more currency, there is a larger "leakage" from the banking system at each stage of the re-lending cycle. This weakens the cycle and results in a smaller overall expansion of the money supply for a given increase in the monetary base.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 31.</p>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-block" id="q7">
+            <p class="question-text">7. True or False: If the central bank increases the required reserve ratio, the money supply will expand.</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="T"> True</label>
+                <label><input type="radio" name="q7" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp7">
+                <p class="explanation-text">An increase in the required reserve ratio (r) means banks must hold a larger fraction of deposits as reserves and can lend out less. This reduces the size of the money multiplier (m) and causes the money supply to contract, assuming the monetary base is constant.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 59.</p>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-block" id="q8">
+            <p class="question-text">8. True or False: Loans made by a bank are considered a liability on its balance sheet.</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="T"> True</label>
+                <label><input type="radio" name="q8" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp8">
+                <p class="explanation-text">Loans are an asset for the bank because they represent a claim on future repayment from borrowers and are a source of income for the bank.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 57.</p>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-block" id="q9">
+            <p class="question-text">9. True or False: The monetary base is also known as "inside money".</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="T"> True</label>
+                <label><input type="radio" name="q9" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp9">
+                <p class="explanation-text">The monetary base (high-powered money) is created by the central bank and is known as "outside money". "Inside money" is created by the private banking system (e.g., deposits).</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 2.</p>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-block" id="q10">
+            <p class="question-text">10. True or False: In a fractional reserve banking system, the total amount of money created is exactly equal to the initial increase in reserves.</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="T"> True</label>
+                <label><input type="radio" name="q10" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp10">
+                <p class="explanation-text">Due to the money multiplier effect, the total increase in the money supply is larger than the initial increase in reserves. The initial reserves are lent out multiple times, creating a magnified effect.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 19.</p>
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question-block" id="q11">
+            <p class="question-text">11. True or False: Financial intermediaries can reduce risk per dollar of lending by pooling independent risks.</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="T"> True</label>
+                <label><input type="radio" name="q11" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp11">
+                <p class="explanation-text">This is a key function of financial intermediaries, known as diversification. By making many different loans, the risk of any single loan defaulting has a much smaller impact on the intermediary's overall portfolio.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 27 (citing Tobin).</p>
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question-block" id="q12">
+            <p class="question-text">12. True or False: The central bank's assets primarily consist of currency in circulation and commercial bank reserves.</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="T"> True</label>
+                <label><input type="radio" name="q12" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp12">
+                <p class="explanation-text">Currency in circulation and reserves are the central bank's liabilities. Its assets are typically government bonds and foreign exchange reserves.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 4, 9.</p>
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question-block" id="q13">
+            <p class="question-text">13. True or False: The simple deposit multiplier is given by the formula \(1/c\), where \(c\) is the currency-deposit ratio.</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="T"> True</label>
+                <label><input type="radio" name="q13" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp13">
+                <p class="explanation-text">The simple deposit multiplier is \(1/r\), where \(r\) is the reserve ratio. It assumes that the currency-deposit ratio is zero (i.e., no currency leakage).</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 22.</p>
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question-block" id="q14">
+            <p class="question-text">14. True or False: Banks hold excess reserves because they are costly in terms of forgone interest income.</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="T"> True</label>
+                <label><input type="radio" name="q14" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp14">
+                <p class="explanation-text">This statement describes why banks want to minimize excess reserves, not why they hold them. They hold them as a precaution against unexpected withdrawals, despite the cost of forgone interest.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 58.</p>
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question-block" id="q15">
+            <p class="question-text">15. True or False: Under a fiat money standard, the value of money is guaranteed by its convertibility into a precious metal.</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="T"> True</label>
+                <label><input type="radio" name="q15" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp15">
+                <p class="explanation-text">Fiat money is, by definition, not convertible into a commodity. Its value is based on trust and its status as legal tender, not on any physical backing.</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 27.</p>
+            </div>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question-block" id="q16">
+            <p class="question-text">16. True or False: The re-lending cycle is strengthened if banks decide to hold more excess reserves.</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="T"> True</label>
+                <label><input type="radio" name="q16" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp16">
+                <p class="explanation-text">Holding more excess reserves means lending out a smaller portion of each new deposit. This weakens the re-lending cycle and leads to a smaller money multiplier.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 31.</p>
+            </div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question-block" id="q17">
+            <p class="question-text">17. True or False: The money supply (M) is identical to the monetary base (MB).</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="T"> True</label>
+                <label><input type="radio" name="q17" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp17">
+                <p class="explanation-text">The money supply is a multiple of the monetary base (\(M = m 	imes MB\)). In a fractional reserve system, \(m > 1\), so the money supply is larger than the monetary base.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 19.</p>
+            </div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question-block" id="q18">
+            <p class="question-text">18. True or False: The process of maturity transformation is risk-free for banks.</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="T"> True</label>
+                <label><input type="radio" name="q18" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp18">
+                <p class="explanation-text">Maturity transformation is inherently risky. It exposes banks to liquidity risk (if too many depositors withdraw funds at once) and interest rate risk (if the interest rates they pay on short-term deposits rise above the rates they earn on long-term loans).</p>
+                <p class="source">Source: General principle implied by Lewis, M. K., & Mizen, P. D. (2000), p. 34.</p>
+            </div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question-block" id="q19">
+            <p class="question-text">19. True or False: A central bank can achieve precise, perfect control over the money supply by setting the monetary base.</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="T"> True</label>
+                <label><input type="radio" name="q19" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp19">
+                <p class="explanation-text">Control is not perfect. The central bank controls the monetary base, but the total money supply also depends on the money multiplier, which is affected by the behavior of commercial banks (their choice of excess reserves) and the public (their choice of currency holdings). These are not directly controlled by the central bank.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 62-63.</p>
+            </div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question-block" id="q20">
+            <p class="question-text">20. True or False: In the money multiplier formula \(m = \frac{c+1}{c+r}\), an increase in \(r\) decreases \(m\).</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="T"> True</label>
+                <label><input type="radio" name="q20" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp20">
+                <p class="explanation-text">An increase in the reserve ratio (r) increases the denominator of the fraction, which decreases the overall value of the multiplier (m). This reflects the fact that banks are lending out a smaller portion of each deposit.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 30.</p>
+            </div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question-block" id="q21">
+            <p class="question-text">21. True or False: The existence of financial intermediaries increases the efficiency of resource allocation in an economy.</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="T"> True</label>
+                <label><input type="radio" name="q21" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp21">
+                <p class="explanation-text">By channeling funds from savers to borrowers with productive investment opportunities, financial intermediaries help ensure that capital is allocated more efficiently, leading to greater economic growth.</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 6.</p>
+            </div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question-block" id="q22">
+            <p class="question-text">22. True or False: A bank's reserves include its deposits at the central bank and the government bonds it holds.</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="T"> True</label>
+                <label><input type="radio" name="q22" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp22">
+                <p class="explanation-text">A bank's reserves consist of its deposits at the central bank and the vault cash it holds. Government bonds are another type of asset but are not part of its reserves.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 4.</p>
+            </div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question-block" id="q23">
+            <p class="question-text">23. True or False: The primary purpose of a mandatory reserve ratio is to ensure a bank has enough cash for all depositors to withdraw their money at once.</p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="T"> True</label>
+                <label><input type="radio" name="q23" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp23">
+                <p class="explanation-text">No fractional reserve system can withstand a run where all depositors withdraw at once. The primary modern purpose of reserve ratios is as a tool of monetary control, influencing the money multiplier and thus the money supply.</p>
+                <p class="source">Source: Implied by McCallum, B. T. (1989), p. 58-59.</p>
+            </div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question-block" id="q24">
+            <p class="question-text">24. True or False: Under the classical gold standard, a country that experienced a trade deficit would see an inflow of gold.</p>
+            <div class="options">
+                <label><input type="radio" name="q24" value="T"> True</label>
+                <label><input type="radio" name="q24" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp24">
+                <p class="explanation-text">A trade deficit means a country is buying more than it is selling, leading to a net outflow of payments. Under the gold standard, this would be settled by an outflow of gold, which would then, in theory, reduce the domestic money supply and lower prices to restore competitiveness (the price-specie-flow mechanism).</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 36.</p>
+            </div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question-block" id="q25">
+            <p class="question-text">25. True or False: The money multiplier process can only occur if the reserve ratio is exactly 10%.</p>
+            <div class="options">
+                <label><input type="radio" name="q25" value="T"> True</label>
+                <label><input type="radio" name="q25" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp25">
+                <p class="explanation-text">The money multiplier process occurs in any fractional reserve system, which is any system where the reserve ratio is less than 100% (or r < 1). The specific value of the multiplier depends on the ratio, but the process itself does not require a specific ratio like 10%.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 11.</p>
+            </div>
+        </div>
+
+        <!-- Question 26 -->
+        <div class="question-block" id="q26">
+            <p class="question-text">26. True or False: The currency-deposit ratio (c) is determined by the central bank.</p>
+            <div class="options">
+                <label><input type="radio" name="q26" value="T"> True</label>
+                <label><input type="radio" name="q26" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp26">
+                <p class="explanation-text">The currency-deposit ratio reflects the preferences of the public for holding currency versus holding deposits. It is a behavioral variable determined by depositors, not the central bank.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 56-57.</p>
+            </div>
+        </div>
+
+        <!-- Question 27 -->
+        <div class="question-block" id="q27">
+            <p class="question-text">27. True or False: A bank's assets and liabilities are typically equal in value, but not necessarily in maturity.</p>
+            <div class="options">
+                <label><input type="radio" name="q27" value="T"> True</label>
+                <label><input type="radio" name="q27" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp27">
+                <p class="explanation-text">This is the essence of maturity transformation. A bank's assets (e.g., long-term loans) typically have a longer maturity than its liabilities (e.g., short-term deposits that can be withdrawn at any time).</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 34.</p>
+            </div>
+        </div>
+
+        <!-- Question 28 -->
+        <div class="question-block" id="q28">
+            <p class="question-text">28. True or False: An increase in the interest elasticity of loan demand makes a change in the reserve ratio a more powerful tool for contracting the money supply.</p>
+            <div class="options">
+                <label><input type="radio" name="q28" value="T"> True</label>
+                <label><input type="radio" name="q28" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp28">
+                <p class="explanation-text">When loan demand is highly elastic, the "lending tax" effect of a higher reserve ratio has a large negative impact on loan demand and deposits, causing the money supply to contract. If loan demand were inelastic, this effect would be small, and the money supply could even expand.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slides 46-48.</p>
+            </div>
+        </div>
+
+        <!-- Question 29 -->
+        <div class="question-block" id="q29">
+            <p class="question-text">29. True or False: The term "credit spread" refers to the difference between the interest rate on loans and the interest rate on deposits.</p>
+            <div class="options">
+                <label><input type="radio" name="q29" value="T"> True</label>
+                <label><input type="radio" name="q29" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp29">
+                <p class="explanation-text">This is the correct definition. The credit spread is a key determinant of a bank's profitability. In a perfectly competitive market with no other costs, this spread would be zero.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 37.</p>
+            </div>
+        </div>
+
+        <!-- Question 30 -->
+        <div class="question-block" id="q30">
+            <p class="question-text">30. True or False: A central bank's decision to sell foreign currency from its reserves will increase the domestic monetary base.</p>
+            <div class="options">
+                <label><input type="radio" name="q30" value="T"> True</label>
+                <label><input type="radio" name="q30" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp30">
+                <p class="explanation-text">Selling foreign currency is similar to selling bonds. The central bank sells an asset (foreign exchange) and receives payment in the form of domestic currency or a debit to a commercial bank's reserve account. This reduces the central bank's liabilities and therefore contracts the domestic monetary base.</p>
+                <p class="source">Source: Inferred from balance sheet mechanics in EC3115 - Monetary Economics Unit E Lectures, Slide 9.</p>
+            </div>
+        </div>
+
+        <!-- Question 31 -->
+        <div class="question-block" id="q31">
+            <p class="question-text">31. True or False: The stability of the classical gold standard was partly due to the credibility of the commitment to fixed parities.</p>
+            <div class="options">
+                <label><input type="radio" name="q31" value="T"> True</label>
+                <label><input type="radio" name="q31" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp31">
+                <p class="explanation-text">The belief that countries would maintain their gold parities "forever" made capital flows highly responsive to small interest rate changes, which helped stabilize exchange rates and reduce the need for actual gold shipments.</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 38.</p>
+            </div>
+        </div>
+
+        <!-- Question 32 -->
+        <div class="question-block" id="q32">
+            <p class="question-text">32. True or False: All financial intermediaries create "money".</p>
+            <div class="options">
+                <label><input type="radio" name="q32" value="T"> True</label>
+                <label><input type="radio" name="q32" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp32">
+                <p class="explanation-text">Only certain intermediaries, primarily commercial banks, create liabilities (like checkable deposits) that are so widely accepted as a medium of exchange that they are counted in the money supply (e.g., M1). Other intermediaries, like pension funds or insurance companies, do not.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 27-28.</p>
+            </div>
+        </div>
+
+        <!-- Question 33 -->
+        <div class="question-block" id="q33">
+            <p class="question-text">33. True or False: If a bank has a reserve ratio of 100%, it cannot create money.</p>
+            <div class="options">
+                <label><input type="radio" name="q33" value="T"> True</label>
+                <label><input type="radio" name="q33" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp33">
+                <p class="explanation-text">If a bank holds 100% of its deposits in reserve, it makes no loans. Without lending, the re-lending cycle cannot begin, and no new money is created. The money multiplier would be 1.</p>
+                <p class="source">Source: Implied by the logic of the re-lending cycle in EC3115 - Monetary Economics Unit E Lectures, Slides 11-18.</p>
+            </div>
+        </div>
+
+        <!-- Question 34 -->
+        <div class="question-block" id="q34">
+            <p class="question-text">34. True or False: The "zero-profit condition" assumes that the banking market is a monopoly.</p>
+            <div class="options">
+                <label><input type="radio" name="q34" value="T"> True</label>
+                <label><input type="radio" name="q34" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp34">
+                <p class="explanation-text">The zero-profit condition is a feature of a competitive market, where entry and exit of firms drive economic profits to zero. A monopoly would be able to sustain positive economic profits.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 37.</p>
+            </div>
+        </div>
+
+        <!-- Question 35 -->
+        <div class="question-block" id="q35">
+            <p class="question-text">35. True or False: A central bank's assets are part of the monetary base.</p>
+            <div class="options">
+                <label><input type="radio" name="q35" value="T"> True</label>
+                <label><input type="radio" name="q35" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp35">
+                <p class="explanation-text">The monetary base consists of the central bank's liabilities (currency in circulation and bank reserves). The central bank's assets (like government bonds) are used to manipulate the level of its liabilities, but are not part of the base itself.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 4.</p>
+            </div>
+        </div>
+
+        <!-- Question 36 -->
+        <div class="question-block" id="q36">
+            <p class="question-text">36. True or False: The value of the money multiplier is independent of the behavior of the non-bank public.</p>
+            <div class="options">
+                <label><input type="radio" name="q36" value="T"> True</label>
+                <label><input type="radio" name="q36" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp36">
+                <p class="explanation-text">The public's behavior is crucial. Their decision on how much currency to hold relative to deposits (the currency-deposit ratio, c) is a key determinant of the size of the money multiplier.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 56-57.</p>
+            </div>
+        </div>
+
+        <!-- Question 37 -->
+        <div class="question-block" id="q37">
+            <p class="question-text">37. True or False: A bank's net worth can be negative.</p>
+            <div class="options">
+                <label><input type="radio" name="q37" value="T"> True</label>
+                <label><input type="radio" name="q37" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp37">
+                <p class="explanation-text">If the value of a bank's assets falls below the value of its liabilities (e.g., due to widespread loan defaults), its net worth becomes negative. This condition is known as insolvency.</p>
+                <p class="source">Source: General accounting principle, implied by McCallum, B. T. (1989), p. 57.</p>
+            </div>
+        </div>
+
+        <!-- Question 38 -->
+        <div class="question-block" id="q38">
+            <p class="question-text">38. True or False: The introduction of a mandatory reserve ratio that is binding will typically cause the credit spread to narrow.</p>
+            <div class="options">
+                <label><input type="radio" name="q38" value="T"> True</label>
+                <label><input type="radio" name="q38" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp38">
+                <p class="explanation-text">The reserve requirement acts as a tax on lending. To maintain profitability, banks must charge a higher loan rate for a given deposit rate, causing the credit spread to widen, not narrow.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slides 43-45.</p>
+            </div>
+        </div>
+
+        <!-- Question 39 -->
+        <div class="question-block" id="q39">
+            <p class="question-text">39. True or False: The M1 money supply consists of currency, demand deposits, and government bonds held by the public.</p>
+            <div class="options">
+                <label><input type="radio" name="q39" value="T"> True</label>
+                <label><input type="radio" name="q39" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp39">
+                <p class="explanation-text">M1 consists of assets that are highly liquid and used as a medium of exchange, such as currency and checkable deposits. Government bonds are a store of value but are not a medium of exchange and are not included in M1.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 19-20.</p>
+            </div>
+        </div>
+
+        <!-- Question 40 -->
+        <div class="question-block" id="q40">
+            <p class="question-text">40. True or False: If the money multiplier is 4, a $10 million decrease in the monetary base will lead to a $40 million decrease in the money supply.</p>
+            <div class="options">
+                <label><input type="radio" name="q40" value="T"> True</label>
+                <label><input type="radio" name="q40" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp40">
+                <p class="explanation-text">The change in the money supply is the money multiplier times the change in the monetary base. \(\Delta M = m 	imes MB = 4  (-$10 	ext{ million}) = -$40 	ext{ million}\).</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 27.</p>
+            </div>
+        </div>
+
+        <!-- Question 41 -->
+        <div class="question-block" id="q41">
+            <p class="question-text">41. True or False: One of the roles of financial intermediaries is to provide government guarantees for deposits.</p>
+            <div class="options">
+                <label><input type="radio" name="q41" value="T"> True</label>
+                <label><input type="radio" name="q41" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp41">
+                <p class="explanation-text">While government guarantees (like deposit insurance) are a feature of many banking systems that support intermediaries, providing these guarantees is a function of the government or a government agency, not of the private financial intermediaries themselves.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 27-28 (citing Tobin).</p>
+            </div>
+        </div>
+
+        <!-- Question 42 -->
+        <div class="question-block" id="q42">
+            <p class="question-text">42. True or False: The "limping gold standard" refers to a system where convertibility into gold is at the discretion of the monetary authorities.</p>
+            <div class="options">
+                <label><input type="radio" name="q42" value="T"> True</label>
+                <label><input type="radio" name="q42" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp42">
+                <p class="explanation-text">This is correct. It represents a more managed and less automatic version of the gold standard, where the commitment to convertibility is not absolute but is instead a policy choice.</p>
+                <p class="source">Source: Lewis, M. K., & Mizen, P. D. (2000). Monetary Economics, p. 28 (Table 2.2).</p>
+            </div>
+        </div>
+
+        <!-- Question 43 -->
+        <div class="question-block" id="q43">
+            <p class="question-text">43. True or False: If a bank has excess reserves, its reserve ratio is less than the legally required ratio.</p>
+            <div class="options">
+                <label><input type="radio" name="q43" value="T"> True</label>
+                <label><input type="radio" name="q43" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp43">
+                <p class="explanation-text">If a bank has excess reserves, its total reserves are greater than its required reserves. Therefore, its actual reserve ratio is greater than the required ratio.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 13.</p>
+            </div>
+        </div>
+
+        <!-- Question 44 -->
+        <div class="question-block" id="q44">
+            <p class="question-text">44. True or False: The money supply process is entirely determined by the actions of the central bank.</p>
+            <div class="options">
+                <label><input type="radio" name="q44" value="T"> True</label>
+                <label><input type="radio" name="q44" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp44">
+                <p class="explanation-text">The process is a three-way interaction. The central bank controls the monetary base, but the final money supply is also determined by the lending behavior of commercial banks and the currency-holding preferences of the public.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 2.</p>
+            </div>
+        </div>
+
+        <!-- Question 45 -->
+        <div class="question-block" id="q45">
+            <p class="question-text">45. True or False: A bank's physical assets, such as buildings and computers, are included in its reserves.</p>
+            <div class="options">
+                <label><input type="radio" name="q45" value="T"> True</label>
+                <label><input type="radio" name="q45" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp45">
+                <p class="explanation-text">Physical assets are part of a bank's total assets, but they are not part of its reserves. Reserves consist only of vault cash and deposits held at the central bank.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 57.</p>
+            </div>
+        </div>
+
+        <!-- Question 46 -->
+        <div class="question-block" id="q46">
+            <p class="question-text">46. True or False: The main purpose of an open market operation is to change the required reserve ratio.</p>
+            <div class="options">
+                <label><input type="radio" name="q46" value="T"> True</label>
+                <label><input type="radio" name="q46" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp46">
+                <p class="explanation-text">The purpose of an open market operation is to change the level of reserves in the banking system and thereby change the monetary base. The required reserve ratio is a separate policy tool that is changed much less frequently.</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 8.</p>
+            </div>
+        </div>
+
+        <!-- Question 47 -->
+        <div class="question-block" id="q47">
+            <p class="question-text">47. True or False: In the equation \(M = C + D\), \(C\) stands for the cash held in bank vaults.</p>
+            <div class="options">
+                <label><input type="radio" name="q47" value="T"> True</label>
+                <label><input type="radio" name="q47" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp47">
+                <p class="explanation-text">In this context, \(C\) stands for currency in circulation, which is cash in the hands of the public. Cash held in bank vaults is part of bank reserves (R).</p>
+                <p class="source">Source: EC3115 - Monetary Economics Unit E Lectures, Slide 5; McCallum, B. T. (1989), p. 56.</p>
+            </div>
+        </div>
+
+        <!-- Question 48 -->
+        <div class="question-block" id="q48">
+            <p class="question-text">48. True or False: The existence of a "lender of last resort" (the central bank) eliminates the need for private banks to perform maturity transformation.</p>
+            <div class="options">
+                <label><input type="radio" name="q48" value="T"> True</label>
+                <label><input type="radio" name="q48" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp48">
+                <p class="explanation-text">The lender of last resort function helps manage the risks associated with maturity transformation (specifically liquidity risk), but it does not eliminate the function itself. Banks still perform the core role of intermediating between short-term savers and long-term borrowers.</p>
+                <p class="source">Source: General principle of central banking.</p>
+            </div>
+        </div>
+
+        <!-- Question 49 -->
+        <div class="question-block" id="q49">
+            <p class="question-text">49. True or False: If all banks in a system have a reserve ratio of 1, the money multiplier will be infinite.</p>
+            <div class="options">
+                <label><input type="radio" name="q49" value="T"> True</label>
+                <label><input type="radio" name="q49" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp49">
+                <p class="explanation-text">If r=1, banks hold 100% of deposits as reserves and make no loans. The money multiplier \(m = \frac{c+1}{c+1} = 1\). There is no multiple expansion of money; the money supply is simply equal to the monetary base.</p>
+                <p class="source">Source: Implied by EC3115 - Monetary Economics Unit E Lectures, Slide 30.</p>
+            </div>
+        </div>
+
+        <!-- Question 50 -->
+        <div class="question-block" id="q50">
+            <p class="question-text">50. True or False: A central bank can increase the money supply by lowering the required reserve ratio.</p>
+            <div class="options">
+                <label><input type="radio" name="q50" value="T"> True</label>
+                <label><input type="radio" name="q50" value="F"> False</label>
+            </div>
+            <div class="explanation" id="exp50">
+                <p class="explanation-text">Lowering the required reserve ratio (r) increases the money multiplier (m). For a given monetary base, a higher multiplier leads to a larger total money supply. This is a valid, though less frequently used, tool of monetary policy.</p>
+                <p class="source">Source: McCallum, B. T. (1989). Monetary Economics, p. 59.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button id="clear-answers">Clear All Answers</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizContainer = document.querySelector('.quiz-container');
+            const clearButton = document.getElementById('clear-answers');
+            const cookieName = 'ec3115_quiz_answers_tf';
+
+            const correctAnswers = {
+                q1: 'F', q2: 'T', q3: 'F', q4: 'T', q5: 'F', q6: 'T', q7: 'F', q8: 'F', q9: 'F', q10: 'F',
+                q11: 'T', q12: 'F', q13: 'F', q14: 'F', q15: 'F', q16: 'F', q17: 'F', q18: 'F', q19: 'F', q20: 'T',
+                q21: 'T', q22: 'F', q23: 'F', q24: 'F', q25: 'F', q26: 'F', q27: 'T', q28: 'T', q29: 'T', q30: 'F',
+                q31: 'T', q32: 'F', q33: 'T', q34: 'F', q35: 'F', q36: 'F', q37: 'T', q38: 'F', q39: 'F', q40: 'T',
+                q41: 'F', q42: 'T', q43: 'F', q44: 'F', q45: 'T', q46: 'F', q47: 'F', q48: 'F', q49: 'F', q50: 'T'
+            };
+
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=Lax`;
+            }
+
+            function showExplanation(questionId, selectedValue) {
+                const explanationDiv = document.getElementById(`exp${questionId.substring(1)}`);
+                if (!explanationDiv) return;
+
+                const correctAnswer = correctAnswers[questionId];
+                const isCorrect = selectedValue === correctAnswer;
+                const explanationTextEl = explanationDiv.querySelector('.explanation-text');
+
+                const oldFeedback = explanationTextEl.querySelector('strong');
+                if (oldFeedback) oldFeedback.remove();
+
+                explanationDiv.classList.remove('correct', 'incorrect');
+
+                if (isCorrect) {
+                    explanationDiv.classList.add('correct');
+                    explanationTextEl.insertAdjacentHTML('afterbegin', '<strong>Correct!</strong> ');
+                } else {
+                    explanationDiv.classList.add('incorrect');
+                    const correctAnswerText = correctAnswer === 'T' ? 'True' : 'False';
+                    explanationTextEl.insertAdjacentHTML('afterbegin', `<strong>Incorrect.</strong> The correct answer is ${correctAnswerText}. `);
+                }
+                explanationDiv.style.display = 'block';
+            }
+
+            function saveState() {
+                const answers = {};
+                document.querySelectorAll('.question-block').forEach(q => {
+                    const selected = q.querySelector(`input[name="${q.id}"]:checked`);
+                    if (selected) {
+                        answers[q.id] = selected.value;
+                    }
+                });
+                setCookie(cookieName, JSON.stringify(answers), 7);
+            }
+
+            function loadState() {
+                const savedAnswers = getCookie(cookieName);
+                if (!savedAnswers) return;
+
+                try {
+                    const answers = JSON.parse(savedAnswers);
+                    for (const questionId in answers) {
+                        const selectedValue = answers[questionId];
+                        const option = document.querySelector(`input[name="${questionId}"][value="${selectedValue}"]`);
+                        if (option) {
+                            option.checked = true;
+                            showExplanation(questionId, selectedValue);
+                        }
+                    }
+                } catch (e) {
+                    console.error("Error parsing saved answers:", e);
+                    setCookie(cookieName, '', -1);
+                }
+            }
+
+            quizContainer.addEventListener('change', function(event) {
+                if (event.target.type === 'radio') {
+                    const questionId = event.target.name;
+                    showExplanation(questionId, event.target.value);
+                    saveState();
+                }
+            });
+
+            clearButton.addEventListener('click', () => {
+                if (confirm('Are you sure you want to clear all your saved answers?')) {
+                    setCookie(cookieName, '', -1);
+                    window.location.reload();
+                }
+            });
+
+            loadState();
+        });
+    </script>
+
+</body>
+</html>
