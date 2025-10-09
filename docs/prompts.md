@@ -17,7 +17,7 @@ Provide a button at the end of the quiz to allow the user to clear the stored an
 Use LaTeX and the MathJax library for math equations. Save the quiz to the file ec3115\ch4-quiz-mc.html as an interactive HTML page.
 ````
 
-# Chapter 5
+## Chapter 5
 ````
 You are a university lecturer on monetary economics. Read the PDF files @ec3115/SubjectGuide/EC3115 - Ch5.pdf and @ec3115/Books/mizen-pages-2.pdf and @ec3115/Books/mizen-pages-3.pdf and @ec3115/Books/mizen-pages-4.pdf and @ec3115/Books/palgrave_p33-39.pdf and @ec3115/Books/palgrave_p262-277.pdf. 
 Generate a set of 50 multiple-choice quiz questions to help me prepare for my EC3115 Monetary Economics exam on the subject of "Classical theory". The questions should cover the following topics: 
@@ -33,7 +33,7 @@ Use LaTeX and the MathJax library for math equations.
 Save the quiz to the file ec3115\ch5-quiz-mc-1.html as an interactive HTML page.
 ````
 
-# Chapter 6
+## Chapter 6
 ````
 You are a university lecturer on monetary economics. Read the PDF files @ec3115/SubjectGuide/EC3115 - Ch\ 4\ Supply\ of\ money.pdf and @ec3115/Books/harris_p30-52.pdf and @ec3115/Books/mizen-pages-2.pdf and @ec3115/Books/mizen-pages-3.pdf and @ec3115/Books/mizen-pages-4.pdf and @ec3115/Books/palgrave_p33-39.pdf and @ec3115/Books/palgrave_p262-277.pdf.  Generate a set of 50 flashcards to help me prepare for my EC3115 Monetary Economics exam on the subject of "Classical theory". The questions should cover the following topics: 
 * define and explain the term ‘neutrality of money’ 
@@ -51,7 +51,7 @@ Each flashcard answer should be as detailed as possible and include the sources 
 Save the flashcards to the file ec3115\ch5-flashcards-1.html
 ````
 
-##Chapter 8
+## Chapter 8
 
 ````
 You are a university lecturer on monetary economics. Read the PDF files @ec3115/SubjectGuide/EC3115\ -\ Ch\ 8\ Classical\ models\ and\ monetary\ policy-1.pdf and @ec3115/Books/mccallum-pages-1.pdf   and @ec3115/Books/mccallum-pages-2.pdf and @ec3115/Books/hargreaves-pages-1.pdf and @ec3115/Papers/plosser.pdf and @ec3115/Papers/long.pdf  and @ec3115/Papers/kydland1.pdf
