@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Chapter 8 True/False Quiz: Money, Inflation and Welfare</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .explanation {
+            margin-top: 10px;
+            padding: 10px;
+            border-left: 4px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .explanation.hidden {
+            display: none;
+        }
+        .feedback {
+            font-weight: bold;
+        }
+        .feedback.correct {
+            color: #27ae60;
+        }
+        .feedback.incorrect {
+            color: #c0392b;
+        }
+        .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        #clear-answers-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        #clear-answers-btn:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 - Chapter 8 True/False Quiz</h1>
+    <h2>Money, Inflation and Welfare</h2>
+
+    <div class="quiz-container">
+        <ol>
+            <!-- Question 1 -->
+            <li class="question" data-answer="true">
+                <p>1. The Fisher equation, \(r = R - \pi^e\), implies that the real interest rate is the nominal interest rate minus the expected rate of inflation.</p>
+                <div class="options">
+                    <input type="radio" name="q1" value="true" id="q1_true"><label for="q1_true">True</label>
+                    <input type="radio" name="q1" value="false" id="q1_false"><label for="q1_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        This is the correct definition of the Fisher equation. It distinguishes between the nominal interest rate (R), which is the rate of interest on a loan specified in monetary terms, and the real interest rate (r), which is the nominal rate adjusted for expected inflation (\(\pi^e\)). The logic is that lenders and borrowers care about the real return on a loan, which is its return in terms of goods and services, not just monetary units.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Section 6.2.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 2 -->
+            <li class="question" data-answer="false">
+                <p>2. Monetary neutrality means that a change in the growth rate of the money supply has no effect on real variables.</p>
+                <div class="options">
+                    <input type="radio" name="q2" value="true" id="q2_true"><label for="q2_true">True</label>
+                    <input type="radio" name="q2" value="false" id="q2_false"><label for="q2_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        This statement describes superneutrality, not neutrality. Monetary neutrality refers to the proposition that a one-time change in the *level* of the money supply affects only nominal variables (like the price level) but not real variables (like output or employment). Superneutrality is a stronger condition, stating that changes in the *growth rate* of the money supply do not affect real variables.
+                        <div class="source">Source: Hargreaves Heap (1992), Chapter 4; McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 3 -->
+            <li class="question" data-answer="true">
+                <p>3. In a classical model with a real-balance effect in the consumption function, money is not superneutral.</p>
+                <div class="options">
+                    <input type="radio" name="q3" value="true" id="q3_true"><label for="q3_true">True</label>
+                    <input type="radio" name="q3" value="false" id="q3_false"><label for="q3_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. A change in the money growth rate (and thus the inflation rate) will alter the steady-state level of real money balances (M/P). If real balances are an argument in the consumption function (a real-balance effect), this change in M/P will alter real consumption and saving decisions, which in turn affects the steady-state capital stock and the real interest rate. Therefore, a change in the money growth rate affects real variables, and money is not superneutral.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Section 6.5.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 4 -->
+            <li class="question" data-answer="true">
+                <p>4. The welfare cost of a steady, anticipated inflation arises because it leads individuals to hold lower real money balances, thus incurring higher transaction costs (e.g., "shoe-leather costs").</p>
+                <div class="options">
+                    <input type="radio" name="q4" value="true" id="q4_true"><label for="q4_true">True</label>
+                    <input type="radio" name="q4" value="false" id="q4_false"><label for="q4_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        This is the standard explanation for the welfare cost of anticipated inflation. Inflation acts as a tax on holding money, raising the nominal interest rate (the opportunity cost of holding money). To economize on money holdings, individuals make more frequent trips to the bank or engage in other costly activities to manage their cash, which represents a real resource cost to society.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Section 6.7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 5 -->
+            <li class="question" data-answer="false">
+                <p>5. Seigniorage is the revenue the government earns from explicit taxes on the banking sector.</p>
+                <div class="options">
+                    <input type="radio" name="q5" value="true" id="q5_true"><label for="q5_true">True</label>
+                    <input type="radio" name="q5" value="false" id="q5_false"><label for="q5_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Seigniorage is the revenue a government obtains by using newly created money to purchase goods and services. It is the difference between the face value of the money created and the cost of its production. It is often referred to as the "inflation tax" because the resulting inflation erodes the real value of money held by the public.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 6 -->
+            <li class="question" data-answer="true">
+                <p>6. Cagan's definition of hyperinflation requires the inflation rate to exceed 50 percent per month.</p>
+                <div class="options">
+                    <input type="radio" name="q6" value="true" id="q6_true"><label for="q6_true">True</label>
+                    <input type="radio" name="q6" value="false" id="q6_false"><label for="q6_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. Phillip Cagan's (1956) famous study of hyperinflations defined the phenomenon as beginning in the month the price level rises by 50 percent or more, and as ending in the month before the monthly price rise drops below that level and stays below it for at least a year.
+                        <div class="source">Source: McCallum (1989), Chapter 7, Section 7.1.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 7 -->
+            <li class="question" data-answer="false">
+                <p>7. The Friedman rule for optimal monetary policy states that the central bank should aim for a constant, low rate of inflation, such as 2% per year.</p>
+                <div class="options">
+                    <input type="radio" name="q7" value="true" id="q7_true"><label for="q7_true">True</label>
+                    <input type="radio" name="q7" value="false" id="q7_false"><label for="q7_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The Friedman rule states that the optimal policy is to engineer a rate of deflation (a negative inflation rate) such that the nominal interest rate is driven to zero. This eliminates the opportunity cost of holding money, satiating the public's demand for real balances and minimizing shoe-leather costs.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Problem 4.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 8 -->
+            <li class="question" data-answer="true">
+                <p>8. In the Lucas misperceptions model, an unanticipated increase in the money supply can lead to a temporary increase in real output.</p>
+                <div class="options">
+                    <input type="radio" name="q8" value="true" id="q8_true"><label for="q8_true">True</label>
+                    <input type="radio" name="q8" value="false" id="q8_false"><label for="q8_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. In the Lucas misperceptions model, producers have imperfect information. They observe the price of their own good but not the aggregate price level. An unexpected monetary expansion raises all prices. A producer might misinterpret the rise in their own product's price as a relative price increase (an increase in real demand for their specific good) rather than a general increase in the price level. This misperception leads them to increase production, causing a temporary rise in aggregate output.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8, Section 8.11.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 9 -->
+            <li class="question" data-answer="false">
+                <p>9. The inflation tax and seigniorage are identical concepts.</p>
+                <div class="options">
+                    <input type="radio" name="q9" value="true" id="q9_true"><label for="q9_true">True</label>
+                    <input type="radio" name="q9" value="false" id="q9_false"><label for="q9_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. While closely related, they are not identical. Seigniorage is the real revenue the government gets from printing money, equal to the change in the money supply divided by the price level (\(\Delta M/P\)). The inflation tax is the rate of inflation times the real money base (\(\pi \cdot M/P\)). The two are equal only in a steady state with no real growth.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 10 -->
+            <li class="question" data-answer="true">
+                <p>10. During a hyperinflation, the real value of the money stock tends to fall dramatically.</p>
+                <div class="options">
+                    <input type="radio" name="q10" value="true" id="q10_true"><label for="q10_true">True</label>
+                    <input type="radio" name="q10" value="false" id="q10_false"><label for="q10_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. As inflation accelerates to extreme levels, the cost of holding money becomes enormous. People "flee from currency" by reducing their real money holdings as much as possible, spending money as soon as they receive it and switching to barter or more stable foreign currencies. This is a key finding in Cagan's study of hyperinflations.
+                        <div class="source">Source: McCallum (1989), Chapter 7, Section 7.2.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 11 -->
+            <li class="question" data-answer="false">
+                <p>11. An anticipated monetary expansion has larger real effects than an unanticipated one.</p>
+                <div class="options">
+                    <input type="radio" name="q11" value="true" id="q11_true"><label for="q11_true">True</label>
+                    <input type="radio" name="q11" value="false" id="q11_false"><label for="q11_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. In classical models with rational expectations, anticipated monetary policy has no real effects at all. Agents adjust their expectations and price-setting behavior in advance, neutralizing the policy's impact on real variables like output. Unanticipated policy, however, can have temporary real effects through mechanisms like the Lucas misperceptions model.
+                        <div class="source">Source: Hargreaves Heap (1992), Chapter 4.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 12 -->
+            <li class="question" data-answer="true">
+                <p>12. The time inconsistency problem of monetary policy arises because a government may have an incentive to announce a low-inflation policy and then deviate from it after the public has formed its expectations.</p>
+                <div class="options">
+                    <input type="radio" name="q12" value="true" id="q12_true"><label for="q12_true">True</label>
+                    <input type="radio" name="q12" value="false" id="q12_false"><label for="q12_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. If the government can convince the public to expect low inflation, it can then create surprise inflation to temporarily boost output and employment (moving along a short-run Phillips curve). The public, knowing this incentive, will not believe the low-inflation announcement, leading to an equilibrium with an inefficiently high inflation rate.
+                        <div class="source">Source: Hargreaves Heap (1992), Chapter 4, Section 4.3.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 13 -->
+            <li class="question" data-answer="false">
+                <p>13. In Real Business Cycle (RBC) models, money is the primary propagation mechanism for shocks.</p>
+                <div class="options">
+                    <input type="radio" name="q13" value="true" id="q13_true"><label for="q13_true">True</label>
+                    <input type="radio" name="q13" value="false" id="q13_false"><label for="q13_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The core of RBC theory is to explain business cycles through real shocks (like technology shocks) and real propagation mechanisms, such as intertemporal substitution and capital accumulation. The models of Long & Plosser (1983) and Plosser (1989) deliberately exclude money to show how far real factors alone can go in explaining cycles.
+                        <div class="source">Source: Plosser (1989); Long and Plosser (1983).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 14 -->
+            <li class="question" data-answer="true">
+                <p>14. The welfare cost of inflation can be represented by the area under the money demand curve between the levels of real balances held with and without inflation.</p>
+                <div class="options">
+                    <input type="radio" name="q14" value="true" id="q14_true"><label for="q14_true">True</label>
+                    <input type="radio" name="q14" value="false" id="q14_false"><label for="q14_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. This area, often called the Bailey triangle (or trapezoid), measures the loss in consumer surplus from the reduction in real money balances caused by inflation. It represents the value of the lost transaction services or the extra resources spent on cash management.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Section 6.7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 15 -->
+            <li class="question" data-answer="true">
+                <p>15. A higher nominal interest rate increases the velocity of money, ceteris paribus.</p>
+                <div class="options">
+                    <input type="radio" name="q15" value="true" id="q15_true"><label for="q15_true">True</label>
+                    <input type="radio" name="q15" value="false" id="q15_false"><label for="q15_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. The nominal interest rate is the opportunity cost of holding money. A higher rate causes people to hold less money for a given level of nominal income (PY). Since velocity is V = PY/M, a lower M for a given PY implies a higher velocity of circulation.
+                        <div class="source">Source: McCallum (1989), Chapter 3, Section 3.5.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 16 -->
+            <li class="question" data-answer="false">
+                <p>16. In the Cagan model of hyperinflation, the demand for real money balances depends positively on the expected rate of inflation.</p>
+                <div class="options">
+                    <input type="radio" name="q16" value="true" id="q16_true"><label for="q16_true">True</label>
+                    <input type="radio" name="q16" value="false" id="q16_false"><label for="q16_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The demand for real money balances depends *negatively* on the expected rate of inflation. Higher expected inflation represents a higher cost of holding money, thus reducing the real quantity demanded.
+                        <div class="source">Source: McCallum (1989), Chapter 7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 17 -->
+            <li class="question" data-answer="false">
+                <p>17. According to Kydland and Prescott, the price level in the post-war U.S. economy has been strongly procyclical.</p>
+                <div class="options">
+                    <input type="radio" name="q17" value="true" id="q17_true"><label for="q17_true">True</label>
+                    <input type="radio" name="q17" value="false" id="q17_false"><label for="q17_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. This is a central point of their paper "Business Cycles: Real Facts and a Monetary Myth." They argue that the belief in a procyclical price level is a myth and present evidence that the U.S. price level has been countercyclical in the post-Korean War period.
+                        <div class="source">Source: Kydland and Prescott (1990).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 18 -->
+            <li class="question" data-answer="true">
+                <p>18. The revenue from the inflation tax is subject to a Laffer curve effect, meaning that beyond a certain point, a higher inflation rate will lead to lower real revenue.</p>
+                <div class="options">
+                    <input type="radio" name="q18" value="true" id="q18_true"><label for="q18_true">True</label>
+                    <input type="radio" name="q18" value="false" id="q18_false"><label for="q18_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. The revenue is the inflation rate (the "tax rate") multiplied by real money balances (the "tax base"). As the inflation rate rises, the tax base (real balances) shrinks because people economize on holding money. Initially, revenue may rise, but at very high rates of inflation, the tax base shrinks so much that total revenue falls.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 19 -->
+            <li class="question" data-answer="false">
+                <p>19. If money is superneutral, then a permanent increase in the money growth rate will cause the real interest rate to rise.</p>
+                <div class="options">
+                    <input type="radio" name="q19" value="true" id="q19_true"><label for="q19_true">True</label>
+                    <input type="radio" name="q19" value="false" id="q19_false"><label for="q19_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Superneutrality means that a change in the money growth rate has no effect on any real variables, including the real interest rate. The nominal interest rate would rise one-for-one with the inflation rate, but the real interest rate would remain unchanged.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 20 -->
+            <li class="question" data-answer="true">
+                <p>20. One of the major undesirabilities of hyperinflation is that it severely undermines money's function as a store of value and medium of exchange.</p>
+                <div class="options">
+                    <input type="radio" name="q20" value="true" id="q20_true"><label for="q20_true">True</label>
+                    <input type="radio" name="q20" value="false" id="q20_false"><label for="q20_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. During hyperinflation, the value of money erodes extremely rapidly. This makes it a very poor store of value. Consequently, people avoid holding it, which in turn makes it less useful as a medium of exchange, forcing a return to inefficient barter or the use of foreign currencies.
+                        <div class="source">Source: McCallum (1989), Chapter 7.</div>
+                    </div>
+                </div>
+            </li>
+            <!-- Question 21 -->
+            <li class="question" data-answer="false">
+                <p>21. The real interest rate can never be negative.</p>
+                <div class="options">
+                    <input type="radio" name="q21" value="true" id="q21_true"><label for="q21_true">True</label>
+                    <input type="radio" name="q21" value="false" id="q21_false"><label for="q21_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The real interest rate, \(r = R - \pi^e\), can be negative if the expected inflation rate \(\pi^e\) is greater than the nominal interest rate \(R\). This situation is common during periods of high and rising inflation.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 22 -->
+            <li class="question" data-answer="true">
+                <p>22. In the Cagan model, the stability of the price level depends on the value of the parameter \(\alpha\), the semi-elasticity of money demand, and \(\lambda\), the coefficient of expectation adjustment.</p>
+                <div class="options">
+                    <input type="radio" name="q22" value="true" id="q22_true"><label for="q22_true">True</label>
+                    <input type="radio" name="q22" value="false" id="q22_false"><label for="q22_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. The condition for dynamic stability in the Cagan model is that \(|(\alpha\lambda + 1 - \lambda) / (1 + \alpha\lambda)| < 1\). The dynamic behavior of the price level (whether it converges to a steady state or explodes) depends critically on the values of these two parameters.
+                        <div class="source">Source: McCallum (1989), Chapter 7, Section 7.4.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 23 -->
+            <li class="question" data-answer="false">
+                <p>23. Using inflation as a source of government revenue is generally considered more efficient than using lump-sum taxes.</p>
+                <div class="options">
+                    <input type="radio" name="q23" value="true" id="q23_true"><label for="q23_true">True</label>
+                    <input type="radio" name="q23" value="false" id="q23_false"><label for="q23_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Lump-sum taxes are, by definition, non-distortionary and the most efficient form of taxation. The inflation tax is distortionary because it alters agents' behavior regarding money holdings, leading to welfare losses (shoe-leather costs). Therefore, lump-sum taxes are theoretically superior.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Section 6.7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 24 -->
+            <li class="question" data-answer="true">
+                <p>24. In a Real Business Cycle model with capital, a temporary productivity shock can have persistent effects on output over time.</p>
+                <div class="options">
+                    <input type="radio" name="q24" value="true" id="q24_true"><label for="q24_true">True</label>
+                    <input type="radio" name="q24" value="false" id="q24_false"><label for="q24_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. A temporary positive productivity shock raises output. Rational agents will save and invest part of this windfall. The increased investment leads to a higher capital stock in subsequent periods, which in turn leads to higher output in the future. This is a key propagation mechanism in RBC models.
+                        <div class="source">Source: Plosser (1989).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 25 -->
+            <li class="question" data-answer="false">
+                <p>25. If the nominal interest rate is 5% and the expected inflation rate is 7%, the real interest rate is 12%.</p>
+                <div class="options">
+                    <input type="radio" name="q25" value="true" id="q25_true"><label for="q25_true">True</label>
+                    <input type="radio" name="q25" value="false" id="q25_false"><label for="q25_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Using the Fisher equation \(r = R - \pi^e\), the real interest rate is \(5\% - 7\% = -2\%\).
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 26 -->
+            <li class="question" data-answer="true">
+                <p>26. A key argument in the Long and Plosser (1983) model is that comovement between different sectors of the economy can arise from the input-output structure of production, even without aggregate shocks.</p>
+                <div class="options">
+                    <input type="radio" name="q26" value="true" id="q26_true"><label for="q26_true">True</label>
+                    <input type="radio" name="q26" value="false" id="q26_false"><label for="q26_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. Their model shows how a shock to one sector (e.g., manufacturing) propagates to other sectors because its output is used as an input in those other sectors. This creates positive correlation (comovement) across sectoral outputs, which is a key feature of business cycles.
+                        <div class="source">Source: Long and Plosser (1983).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 27 -->
+            <li class="question" data-answer="false">
+                <p>27. The Lucas aggregate supply curve, \(y_t = y^* + d(P_t - E_{t-1}[P_t])\), is vertical in the short run.</p>
+                <div class="options">
+                    <input type="radio" name="q27" value="true" id="q27_true"><label for="q27_true">True</label>
+                    <input type="radio" name="q27" value="false" id="q27_false"><label for="q27_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The curve is upward-sloping in the short run because of the price surprise term \((P_t - E_{t-1}[P_t])\). An unexpected increase in the price level causes output to rise above its natural rate \(y^*\). The long-run aggregate supply curve, however, is vertical at \(y^*\) because in the long run, expectations are correct and the price surprise term is zero.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8, Section 8.11.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 28 -->
+            <li class="question" data-answer="true">
+                <p>28. Hyperinflations are typically caused by large and persistent government budget deficits that are financed by printing money.</p>
+                <div class="options">
+                    <input type="radio" name="q28" value="true" id="q28_true"><label for="q28_true">True</label>
+                    <input type="radio" name="q28" value="false" id="q28_false"><label for="q28_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. This is the consensus view among economists. When a government is unable to finance its spending through taxation or borrowing, it may resort to seigniorage. The resulting rapid growth in the money supply leads to hyperinflation.
+                        <div class="source">Source: McCallum (1989), Chapter 7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 29 -->
+            <li class="question" data-answer="false">
+                <p>29. If a country's central bank follows the Friedman rule, the nominal interest rate will be equal to the real interest rate.</p>
+                <div class="options">
+                    <input type="radio" name="q29" value="true" id="q29_true"><label for="q29_true">True</label>
+                    <input type="radio" name="q29" value="false" id="q29_false"><label for="q29_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The Friedman rule advocates for a zero nominal interest rate (R=0). According to the Fisher equation, this implies that the expected inflation rate should be equal to the negative of the real interest rate (\(\pi^e = -r\)). This requires deflation, not zero inflation.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 30 -->
+            <li class="question" data-answer="true">
+                <p>30. In a model where money is neutral but not superneutral, a one-time 5% increase in the money supply will not change the long-run real interest rate, but a permanent increase in the money growth rate from 0% to 5% will.</p>
+                <div class="options">
+                    <input type="radio" name="q30" value="true" id="q30_true"><label for="q30_true">True</label>
+                    <input type="radio" name="q30" value="false" id="q30_false"><label for="q30_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. This statement correctly distinguishes the two concepts. Neutrality implies that a change in the level of money has no real effects. Non-superneutrality implies that a change in the growth rate of money does have real effects, for example on the real interest rate via a real balance effect.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 31 -->
+            <li class="question" data-answer="false">
+                <p>31. The Fisher effect refers to the tendency of real interest rates to rise with expected inflation.</p>
+                <div class="options">
+                    <input type="radio" name="q31" value="true" id="q31_true"><label for="q31_true">True</label>
+                    <input type="radio" name="q31" value="false" id="q31_false"><label for="q31_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. The Fisher effect refers to the tendency of the *nominal* interest rate to move one-for-one with the expected inflation rate, leaving the *real* interest rate unaffected.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 32 -->
+            <li class="question" data-answer="true">
+                <p>32. A government can collect seigniorage revenue even if the inflation rate is zero, provided the economy is growing.</p>
+                <div class="options">
+                    <input type="radio" name="q32" value="true" id="q32_true"><label for="q32_true">True</label>
+                    <input type="radio" name="q32" value="false" id="q32_false"><label for="q32_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. In a growing economy, the demand for real money balances increases over time. The government can meet this demand by printing new money without causing inflation. The purchasing power of this new money is the seigniorage revenue.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 33 -->
+            <li class="question" data-answer="false">
+                <p>33. The adaptive expectations hypothesis, used in Cagan's model, assumes that agents use all available information to forecast inflation, making only random errors.</p>
+                <div class="options">
+                    <input type="radio" name="q33" value="true" id="q33_true"><label for="q33_true">True</label>
+                    <input type="radio" name="q33" value="false" id="q33_false"><label for="q33_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. This describes rational expectations. The adaptive expectations hypothesis assumes that agents form expectations by adjusting their previous period's expectation based on the error they made. This can lead to systematic, predictable errors, for example, consistently under-predicting inflation when it is accelerating.
+                        <div class="source">Source: McCallum (1989), Chapter 7, Section 7.5.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 34 -->
+            <li class="question" data-answer="true">
+                <p>34. In the Long and Plosser (1983) RBC model, there are no frictions, adjustment costs, or money.</p>
+                <div class="options">
+                    <input type="radio" name="q34" value="true" id="q34_true"><label for="q34_true">True</label>
+                    <input type="radio" name="q34" value="false" id="q34_false"><label for="q34_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. The Long and Plosser model is a benchmark that deliberately abstracts from many factors, including money, government, and any frictions, to demonstrate that business cycle-like fluctuations can arise from real shocks being propagated through a frictionless, competitive equilibrium model.
+                        <div class="source">Source: Long and Plosser (1983).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 35 -->
+            <li class="question" data-answer="false">
+                <p>35. The welfare cost of a 10% steady, anticipated inflation is typically estimated to be a large fraction of GNP, around 10-15%.</p>
+                <div class="options">
+                    <input type="radio" name="q35" value="true" id="q35_true"><label for="q35_true">True</label>
+                    <input type="radio" name="q35" value="false" id="q35_false"><label for="q35_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Standard calculations of the welfare cost of anticipated inflation (the "shoe-leather costs") based on the Bailey triangle are typically very small, often less than 1% of GNP for a 10% inflation rate. The larger costs of inflation are usually associated with it being variable and unanticipated.
+                        <div class="source">Source: McCallum (1989), Chapter 6, Section 6.7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 36 -->
+            <li class="question" data-answer="true">
+                <p>36. If the government finances a budget deficit by selling bonds to the central bank, this is equivalent to financing it through seigniorage.</p>
+                <div class="options">
+                    <input type="radio" name="q36" value="true" id="q36_true"><label for="q36_true">True</label>
+                    <input type="radio" name="q36" value="false" id="q36_false"><label for="q36_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. When the central bank buys government bonds, it typically does so by creating new high-powered money. This increases the money supply and is the modern institutional arrangement through which governments effectively print money to finance spending.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 37 -->
+            <li class="question" data-answer="false">
+                <p>37. In a Cash-in-Advance (CIA) model, an increase in the rate of inflation encourages individuals to increase their supply of labour.</p>
+                <div class="options">
+                    <input type="radio" name="q37" value="true" id="q37_true"><label for="q37_true">True</label>
+                    <input type="radio" name="q37" value="false" id="q37_false"><label for="q37_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. In a CIA model, inflation acts as a tax on consumption. This makes consumption more expensive relative to leisure. Rational agents will therefore substitute away from consumption and towards leisure, which means they will decrease their supply of labour.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8, Section 8.11.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 38 -->
+            <li class="question" data-answer="true">
+                <p>38. The policy impotence proposition from New Classical Macroeconomics states that systematic, and therefore anticipated, monetary policy will have no effect on real output.</p>
+                <div class="options">
+                    <input type="radio" name="q38" value="true" id="q38_true"><label for="q38_true">True</label>
+                    <input type="radio" name="q38" value="false" id="q38_false"><label for="q38_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. This is the essence of the policy impotence proposition. If a policy is systematic (e.g., follows a rule), rational agents will anticipate its effects on the price level. They will adjust their price and wage expectations accordingly, leaving no room for the price surprises that are necessary for monetary policy to have real effects in these models.
+                        <div class="source">Source: Hargreaves Heap (1992), Chapter 4, Section 4.2.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 39 -->
+            <li class="question" data-answer="false">
+                <p>39. If the real interest rate is 3% and the nominal interest rate is 2%, the expected inflation rate must be 5%.</p>
+                <div class="options">
+                    <input type="radio" name="q39" value="true" id="q39_true"><label for="q39_true">True</label>
+                    <input type="radio" name="q39" value="false" id="q39_false"><label for="q39_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Rearranging the Fisher equation, \(\pi^e = R - r\). Therefore, the expected inflation rate is \(2\% - 3\% = -1\%\). This implies an expected deflation of 1%.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 40 -->
+            <li class="question" data-answer="true">
+                <p>40. The argument that governments might use surprise inflation to reduce unemployment is an example of the time inconsistency problem.</p>
+                <div class="options">
+                    <input type="radio" name="q40" value="true" id="q40_true"><label for="q40_true">True</label>
+                    <input type="radio" name="q40" value="false" id="q40_false"><label for="q40_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. The optimal policy announced beforehand (ex-ante) is zero inflation. However, once the public has formed its expectations based on this announcement, the government has an incentive to renege and create surprise inflation to gain a short-term output boost. This inconsistency between the ex-ante optimal plan and the ex-post incentive is the core of the time inconsistency problem.
+                        <div class="source">Source: Hargreaves Heap (1992), Chapter 4.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 41 -->
+            <li class="question" data-answer="false">
+                <p>41. In the classical model, an increase in the money supply leads to a lower real wage in equilibrium.</p>
+                <div class="options">
+                    <input type="radio" name="q41" value="true" id="q41_true"><label for="q41_true">True</label>
+                    <input type="radio" name="q41" value="false" id="q41_false"><label for="q41_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. In the standard classical model, money is neutral. An increase in the money supply causes the price level and the nominal wage to increase in the same proportion, leaving the real wage (W/P) and all other real variables unchanged.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8, Section 8.8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 42 -->
+            <li class="question" data-answer="true">
+                <p>42. The welfare-maximizing rate of inflation according to the Friedman rule is achieved when the nominal interest rate is zero.</p>
+                <div class="options">
+                    <input type="radio" name="q42" value="true" id="q42_true"><label for="q42_true">True</label>
+                    <input type="radio" name="q42" value="false" id="q42_false"><label for="q42_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. When the nominal interest rate is zero, the opportunity cost of holding money is zero. This induces people to hold real balances to the point of satiation, where the marginal benefit of holding money is zero. At this point, the transaction-related welfare losses (shoe-leather costs) are eliminated.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 43 -->
+            <li class="question" data-answer="false">
+                <p>43. Real Business Cycle theory posits that monetary policy is the most important cause of economic fluctuations.</p>
+                <div class="options">
+                    <input type="radio" name="q43" value="true" id="q43_true"><label for="q43_true">True</label>
+                    <input type="radio" name="q43" value="false" id="q43_false"><label for="q43_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. RBC theory argues that real shocks, primarily to technology and productivity, are the main drivers of business cycles. It attempts to explain fluctuations as the efficient response of the economy to these real shocks, abstracting from monetary factors.
+                        <div class="source">Source: Plosser (1989).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 44 -->
+            <li class="question" data-answer="true">
+                <p>44. If the government uses seigniorage to finance its spending, it is effectively imposing a tax on holders of money.</p>
+                <div class="options">
+                    <input type="radio" name="q44" value="true" id="q44_true"><label for="q44_true">True</label>
+                    <input type="radio" name="q44" value="false" id="q44_false"><label for="q44_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. By printing money, the government increases the money supply, which leads to inflation. This inflation erodes the real purchasing power of the money held by the public. This loss of purchasing power is the "inflation tax," which is the cost borne by money holders that allows the government to acquire real resources.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 45 -->
+            <li class="question" data-answer="false">
+                <p>45. Superneutrality holds in any model where neutrality holds.</p>
+                <div class="options">
+                    <input type="radio" name="q45" value="true" id="q45_true"><label for="q45_true">True</label>
+                    <input type="radio" name="q45" value="false" id="q45_false"><label for="q45_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Superneutrality is a much stronger condition than neutrality. A model can be neutral (a change in the level of money has no real effects) but not superneutral. For example, in a model with a real balance effect, a change in the money growth rate (and thus inflation) affects steady-state real balances, which in turn affects the capital stock and real interest rate.
+                        <div class="source">Source: McCallum (1989), Chapter 6.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 46 -->
+            <li class="question" data-answer="true">
+                <p>46. A key feature of the RBC model in Long and Plosser (1983) is that it can generate persistence and comovement in output series from independent, serially uncorrelated shocks.</p>
+                <div class="options">
+                    <input type="radio" name="q46" value="true" id="q46_true"><label for="q46_true">True</label>
+                    <input type="radio" name="q46" value="false" id="q46_false"><label for="q46_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. The model's input-output structure acts as a propagation mechanism. A shock to one industry is propagated to other industries that use its output as an input, generating comovement. The shock is also propagated through time via capital accumulation (as goods produced in one period are used as inputs in the next), generating persistence.
+                        <div class="source">Source: Long and Plosser (1983).</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 47 -->
+            <li class="question" data-answer="false">
+                <p>47. The primary social cost of hyperinflation is the redistribution of wealth from debtors to creditors.</p>
+                <div class="options">
+                    <input type="radio" name="q47" value="true" id="q47_true"><label for="q47_true">True</label>
+                    <input type="radio" name="q47" value="false" id="q47_false"><label for="q47_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. While wealth redistribution can occur (from creditors to debtors if the inflation is unexpected), the primary social cost is the massive inefficiency and resource misallocation that results from the breakdown of the monetary system. The economy reverts to inefficient barter, and huge amounts of time and resources are wasted trying to avoid holding the rapidly depreciating currency.
+                        <div class="source">Source: McCallum (1989), Chapter 7.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 48 -->
+            <li class="question" data-answer="true">
+                <p>48. In the classical model, the aggregate supply curve is vertical because wages and prices are perfectly flexible.</p>
+                <div class="options">
+                    <input type="radio" name="q48" value="true" id="q48_true"><label for="q48_true">True</label>
+                    <input type="radio" name="q48" value="false" id="q48_false"><label for="q48_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. Perfect flexibility of wages and prices ensures that the labor market is always in equilibrium at the full-employment level of output (the natural rate). Output is therefore determined solely by supply-side factors (the capital stock, labor supply, and technology) and is independent of the price level.
+                        <div class="source">Source: EC3115 Subject Guide, Chapter 8, Section 8.8.</div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Question 49 -->
+            <li class="question" data-answer="false">
+                <p>49. The existence of business cycles is, by itself, evidence of market failure.</p>
+                <div class="options">
+                    <input type="radio" name="q49" value="true" id="q49_true"><label for="q49_true">True</label>
+                    <input type="radio" name="q49" value="false" id="q49_false"><label for="q49_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        False. Real Business Cycle theory demonstrates that fluctuations in aggregate variables can be the result of optimal, efficient responses by rational agents to real shocks. In this view, the business cycle is an equilibrium phenomenon and does not represent a market failure.
+                        <div class="source">Source: Plosser (1989); Long and Plosser (1983).</div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="question" data-answer="true">
+                <p>50. Real Business Cycle (RBC) theory suggests that business cycles are natural and efficient responses of the economy to real shocks, such as changes in technology.</p>
+                <div class="options">
+                    <input type="radio" name="q50" value="true" id="q50_true"><label for="q50_true">True</label>
+                    <input type="radio" name="q50" value="false" id="q50_false"><label for="q50_false">False</label>
+                </div>
+                <div class="explanation hidden">
+                    <span class="feedback"></span>
+                    <div class="explanation-text">
+                        True. A central tenet of RBC theory is that fluctuations in aggregate output are primarily driven by real shocks (especially to technology/productivity) and that the observed cycles are the Pareto-optimal responses of maximizing agents in a competitive equilibrium. In this view, cycles are not a sign of market failure that needs to be stabilized.
+                        <div class="source">Source: Long and Plosser (1983); Plosser (1989).</div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <button id="clear-answers-btn">Clear My Answers and Restart</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.question');
+
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Function to get a cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Function to erase a cookie
+            function eraseCookie(name) {
+                document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            }
+
+            // Function to handle answer checking
+            function checkAnswer(questionElement, selectedValue) {
+                const correctAnswer = questionElement.getAttribute('data-answer');
+                const explanationDiv = questionElement.querySelector('.explanation');
+                const feedbackSpan = explanationDiv.querySelector('.feedback');
+                
+                if (selectedValue === correctAnswer) {
+                    feedbackSpan.textContent = 'Correct!';
+                    feedbackSpan.className = 'feedback correct';
+                } else {
+                    feedbackSpan.textContent = 'Incorrect. The correct answer is ' + (correctAnswer === 'true' ? 'True.' : 'False.');
+                    feedbackSpan.className = 'feedback incorrect';
+                }
+                explanationDiv.classList.remove('hidden');
+            }
+
+            // Add event listeners to all radio buttons
+            questions.forEach((question, index) => {
+                const qNum = index + 1;
+                const radios = question.querySelectorAll(`input[name="q${qNum}"]`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        checkAnswer(question, selectedValue);
+                        setCookie(`quiz_answer_q${qNum}`, selectedValue, 7); // Save answer for 7 days
+                    });
+                });
+            });
+
+            // Load answers from cookies on page load
+            questions.forEach((question, index) => {
+                const qNum = index + 1;
+                const savedAnswer = getCookie(`quiz_answer_q${qNum}`);
+                if (savedAnswer) {
+                    const radioToCheck = question.querySelector(`input[name="q${qNum}"][value="${savedAnswer}"]`);
+                    if (radioToCheck) {
+                        radioToCheck.checked = true;
+                        checkAnswer(question, savedAnswer);
+                    }
+                }
+            });
+
+            // Event listener for the clear button
+            document.getElementById('clear-answers-btn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to clear all your saved answers and restart the quiz?')) {
+                    questions.forEach((question, index) => {
+                        const qNum = index + 1;
+                        eraseCookie(`quiz_answer_q${qNum}`);
+                    });
+                    location.reload();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

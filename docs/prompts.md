@@ -70,17 +70,18 @@ Generate a set of 50 multiple-choice quiz questions to help me prepare for my EC
  
  
  ````
- You are a university lecturer on monetary economics. Read the PDF files @ec3115/SubjectGuide/EC3115\ -\ Ch\ 8\ Classical\ models\ and\ monetary\ policy-1.pdf and @ec3115/Books/mccallum-pages-1.pdf   and @ec3115/Books/mccallum-pages-2.pdf and @ec3115/Books/hargreaves-pages-1.pdf and @ec3115/Papers/plosser.pdf and @ec3115/Papers/long.pdf  and @ec3115/Papers/kydland1.pdf
- Generate a set of 50 multiple-choice quiz questions to help me prepare for my EC3115 exam on the subject of "Classical models and monetary policy". The questions should cover the following topics: 
- * describe how, in the classical economy, output is determined by the factor markets 
- * describe and discuss the effects of monetary policy, with reference to the effects of 
- * money on nominal variables such as prices and nominal wages, and on real variables such as employment 
- * describe what business cycle models are and what they try to do * list and explain the workings behind, the flexible price models where money has real effects. 
- The quiz questions and answers should be statically stored using HTML elements, not in JavaScript strings or HTML attribute values. 
- Allow the user to select an answer using radio buttons, and then the quiz will show if the user's answer is correct or not, together with the correct answer.   
- Include a detailed explanation with each answer. 
- The explanation should also include the sources used for the answer.  
- Store the user's answers in cookies so that they can resume the quiz if they leave the page.  
- Provide a button at the end of the quiz to allow the user to clear the stored answers.  
- Use LaTeX and the MathJax library for math equations.  Save the quiz to the file ec3115\ch8-quiz-mc-1.html as an interactive HTML page.
+ YYou are a university lecturer on monetary economics. R@ec3115/SubjectGuide/EC3115\ -\ Ch\ 8\ Classical\ models\ and\ monetary\ policy-1.pdf and @ec3115/Books/mccallum-pages-1.pdf   and @ec3115/Books/mccallum-pages-2.pdf and @ec3115/Books/hargreaves-pages-1.pdf and @ec3115/Papers/plosser.pdf and @ec3115/Papers/long.pdf  and @ec3115/Papers/kydland1.pdf. 
+ Generate a set of 100 flashcards to help me prepare for my EC3115 exam on the subject of "Classical models and monetary policy". The questions should cover the following topics:  
+ * describe how, in the classical economy, output is determined by the factor markets  
+ * describe and discuss the effects of monetary policy, with reference to the effects of  
+ * money on nominal variables such as prices and nominal wages, and on real variables such as employment  
+ * describe what business cycle models are and what they try to do * list and explain the workings behind, the flexible price models where money has real effects.  
+ 
+ The flashcards should be an interactive HTML page and display as a slideshow moving left-to-right. 
+ Use LaTeX and the MathJax library for math equations. 
+ LaTeX equations in cards should render inline. 
+ The flashcard questions and answers should be stored statically using HTML elements, not as JavaScript strings or HTML attribute values. 
+ Allow the user to flip a card by either pressing a button or clicking on the card itself. 
+ Each flashcard answer should be as detailed as possible and include the sources used to generate the answer. 
+ Save the flashcards to the file ec3115\ch8-flashcards-1.html
  ````
