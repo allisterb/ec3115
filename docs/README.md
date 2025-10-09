@@ -24,7 +24,7 @@ This site contains study materials for the EC3115 Monetary Economics course.
 	*   [Money, Inflation and Welfare True/False 2](./quizzes/ch7-quiz-tf-2.html)
     *   [Money, Inflation and Welfare Multiple Choice](./quizzes/ch7-quiz-mc-1.html)
 	*   [Money, Inflation and Welfare Multiple Choice 2](./quizzes/ch7-quiz-mc-2.html)
-	*   [Classical Models and Monetary Policy(./quizzes/ch8-quiz-mc-1.html)
+	*   [Classical Models and Monetary Policy](./quizzes/ch8-quiz-mc-1.html)
 	*   [Classical Models and Monetary Policy](./quizzes/ch8-quiz-mc-2.html)
 
 *   [Prompts](./prompts.md)
