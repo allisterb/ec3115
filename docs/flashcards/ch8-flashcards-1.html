@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Ch 8: Classical Models and Monetary Policy Flashcards</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        h1 {
+            color: #1c2e5a;
+            margin-bottom: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 800px;
+            max-width: 90vw;
+            height: 675px;
+            perspective: 1500px;
+        }
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .card.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .card-front {
+            font-size: 1.8em;
+            color: #1c2e5a;
+        }
+        .card-back {
+            background-color: #f8f9fa;
+            transform: rotateY(180deg);
+            text-align: left;
+            align-items: flex-start;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .card-back h3 {
+            color: #1c2e5a;
+            margin-top: 0;
+        }
+        .card-back .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            width: 100%;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 800px;
+            max-width: 90vw;
+            margin-top: 20px;
+        }
+        .nav-btn, .flip-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover, .flip-btn:hover {
+            background-color: #0056b3;
+        }
+        #card-counter {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 - Ch 8: Classical Models and Monetary Policy</h1>
+
+    <div class="slideshow-container">
+        <!-- Card 1 -->
+        <div class="card active">
+            <div class="card-inner">
+                <div class="card-front">How is the equilibrium level of output determined in the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the classical model, the equilibrium level of output is determined entirely by supply-side factors in the factor markets, specifically the labour market. The key components are:</p>
+                    <ol>
+                        <li><b>Production Function:</b> Output (\(y\)) is a function of capital (\(k\)) and labour (\(l\)), \(y = f(k, l)\). In the short-run, capital is assumed to be fixed.</li>
+                        <li><b>Labour Demand:</b> Profit-maximising firms demand labour up to the point where the marginal product of labour (MPL) equals the real wage (\(W/P\)). This gives a downward-sloping labour demand curve: \(W/P = f_l(k^*, l)\).</li>
+                        <li><b>Labour Supply:</b> The supply of labour is a positive function of the real wage, as a higher real wage encourages individuals to substitute work for leisure.</li>
+                    </ol>
+                    <p>The labour market clears at an equilibrium real wage and an equilibrium level of employment (\(l^*\)). This level of employment, via the production function, determines the unique full-employment level of output (\(y^* = f(k^*, l^*)\)). Because output is determined this way, the aggregate supply curve is vertical at \(y^*\).</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.7; McCallum, Ch 5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the principle of monetary neutrality in the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Monetary neutrality is a core proposition of the classical model which states that a one-time change in the nominal money supply (\(M\)) affects only nominal variables, leaving all real variables unchanged. </p>
+                    <p>Specifically, a doubling of the money supply will, in equilibrium, lead to a doubling of the price level (\(P\)) and the nominal wage (\(W\)). However, real variables such as output (\(y\)), employment (\(l\)), the real wage (\(W/P\)), and the real interest rate (\(r\)) will remain unaffected.</p>
+                    <p>This occurs because the vertical aggregate supply curve dictates that output is fixed at its full-employment level, \(y^*\). An increase in \(M\) shifts the aggregate demand curve to the right, but the only effect is to raise the price level proportionally, restoring the real money supply (\(M/P\)) to its original level and leaving the real side of the economy untouched.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.8; McCallum, Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the primary purpose of Real Business Cycle (RBC) models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Real Business Cycle (RBC) models aim to explain business cycle fluctuations as the natural and efficient response of the economy to real shocks, primarily random shocks to technology (total factor productivity).</p>
+                    <p>Key tenets and purposes include:</p>
+                    <ul>
+                        <li>To demonstrate that a standard neoclassical growth model, when subjected to technology shocks, can generate fluctuations that qualitatively and quantitatively resemble the "stylized facts" of actual business cycles (e.g., persistence in output, comovement of series, relative volatilities of consumption and investment).</li>
+                        <li>To view business cycles not as welfare-reducing deviations from a trend, but as the Pareto-optimal path of the economy given the available technology and preferences.</li>
+                        <li>To provide a unified theory of growth and fluctuations, where the same economic principles and mechanisms explain both phenomena.</li>
+                        <li>To serve as a well-defined benchmark to assess the importance of other factors, such as monetary disturbances or market failures, in explaining economic fluctuations.</li>
+                    </ul>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles"; Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the Lucas "misperceptions" model and how does it allow money to have real effects?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Lucas misperceptions model is a flexible-price classical model where money can have short-run real effects due to asymmetric information. The core idea is the "islands" paradigm:</p>
+                    <ol>
+                        <li>The economy consists of many separate markets ("islands").</li>
+                        <li>Producers on each island observe the price of their own good (\(P_i\)) but do not immediately observe the aggregate price level (\(P\)).</li>
+                        <li>An unexpected increase in the money supply raises all prices, including \(P_i\) and \(P\).</li>
+                        <li>A producer sees their own price \(P_i\) rise but cannot be sure if this is due to a general rise in all prices (a nominal shock) or a specific increase in demand for their good (a real, relative price shock).</li>
+                        <li>They rationally infer it is likely a combination of both. To the extent they perceive it as a relative price increase, they are induced to increase their labour supply and production.</li>
+                    </ol>
+                    <p>When this happens across all islands, aggregate output rises above its natural rate. Therefore, <b>unexpected</b> monetary policy has real effects. However, these effects are temporary. Once producers realize the aggregate price level has risen, they adjust their expectations and output returns to the natural rate. <b>Anticipated</b> monetary policy has no real effects.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11; Hargreaves Heap (1992), Ch 2.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the Lucas Aggregate Supply Curve?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Lucas aggregate supply curve formalizes the key result of the misperceptions model. It states that aggregate output (\(y_t\)) deviates from its natural or full-employment level (\(y^*\)) only in response to unanticipated movements in the price level ("price surprises").</p>
+                    <p>The equation is typically written as:</p>
+                    <p>\( y_t = y^* + d(P_t - E_{t-1}[P_t]) \)</p>
+                    <p>Where:</p>
+                    <ul>
+                        <li>\(y_t\) is the log of real output at time \(t\).</li>
+                        <li>\(y^*\) is the log of the natural rate of output.</li>
+                        <li>\(P_t\) is the log of the price level at time \(t\).</li>
+                        <li>\(E_{t-1}[P_t]\) is the expectation of the price level for time \(t\), formed at time \(t-1\) based on all available information.</li>
+                        <li>\(d > 0\) is a coefficient that reflects how much output responds to a price surprise. Its magnitude depends on the relative variance of aggregate versus idiosyncratic shocks.</li>
+                    </ul>
+                    <p>This equation implies that only the unexpected part of monetary policy can affect real output.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11; Hargreaves Heap (1992), Ch 2.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the classical model, what is the role of the labour demand curve?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The labour demand curve in the classical model represents the profit-maximizing choices of firms. It is derived from the production function and shows the quantity of labour firms are willing to hire at any given real wage.</p>
+                    <p>The key principles are:</p>
+                    <ul>
+                        <li><b>Profit Maximization:</b> A competitive, profit-maximizing firm will hire labour up to the point where the cost of an additional unit of labour (the real wage, \(W/P\)) is equal to the benefit from that unit (the marginal product of labour, MPL). Thus, the condition for labour demand is \(W/P = MPL\).</li>
+                        <li><b>Diminishing Marginal Product:</b> The production function is assumed to exhibit a diminishing marginal product of labour. As more labour is added (holding capital fixed), each additional unit of labour adds less to output than the previous one.</li>
+                    </ul>
+                    <p>Because the MPL is a decreasing function of the amount of labour employed, the labour demand curve, which is identical to the MPL curve, is downward-sloping. A lower real wage is required to induce firms to hire more labour.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5; EC3115 Subject Guide, Ch 8.7.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the Policy Impotence Proposition?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Policy Impotence Proposition, a central tenet of New Classical Macroeconomics, states that systematic, feedback-based monetary (or fiscal) policy has no effect on real variables like output and employment, even in the short run.</p>
+                    <p>The argument combines the Lucas supply curve with the assumption of Rational Expectations:</p>
+                    <ol>
+                        <li>The Lucas supply curve states that only <b>unanticipated</b> price changes affect output.</li>
+                        <li>Rational agents understand the structure of the economy, including the systematic way the central bank conducts policy (its "policy rule").</li>
+                        <li>Therefore, any systematic component of monetary policy will be anticipated by rational agents. They will incorporate this knowledge into their price expectations (\(E_{t-1}[P_t]\)).</li>
+                        <li>Since the systematic policy is anticipated, it creates no price surprise (\(P_t - E_{t-1}[P_t] = 0\) for the systematic part). Consequently, it has no effect on output.</li>
+                    </ol>
+                    <p>The only way policy can affect real output is through random, unsystematic, and therefore surprising, actions, which cannot be used to stabilize the economy.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">According to Kydland and Prescott (1990), what are some key "real facts" of U.S. business cycles?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Kydland and Prescott (1990) document several statistical regularities or "stylized facts" about U.S. business cycles in the post-war period by analyzing the percentage deviations from trend of various macroeconomic aggregates. Key facts include:</p>
+                    <ul>
+                        <li><b>Volatility:</b> Investment is far more volatile than output. Consumption of nondurables and services is much smoother than output.</li>
+                        <li><b>Comovement (Procyclicality):</b> Consumption, investment, and employment are all strongly procyclical (they move in the same direction as output).</li>
+                        <li><b>Productivity:</b> Labour productivity (GNP/hours) is procyclical.</li>
+                        <li><b>Prices:</b> Contrary to the common belief at the time, the aggregate price level (GNP deflator or CPI) is <b>countercyclical</b>. It tends to be below trend when output is above trend.</li>
+                        <li><b>Money:</b> Nominal money stocks (M1, M2) are procyclical, but they do not strongly lead the cycle.</li>
+                    </ul>
+                    <p>These facts, particularly the countercyclical nature of prices, pose a significant challenge for monetary theories of the business cycle and provide a benchmark for RBC models to match.</p>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is a Cash-in-Advance (CIA) model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A Cash-in-Advance (CIA) model, also known as a Clower constraint model, is a framework used to provide explicit microfoundations for the demand for money. It moves beyond simply putting money in the utility function.</p>
+                    <p>The core feature is a constraint that requires certain goods to be purchased with cash. Agents must hold sufficient money balances <b>before</b> they go to the goods market. Typically, the constraint takes the form:</p>
+                    <p>\( P_t C_t \le M_{t-1} \)</p>
+                    <p>This means that nominal consumption spending in period \(t\) (\(P_t C_t\)) cannot exceed the money balances carried over from the previous period (\(M_{t-1}\)).</p>
+                    <p>This setup creates a real demand for an otherwise useless asset (fiat money) because it is essential for facilitating transactions. CIA models are used to study the effects of inflation, which acts as a tax on cash balances and can distort consumption and labour supply decisions.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How can a Cash-in-Advance (CIA) model generate real effects from monetary policy?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In a CIA model, monetary policy has real effects by influencing the effective price of consumption. The mechanism works as follows:</p>
+                    <ol>
+                        <li>The CIA constraint, \(P_t C_t \le M_{t-1}\), can be written in real terms as \(C_t \le M_{t-1}/P_t\). By noting that \(M_{t-1}/P_t = (M_{t-1}/P_{t-1}) / (P_t/P_{t-1}) = m_{t-1} / (1+\pi_t)\), the constraint becomes \(C_t \le m_{t-1} / (1+\pi_t)\).</li>
+                        <li>An increase in the nominal interest rate, typically driven by higher expected inflation (\(\pi_t\)), raises the opportunity cost of holding money.</li>
+                        <li>This higher cost of holding money acts like a tax on consumption. It makes consumption goods relatively more expensive compared to leisure.</li>
+                        <li>Rational agents respond to this change in relative prices by substituting away from consumption and towards leisure.</li>
+                        <li>The increase in leisure implies a decrease in labour supply.</li>
+                        <li>With less labour input, equilibrium output falls.</li>
+                    </ol>
+                    <p>Thus, through the "inflation tax" mechanism, changes in monetary policy that affect inflation can have real effects on consumption, labour supply, and output.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What are "Limited Participation" models and how do they explain the real effects of money?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Limited participation models are a class of classical models with flexible prices where money has real effects because not all agents can respond immediately to monetary policy actions.</p>
+                    <p>The typical structure is:</p>
+                    <ol>
+                        <li>Monetary policy (e.g., an open market operation) is conducted through the financial system, affecting banks and other financial intermediaries first.</li>
+                        <li>A subset of agents (e.g., firms, financial traders) participate directly in these financial markets, while others (e.g., households) do not. Households may have made portfolio decisions in a previous period and cannot adjust them within the current period.</li>
+                        <li>An unexpected increase in the money supply creates a glut of liquidity in the banking system.</li>
+                        <li>To lend out these excess reserves, banks lower the nominal interest rate. This is known as the <b>liquidity effect</b>.</li>
+                        <li>Firms, who participate in the credit market, see the lower interest rate and find it cheaper to borrow to finance investment projects. They increase investment.</li>
+                        <li>The increase in investment demand leads to higher output and employment, as labour and capital are complementary inputs.</li>
+                    </ol>
+                    <p>Thus, money has real, short-run effects because its injection into the economy is not uniform but is channelled through a specific market, causing a temporary change in the real interest rate that affects investment decisions.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the context of RBC theory, what is meant by "propagation mechanism"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A propagation mechanism refers to the economic forces within a model that transmit and amplify initial shocks, causing their effects to persist over time and spread across different sectors of the economy.</p>
+                    <p>In Real Business Cycle (RBC) theory, the economy's structure itself acts as the propagation mechanism. Even if the initial shocks (e.g., to technology) are random and uncorrelated over time, the model can generate output series that are serially correlated (persistent) and that move together with other series (comovement).</p>
+                    <p>A key example is the input-output structure of production, as in Long and Plosser (1983). An unexpected positive technology shock in one sector (e.g., manufacturing) increases its output. Since manufactured goods are used as inputs in many other sectors (including manufacturing itself), this abundance of inputs raises productivity and output in those sectors in subsequent periods. This spreads the shock across the economy and makes its effects last longer than the initial impulse.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 13 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "time inconsistency" problem of monetary policy?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The time inconsistency problem, in the context of monetary policy, describes a situation where a government or central bank finds it optimal to announce a certain policy (e.g., zero inflation) to influence public expectations, but then has an incentive to renege on that policy once the public has acted on those expectations.</p>
+                    <p>The typical story is as follows:</p>
+                    <ol>
+                        <li>The government desires both low inflation and low unemployment. It announces a policy of zero inflation.</li>
+                        <li>The public, believing the announcement, forms expectations of zero inflation and sets wages and prices accordingly.</li>
+                        <li>Once these expectations are set, the government has an incentive to create a monetary "surprise" (unexpected inflation). According to the Lucas supply curve (\(y = y^* + d(P - P^e)\)), this surprise will temporarily boost output and reduce unemployment, which the government values.</li>
+                        <li>Rational agents in the public understand this incentive. They know the government's promise of zero inflation is not credible (it is "time inconsistent").</li>
+                        <li>Therefore, the public will not expect zero inflation. They will expect the level of inflation the government will be tempted to create. In equilibrium, the government creates inflation, but because it is fully anticipated, there is no output gain. The economy ends up with an "inflationary bias" but no reduction in unemployment.</li>
+                    </ol>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4.3.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 14 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How does the classical model explain the determination of the price level?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the classical model, the price level (\(P\)) is determined by the interaction of aggregate supply (AS) and aggregate demand (AD), where the quantity theory of money plays a crucial role.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li><b>Aggregate Supply (AS):</b> As determined by the labour market and the production function, the AS curve is vertical at the full-employment level of output, \(y^*\).</li>
+                        <li><b>Aggregate Demand (AD):</b> The AD curve is derived from the IS-LM model. For a given money supply (\(M\)), a lower price level (\(P\)) means higher real money balances (\(M/P\)), which shifts the LM curve to the right, lowering the interest rate, stimulating investment, and thus increasing aggregate demand. This gives a downward-sloping AD curve.</li>
+                        <li><b>Equilibrium:</b> The equilibrium price level \(P^*\) is the level at which the AD curve intersects the vertical AS curve. At this price level, the demand for goods and services is exactly equal to the amount supplied at full employment.</li>
+                    </ol>
+                    <p>Essentially, with output fixed at \(y^*\), the price level must adjust to ensure that the real money supply (\(M/P\)) is at the level required to clear the money market and generate aggregate demand equal to \(y^*\).</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 15 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is a "political business cycle" in the context of New Classical models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In New Classical models, a political business cycle can arise from the strategic interaction between a government that has private information about its "type" and a rational public.</p>
+                    <p>The model, based on the time-inconsistency problem, works as follows:</p>
+                    <ul>
+                        <li>There are two types of government: a "wet" government that is tempted to inflate to gain output, and a "hard-nosed" government that is committed to zero inflation. The public does not know the government's type for sure.</li>
+                        <li>Early in its term, even a "wet" government may choose not to inflate. It does this to mimic a "hard-nosed" government and build a reputation for being tough on inflation.</li>
+                        <li>As an election approaches or the end of the term nears, the incentive to maintain this reputation diminishes. The short-run gain from an inflationary surprise may now outweigh the long-run benefit of the reputation.</li>
+                        <li>A "wet" government may then choose to create a surprise inflation to boost output before an election. This can be accompanied by an expansion if the public did not expect it.</li>
+                        <li>Once the reputation is "dashed," the public will expect inflation for the remainder of the term.</li>
+                    </ul>
+                    <p>This strategic behavior can lead to a cycle of low inflation early in a political term, followed by a period of higher or surprise inflation later on, generating fluctuations in output.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 16 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why is investment more volatile than consumption over the business cycle?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Investment is more volatile than consumption because rational, forward-looking agents prefer to smooth their consumption over time. This is a key prediction of both RBC theory and other modern macro models.</p>
+                    <p>The logic is as follows:</p>
+                    <ol>
+                        <li><b>Consumption Smoothing:</b> Due to diminishing marginal utility, agents prefer a stable path of consumption to a volatile one. When they experience a temporary increase in income (e.g., from a positive productivity shock), they will not consume all of it at once. Instead, they will save a large portion of it to finance small increases in consumption over many future periods.</li>
+                        <li><b>Investment as a Buffer:</b> Saving in the model takes the form of investment. Therefore, investment acts as a buffer, absorbing most of the temporary fluctuations in output. When output is temporarily high, agents save/invest most of the extra income. When output is temporarily low, they disinvest or reduce investment to maintain their smooth consumption path.</li>
+                    </ol>
+                    <p>As a result, investment expenditures fluctuate significantly to accommodate agents' desire for smooth consumption, making investment much more volatile than consumption, which is consistent with the "real facts" of business cycles.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 17 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between a real shock and a nominal shock?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The distinction lies in what part of the economy the shock originates from and what curves it affects in the standard AD-AS framework.</p>
+                    <ul>
+                        <li><b>Real Shocks:</b> These are shocks that affect the real side of the economy, such as the production function or real demand for goods and services. They directly shift the Aggregate Supply (AS) or IS curves.
+                            <ul>
+                                <li><b>Examples:</b> Shocks to technology (productivity), changes in the availability of raw materials (e.g., oil price shocks), changes in government regulations, natural disasters, or shifts in consumer preferences between saving and consumption.</li>
+                                <li>In RBC theory, these are the primary drivers of business cycles.</li>
+                            </ul>
+                        </li>
+                        <li><b>Nominal Shocks:</b> These are shocks to nominal variables, primarily those originating from the monetary side of the economy. They directly shift the Aggregate Demand (AD) curve via the LM curve.
+                            <ul>
+                                <li><b>Examples:</b> Unexpected changes in the money supply or shocks to money demand (velocity).</li>
+                                <li>In the classical model, only unexpected nominal shocks can have real effects.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.9.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 18 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How does the assumption of rational expectations differ from adaptive expectations?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The key difference lies in how agents use information to form expectations about the future.</p>
+                    <ul>
+                        <li><b>Adaptive Expectations:</b> Under this scheme, agents form expectations about the future by looking only at the past behavior of the variable in question. They are assumed to revise their expectations in proportion to their most recent forecast error. For example: \(P^e_t = P^e_{t-1} + \lambda(P_{t-1} - P^e_{t-1})\). A key weakness is that this can lead to systematic, predictable errors. For instance, in a period of steadily rising inflation, adaptive expectations will always underestimate the actual inflation rate.</li>
+                        <li><b>Rational Expectations (RE):</b> Under RE, agents are assumed to use <b>all</b> available and relevant information, including their understanding of how the economy works and how the government conducts policy, when forming expectations. This does not mean they have perfect foresight; their forecasts can be wrong. However, it implies that their forecast errors are random and not systematically predictable based on available information. They do not make repeated, correctable errors.</li>
+                    </ul>
+                    <p>RE is a cornerstone of New Classical and RBC models, providing the foundation for the policy impotence proposition.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.4 & 4.2; McCallum (1989), Ch 7.5 & 8.1.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 19 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the classical model, what happens to the real wage and employment if there is an increase in the nominal money supply?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Nothing. In the classical model, an increase in the nominal money supply has no effect on the real wage or the level of employment.</p>
+                    <p>The logic is as follows:</p>
+                    <ol>
+                        <li>The equilibrium real wage (\(W/P\)) and the level of employment (\(l\)) are determined solely in the labour market, where the labour supply and labour demand curves intersect.</li>
+                        <li>Labour demand depends on the marginal product of labour, and labour supply depends on households' preference for leisure versus consumption. Both are functions of the <b>real</b> wage.</li>
+                        <li>A change in the nominal money supply is a nominal change that does not affect the production function or household preferences.</li>
+                        <li>The increase in the money supply leads to a proportional increase in the aggregate price level (\(P\)) and the nominal wage (\(W\)).</li>
+                        <li>Since both \(W\) and \(P\) increase by the same proportion, the real wage (\(W/P\)) remains unchanged.</li>
+                        <li>With the real wage unchanged, neither firms' hiring decisions nor households' labour supply decisions are altered. Employment remains at its full-employment equilibrium level, \(l^*\).</li>
+                    </ol>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.8.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 20 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "liquidity effect" in the context of a limited participation model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "liquidity effect" refers to the fall in the nominal interest rate that occurs when the central bank increases the supply of liquidity (money or reserves) in the financial system.</p>
+                    <p>In a limited participation model, this effect is crucial for generating real effects of monetary policy. The mechanism is:</p>
+                    <ol>
+                        <li>The central bank conducts an open market operation, buying bonds and injecting new reserves into the banking system.</li>
+                        <li>This injection of money is not distributed evenly throughout the economy. It flows first to the financial intermediaries (banks) that "participate" in this market.</li>
+                        <li>The banks now have excess reserves that they wish to lend out. To attract borrowers, they must lower the interest rate they charge on loans.</li>
+                        <li>This initial fall in the nominal interest rate, caused by the increased supply of loanable funds, is the liquidity effect.</li>
+                    </ol>
+                    <p>Because prices do not adjust instantaneously, this fall in the nominal rate also translates into a temporary fall in the real interest rate, which then stimulates investment and output.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 21 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How does a Real Business Cycle (RBC) model account for the procyclicality of employment?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>RBC models explain the procyclicality of employment primarily through the mechanism of <b>intertemporal substitution of labour</b>.</p>
+                    <p>The argument is as follows:</p>
+                    <ol>
+                        <li>Business cycles are driven by technology shocks. A positive (favourable) technology shock temporarily increases the marginal product of labour.</li>
+                        <li>This temporary increase in labour productivity leads to a temporary increase in the real wage.</li>
+                        <li>Rational individuals see that the reward for working is temporarily high. They respond by substituting their time: they choose to work more today (when the wage is high) and plan for more leisure in the future (when the wage is expected to be back at its normal level).</li>
+                        <li>This increase in labour supply leads to a higher level of employment.</li>
+                    </ol>
+                    <p>Since the positive technology shock also causes output to rise, the resulting increase in employment is procyclical. The same logic works in reverse for a negative technology shock, causing employment and output to fall together.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 22 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the role of the production function in determining output in the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The production function plays a direct and fundamental role in determining the level of output in the classical model. It represents the technological relationship between inputs and output.</p>
+                    <p>Its role can be broken down into two parts:</p>
+                    <ol>
+                        <li><b>Determining Labour Demand:</b> The slope of the production function gives the Marginal Product of Labour (MPL). Since profit-maximizing firms hire labour until the real wage equals the MPL, the production function's properties (specifically, diminishing marginal product) directly determine the shape and position of the economy's labour demand curve.</li>
+                        <li><b>Translating Employment into Output:</b> Once the equilibrium level of employment (\(l^*\)) is determined by the clearing of the labour market, the production function translates this quantity of labour input directly into the full-employment level of output (\(y^*\)). That is, \(y^* = f(k^*, l^*)\), where \(k^*\) is the fixed capital stock.</li>
+                    </ol>
+                    <p>In essence, the production function is the final link in the supply-side chain of causation that determines the economy's total output.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 23 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why does the classical aggregate supply curve slope vertically?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The classical aggregate supply curve is vertical because, in this model, the equilibrium level of output is independent of the nominal price level. Output is determined purely by real factors on the supply side of the economy.</p>
+                    <p>The reasoning is as follows:</p>
+                    <ol>
+                        <li>Equilibrium employment (\(l^*\)) is determined in the labour market at the point where labour supply equals labour demand.</li>
+                        <li>Both labour supply and labour demand are functions of the <b>real wage</b> (\(W/P\)), not the nominal wage (\(W\)) or the price level (\(P\)) independently.</li>
+                        <li>Because wages and prices are assumed to be perfectly flexible, the real wage will always adjust to its market-clearing level, ensuring the labour market is in equilibrium at \(l^*\).</li>
+                        <li>The equilibrium level of output (\(y^*\)) is then determined by the level of employment via the production function: \(y^* = f(k^*, l^*)\).</li>
+                    </ol>
+                    <p>Since a change in the price level \(P\) leads to a proportional change in the nominal wage \(W\), leaving the real wage and thus employment and output unchanged, output \(y^*\) is supplied regardless of the price level. This relationship plots as a vertical line in (\(y, P\)) space.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 24 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the Long and Plosser (1983) RBC model, what ensures that quantities of all goods move together (comovement)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the multi-sector Real Business Cycle model of Long and Plosser (1983), comovement arises from two main features of the economic environment:</p>
+                    <ol>
+                        <li><b>Input-Output Linkages:</b> The production technology is "capitalistic" in the sense that the output of one sector is used as an input in other sectors. For example, steel is an output of the steel sector but an input for the auto sector. A positive productivity shock in a key sector (like manufacturing) increases its output. This abundance of output-as-an-input then raises the productivity and subsequent output of the sectors that use it, causing a general expansion.</li>
+                        <li><b>Consumption Smoothing:</b> When a shock leads to an unexpected increase in the output of one good, utility-maximizing consumers do not wish to consume only that good. They prefer to smooth consumption across all goods and over time. They will trade the abundant good for other goods and also save (invest) a portion of the windfall to increase future consumption of all goods. This creates positive comovement in consumption and investment across different sectors.</li>
+                    </ol>
+                    <p>The combination of these production and preference structures causes an initial shock in one part of the economy to spread, leading to a generalized boom or bust.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 25 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the main criticism of the adaptive expectations hypothesis?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The main criticism of the adaptive expectations hypothesis is that it can lead to <b>systematic and predictable forecast errors</b>, which is inconsistent with the idea of rational, optimizing agents.</p>
+                    <p>Under adaptive expectations, people form expectations based only on past values of the variable. If the underlying process generating the variable changes, adaptive expectations will be slow to catch up, leading to a series of errors in the same direction.</p>
+                    <p>For example, if an economy enters a period of consistently rising inflation, an agent using adaptive expectations will always be revising their forecast upwards based on past errors, but they will consistently underestimate the actual inflation rate in every period. A rational agent would recognize this pattern of under-prediction and adjust their forecasting method to eliminate the systematic error. The adaptive expectations scheme, by its mechanical nature, does not allow for this kind of learning.</p>
+                    <div class="source">Source: McCallum (1989), Ch 7.5; Hargreaves Heap (1992), Ch 4.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 26 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is a "stylized fact" of the business cycle?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A "stylized fact" of the business cycle is a broad, statistical regularity or pattern observed in macroeconomic data across many countries and time periods. These are not precise laws but rather general tendencies in how aggregate economic variables move over the cycle.</p>
+                    <p>The practice of identifying these facts was pioneered by Burns and Mitchell (1946) and modernized by researchers like Kydland and Prescott (1990). The goal is to establish a set of empirical benchmarks that business cycle theories should be able to explain.</p>
+                    <p>Examples of stylized facts for the post-war U.S. economy include:</p>
+                    <ul>
+                        <li>Consumption is less volatile than output.</li>
+                        <li>Investment is more volatile than output.</li>
+                        <li>Employment is procyclical and about as volatile as output.</li>
+                        <li>The price level is countercyclical.</li>
+                    </ul>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 27 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the classical model, what is the effect of an increase in government spending (\(g\)) on output and the price level?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the pure classical model, an increase in government spending (\(g\)) has <b>no effect on output or the price level</b>. This is a result of 100% "crowding out".</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li>Output (\(y\)) is fixed at the full-employment level \(y^*\) by the vertical aggregate supply curve.</li>
+                        <li>An increase in \(g\) represents an increase in the demand for goods and services, which shifts the IS curve to the right.</li>
+                        <li>At the fixed output level \(y^*\), this increased demand for funds raises the real interest rate (\(r\)).</li>
+                        <li>The higher real interest rate reduces (or "crowds out") private investment (\(i\)) and may also reduce consumption (\(c\)) if consumption depends negatively on the interest rate.</li>
+                        <li>In equilibrium, the increase in \(g\) is exactly offset by the decrease in \(c+i\), such that total aggregate demand remains equal to the fixed supply \(y^*\).</li>
+                    </ol>
+                    <p>Since the AD curve's position depends on \(M/P\) and the IS curve, and the IS curve shifts but the intersection with the vertical AS curve remains at \(y^*\), there is no shift in the AD curve itself and thus no change in the price level \(P\).</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 28 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why do RBC models use the neoclassical growth model as their foundation?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Real Business Cycle (RBC) models use the neoclassical growth model as their foundation because it is the standard, established framework for understanding the long-run behavior of aggregate economies. By building on this foundation, RBC theory aims to provide a unified explanation for both long-run growth and short-run fluctuations.</p>
+                    <p>Key reasons for this choice include:</p>
+                    <ul>
+                        <li><b>Microfoundations:</b> The growth model is built on the principles of optimizing behavior by rational agents (households and firms) and market clearing, providing a coherent, choice-theoretic basis.</li>
+                        <li><b>Dynamic Framework:</b> It is an explicitly dynamic model, focusing on intertemporal decisions like saving and investment, which are crucial for understanding how shocks are propagated over time.</li>
+                        <li><b>Explaining Growth Facts:</b> The model was developed to successfully account for the broad "stylized facts" of economic growth (e.g., roughly constant growth in per capita output, constant capital-output ratio).</li>
+                        <li><b>Benchmark for Fluctuations:</b> RBC theorists argue that before one can understand deviations from trend (fluctuations), one must first have a theory of the trend (growth) itself. The growth model provides this theory of the trend path.</li>
+                    </ul>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 29 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "inflation tax" in a cash-in-advance model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "inflation tax" in a cash-in-advance (CIA) model refers to the loss of purchasing power of money holdings due to inflation. It acts as a tax on activities that require the use of cash.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li>Agents must hold money from period \(t-1\) to make purchases in period \(t\).</li>
+                        <li>During this time, inflation (\(\pi_t\)) occurs, meaning the general price level \(P_t\) rises.</li>
+                        <li>The real value of the money held, \(M_{t-1}\), erodes. The real purchasing power of this money in period \(t\) is \(M_{t-1}/P_t\), which is less than its real value in the previous period, \(M_{t-1}/P_{t-1}\).</li>
+                        <li>This erosion of purchasing power is the inflation tax. It increases the opportunity cost of holding money.</li>
+                    </ol>
+                    <p>Because the CIA constraint links consumption directly to money holdings, this inflation tax effectively raises the price of consumption relative to other activities like leisure, leading agents to substitute away from consumption. This distortion is a key channel for the real effects of monetary policy in CIA models.</p>
+                    <div class="source">Source: EC3115 Subject Guide, Ch 8, Section 8.11.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 30 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What does it mean for a macroeconomic variable to be "procyclical" or "countercyclical"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>These terms describe how the cyclical component of a macroeconomic variable moves in relation to the cyclical component of overall economic activity (usually measured by real GNP or GDP).</p>
+                    <ul>
+                        <li><b>Procyclical:</b> A variable is procyclical if it tends to move in the same direction as the overall economy. It is typically above its trend when the economy is in an expansion (output is above trend) and below its trend when the economy is in a recession (output is below trend). The statistical measure is a positive correlation between the variable's cyclical component and that of real GNP.
+                            <ul><li><i>Example:</i> Consumption and investment are strongly procyclical.</li></ul>
+                        </li>
+                        <li><b>Countercyclical:</b> A variable is countercyclical if it tends to move in the opposite direction to the overall economy. It is typically below its trend during expansions and above its trend during recessions. The statistical measure is a negative correlation with the cyclical component of real GNP.
+                            <ul><li><i>Example:</i> Kydland and Prescott (1990) show that the price level has been countercyclical in the post-war U.S. economy.</li></ul>
+                        </li>
+                        <li><b>Acyclical:</b> A variable is acyclical if it has no clear, systematic relationship with the business cycle. Its correlation with cyclical real GNP is close to zero.</li>
+                    </ul>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 31 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the classical model, what determines the real rate of interest?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the classical model, the real rate of interest (\(r\)) is determined by the equilibrium between the supply of and demand for loanable funds, which is equivalent to the equilibrium between real saving and real investment.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li><b>Saving (Supply of Loanable Funds):</b> Saving is the portion of full-employment income (\(y^*\)) that is not consumed. It is generally considered to be an increasing function of the real interest rate, as a higher rate rewards saving more. \(S = y^* - C(y^*-\tau, r)\).</li>
+                        <li><b>Investment (Demand for Loanable Funds):</b> Investment is a decreasing function of the real interest rate. Firms will undertake investment projects only if the expected return is greater than or equal to the real cost of borrowing.</li>
+                        <li><b>Equilibrium:</b> The real interest rate adjusts to clear the market for goods and services, ensuring that desired saving equals desired investment at the full-employment level of output. This is represented by the intersection of the IS curve and the vertical AS curve.</li>
+                    </ol>
+                    <p>Therefore, the real interest rate is determined by the "real" factors of productivity (which influences investment demand) and thrift (which influences saving supply).</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 32 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "natural rate of output"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The natural rate of output, also known as potential output or full-employment output (denoted \(y^*\)), is the level of aggregate output produced when the economy's labour market is in equilibrium.</p>
+                    <p>It is the level of output that would be "ground out by the Walrasian system" (in Friedman's words), meaning it's the level of production that occurs when wages and prices are fully flexible and expectations are correct. It is determined by the economy's:</p>
+                    <ul>
+                        <li>Capital stock (\(K\))</li>
+                        <li>Available technology (the production function \(F\))</li>
+                        <li>Equilibrium level of employment (\(L^*\)), which is determined by the intersection of labour supply and demand.</li>
+                    </ul>
+                    <p>In the classical and New Classical models, actual output can deviate from the natural rate only temporarily, due to factors like misperceptions or informational frictions. In the long run, the economy always returns to \(y^*\).</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 33 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why is the concept of a "representative agent" used in RBC models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "representative agent" is a modeling device used to simplify the analysis of a complex economy. It assumes that the economy is populated by a large number of identical individuals (households and firms).</p>
+                    <p>The key advantage is that the aggregate behavior of the economy can be analyzed by studying the optimization problem of a single, representative individual (like Robinson Crusoe). The choices made by this single agent for consumption, investment, and work effort are taken to represent the per-capita equilibrium outcomes of a competitive market economy with many agents.</p>
+                    <p>This simplification is justified by theorems in general equilibrium theory which show that, under certain conditions (e.g., no externalities), a competitive equilibrium is Pareto optimal. The allocation chosen by a central planner maximizing the utility of a representative agent will coincide with the competitive equilibrium allocation. This allows researchers to solve a much simpler planner's problem to find the competitive equilibrium outcomes.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles"; Long and Plosser (1983).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 34 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the Lucas misperceptions model, what determines the size of the output response to a price surprise?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the Lucas misperceptions model, the size of the output response to a price surprise, represented by the parameter \(d\) in the Lucas supply curve \(y_t = y^* + d(P_t - E_{t-1}[P_t])\), is determined by the <b>relative variability of aggregate versus relative shocks</b>.</p>
+                    <p>The logic is as follows:</p>
+                    <ul>
+                        <li>Producers are trying to distinguish between two types of price changes:
+                            <ol>
+                                <li>Changes in the aggregate price level (nominal shocks), to which they do not want to respond.</li>
+                                <li>Changes in the relative price of their own good (real shocks), to which they do want to respond by changing output.</li>
+                            </ol>
+                        </li>
+                        <li>If aggregate price shocks are highly volatile compared to relative price shocks, a producer observing a price change will rationally attribute most of that change to the volatile aggregate price level. They will perceive very little of it as a real, relative price change and will therefore change their output by very little. In this case, \(d\) will be small.</li>
+                        <li>Conversely, if the economic environment is very stable at the aggregate level (low variance of nominal shocks) but there is a lot of sector-specific volatility, a producer will rationally attribute a price change mostly to a real, relative shock and will respond with a large change in output. In this case, \(d\) will be large.</li>
+                    </ul>
+                    <p>Thus, the slope of the Lucas supply curve is not a fixed structural parameter but depends on the characteristics of the monetary policy regime.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 35 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "neutrality of money"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The neutrality of money is the proposition that a one-time change in the stock of money has no effect on real economic variables, such as real output, employment, the real wage, or the real interest rate. It asserts that money only affects nominal variables, like the price level and the nominal wage rate, which are expected to change proportionally to the change in the money stock.</p>
+                    <p>This is a key feature of the long-run in most macroeconomic models and a feature of the short-run in the pure classical model. The idea is that if the amount of money in an economy doubles, rational agents will eventually realize that all prices and nominal incomes will also double, leaving their real purchasing power and relative prices unchanged. With no change in real incentives, there is no reason for them to alter their real decisions about consumption, investment, or work effort.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.6; EC3115 Subject Guide, Ch 8.8.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 36 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between "persistence" and "comovement" in business cycle analysis?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Both are key stylized facts of business cycles, but they describe different aspects of economic fluctuations.</p>
+                    <ul>
+                        <li><b>Persistence:</b> This refers to the tendency for macroeconomic variables to show positive serial correlation over time. If a variable (like real GNP) is above its trend in one period, it is likely to remain above its trend in the next few periods. It describes the "up-and-down" nature of cycles, where booms and recessions are not just single-period events but last for some duration. It is measured by a variable's autocorrelation.</li>
+                        <li><b>Comovement:</b> This refers to the tendency for different macroeconomic variables to move together over the course of the business cycle. For example, when output is booming, consumption and investment also tend to be booming. It describes the shared cyclical pattern across different aggregate series. It is measured by the cross-correlation between a variable's cyclical component and that of a benchmark series, like real GNP.</li>
+                    </ul>
+                    <p>RBC models, for example, seek to explain both phenomena through propagation mechanisms that transmit shocks through time (persistence) and across sectors (comovement).</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 37 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why might the real wage be procyclical in an RBC model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In a Real Business Cycle (RBC) model, the real wage is procyclical because the same shocks that drive the cycle also drive the real wage. The primary driver is a technology shock.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li>A positive (favourable) technology shock increases the productivity of both capital and labour.</li>
+                        <li>The increase in labour productivity directly raises the marginal product of labour (MPL).</li>
+                        <li>In a competitive labour market, the real wage is equal to the MPL.</li>
+                        <li>Therefore, a positive technology shock, which causes output to rise (a boom), also causes the MPL and thus the real wage to rise.</li>
+                        <li>Conversely, a negative technology shock, which causes output to fall (a recession), causes the MPL and the real wage to fall.</li>
+                    </ol>
+                    <p>Because the real wage moves in the same direction as output, it is procyclical. This aligns with the empirical findings of Kydland and Prescott (1990) when labour input is properly measured.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 38 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the role of the labour supply curve in the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The labour supply curve in the classical model represents the choices of households regarding how much time to allocate to work versus leisure. It shows the total quantity of labour households are willing to supply at any given real wage.</p>
+                    <p>The curve is typically upward-sloping, based on the following principles:</p>
+                    <ul>
+                        <li><b>Utility Maximization:</b> Households are assumed to maximize their utility, which depends on consumption and leisure.</li>
+                        <li><b>Substitution Effect:</b> A higher real wage (\(W/P\)) increases the opportunity cost of leisure. That is, for every hour not worked, a household forgoes a larger amount of consumption goods. This substitution effect encourages individuals to work more and take less leisure.</li>
+                        <li><b>Income Effect:</b> A higher real wage also makes individuals wealthier, allowing them to afford more of all normal goods, including leisure. This income effect encourages individuals to work less.</li>
+                    </ul>
+                    <p>The classical model typically assumes the substitution effect dominates the income effect, resulting in an upward-sloping labour supply curve where a higher real wage elicits a greater quantity of labour supplied.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 39 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is "intertemporal substitution of leisure"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>"Intertemporal substitution of leisure" (or labour) is the idea that rational individuals will adjust their allocation of time between work and leisure across different periods in response to changes in the relative price of leisure over time, which is the real wage.</p>
+                    <p>The core concept is that people will choose to work more (take less leisure) in periods when the real wage is temporarily high, and take more leisure (work less) in periods when the real wage is temporarily low.</p>
+                    <p>This is a key mechanism in Real Business Cycle theory for explaining why employment fluctuates. A temporary positive technology shock raises the current real wage, making it a good time to "make hay while the sun shines." People work harder today and plan to take more vacations in the future when wages are expected to return to normal. This willingness to substitute leisure over time makes the labour supply more elastic in response to temporary wage changes, leading to larger fluctuations in employment over the business cycle.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 40 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the classical model, what is the effect of an increase in the labour supply (e.g., due to immigration) on output and the real wage?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>An increase in the labour supply in the classical model will lead to a <b>higher level of output</b> and a <b>lower equilibrium real wage</b>.</p>
+                    <p>The mechanism works through the labour market:</p>
+                    <ol>
+                        <li>An increase in labour supply (e.g., from immigration or a change in preferences) shifts the upward-sloping labour supply curve to the right.</li>
+                        <li>With an unchanged labour demand curve, the new equilibrium in the labour market occurs at a lower real wage and a higher level of employment.</li>
+                        <li>The higher level of employment, combined with the fixed capital stock, results in a greater level of output via the production function.</li>
+                    </ol>
+                    <p>Graphically, this corresponds to a rightward shift of the vertical aggregate supply curve. For a given aggregate demand curve, this would also lead to a lower price level.</p>
+                    <div class="source">Source: Based on principles from McCallum (1989), Ch 5.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 41 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is a "technology shock" in the context of RBC theory?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In Real Business Cycle (RBC) theory, a "technology shock" (or productivity shock) is a random, exogenous change in the economy's ability to transform inputs (capital and labour) into output. It represents any factor that shifts the production function.</p>
+                    <p>These shocks are the primary "impulse" or driving force behind business cycles in RBC models. They are typically modeled as random fluctuations in the total factor productivity (TFP) parameter of the aggregate production function, \(Y_t = \theta_t F(K_t, N_t)\), where \(\theta_t\) is the technology/productivity shock.</p>
+                    <p>Examples of what a technology shock might represent in the real world include:</p>
+                    <ul>
+                        <li>Development of new products or production methods.</li>
+                        <li>Changes in the quality of labour or capital.</li>
+                        <li>Changes in government regulations that affect productivity.</li>
+                        <li>Unusually good or bad weather, especially for an agricultural economy.</li>
+                        <li>Changes in the availability of raw materials.</li>
+                    </ul>
+                    <p>A positive shock (\(\theta_t\) increases) leads to a boom, while a negative shock (\(\theta_t\) decreases) leads to a recession.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles"; EC3115 Subject Guide, Ch 8.9.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 42 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why is the price level countercyclical in the post-war U.S. data according to Kydland and Prescott?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Kydland and Prescott (1990) found that the price level is countercyclical, meaning it tends to be below its trend during economic booms and above its trend during recessions. This finding is a key challenge to monetary theories of the business cycle but is consistent with a simple RBC framework.</p>
+                    <p>In an RBC model driven by technology shocks, the logic is as follows:</p>
+                    <ol>
+                        <li>A positive technology shock is a shock to aggregate supply. It shifts the vertical AS curve to the right, increasing the natural rate of output.</li>
+                        <li>For a given aggregate demand (AD) curve, this rightward shift of the AS curve leads to a new equilibrium with <b>higher output</b> and a <b>lower price level</b>.</li>
+                        <li>Conversely, a negative technology shock shifts the AS curve to the left, leading to <b>lower output</b> and a <b>higher price level</b>.</li>
+                    </ol>
+                    <p>Since output and prices move in opposite directions in response to the primary shocks driving the cycle, the price level is countercyclical. This contrasts with demand-driven theories, where a positive AD shock would cause both output and prices to rise, implying a procyclical price level.</p>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 43 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "marginal product of labour" (MPL)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The marginal product of labour (MPL) is the additional amount of output produced when one more unit of labour is employed, holding all other inputs (like the capital stock) constant.</p>
+                    <p>Mathematically, if the production function is \(y = f(k, l)\), the MPL is the partial derivative of the production function with respect to labour:</p>
+                    <p>\( MPL = \frac{\partial y}{\partial l} = f_l(k, l) \)</p>
+                    <p>A standard assumption in classical and neoclassical models is that the MPL is positive but diminishing. It is positive because adding more labour increases output (\(f_l > 0\)). It is diminishing because as more and more labour is added to a fixed amount of capital, each additional worker has less capital to work with, so their contribution to output becomes progressively smaller (\(f_{ll} < 0\)).</p>
+                    <p>In a competitive market, the MPL curve is the firm's (and the economy's) demand curve for labour, as firms hire workers until the real wage equals the MPL.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 44 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How can a model with independent, random shocks generate persistent business cycles?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A model can generate persistence (positive serial correlation) from independent, random shocks through its internal <b>propagation mechanisms</b>. The shocks are the "impulses," and the economic structure determines how they are propagated over time.</p>
+                    <p>In RBC models, two key mechanisms create persistence:</p>
+                    <ol>
+                        <li><b>Capital Accumulation:</b> A temporary positive technology shock raises output. Rational agents save and invest a portion of this extra output. This increases the capital stock for the next period. A larger capital stock makes labour more productive and increases output in the next period, even after the initial shock has vanished. The effects of the shock persist through its impact on the capital stock.</li>
+                        <li><b>Input-Output Linkages:</b> In a multi-sector model (like Long and Plosser, 1983), the output of one industry is an input for another. A shock to an industry that produces key intermediate goods will propagate forward as those goods are used in production in subsequent periods, causing the initial shock's effects to last.</li>
+                    </ol>
+                    <p>This is analogous to Slutsky's (1937) finding that summing up random causes can generate cyclical patterns, or Frisch's (1933) analogy of hitting a rocking horse: the impulse is the hit, but the horse's structure causes it to rock back and forth for some time.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles"; Plosser (1989).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 45 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "real wage"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The real wage is the payment to labour measured in units of goods and services, rather than in units of money. It represents the purchasing power of the nominal wage.</p>
+                    <p>It is calculated by dividing the nominal wage (\(W\)), which is measured in monetary units (e.g., pounds per hour), by the aggregate price level (\(P\)), which is measured in monetary units per unit of goods (e.g., pounds per basket of goods):</p>
+                    <p>Real Wage = \( \frac{W}{P} \)</p>
+                    <p>The real wage is a crucial variable in the classical model because it is what matters for the decisions of both households and firms.</p>
+                    <ul>
+                        <li><b>Firms</b> compare the real wage to the marginal product of labour to make their hiring decisions.</li>
+                        <li><b>Households</b> compare the real wage to the value of their leisure time to make their labour supply decisions.</li>
+                    </ul>
+                    <p>In the classical model, perfect flexibility of \(W\) and \(P\) ensures the real wage always adjusts to clear the labour market.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 46 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the role of the IS curve in the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The IS curve represents equilibrium in the goods market. In the context of the full classical model, its primary role is to determine the equilibrium real interest rate, given the level of full-employment output.</p>
+                    <p>The IS curve is defined by the goods market equilibrium condition: \( y = C(y-\tau) + I(r) + g \). It shows the combinations of the real interest rate (\(r\)) and income (\(y\)) that are consistent with equilibrium.</p>
+                    <p>In the classical model:</p>
+                    <ol>
+                        <li>The aggregate supply curve determines the equilibrium level of output, \(y^*\), independently of the IS curve.</li>
+                        <li>The IS curve is then used to find the real interest rate, \(r^*\), that is consistent with this level of output. That is, \(r^*\) is the rate that ensures that the sum of consumption, investment, and government spending equals the full-employment output level.</li>
+                    </ol>
+                    <p>Essentially, with output fixed by the supply side, the real interest rate adjusts to ensure that desired saving (\(S = y^* - C - g\)) equals desired investment (\(I\)).</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 47 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the role of the LM curve in the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The LM curve represents equilibrium in the money market, where real money supply equals real money demand: \(M/P = L(y, r)\). In the full classical model, its primary role is to determine the equilibrium price level.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li>The supply side of the model determines the full-employment output level, \(y^*\).</li>
+                        <li>The goods market (the IS curve) then determines the equilibrium real interest rate, \(r^*\), that is consistent with \(y^*\).</li>
+                        <li>With both \(y^*\) and \(r^*\) determined, the real money demand, \(L(y^*, r^*)\), is fixed.</li>
+                        <li>The LM equation, \(M/P = L(y^*, r^*)\), now determines the price level \(P\). Given the exogenous nominal money supply \(M\), the price level \(P\) must adjust to whatever level is necessary to make the real money supply \(M/P\) equal to the fixed real money demand.</li>
+                    </ol>
+                    <p>Thus, the LM curve pins down the nominal price level in the economy.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 48 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why do Long and Plosser (1983) assume a 100% depreciation rate in their RBC model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Long and Plosser (1983) assume a 100% depreciation rate (i.e., that all commodities are perishable and last only one period) primarily for <b>analytical tractability</b>. This assumption greatly simplifies the model and allows them to derive an exact, closed-form solution for the equilibrium quantities and prices.</p>
+                    <p>Without this assumption, the capital stock would become a more complex state variable, as it would consist of a mix of capital goods of different ages and productivities. The optimization problem would become much harder to solve analytically, typically requiring numerical approximation methods.</p>
+                    <p>While unrealistic, the 100% depreciation assumption allows them to focus clearly on the propagation of shocks through the <b>input-output structure</b> of the economy, which is the central mechanism they wish to highlight. It demonstrates how persistence and comovement can arise even without durable capital goods and the accelerator principle.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 49 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "dichotomy" of the classical model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The dichotomy of the classical model refers to the complete separation between the determination of real variables and nominal variables.</p>
+                    <ul>
+                        <li><b>The Real Sector:</b> Real variables—such as output, employment, the real wage, and the real interest rate—are determined entirely by real factors. The labour market and production function determine output and employment (the supply side). The goods market (saving and investment) then determines the real interest rate.</li>
+                        <li><b>The Nominal Sector:</b> Nominal variables—such as the price level and the nominal wage—are then determined by monetary factors, specifically the quantity of money. Given the real variables, the money market (LM curve) determines the price level needed to equate real money supply with real money demand.</li>
+                    </ul>
+                    <p>This separation is a direct consequence of the neutrality of money. Because changes in the money supply do not affect the real sector, the real variables can be solved for first, independently of the money supply. Then, the price level can be solved for in the second step. This two-step process is the classical dichotomy.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.8.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 50 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Solow residual"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "Solow residual" is a measure of total factor productivity (TFP) growth, often used as an empirical proxy for technology shocks in Real Business Cycle models.</p>
+                    <p>It is derived from a growth accounting framework. Given a production function \(Y = \theta F(K, N)\), the growth rate of output can be decomposed into the contributions from the growth of inputs (capital and labour) and the growth of productivity (\(\theta\)). The Solow residual is the portion of output growth that cannot be explained by the growth in measured inputs.</p>
+                    <p>Specifically, for a Cobb-Douglas production function, the growth rate of the residual is calculated as:</p>
+                    <p>\( \Delta \log(\theta_t) = \Delta \log(Y_t) - (1-\alpha)\Delta \log(K_t) - \alpha \Delta \log(N_t) \)</p>
+                    <p>where \(\alpha\) is labour's share of income. The residual \(\Delta \log(\theta_t)\) captures any factor that shifts the production function, including technological progress, changes in regulations, or measurement errors.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 51 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the primary conclusion of the Long and Plosser (1983) paper on Real Business Cycles?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The primary conclusion of Long and Plosser (1983) is that a multi-sector neoclassical growth model, with no money and no frictions, can generate output series that exhibit key features of observed business cycles—namely, <b>persistence</b> (positive serial correlation) and <b>comovement</b> (positive cross-sector correlation)—when subjected to independent random productivity shocks in each sector.</p>
+                    <p>They demonstrate that the economy's "capitalistic" production structure, where the outputs of some sectors are the inputs for others, acts as a powerful propagation mechanism. This mechanism transforms and amplifies serially uncorrelated shocks into serially correlated output movements. Their work shows that what we call "business cycles" can be interpreted as the natural, efficient equilibrium response of the economy to real disturbances, without any need to appeal to monetary shocks, market failures, or irrationality.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 52 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the classical model, what is the effect of a permanent increase in the level of technology?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A permanent increase in the level of technology (a positive productivity shock) has significant real effects in the classical model.</p>
+                    <ol>
+                        <li><b>Labour Market:</b> The technology improvement raises the marginal product of labour (MPL) at every level of employment. This shifts the labour demand curve to the right.</li>
+                        <li>The new equilibrium in the labour market occurs at a <b>higher real wage</b> and a <b>higher level of employment</b>.</li>
+                        <li><b>Output:</b> With both higher employment and a more productive technology, the full-employment level of output increases. The vertical aggregate supply curve shifts to the right.</li>
+                        <li><b>Interest Rate:</b> The higher level of income increases saving, while the improved productivity may increase investment demand. The net effect on the real interest rate is ambiguous, but it must adjust to clear the goods market at the new, higher level of output.</li>
+                        <li><b>Price Level:</b> With a rightward shift in the AS curve, the equilibrium price level will fall for a given AD curve.</li>
+                    </ol>
+                    <p>In summary, a technology improvement leads to higher real wages, employment, and output, and a lower price level.</p>
+                    <div class="source">Source: Based on principles from McCallum (1989), Ch 5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 53 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "informational" role of prices in the Lucas misperceptions model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the Lucas misperceptions model, prices have a crucial but imperfect informational role. Agents operate in an environment of incomplete information and must use the prices they observe to make inferences about the state of the economy.</p>
+                    <p>Specifically, a producer on a single "island" observes the price of their own good, \(P_i\), but not the aggregate price level, \(P\). The price \(P_i\) contains information about both real (relative) shocks and nominal (aggregate) shocks. The producer's problem is to extract the "signal" about the real shock from the "noise" of the aggregate shock.</p>
+                    <p>A rational producer uses their knowledge of the relative variances of these two types of shocks to make the best possible inference. The price \(P_i\) is an imperfect signal of the underlying real demand for their good. When they misinterpret a general price increase as a relative price increase, they are making an error based on this imperfect information, which leads to the short-run non-neutrality of money.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 54 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why is it said that business cycles are "efficient" in RBC models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Business cycles are described as "efficient" in Real Business Cycle (RBC) models because they represent the optimal, Pareto-efficient response of the economy to the available production possibilities.</p>
+                    <p>The models are built on the assumptions of:</p>
+                    <ul>
+                        <li>Rational, utility-maximizing agents.</li>
+                        <li>Profit-maximizing firms.</li>
+                        <li>Perfectly competitive markets that clear.</li>
+                        <li>No externalities or other market failures.</li>
+                    </ul>
+                    <p>Given these assumptions, the First Fundamental Theorem of Welfare Economics applies: the competitive equilibrium is Pareto optimal. Therefore, the observed fluctuations in output, consumption, and employment are not "failures" or undesirable deviations from a smooth trend. Instead, they are the best possible response that rational agents can make to the real shocks (e.g., to technology) that hit the economy. Any attempt by a central planner or government to alter these fluctuations (e.g., to smooth out a recession) would, in the context of the model, only make agents worse off.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles"; Long and Plosser (1983).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 55 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "real-balance effect"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The real-balance effect (or Pigou effect) describes how changes in the price level can affect aggregate demand through their impact on the real value of wealth.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li>Households hold some of their wealth in the form of nominal assets, most notably money.</li>
+                        <li>A fall in the aggregate price level (\(P\)) increases the real purchasing power of these nominal money holdings (\(M/P\)).</li>
+                        <li>This increase in real wealth makes consumers feel richer, and they respond by increasing their consumption spending.</li>
+                        <li>The increase in consumption spending is a direct increase in aggregate demand.</li>
+                    </ol>
+                    <p>This effect provides another reason (in addition to the interest rate effect via the LM curve) why the aggregate demand curve is downward-sloping. In the context of the IS-LM model, the real-balance effect can be modeled as a rightward shift of the IS curve when the price level falls.</p>
+                    <div class="source">Source: McCallum (1989), Ch 6.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 56 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How does the classical model differ from the Keynesian model in its assumption about wages?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The primary difference lies in the assumption about the flexibility of the nominal wage (\(W\)).</p>
+                    <ul>
+                        <li><b>Classical Model:</b> Assumes that nominal wages are perfectly flexible. They adjust instantly to clear the labour market, ensuring that labour supply always equals labour demand. This means the economy is always at full employment, and unemployment is purely voluntary. The key variable that adjusts is the real wage (\(W/P\)).</li>
+                        <li><b>Keynesian Model (simple version):</b> Assumes that the nominal wage is "sticky" or fixed in the short run, for example, due to long-term contracts. If the price level falls, the real wage (\(W/P\)) rises. Because firms' labour demand depends on the real wage, they will reduce employment. This leads to involuntary unemployment, where people are willing to work at the going wage but cannot find jobs.</li>
+                    </ul>
+                    <p>This difference in wage assumptions is the source of the different shapes of the aggregate supply curve: vertical in the classical model and upward-sloping (or horizontal in extreme cases) in the Keynesian model.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5 & 5.7.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 57 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "marginal propensity to consume" (MPC)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The marginal propensity to consume (MPC) is the fraction of an additional unit of disposable income that a household chooses to spend on consumption.</p>
+                    <p>Mathematically, if the consumption function is \(c = C(y_d)\), where \(y_d\) is disposable income, then the MPC is the derivative of the consumption function:</p>
+                    <p>\( MPC = C'(y_d) = \frac{dc}{dy_d} \)</p>
+                    <p>A standard assumption in macroeconomics is that the MPC is positive but less than one (\(0 < MPC < 1\)).</p>
+                    <ul>
+                        <li><b>MPC > 0:</b> When households receive more income, they consume more.</li>
+                        <li><b>MPC < 1:</b> When households receive an extra pound of income, they spend part of it and save the rest. The portion saved is given by the marginal propensity to save (MPS), where MPC + MPS = 1.</li>
+                    </ul>
+                    <p>The MPC is a key parameter in the Keynesian multiplier process.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 58 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is "crowding out"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>"Crowding out" is the reduction in private investment (and sometimes consumption) that occurs as a result of an increase in government spending.</p>
+                    <p>In the classical model, crowding out is 100%. The mechanism is:</p>
+                    <ol>
+                        <li>The economy is at a fixed, full-employment level of output (\(y^*\)).</li>
+                        <li>The government increases its purchases (\(g\)).</li>
+                        <li>This increases the demand for loanable funds, causing the real interest rate (\(r\)) to rise.</li>
+                        <li>The higher real interest rate makes borrowing more expensive for firms, so they reduce their investment spending (\(i\)). It may also induce households to save more and consume less (\(c\)).</li>
+                        <li>The interest rate rises until the fall in private spending (\(\Delta c + \Delta i\)) exactly offsets the initial rise in government spending (\(\Delta g\)), so that total demand still equals the fixed level of output.</li>
+                    </ol>
+                    <p>In this case, public spending completely displaces, or "crowds out," private spending, with no net effect on total output.</p>
+                    <div class="source">Source: Based on principles from McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 59 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is a "steady state" in a growth model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A steady state is a long-run equilibrium path in a growth model where key economic variables grow at constant rates. It is a state of balanced growth.</p>
+                    <p>In the neoclassical growth model (without population growth or technological change), the steady state is characterized by:</p>
+                    <ul>
+                        <li>A constant capital stock per worker.</li>
+                        <li>Constant output per worker.</li>
+                        <li>Constant consumption per worker.</li>
+                        <li>Gross investment is exactly equal to the amount of depreciation, so the net change in the capital stock is zero.</li>
+                    </ul>
+                    <p>If the economy starts with a capital stock below its steady-state level, it will experience a period of transition with positive net investment and growth in per-capita output until it converges to the steady state. In models with technological progress, the steady state is a path where per-capita variables grow at the constant rate of technological progress.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 60 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between the real and nominal interest rate?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The difference lies in what they measure the return to saving in.</p>
+                    <ul>
+                        <li>The <b>nominal interest rate (\(R\))</b> is the rate of return measured in monetary units. It tells you how many more pounds you will have in the future for every pound you save today. It is the interest rate typically quoted by banks.</li>
+                        <li>The <b>real interest rate (\(r\))</b> is the rate of return measured in units of goods and services. It tells you how much more purchasing power you will have in the future for every unit of purchasing power you save today.</li>
+                    </ul>
+                    <p>The relationship between them is given by the <b>Fisher equation</b>:</p>
+                    <p>\( r \approx R - \pi^e \)</p>
+                    <p>where \(\pi^e\) is the expected rate of inflation. The real interest rate is approximately the nominal interest rate minus the expected rate of inflation. It is the real interest rate that is relevant for saving and investment decisions, as rational agents care about their real purchasing power, not the nominal amount of money they have.</p>
+                    <div class="source">Source: McCallum (1989), Ch 6.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 61 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Lucas Critique"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Lucas Critique (Lucas, 1976) is a fundamental criticism of the large-scale macroeconometric models popular in the 1960s and 1970s. It argues that it is naive to try to predict the effects of a change in economic policy entirely on the basis of relationships observed in historical data, especially in the form of simple behavioral equations.</p>
+                    <p>The core idea is that the "structural" parameters of these models (e.g., the marginal propensity to consume) are not truly structural. They are themselves the result of optimal decisions made by rational agents based on their expectations of government policy. If the policy changes, agents' expectations will change, their optimal decision rules will change, and thus the parameters of the behavioral equations will change.</p>
+                    <p>Therefore, a model used for policy evaluation must be based on truly deep structural parameters—those governing preferences and technology—which are invariant to changes in policy.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4; Plosser (1989).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 62 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In an RBC model, how does the economy respond to a permanent increase in productivity?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A permanent increase in productivity sets in motion a series of <b>transitory dynamics</b> as the economy moves to a new, higher steady-state growth path.</p>
+                    <ol>
+                        <li><b>Investment:</b> To reach the new, higher steady-state capital stock that is optimal with the new technology, investment must rise substantially in the short run. This increase is temporary and tapers off as the new capital stock is reached.</li>
+                        <li><b>Work Effort:</b> Work effort also rises temporarily. The permanent increase in wealth has a negative income effect on labour supply, but the higher productivity and rising capital stock create a strong, positive intertemporal substitution effect, which dominates in the short run.</li>
+                        <li><b>Consumption and Output:</b> Consumption and output begin to rise, gradually converging to their new, permanently higher growth path.</li>
+                    </ol>
+                    <p>Thus, even a permanent shock generates temporary "business cycle" like fluctuations as the economy optimally adjusts its capital stock and work effort to the new technological reality. These fluctuations are an integral part of the growth process.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 63 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "hours puzzle" in RBC theory?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "hours puzzle" refers to a quantitative discrepancy between the predictions of simple Real Business Cycle (RBC) models and the actual data regarding the volatility of hours worked versus the volatility of real wages.</p>
+                    <ul>
+                        <li><b>In the Data:</b> Hours worked are highly volatile (nearly as volatile as output), while the real wage is only moderately volatile and not strongly correlated with hours.</li>
+                        <li><b>In a Simple RBC Model:</b> To generate the large observed fluctuations in hours worked through intertemporal substitution, the model requires a high elasticity of labour supply. This, in turn, implies that real wages must also be highly volatile and strongly correlated with hours, as it is the high wage that induces people to work so much more.</li>
+                    </ul>
+                    <p>The puzzle is that the model cannot simultaneously generate highly volatile hours and only moderately volatile real wages, as seen in the data. Much research in the RBC literature (e.g., using indivisible labour, household production) is aimed at resolving this puzzle.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 64 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the Fisher Effect?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Fisher Effect (or Fisher Hypothesis) describes the relationship between nominal interest rates, real interest rates, and inflation. It states that the nominal interest rate will adjust one-for-one with the expected inflation rate, leaving the real interest rate unaffected.</p>
+                    <p>The relationship is defined by the Fisher equation:</p>
+                    <p>\( R = r + \pi^e \)</p>
+                    <p>Where R is the nominal interest rate, r is the real interest rate, and \(\pi^e\) is the expected inflation rate.</p>
+                    <p>The underlying theory is that the real interest rate is determined by real factors (productivity and thrift). If expected inflation rises by 1 percentage point, lenders will demand and borrowers will agree to a 1 percentage point higher nominal interest rate to compensate for the erosion of purchasing power, leaving the real return r unchanged. This implies that monetary policy, which can influence inflation, has no long-run effect on the real interest rate.</p>
+                    <div class="source">Source: McCallum (1989), Ch 6.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 65 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between the natural rate of output (\(y^*\)) and the NAIRU?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>While both concepts refer to a benchmark level of output/unemployment, they have different normative implications due to their different microfoundations.</p>
+                    <ul>
+                        <li><b>Natural Rate of Output (\(y^*\)):</b> This emerges from a classical or New Classical model with competitive, market-clearing microfoundations (e.g., the Friedman/Lucas model). \(y^*\) is the full-employment, Pareto-efficient level of output. Deviations from it are caused by misperceptions or surprises. The associated unemployment rate is the "natural rate of unemployment," which consists of frictional and voluntary unemployment.</li>
+                        <li><b>NAIRU (Non-Accelerating Inflation Rate of Unemployment):</b> This emerges from models with imperfectly competitive microfoundations (e.g., models with union bargaining or efficiency wages). The level of output associated with the NAIRU is simply the level where inflationary pressures are stable. It has no connotation of being optimal or efficient. It is determined by the balance of power in wage/price setting. Because of the underlying market imperfections, the NAIRU level of output is likely to be inefficient and can potentially be improved by supply-side policies.</li>
+                    </ul>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 3.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 66 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the context of repeated policy games, what is a "trigger strategy"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A "trigger strategy" is a type of punishment strategy used in repeated games that can sometimes support a cooperative outcome (like zero inflation) as an equilibrium.</p>
+                    <p>In the context of the monetary policy time-inconsistency game, a trigger strategy employed by the public would be:</p>
+                    <p>"I will expect zero inflation in the next period as long as the central bank has never created inflation in the past. However, if the central bank ever creates a surprise inflation (i.e., 'pulls the trigger'), I will revert to expecting high inflation forever after."</p>
+                    <p>Faced with this strategy, a rational central bank must weigh the one-time gain from creating a surprise inflation today against the permanent loss of being in a bad, high-inflation equilibrium in all future periods. If the central bank is sufficiently patient (i.e., has a low discount rate), the future losses will outweigh the present gain, and it will choose to cooperate by maintaining zero inflation. This can make the optimal, low-inflation outcome a credible, time-consistent equilibrium.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 67 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Lucas island" paradigm?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "Lucas island" paradigm is a metaphorical framework developed by Robert Lucas to model an economy with imperfect information, providing the foundation for his misperceptions theory.</p>
+                    <p>The key features of the paradigm are:</p>
+                    <ul>
+                        <li>The economy is composed of a large number of isolated, competitive markets, or "islands."</li>
+                        <li>Each island produces a single good, and producers live on their own island.</li>
+                        <li>Information is incomplete: producers know the current local price of the good on their own island, but they do not know the current prices on other islands or the current aggregate price level for the whole economy.</li>
+                        <li>Shocks can be either local (relative, real shocks) affecting just one island, or global (aggregate, nominal shocks) affecting all islands simultaneously.</li>
+                    </ul>
+                    <p>This setup forces producers to engage in a "signal extraction problem." When the price on their island changes, they must infer whether it is a local change (to which they should respond by adjusting output) or a global change (to which they should not). This potential for confusion between relative and absolute price changes is what allows unexpected monetary shocks to have real effects.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.6; McCallum (1989), Ch 9.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 68 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between a deterministic and a stochastic model of business cycles?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The difference lies in the source and nature of the cyclical fluctuations.</p>
+                    <ul>
+                        <li><b>Deterministic Models:</b> In these models, the cyclical path is an inherent property of the model's structure. The economy follows a fixed, predictable wave-like pattern (e.g., a sine wave). Once set in motion, the system will generate cycles endogenously without any external shocks. Early business cycle theories that viewed cycles as an inevitable four-phase sequence (prosperity, crisis, depression, revival) were deterministic in spirit. These models have largely failed as they do not arise from standard economic principles.</li>
+                        <li><b>Stochastic Models:</b> In these models, the fluctuations are not inherent but are driven by random, unpredictable shocks from outside the system (the "impulses"). The economic model itself acts as a "propagation mechanism" that transforms these random shocks into the cyclical patterns we observe. Modern business cycle theories, including New Classical and RBC models, are stochastic. They view cycles as the accumulation of random events, following the work of Slutsky (1937) and Frisch (1933).</li>
+                    </ul>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 69 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">Why is the assumption of constant returns to scale important in the Long and Plosser (1983) model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The assumption of constant returns to scale (CRS) in production is crucial in the Long and Plosser (1983) model for several reasons:</p>
+                    <ol>
+                        <li><b>Consistency with Competition:</b> CRS is a standard assumption for ensuring the existence of a competitive equilibrium. With increasing returns, firms would tend towards monopoly, and with decreasing returns, the distribution of firm size becomes problematic.</li>
+                        <li><b>Analytical Tractability:</b> When combined with Cobb-Douglas production functions, CRS ensures that the output elasticities with respect to inputs are constant and equal to the cost shares. This results in a linear (in logs) vector autoregression for output, as seen in their equation (20): \(y_{t+1} = Ay_t + k + \eta_{t+1}\). This linearity allows for a closed-form, analytical solution, which is a major advantage of their model.</li>
+                        <li><b>Aggregation:</b> CRS simplifies the aggregation from firm-level or sector-level production to economy-wide aggregates, making the representative agent framework more applicable.</li>
+                    </ol>
+                    <p>Without CRS, solving the model would be significantly more complex and would likely require numerical approximation methods rather than a direct analytical solution.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 70 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Lucas Critique" and how does it relate to the policy impotence proposition?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Lucas Critique is a fundamental argument that traditional macroeconometric models cannot be used to evaluate the effects of policy changes because the model's parameters are not truly structural and will change along with the policy.</p>
+                    <p>The connection to the Policy Impotence Proposition (PIP) is very close:</p>
+                    <ul>
+                        <li>The PIP argues that <b>systematic</b> policy is ineffective because rational agents anticipate it, and only surprises matter.</li>
+                        <li>The Lucas Critique provides the underlying reason <b>why</b> this is the case. It states that the estimated relationships in old Keynesian models (e.g., a stable Phillips Curve) were themselves dependent on the specific policy regime in place during the estimation period. If the central bank were to change its policy to try and exploit that Phillips Curve, rational agents would change their expectations and behavior, causing the Phillips Curve relationship itself to break down.</li>
+                    </ul>
+                    <p>In essence, the PIP is a specific application of the Lucas Critique to systematic demand-management policy. The critique explains that the "stable" relationships policy-makers might try to exploit are not stable at all, but are functions of expectations, which in turn are functions of the policy itself.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 71 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between frictional and involuntary unemployment?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The distinction lies in whether unemployment is a voluntary choice or a result of market failure.</p>
+                    <ul>
+                        <li><b>Frictional Unemployment:</b> This is the temporary unemployment that arises from the normal process of job search. It takes time for workers to find jobs and for firms to find workers. People who are frictionally unemployed are in the process of moving between jobs or are new entrants to the labour force. This type of unemployment is considered voluntary and is consistent with a market-clearing, full-employment classical model. The "natural rate of unemployment" is primarily composed of frictional unemployment.</li>
+                        <li><b>Involuntary Unemployment:</b> This occurs when a person is willing and able to work at the prevailing market wage but cannot find a job. It signifies an excess supply of labour, meaning the labour market is not clearing. This is a hallmark of Keynesian models, where sticky nominal wages can cause the real wage to be stuck above its market-clearing level, leading to a situation where the number of people who want to work exceeds the number of jobs available.</li>
+                    </ul>
+                    <div class="source">Source: General macroeconomic principles.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 72 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the Long & Plosser (1983) model, what is the economic interpretation of the matrix \(A\) in the equation \(y_{t+1} = Ay_t + k + \eta_{t+1}\)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the vector autoregression \(y_{t+1} = Ay_t + k + \eta_{t+1}\) from Long and Plosser (1983), the matrix \(A\) is the <b>input-output matrix expressed in terms of cost shares</b>.</p>
+                    <p>Each element \(a_{ij}\) of the matrix \(A\) represents the elasticity of output in sector \(i\) with respect to the input of the commodity from sector \(j\). Under their assumptions of Cobb-Douglas technology and constant returns to scale, this elasticity is equal to the equilibrium share of input \(j\) in the total cost of producing output \(i\).</p>
+                    <p>This matrix is the heart of the model's propagation mechanism. It explicitly maps out how the outputs of various sectors (the elements of \(y_t\)) are used as inputs to produce the next period's outputs (the elements of \(y_{t+1}\)). It is through the off-diagonal elements of \(A\) that shocks are transmitted from one sector to another, creating comovement.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 73 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the law of iterated expectations and why is it important for rational expectations models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The law of iterated expectations (also known as the tower property) states that the expectation of a conditional expectation of a random variable is simply the unconditional expectation of that variable. More formally, for random variables X and Y:</p>
+                    <p>\( E[E(X|Y)] = E[X] \)</p>
+                    <p>In the context of rational expectations models, it means that today's forecast of a forecast you will make tomorrow (with more information) is just today's forecast of the ultimate outcome.</p>
+                    <p>For example, \( E_t[E_{t+1}(P_{t+2})] = E_t(P_{t+2}) \). You cannot predict how you will update your forecast in the future.</p>
+                    <p>This law is crucial for solving rational expectations models using the forward-looking substitution method. It allows modelers to take expectations of future expectations, simplifying complex dynamic equations and enabling them to express the current value of a variable as a function of expectations about future fundamental factors, not future expectations themselves.</p>
+                    <div class="source">Source: McCallum (1989), Ch 8 Appendix.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 74 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How can distortionary taxes affect fluctuations in an RBC model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Distortionary taxes (e.g., taxes on labour or capital income) can amplify fluctuations in an RBC model by affecting the after-tax returns to work and investment, thereby strengthening the response to shocks.</p>
+                    <p>Consider a positive technology shock in a model with a balanced budget and a tax on output:</p>
+                    <ol>
+                        <li>A positive technology shock increases output.</li>
+                        <li>With a balanced budget, the government needs the same amount of real revenue. Since the tax base (output) has increased, the government can lower the tax rate.</li>
+                        <li>The technology shock already increased the pre-tax marginal product of labour. The reduction in the tax rate further increases the <b>after-tax</b> real wage.</li>
+                        <li>This larger increase in the after-tax real wage creates a stronger intertemporal substitution effect, leading to a larger increase in labour supply and hours worked compared to a model without such taxes.</li>
+                        <li>Similarly, the after-tax return on investment increases, amplifying the investment response.</li>
+                    </ol>
+                    <p>By making after-tax returns more sensitive to underlying shocks, distortionary taxes can increase the volatility of hours and investment, helping some RBC models better match the empirical facts.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 75 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is meant by a "Cobb-Douglas" production function?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A Cobb-Douglas production function is a specific functional form that relates inputs to output. It is widely used in macroeconomics for its analytical tractability and because it fits aggregate data reasonably well. The general form is:</p>
+                    <p>\( Y = \theta K^{\alpha} N^{1-\alpha} \)</p>
+                    <p>Where:</p>
+                    <ul>
+                        <li>\(Y\) is total output.</li>
+                        <li>\(\theta\) is total factor productivity (a technology parameter).</li>
+                        <li>\(K\) is the capital input.</li>
+                        <li>\(N\) is the labour input.</li>
+                        <li>\(\alpha\) is a parameter between 0 and 1 representing the output elasticity of capital. Under perfect competition, \(\alpha\) is also capital's share of total income.</li>
+                    </ul>
+                    <p>Key properties include:</p>
+                    <ul>
+                        <li><b>Constant Returns to Scale:</b> If you double both inputs (K and N), you double the output.</li>
+                        <li><b>Diminishing Marginal Products:</b> The marginal product of each input is positive but decreases as you add more of that input, holding the other fixed.</li>
+                        <li><b>Unit Elasticity of Substitution:</b> The elasticity of substitution between capital and labour is equal to one.</li>
+                    </ul>
+                    <div class="source">Source: Plosser (1989), Appendix; Long and Plosser (1983).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 76 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Lucas Critique"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Lucas Critique (Lucas, 1976) is a fundamental criticism of the large-scale macroeconometric models popular in the 1960s and 1970s. It argues that it is naive to try to predict the effects of a change in economic policy entirely on the basis of relationships observed in historical data, especially in the form of simple behavioral equations.</p>
+                    <p>The core idea is that the "structural" parameters of these models (e.g., the marginal propensity to consume) are not truly structural. They are themselves the result of optimal decisions made by rational agents based on their expectations of government policy. If the policy changes, agents' expectations will change, their optimal decision rules will change, and thus the parameters of the behavioral equations will change.</p>
+                    <p>Therefore, a model used for policy evaluation must be based on truly deep structural parameters—those governing preferences and technology—which are invariant to changes in policy.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4; Plosser (1989).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 77 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the context of repeated policy games, what is a "trigger strategy"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A "trigger strategy" is a type of punishment strategy used in repeated games that can sometimes support a cooperative outcome (like zero inflation) as an equilibrium.</p>
+                    <p>In the context of the monetary policy time-inconsistency game, a trigger strategy employed by the public would be:</p>
+                    <p>"I will expect zero inflation in the next period as long as the central bank has never created inflation in the past. However, if the central bank ever creates a surprise inflation (i.e., 'pulls the trigger'), I will revert to expecting high inflation forever after."</p>
+                    <p>Faced with this strategy, a rational central bank must weigh the one-time gain from creating a surprise inflation today against the permanent loss of being in a bad, high-inflation equilibrium in all future periods. If the central bank is sufficiently patient (i.e., has a low discount rate), the future losses will outweigh the present gain, and it will choose to cooperate by maintaining zero inflation. This can make the optimal, low-inflation outcome a credible, time-consistent equilibrium.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 4.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 78 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "hours puzzle" in RBC theory?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "hours puzzle" refers to a quantitative discrepancy between the predictions of simple Real Business Cycle (RBC) models and the actual data regarding the volatility of hours worked versus the volatility of real wages.</p>
+                    <ul>
+                        <li><b>In the Data:</b> Hours worked are highly volatile (nearly as volatile as output), while the real wage is only moderately volatile and not strongly correlated with hours.</li>
+                        <li><b>In a Simple RBC Model:</b> To generate the large observed fluctuations in hours worked through intertemporal substitution, the model requires a high elasticity of labour supply. This, in turn, implies that real wages must also be highly volatile and strongly correlated with hours, as it is the high wage that induces people to work so much more.</li>
+                    </ul>
+                    <p>The puzzle is that the model cannot simultaneously generate highly volatile hours and only moderately volatile real wages, as seen in the data. Much research in the RBC literature (e.g., using indivisible labour, household production) is aimed at resolving this puzzle.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 79 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the Fisher Effect?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The Fisher Effect (or Fisher Hypothesis) describes the relationship between nominal interest rates, real interest rates, and inflation. It states that the nominal interest rate will adjust one-for-one with the expected inflation rate, leaving the real interest rate unaffected.</p>
+                    <p>The relationship is defined by the Fisher equation:</p>
+                    <p>\( R = r + \pi^e \)</p>
+                    <p>Where R is the nominal interest rate, r is the real interest rate, and \(\pi^e\) is the expected inflation rate.</p>
+                    <p>The underlying theory is that the real interest rate is determined by real factors (productivity and thrift). If expected inflation rises by 1 percentage point, lenders will demand and borrowers will agree to a 1 percentage point higher nominal interest rate to compensate for the erosion of purchasing power, leaving the real return r unchanged. This implies that monetary policy, which can influence inflation, has no long-run effect on the real interest rate.</p>
+                    <div class="source">Source: McCallum (1989), Ch 6.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 80 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between the natural rate of output (\(y^*\)) and the NAIRU?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>While both concepts refer to a benchmark level of output/unemployment, they have different normative implications due to their different microfoundations.</p>
+                    <ul>
+                        <li><b>Natural Rate of Output (\(y^*\)):</b> This emerges from a classical or New Classical model with competitive, market-clearing microfoundations (e.g., the Friedman/Lucas model). \(y^*\) is the full-employment, Pareto-efficient level of output. Deviations from it are caused by misperceptions or surprises. The associated unemployment rate is the "natural rate of unemployment," which consists of frictional and voluntary unemployment.</li>
+                        <li><b>NAIRU (Non-Accelerating Inflation Rate of Unemployment):</b> This emerges from models with imperfectly competitive microfoundations (e.g., models with union bargaining or efficiency wages). The level of output associated with the NAIRU is simply the level where inflationary pressures are stable. It has no connotation of being optimal or efficient. It is determined by the balance of power in wage/price setting. Because of the underlying market imperfections, the NAIRU level of output is likely to be inefficient and can potentially be improved by supply-side policies.</li>
+                    </ul>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 3.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 81 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Solow residual"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "Solow residual" is a measure of total factor productivity (TFP) growth, often used as an empirical proxy for technology shocks in Real Business Cycle models.</p>
+                    <p>It is derived from a growth accounting framework. Given a production function \(Y = \theta F(K, N)\), the growth rate of output can be decomposed into the contributions from the growth of inputs (capital and labour) and the growth of productivity (\(\theta\)). The Solow residual is the portion of output growth that cannot be explained by the growth in measured inputs.</p>
+                    <p>Specifically, for a Cobb-Douglas production function, the growth rate of the residual is calculated as:</p>
+                    <p>\( \Delta \log(\theta_t) = \Delta \log(Y_t) - (1-\alpha)\Delta \log(K_t) - \alpha \Delta \log(N_t) \)</p>
+                    <p>where \(\alpha\) is labour's share of income. The residual \(\Delta \log(\theta_t)\) captures any factor that shifts the production function, including technological progress, changes in regulations, or measurement errors.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 82 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is meant by a "Cobb-Douglas" production function?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A Cobb-Douglas production function is a specific functional form that relates inputs to output. It is widely used in macroeconomics for its analytical tractability and because it fits aggregate data reasonably well. The general form is:</p>
+                    <p>\( Y = \theta K^{\alpha} N^{1-\alpha} \)</p>
+                    <p>Where:</p>
+                    <ul>
+                        <li>\(Y\) is total output.</li>
+                        <li>\(\theta\) is total factor productivity (a technology parameter).</li>
+                        <li>\(K\) is the capital input.</li>
+                        <li>\(N\) is the labour input.</li>
+                        <li>\(\alpha\) is a parameter between 0 and 1 representing the output elasticity of capital. Under perfect competition, \(\alpha\) is also capital's share of total income.</li>
+                    </ul>
+                    <p>Key properties include:</p>
+                    <ul>
+                        <li><b>Constant Returns to Scale:</b> If you double both inputs (K and N), you double the output.</li>
+                        <li><b>Diminishing Marginal Products:</b> The marginal product of each input is positive but decreases as you add more of that input, holding the other fixed.</li>
+                        <li><b>Unit Elasticity of Substitution:</b> The elasticity of substitution between capital and labour is equal to one.</li>
+                    </ul>
+                    <div class="source">Source: Plosser (1989), Appendix; Long and Plosser (1983).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 83 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "real-balance effect"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The real-balance effect (or Pigou effect) describes how changes in the price level can affect aggregate demand through their impact on the real value of wealth.</p>
+                    <p>The mechanism is as follows:</p>
+                    <ol>
+                        <li>Households hold some of their wealth in the form of nominal assets, most notably money.</li>
+                        <li>A fall in the aggregate price level (\(P\)) increases the real purchasing power of these nominal money holdings (\(M/P\)).</li>
+                        <li>This increase in real wealth makes consumers feel richer, and they respond by increasing their consumption spending.</li>
+                        <li>The increase in consumption spending is a direct increase in aggregate demand.</li>
+                    </ol>
+                    <p>This effect provides another reason (in addition to the interest rate effect via the LM curve) why the aggregate demand curve is downward-sloping. In the context of the IS-LM model, the real-balance effect can be modeled as a rightward shift of the IS curve when the price level falls.</p>
+                    <div class="source">Source: McCallum (1989), Ch 6.5.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 84 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How does the classical model differ from the Keynesian model in its assumption about wages?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The primary difference lies in the assumption about the flexibility of the nominal wage (\(W\)).</p>
+                    <ul>
+                        <li><b>Classical Model:</b> Assumes that nominal wages are perfectly flexible. They adjust instantly to clear the labour market, ensuring that labour supply always equals labour demand. This means the economy is always at full employment, and unemployment is purely voluntary. The key variable that adjusts is the real wage (\(W/P\)).</li>
+                        <li><b>Keynesian Model (simple version):</b> Assumes that the nominal wage is "sticky" or fixed in the short run, for example, due to long-term contracts. If the price level falls, the real wage (\(W/P\)) rises. Because firms' labour demand depends on the real wage, they will reduce employment. This leads to involuntary unemployment, where people are willing to work at the going wage but cannot find jobs.</li>
+                    </ul>
+                    <p>This difference in wage assumptions is the source of the different shapes of the aggregate supply curve: vertical in the classical model and upward-sloping (or horizontal in extreme cases) in the Keynesian model.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.5 & 5.7.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 85 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "marginal propensity to consume" (MPC)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The marginal propensity to consume (MPC) is the fraction of an additional unit of disposable income that a household chooses to spend on consumption.</p>
+                    <p>Mathematically, if the consumption function is \(c = C(y_d)\), where \(y_d\) is disposable income, then the MPC is the derivative of the consumption function:</p>
+                    <p>\( MPC = C'(y_d) = \frac{dc}{dy_d} \)</p>
+                    <p>A standard assumption in macroeconomics is that the MPC is positive but less than one (\(0 < MPC < 1\)).</p>
+                    <ul>
+                        <li><b>MPC > 0:</b> When households receive more income, they consume more.</li>
+                        <li><b>MPC < 1:</b> When households receive an extra pound of income, they spend part of it and save the rest. The portion saved is given by the marginal propensity to save (MPS), where MPC + MPS = 1.</li>
+                    </ul>
+                    <p>The MPC is a key parameter in the Keynesian multiplier process.</p>
+                    <div class="source">Source: McCallum (1989), Ch 5.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 86 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is "crowding out"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>"Crowding out" is the reduction in private investment (and sometimes consumption) that occurs as a result of an increase in government spending.</p>
+                    <p>In the classical model, crowding out is 100%. The mechanism is:</p>
+                    <ol>
+                        <li>The economy is at a fixed, full-employment level of output (\(y^*\)).</li>
+                        <li>The government increases its purchases (\(g\)).</li>
+                        <li>This increases the demand for loanable funds, causing the real interest rate (\(r\)) to rise.</li>
+                        <li>The higher real interest rate makes borrowing more expensive for firms, so they reduce their investment spending (\(i\)). It may also induce households to save more and consume less (\(c\)).</li>
+                        <li>The interest rate rises until the fall in private spending (\(\Delta c + \Delta i\)) exactly offsets the initial rise in government spending (\(\Delta g\)), so that total demand still equals the fixed level of output.</li>
+                    </ol>
+                    <p>In this case, public spending completely displaces, or "crowds out," private spending, with no net effect on total output.</p>
+                    <div class="source">Source: Based on principles from McCallum (1989), Ch 5.6.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 87 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is a "steady state" in a growth model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>A steady state is a long-run equilibrium path in a growth model where key economic variables grow at constant rates. It is a state of balanced growth.</p>
+                    <p>In the neoclassical growth model (without population growth or technological change), the steady state is characterized by:</p>
+                    <ul>
+                        <li>A constant capital stock per worker.</li>
+                        <li>Constant output per worker.</li>
+                        <li>Constant consumption per worker.</li>
+                        <li>Gross investment is exactly equal to the amount of depreciation, so the net change in the capital stock is zero.</li>
+                    </ul>
+                    <p>If the economy starts with a capital stock below its steady-state level, it will experience a period of transition with positive net investment and growth in per-capita output until it converges to the steady state. In models with technological progress, the steady state is a path where per-capita variables grow at the constant rate of technological progress.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 88 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between the real and nominal interest rate?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The difference lies in what they measure the return to saving in.</p>
+                    <ul>
+                        <li>The <b>nominal interest rate (\(R\))</b> is the rate of return measured in monetary units. It tells you how many more pounds you will have in the future for every pound you save today. It is the interest rate typically quoted by banks.</li>
+                        <li>The <b>real interest rate (\(r\))</b> is the rate of return measured in units of goods and services. It tells you how much more purchasing power you will have in the future for every unit of purchasing power you save today.</li>
+                    </ul>
+                    <p>The relationship between them is given by the <b>Fisher equation</b>:</p>
+                    <p>\( r \approx R - \pi^e \)</p>
+                    <p>where \(\pi^e\) is the expected rate of inflation. The real interest rate is approximately the nominal interest rate minus the expected rate of inflation. It is the real interest rate that is relevant for saving and investment decisions, as rational agents care about their real purchasing power, not the nominal amount of money they have.</p>
+                    <div class="source">Source: McCallum (1989), Ch 6.2.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 89 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the main takeaway from the Kydland and Prescott (1990) paper "Business Cycles: Real Facts and a Monetary Myth"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The main takeaway is that many commonly held beliefs about business cycles, particularly regarding the role of money and prices, are not supported by post-war U.S. data. The paper presents a systematic documentation of business cycle "facts" that serve as a benchmark for theories.</p>
+                    <p>Key findings that challenge traditional (monetary) views of business cycles include:</p>
+                    <ul>
+                        <li><b>The Price Level is Countercyclical:</b> This is their most famous finding. Prices tend to be below trend in booms and above trend in recessions, which contradicts theories where aggregate demand shocks are the primary driver of cycles.</li>
+                        <li><b>Money is Not a Leading Variable:</b> They find no strong evidence that monetary aggregates like M1 or the monetary base lead the cycle. If anything, they are contemporaneous or slightly lagging, which challenges the monetarist view of money as the primary impulse.</li>
+                    </ul>
+                    <p>The paper argues that these "real facts" are more consistent with a Real Business Cycle perspective, where technology shocks drive fluctuations, than with monetary or other demand-side theories. It shifted the focus of business cycle research towards matching these quantitative, empirical regularities.</p>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 90 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Lucas island" paradigm?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "Lucas island" paradigm is a metaphorical framework developed by Robert Lucas to model an economy with imperfect information, providing the foundation for his misperceptions theory.</p>
+                    <p>The key features of the paradigm are:</p>
+                    <ul>
+                        <li>The economy is composed of a large number of isolated, competitive markets, or "islands."</li>
+                        <li>Each island produces a single good, and producers live on their own island.</li>
+                        <li>Information is incomplete: producers know the current local price of the good on their own island, but they do not know the current prices on other islands or the current aggregate price level for the whole economy.</li>
+                        <li>Shocks can be either local (relative, real shocks) affecting just one island, or global (aggregate, nominal shocks) affecting all islands simultaneously.</li>
+                    </ul>
+                    <p>This setup forces producers to engage in a "signal extraction problem." When the price on their island changes, they must infer whether it is a local change (to which they should respond by adjusting output) or a global change (to which they should not). This potential for confusion between relative and absolute price changes is what allows unexpected monetary shocks to have real effects.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.6; McCallum (1989), Ch 9.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 91 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between frictional and involuntary unemployment?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The distinction lies in whether unemployment is a voluntary choice or a result of market failure.</p>
+                    <ul>
+                        <li><b>Frictional Unemployment:</b> This is the temporary unemployment that arises from the normal process of job search. It takes time for workers to find jobs and for firms to find workers. People who are frictionally unemployed are in the process of moving between jobs or are new entrants to the labour force. This type of unemployment is considered voluntary and is consistent with a market-clearing, full-employment classical model. The "natural rate of unemployment" is primarily composed of frictional unemployment.</li>
+                        <li><b>Involuntary Unemployment:</b> This occurs when a person is willing and able to work at the prevailing market wage but cannot find a job. It signifies an excess supply of labour, meaning the labour market is not clearing. This is a hallmark of Keynesian models, where sticky nominal wages can cause the real wage to be stuck above its market-clearing level, leading to a situation where the number of people who want to work exceeds the number of jobs available.</li>
+                    </ul>
+                    <div class="source">Source: General macroeconomic principles.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 92 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the Long & Plosser (1983) model, what is the economic interpretation of the matrix \(A\) in the equation \(y_{t+1} = Ay_t + k + \eta_{t+1}\)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the vector autoregression \(y_{t+1} = Ay_t + k + \eta_{t+1}\) from Long and Plosser (1983), the matrix \(A\) is the <b>input-output matrix expressed in terms of cost shares</b>.</p>
+                    <p>Each element \(a_{ij}\) of the matrix \(A\) represents the elasticity of output in sector \(i\) with respect to the input of the commodity from sector \(j\). Under their assumptions of Cobb-Douglas technology and constant returns to scale, this elasticity is equal to the equilibrium share of input \(j\) in the total cost of producing output \(i\).</p>
+                    <p>This matrix is the heart of the model's propagation mechanism. It explicitly maps out how the outputs of various sectors (the elements of \(y_t\)) are used as inputs to produce the next period's outputs (the elements of \(y_{t+1}\)). It is through the off-diagonal elements of \(A\) that shocks are transmitted from one sector to another, creating comovement.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 93 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the law of iterated expectations and why is it important for rational expectations models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The law of iterated expectations (also known as the tower property) states that the expectation of a conditional expectation of a random variable is simply the unconditional expectation of that variable. More formally, for random variables X and Y:</p>
+                    <p>\( E[E(X|Y)] = E[X] \)</p>
+                    <p>In the context of rational expectations models, it means that today's forecast of a forecast you will make tomorrow (with more information) is just today's forecast of the ultimate outcome.</p>
+                    <p>For example, \( E_t[E_{t+1}(P_{t+2})] = E_t(P_{t+2}) \). You cannot predict how you will update your forecast in the future.</p>
+                    <p>This law is crucial for solving rational expectations models using the forward-looking substitution method. It allows modelers to take expectations of future expectations, simplifying complex dynamic equations and enabling them to express the current value of a variable as a function of expectations about future fundamental factors, not future expectations themselves.</p>
+                    <div class="source">Source: McCallum (1989), Ch 8 Appendix.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 94 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">How can distortionary taxes affect fluctuations in an RBC model?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>Distortionary taxes (e.g., taxes on labour or capital income) can amplify fluctuations in an RBC model by affecting the after-tax returns to work and investment, thereby strengthening the response to shocks.</p>
+                    <p>Consider a positive technology shock in a model with a balanced budget and a tax on output:</p>
+                    <ol>
+                        <li>A positive technology shock increases output.</li>
+                        <li>With a balanced budget, the government needs the same amount of real revenue. Since the tax base (output) has increased, the government can lower the tax rate.</li>
+                        <li>The technology shock already increased the pre-tax marginal product of labour. The reduction in the tax rate further increases the <b>after-tax</b> real wage.</li>
+                        <li>This larger increase in the after-tax real wage creates a stronger intertemporal substitution effect, leading to a larger increase in labour supply and hours worked compared to a model without such taxes.</li>
+                        <li>Similarly, the after-tax return on investment increases, amplifying the investment response.</li>
+                    </ol>
+                    <p>By making after-tax returns more sensitive to underlying shocks, distortionary taxes can increase the volatility of hours and investment, helping some RBC models better match the empirical facts.</p>
+                    <div class="source">Source: Plosser (1989), "Understanding Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 95 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the main takeaway from the Kydland and Prescott (1990) paper "Business Cycles: Real Facts and a Monetary Myth"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The main takeaway is that many commonly held beliefs about business cycles, particularly regarding the role of money and prices, are not supported by post-war U.S. data. The paper presents a systematic documentation of business cycle "facts" that serve as a benchmark for theories.</p>
+                    <p>Key findings that challenge traditional (monetary) views of business cycles include:</p>
+                    <ul>
+                        <li><b>The Price Level is Countercyclical:</b> This is their most famous finding. Prices tend to be below trend in booms and above trend in recessions, which contradicts theories where aggregate demand shocks are the primary driver of cycles.</li>
+                        <li><b>Money is Not a Leading Variable:</b> They find no strong evidence that monetary aggregates like M1 or the monetary base lead the cycle. If anything, they are contemporaneous or slightly lagging, which challenges the monetarist view of money as the primary impulse.</li>
+                    </ul>
+                    <p>The paper argues that these "real facts" are more consistent with a Real Business Cycle perspective, where technology shocks drive fluctuations, than with monetary or other demand-side theories. It shifted the focus of business cycle research towards matching these quantitative, empirical regularities.</p>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 96 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the "Lucas island" paradigm?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The "Lucas island" paradigm is a metaphorical framework developed by Robert Lucas to model an economy with imperfect information, providing the foundation for his misperceptions theory.</p>
+                    <p>The key features of the paradigm are:</p>
+                    <ul>
+                        <li>The economy is composed of a large number of isolated, competitive markets, or "islands."</li>
+                        <li>Each island produces a single good, and producers live on their own island.</li>
+                        <li>Information is incomplete: producers know the current local price of the good on their own island, but they do not know the current prices on other islands or the current aggregate price level for the whole economy.</li>
+                        <li>Shocks can be either local (relative, real shocks) affecting just one island, or global (aggregate, nominal shocks) affecting all islands simultaneously.</li>
+                    </ul>
+                    <p>This setup forces producers to engage in a "signal extraction problem." When the price on their island changes, they must infer whether it is a local change (to which they should respond by adjusting output) or a global change (to which they should not). This potential for confusion between relative and absolute price changes is what allows unexpected monetary shocks to have real effects.</p>
+                    <div class="source">Source: Hargreaves Heap (1992), Ch 2.6; McCallum (1989), Ch 9.4.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 97 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the difference between frictional and involuntary unemployment?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The distinction lies in whether unemployment is a voluntary choice or a result of market failure.</p>
+                    <ul>
+                        <li><b>Frictional Unemployment:</b> This is the temporary unemployment that arises from the normal process of job search. It takes time for workers to find jobs and for firms to find workers. People who are frictionally unemployed are in the process of moving between jobs or are new entrants to the labour force. This type of unemployment is considered voluntary and is consistent with a market-clearing, full-employment classical model. The "natural rate of unemployment" is primarily composed of frictional unemployment.</li>
+                        <li><b>Involuntary Unemployment:</b> This occurs when a person is willing and able to work at the prevailing market wage but cannot find a job. It signifies an excess supply of labour, meaning the labour market is not clearing. This is a hallmark of Keynesian models, where sticky nominal wages can cause the real wage to be stuck above its market-clearing level, leading to a situation where the number of people who want to work exceeds the number of jobs available.</li>
+                    </ul>
+                    <div class="source">Source: General macroeconomic principles.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 98 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">In the Long & Plosser (1983) model, what is the economic interpretation of the matrix \(A\) in the equation \(y_{t+1} = Ay_t + k + \eta_{t+1}\)?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>In the vector autoregression \(y_{t+1} = Ay_t + k + \eta_{t+1}\) from Long and Plosser (1983), the matrix \(A\) is the <b>input-output matrix expressed in terms of cost shares</b>.</p>
+                    <p>Each element \(a_{ij}\) of the matrix \(A\) represents the elasticity of output in sector \(i\) with respect to the input of the commodity from sector \(j\). Under their assumptions of Cobb-Douglas technology and constant returns to scale, this elasticity is equal to the equilibrium share of input \(j\) in the total cost of producing output \(i\).</p>
+                    <p>This matrix is the heart of the model's propagation mechanism. It explicitly maps out how the outputs of various sectors (the elements of \(y_t\)) are used as inputs to produce the next period's outputs (the elements of \(y_{t+1}\)). It is through the off-diagonal elements of \(A\) that shocks are transmitted from one sector to another, creating comovement.</p>
+                    <div class="source">Source: Long and Plosser (1983), "Real Business Cycles".</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 99 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the law of iterated expectations and why is it important for rational expectations models?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The law of iterated expectations (also known as the tower property) states that the expectation of a conditional expectation of a random variable is simply the unconditional expectation of that variable. More formally, for random variables X and Y:</p>
+                    <p>\( E[E(X|Y)] = E[X] \)</p>
+                    <p>In the context of rational expectations models, it means that today's forecast of a forecast you will make tomorrow (with more information) is just today's forecast of the ultimate outcome.</p>
+                    <p>For example, \( E_t[E_{t+1}(P_{t+2})] = E_t(P_{t+2}) \). You cannot predict how you will update your forecast in the future.</p>
+                    <p>This law is crucial for solving rational expectations models using the forward-looking substitution method. It allows modelers to take expectations of future expectations, simplifying complex dynamic equations and enabling them to express the current value of a variable as a function of expectations about future fundamental factors, not future expectations themselves.</p>
+                    <div class="source">Source: McCallum (1989), Ch 8 Appendix.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 100 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">What is the main takeaway from the Kydland and Prescott (1990) paper "Business Cycles: Real Facts and a Monetary Myth"?</div>
+                <div class="card-back">
+                    <h3>Answer</h3>
+                    <p>The main takeaway is that many commonly held beliefs about business cycles, particularly regarding the role of money and prices, are not supported by post-war U.S. data. The paper presents a systematic documentation of business cycle "facts" that serve as a benchmark for theories.</p>
+                    <p>Key findings that challenge traditional (monetary) views of business cycles include:</p>
+                    <ul>
+                        <li><b>The Price Level is Countercyclical:</b> This is their most famous finding. Prices tend to be below trend in booms and above trend in recessions, which contradicts theories where aggregate demand shocks are the primary driver of cycles.</li>
+                        <li><b>Money is Not a Leading Variable:</b> They find no strong evidence that monetary aggregates like M1 or the monetary base lead the cycle. If anything, they are contemporaneous or slightly lagging, which challenges the monetarist view of money as the primary impulse.</li>
+                    </ul>
+                    <p>The paper argues that these "real facts" are more consistent with a Real Business Cycle perspective, where technology shocks drive fluctuations, than with monetary or other demand-side theories. It shifted the focus of business cycle research towards matching these quantitative, empirical regularities.</p>
+                    <div class="source">Source: Kydland and Prescott (1990), "Business Cycles: Real Facts and a Monetary Myth".</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button id="prev" class="nav-btn">&laquo; Previous</button>
+        <button id="flip" class="flip-btn">Flip Card</button>
+        <div id="card-counter">Card 1 of 100</div>
+        <button id="next" class="nav-btn">Next &raquo;</button>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const nextBtn = document.getElementById('next');
+        const prevBtn = document.getElementById('prev');
+        const flipBtn = document.getElementById('flip');
+        const cardCounter = document.getElementById('card-counter');
+        let currentCardIndex = 0;
+
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                card.classList.remove('active');
+                card.classList.remove('is-flipped');
+                if (i === index) {
+                    card.classList.add('active');
+                }
+            });
+            cardCounter.textContent = `Card ${index + 1} of ${cards.length}`;
+        }
+
+        function flipCard() {
+            cards[currentCardIndex].classList.toggle('is-flipped');
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentCardIndex = (currentCardIndex + 1) % cards.length;
+            showCard(currentCardIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length;
+            showCard(currentCardIndex);
+        });
+
+        flipBtn.addEventListener('click', flipCard);
+
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Prevent flipping when clicking on links or selecting text in the answer
+                if (e.target.tagName.toLowerCase() === 'a' || window.getSelection().toString()) {
+                    return;
+                }
+                flipCard();
+            });
+        });
+
+        showCard(currentCardIndex);
+    </script>
+
+</body>
+</html>

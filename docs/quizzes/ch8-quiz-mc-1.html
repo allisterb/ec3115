@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Chapter 8 Quiz: Classical Models and Monetary Policy</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #005a9c;
+        }
+        .question-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .correct {
+            background-color: #e7f4e7;
+            border-left: 5px solid #4caf50;
+        }
+        .incorrect {
+            background-color: #fce8e6;
+            border-left: 5px solid #d93025;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .explanation p {
+            margin: 5px 0;
+        }
+        .explanation em {
+            font-style: italic;
+            color: #000;
+        }
+        #clear-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #d93025;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        #clear-button:hover {
+            background-color: #c5221f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 - Chapter 8 Quiz: Classical Models and Monetary Policy</h1>
+
+    <div id="quiz-container">
+        <!-- Question 1 -->
+        <div class="question-container">
+            <p class="question">1. In the pure classical model, what is the primary determinant of the aggregate level of output?</p>
+            <form class="answers">
+                <label><input type="radio" name="q1" value="a"> a) The level of aggregate demand.</label><br>
+                <label><input type="radio" name="q1" value="b"> b) The quantity of money in circulation.</label><br>
+                <label><input type="radio" name="q1" value="c" data-correct="true"> c) The supply of factor inputs and the available technology.</label><br>
+                <label><input type="radio" name="q1" value="d"> d) The nominal interest rate.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>In the classical model, the economy's output is determined on the supply side. The aggregate supply curve is vertical at the full-employment level of output, \(y^*\). This level of output is determined by the equilibrium in the labor market and the economy's production function, \(y = f(k, l)\), where \(k\) (capital) and \(l\) (labor) are the factor inputs. Changes in aggregate demand only affect the price level, not the level of real output.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 3; Hargreaves Heap, The New Keynesian Macroeconomics, Chapter 2.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-container">
+            <p class="question">2. According to the classical model, what is the effect of an increase in the money supply?</p>
+            <form class="answers">
+                <label><input type="radio" name="q2" value="a"> a) An increase in output and employment.</label><br>
+                <label><input type="radio" name="q2" value="b" data-correct="true"> b) A proportional increase in the nominal wage and the price level.</label><br>
+                <label><input type="radio" name="q2" value="c"> c) A decrease in the real interest rate.</label><br>
+                <label><input type="radio" name="q2" value="d"> d) An increase in the real wage.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>This is the concept of monetary neutrality. In the classical model, a change in the money supply leads to a proportional change in all nominal variables (like the price level and nominal wages) but has no effect on real variables (like output, employment, and the real wage). The real wage (W/P) remains unchanged because both W and P increase by the same proportion.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 4; McCallum, Monetary Economics, Chapter 5.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-container">
+            <p class="question">3. What is the shape of the aggregate supply (AS) curve in the classical model?</p>
+            <form class="answers">
+                <label><input type="radio" name="q3" value="a"> a) Upward sloping.</label><br>
+                <label><input type="radio" name="q3" value="b"> b) Downward sloping.</label><br>
+                <label><input type="radio" name="q3" value="c" data-correct="true"> c) Vertical.</label><br>
+                <label><input type="radio" name="q3" value="d"> d) Horizontal.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The aggregate supply curve is vertical at the full-employment (or natural) level of output, \(y^*\). This is because output is determined by factor markets (labor and capital) and technology, which are independent of the price level in the classical framework. Any change in the price level is met with a proportional change in the nominal wage, keeping the real wage and thus employment and output constant.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 3; Hoover, The New Classical Macroeconomics, p. 25.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-container">
+            <p class="question">4. In the labor market of the classical model, firms demand labor up to the point where:</p>
+            <form class="answers">
+                <label><input type="radio" name="q4" value="a"> a) The nominal wage equals the marginal product of labor.</label><br>
+                <label><input type="radio" name="q4" value="b" data-correct="true"> b) The real wage equals the marginal product of labor.</label><br>
+                <label><input type="radio" name="q4" value="c"> c) The supply of labor is exhausted.</label><br>
+                <label><input type="radio" name="q4" value="d"> d) The price level equals the nominal wage.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Profit-maximizing firms in a competitive market will hire labor until the cost of an additional unit of labor (the real wage, W/P) is equal to the benefit from that additional unit (the marginal product of labor, MPL). This condition, \(W/P = MPL\), defines the labor demand curve.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 3; McCallum, Monetary Economics, p. 90.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-container">
+            <p class="question">5. The Lucas 'misperceptions' model provides a rationale for:</p>
+            <form class="answers">
+                <label><input type="radio" name="q5" value="a"> a) Why money is always neutral.</label><br>
+                <label><input type="radio" name="q5" value="b"> b) Why the aggregate supply curve is always vertical.</label><br>
+                <label><input type="radio" name="q5" value="c" data-correct="true"> c) Why an unexpected monetary expansion can have short-run real effects.</label><br>
+                <label><input type="radio" name="q5" value="d"> d) Why inflation is always and everywhere a monetary phenomenon.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>In the Lucas misperceptions model, producers have imperfect information. They can observe the price of their own good but not the aggregate price level. An unexpected increase in the money supply causes all prices to rise. A producer sees their own price rise and 'misperceives' part of this general price increase as a relative price increase for their specific good. Believing the relative price of their good has risen, they increase production. This leads to a short-run upward-sloping aggregate supply curve, \(Y_t = y^* + d(P_t - E_{t-1}[P_t])\), and allows unexpected monetary policy to have real effects.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 7; Hargreaves Heap, The New Keynesian Macroeconomics, pp. 20-24.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-container">
+            <p class="question">6. What is a central goal of Real Business Cycle (RBC) theory?</p>
+            <form class="answers">
+                <label><input type="radio" name="q6" value="a"> a) To explain business cycles as deviations from an optimal path caused by monetary shocks.</label><br>
+                <label><input type="radio" name="q6" value="b" data-correct="true"> b) To explain business cycles as the efficient response of the economy to real shocks, like changes in technology.</label><br>
+                <label><input type="radio" name="q6" value="c"> c) To highlight the role of sticky prices and wages in creating recessions.</label><br>
+                <label><input type="radio" name="q6" value="d"> d) To advocate for active government stabilization policy.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>RBC theory extends the classical model and argues that business cycles are not market failures but are the natural and efficient responses of the economy to real shocks, primarily technology shocks. Fluctuations in output, employment, etc., are seen as optimal adjustments by rational agents to changes in production possibilities.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 6; Long and Plosser, 'Real Business Cycles', p. 39.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-container">
+            <p class="question">7. In the context of Real Business Cycle models, what is meant by the "intertemporal substitution of labor"?</p>
+            <form class="answers">
+                <label><input type="radio" name="q7" value="a"> a) Firms substituting capital for labor when wages are high.</label><br>
+                <label><input type="radio" name="q7" value="b"> b) Workers choosing to work in different industries based on relative wages.</label><br>
+                <label><input type="radio" name="q7" value="c" data-correct="true"> c) Workers choosing to work more in periods when the real wage is temporarily high and take more leisure when it is temporarily low.</label><br>
+                <label><input type="radio" name="q7" value="d"> d) The government substituting tax cuts for spending to encourage work.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>A key mechanism in many RBC models is that households can substitute leisure across time. A temporary positive technology shock raises the current real wage, making current leisure relatively more expensive than future leisure. Rational individuals will respond by working more today (substituting away from expensive current leisure) and planning for more leisure in the future when the real wage is expected to be lower.</p>
+                    <p><em>Source: Plosser, 'Understanding real business cycles', p. 56; Hoover, The New Classical Macroeconomics, p. 45.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-container">
+            <p class="question">8. What does the "policy-ineffectiveness proposition," associated with New Classical Macroeconomics, state?</p>
+            <form class="answers">
+                <label><input type="radio" name="q8" value="a"> a) Monetary policy cannot affect the price level.</label><br>
+                <label><input type="radio" name="q8" value="b"> b) Fiscal policy is more effective than monetary policy.</label><br>
+                <label><input type="radio" name="q8" value="c" data-correct="true"> c) Systematic, and therefore anticipated, monetary policy cannot affect real variables like output and employment.</label><br>
+                <label><input type="radio" name="q8" value="d"> d) All government policies are completely ineffective under all circumstances.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The policy-ineffectiveness proposition, emerging from models combining rational expectations with a natural rate hypothesis, argues that if economic agents have rational expectations, they will anticipate any systematic policy actions by the central bank. They will adjust their price expectations accordingly, neutralizing any potential real effects of the policy. Only unsystematic, surprise monetary policy can affect real output.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, pp. 59-63; Hoover, The New Classical Macroeconomics, p. 66.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-container">
+            <p class="question">9. In a "cash-in-advance" (CIA) model, money has real effects because:</p>
+            <form class="answers">
+                <label><input type="radio" name="q9" value="a"> a) People misperceive changes in the money supply.</label><br>
+                <label><input type="radio" name="q9" value="b"> b) It enters directly into the utility function.</label><br>
+                <label><input type="radio" name="q9" value="c" data-correct="true"> c) An increase in inflation acts like a tax on consumption, causing a substitution towards leisure.</label><br>
+                <label><input type="radio" name="q9" value="d"> d) It is a perfect substitute for government bonds.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>In CIA models, households must hold cash from the previous period to purchase consumption goods in the current period. The constraint is \(P_t C_t \le M_{t-1}\). An increase in the inflation rate (\(\pi_t\)) between \(t-1\) and \(t\) reduces the real value of the cash balances brought into the period, effectively making consumption goods more expensive. This "inflation tax" leads households to substitute away from consumption and towards leisure, thus reducing labor supply and output.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 8.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-container">
+            <p class="question">10. What is a primary criticism of early Real Business Cycle models, as highlighted by Long and Plosser (1983)?</p>
+            <form class="answers">
+                <label><input type="radio" name="q10" value="a"> a) They assume that agents have irrational expectations.</label><br>
+                <label><input type="radio" name="q10" value="b"> b) They rely too heavily on monetary shocks as the source of fluctuations.</label><br>
+                <label><input type="radio" name="q10" value="c"> c) They cannot explain the persistence and comovement of economic aggregates.</label><br>
+                <label><input type="radio" name="q10" value="d" data-correct="true"> d) They demonstrate how persistence and comovement can arise from real shocks propagated through an input-output structure, without relying on monetary factors.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The contribution of the Long and Plosser (1983) paper was to build a multi-sector RBC model that explains key business cycle facts. They showed that independent, real shocks to different sectors could be propagated through time (persistence) and across sectors (comovement) via the economy's capitalistic production structure (where the output of one sector is an input for another), without needing to assume monetary shocks, adjustment costs, or serial correlation in the shocks themselves.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', pp. 41, 53.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ... 40 more questions ... -->
+        <div class="question-container">
+            <p class="question">11. The "time inconsistency" problem in monetary policy refers to the idea that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q11" value="a"> a) Monetary policy takes a long and variable time to affect the economy.</label><br>
+                <label><input type="radio" name="q11" value="b" data-correct="true"> b) A government may have an incentive to renege on a previously announced optimal policy (like zero inflation) to achieve short-term gains.</label><br>
+                <label><input type="radio" name="q11" value="c"> c) It is inconsistent to use monetary policy to target both inflation and unemployment.</label><br>
+                <label><input type="radio" name="q11" value="d"> d) Data on the economy is always out of date, making optimal policy impossible.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The time inconsistency problem arises when a policy that is optimal for the government to announce ex-ante is no longer optimal to execute ex-post. For example, a government announces a zero-inflation policy. If the public believes this and forms low inflation expectations, the government then has an incentive to create surprise inflation to boost output temporarily. Rational agents anticipate this incentive, disbelieve the announcement, and the economy ends up with an inefficiently high inflation rate.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, pp. 64-66.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">12. In the classical factor market, an increase in the supply of labor, ceteris paribus, will lead to:</p>
+            <form class="answers">
+                <label><input type="radio" name="q12" value="a"> a) A higher real wage and higher employment.</label><br>
+                <label><input type="radio" name="q12" value="b"> b) A lower real wage and lower employment.</label><br>
+                <label><input type="radio" name="q12" value="c" data-correct="true"> c) A lower real wage and higher employment.</label><br>
+                <label><input type="radio" name="q12" value="d"> d) A higher real wage and lower employment.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>An increase in the supply of labor shifts the labor supply curve to the right. Given a downward-sloping labor demand curve (reflecting the diminishing marginal product of labor), this results in a new equilibrium with a lower real wage and a higher level of employment. The increased employment, in turn, leads to a higher level of full-employment output.</p>
+                    <p><em>Source: McCallum, Monetary Economics, pp. 91-92.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">13. What is a key feature of a "limited participation" model of monetary policy?</p>
+            <form class="answers">
+                <label><input type="radio" name="q13" value="a"> a) Only a limited number of goods can be purchased with money.</label><br>
+                <label><input type="radio" name="q13" value="b"> b) All agents participate in financial markets at all times.</label><br>
+                <label><input type="radio" name="q13" value="c" data-correct="true"> c) Some agents (like households) do not immediately adjust their portfolios to a monetary injection, while others (like banks) do.</label><br>
+                <label><input type="radio" name="q13" value="d"> d) The government's participation in the economy is strictly limited.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Limited participation models create a channel for monetary policy to have real effects by assuming that monetary injections (e.g., via open market operations) flow first to financial intermediaries (banks). Other agents, like households, only adjust their portfolios with a lag. This creates a short-run "liquidity effect" where the increased supply of loanable funds from banks lowers the interest rate, stimulating investment and output before prices fully adjust.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 8.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">14. In the Friedman/Lucas "modern" aggregate supply function, \(Y_t = y^* + a(P_t - P_t^e)\), what does the term \((P_t - P_t^e)\) represent?</p>
+            <form class="answers">
+                <label><input type="radio" name="q14" value="a"> a) The actual rate of inflation.</label><br>
+                <label><input type="radio" name="q14" value="b"> b) The nominal interest rate.</label><br>
+                <label><input type="radio" name="q14" value="c" data-correct="true"> c) The price surprise, or the difference between the actual and expected price level.</label><br>
+                <label><input type="radio" name="q14" value="d"> d) The output gap.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>This term is the core of the misperceptions story. \(P_t\) is the actual price level and \(P_t^e\) (or \(E_{t-1}[P_t]\)) is the price level that was expected. When the actual price level is higher than expected, producers misinterpret this as a higher relative price for their goods and increase output. Thus, output deviates from its natural rate \(y^*\) only when there is a price surprise.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, p. 27.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">15. A key finding of Long and Plosser's (1983) RBC model is that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q15" value="a"> a) Monetary shocks are the primary driver of business cycles.</label><br>
+                <label><input type="radio" name="q15" value="b" data-correct="true"> b) Independent shocks to individual sectors can generate positive comovement across all sectors.</label><br>
+                <label><input type="radio" name="q15" value="c"> c) Consumption is more volatile than investment.</label><br>
+                <label><input type="radio" name="q15" value="d"> d) The model requires serially correlated technology shocks to generate persistence in output.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>A central result of their paper is that the input-output structure of the economy acts as a propagation mechanism. A positive shock to one sector (e.g., manufacturing) means more output of that good. Since that good is an input into many other sectors, it stimulates production across the economy, leading to positive comovement, even if the initial shocks are independent across sectors.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 57.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">16. In the classical model, "involuntary unemployment" is zero because:</p>
+            <form class="answers">
+                <label><input type="radio" name="q16" value="a"> a) The government guarantees a job for everyone.</label><br>
+                <label><input type="radio" name="q16" value="b" data-correct="true"> b) Wages are perfectly flexible and adjust to ensure the quantity of labor supplied equals the quantity demanded.</label><br>
+                <label><input type="radio" name="q16" value="c"> c) The production function exhibits constant returns to scale.</label><br>
+                <label><input type="radio" name="q16" value="d"> d) All unemployment is considered a form of leisure.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The core assumption of the classical labor market is that the real wage is perfectly flexible. If there is an excess supply of labor (unemployment), the real wage will fall until the market clears, i.e., until everyone who wants to work at the prevailing real wage is employed. Therefore, any observed unemployment is considered voluntary (frictional or search unemployment).</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 3.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">17. According to Plosser (1989), a key empirical regularity that RBC models attempt to explain is that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q17" value="a"> a) Consumption is more volatile than investment.</label><br>
+                <label><input type="radio" name="q17" value="b"> b) Employment is countercyclical.</label><br>
+                <label><input type="radio" name="q17" value="c" data-correct="true"> c) Investment is significantly more volatile than consumption.</label><br>
+                <label><input type="radio" name="q17" value="d"> d) Real wages are highly countercyclical.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>One of the "stylised facts" of the business cycle is that investment spending fluctuates much more dramatically than consumption spending. RBC models explain this through consumption smoothing: risk-averse agents prefer a smooth consumption path, so when they receive a positive income shock, they save/invest a large portion of it rather than consuming it all at once, which makes investment volatile and consumption smooth.</p>
+                    <p><em>Source: Plosser, 'Understanding real business cycles', p. 62.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">18. In the Lucas islands model, the slope of the short-run aggregate supply curve depends on:</p>
+            <form class="answers">
+                <label><input type="radio" name="q18" value="a"> a) The level of government spending.</label><br>
+                <label><input type="radio" name="q18" value="b" data-correct="true"> b) The variance of aggregate price shocks relative to the variance of local relative price shocks.</label><br>
+                <label><input type="radio" name="q18" value="c"> c) The marginal propensity to consume.</label><br>
+                <label><input type="radio" name="q18" value="d"> d) The degree of monopoly power in the economy.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Producers must perform a "signal extraction" problem. If aggregate price shocks (monetary noise) are highly variable compared to local shocks, a producer will attribute most of any observed price change to aggregate inflation and will not change output much. This makes the AS curve steep. If aggregate shocks are not very variable, they will attribute the price change to a relative price shift and change output significantly, making the AS curve flatter. The key parameter is \(\theta = var(p) / [var(p) + var(z)]\).</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, p. 28; Hoover, The New Classical Macroeconomics, pp. 32-35.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">19. What is the "propagation mechanism" in a business cycle model?</p>
+            <form class="answers">
+                <label><input type="radio" name="q19" value="a"> a) The initial shock that starts the cycle, such as a technology shock.</label><br>
+                <label><input type="radio" name="q19" value="b" data-correct="true"> b) The economic features that spread the effects of an initial shock through time and across different sectors.</label><br>
+                <label><input type="radio" name="q19" value="c"> c) The government's policy response to a shock.</label><br>
+                <label><input type="radio" name="q19" value="d"> d) The process by which agents form expectations.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Business cycle theory distinguishes between the initial "impulse" (the shock) and the "propagation mechanism." The propagation mechanism consists of the internal dynamics of the model (e.g., capital accumulation, inventory adjustments, input-output linkages) that cause the effects of a one-time shock to persist over time and spread throughout the economy, creating the serially correlated and comoving behavior characteristic of business cycles.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 55; Hoover, The New Classical Macroeconomics, p. 42.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">20. In the classical dichotomy, real variables are determined by ________ and nominal variables are determined by ________.</p>
+            <form class="answers">
+                <label><input type="radio" name="q20" value="a"> a) monetary factors; real factors</label><br>
+                <label><input type="radio" name="q20" value="b" data-correct="true"> b) real factors; monetary factors</label><br>
+                <label><input type="radio" name="q20" value="c"> c) government policy; market forces</label><br>
+                <label><input type="radio" name="q20" value="d"> d) animal spirits; rational expectations</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The classical dichotomy is the idea that the economy can be conceptually split into a real side and a nominal side. Real variables like output, employment, and the real interest rate are determined by real factors like technology, factor supplies, and preferences. Nominal variables like the price level and nominal wage are then determined by monetary factors, primarily the money supply, via the quantity theory of money.</p>
+                    <p><em>Source: McCallum, Monetary Economics, Chapter 5.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions 21-50 -->
+        <div class="question-container">
+            <p class="question">21. A temporary adverse productivity shock in an RBC model typically leads to:</p>
+            <form class="answers">
+                <label><input type="radio" name="q21" value="a"> a) A rise in investment and a fall in consumption.</label><br>
+                <label><input type="radio" name="q21" value="b" data-correct="true"> b) A fall in investment, consumption, output, and employment.</label><br>
+                <label><input type="radio" name="q21" value="c"> c) No change in any real variables, only a rise in the price level.</label><br>
+                <label><input type="radio" name="q21" value="d"> d) A fall in the real interest rate and a rise in investment.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>An adverse productivity shock makes production less efficient. This lowers the marginal product of both labor and capital. The result is a lower real wage and a lower real interest rate. Households and firms respond by reducing work effort (employment), consumption, and investment. The combined effect is a fall in total output, characteristic of a recession.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 6.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">22. The assumption of rational expectations implies that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q22" value="a"> a) Agents' forecasts are always correct.</label><br>
+                <label><input type="radio" name="q22" value="b"> b) Agents use complex econometric models to forecast.</label><br>
+                <label><input type="radio" name="q22" value="c" data-correct="true"> c) Agents' forecast errors are not systematic or predictable based on available information.</label><br>
+                <label><input type="radio" name="q22" value="d"> d) Agents have perfect foresight about the future.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Rational expectations does not mean perfect foresight. It means that agents use all available information efficiently when forming expectations. Consequently, their forecast errors should be random (white noise) and, on average, zero. They do not make systematic, repeatable mistakes that could be corrected using information they already possess.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, p. 60; McCallum, Monetary Economics, p. 145.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">23. In the classical model, if the nominal money supply is constant and real output grows over time, what will happen to the price level?</p>
+            <form class="answers">
+                <label><input type="radio" name="q23" value="a"> a) It will rise.</label><br>
+                <label><input type="radio" name="q23" value="b" data-correct="true"> b) It will fall.</label><br>
+                <label><input type="radio" name="q23" value="c"> c) It will remain constant.</label><br>
+                <label><input type="radio" name="q23" value="d"> d) Its behavior is indeterminate.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>From the quantity theory equation \(M/P = L(y, r)\), if M is constant and y (real output) increases, the demand for real money balances \(L(y, r)\) will increase. To restore equilibrium, the supply of real balances, M/P, must also increase. Since M is constant, P must fall. This is a situation of secular deflation.</p>
+                    <p><em>Source: McCallum, Monetary Economics, p. 115.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">24. What is a key difference between the interpretation of \(y^*\) in a Friedman-style model versus a New Keynesian model with a NAIRU?</p>
+            <form class="answers">
+                <label><input type="radio" name="q24" value="a"> a) There is no difference; both represent the maximum possible output.</label><br>
+                <label><input type="radio" name="q24" value="b" data-correct="true"> b) In Friedman's model, \(y^*\) is the efficient, Walrasian full-employment output, whereas the NAIRU is not necessarily efficient or optimal.</label><br>
+                <label><input type="radio" name="q24" value="c"> c) \(y^*\) is determined by aggregate demand, while the NAIRU is determined by supply.</label><br>
+                <label><input type="radio" name="q24" value="d"> d) The NAIRU is always lower than \(y^*\).</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>In the Friedman/Lucas classical framework, \(y^*\) is the "natural rate" of output, which is the efficient level that would be "ground out by the Walrasian system." It has normative properties of full employment and efficiency. In contrast, the NAIRU (Non-Accelerating Inflation Rate of Unemployment) that emerges from models with imperfect competition (like New Keynesian models) is simply the level of unemployment/output where inflation is stable. Due to market imperfections (e.g., union bargaining power), it is not necessarily the socially optimal or efficient level of output.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, p. 47.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">25. The idea that business cycles are "all alike," as mentioned by Lucas, suggests that they:</p>
+            <form class="answers">
+                <label><input type="radio" name="q25" value="a"> a) Are caused by the same shocks in every country.</label><br>
+                <label><input type="radio" name="q25" value="b"> b) Have the same duration and amplitude in every recession.</label><br>
+                <label><input type="radio" name="q25" value="c" data-correct="true"> c) Share common qualitative features, like the comovement of key aggregates, across different countries and time periods.</label><br>
+                <label><input type="radio" name="q25" value="d"> d) Are primarily a political phenomenon.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Lucas's point is that despite the wide variety of institutional and political arrangements across different market economies, the qualitative statistical properties of business cycles (e.g., consumption is smooth, investment is volatile, employment is procyclical) are remarkably similar. This suggests the possibility of a unified, general theory of business cycles based on fundamental economic principles rather than country-specific factors.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 40.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions 26-50 -->
+        <div class="question-container">
+            <p class="question">26. A technological improvement that increases the marginal product of labor will:</p>
+            <form class="answers">
+                <label><input type="radio" name="q26" value="a"> a) Shift the labor demand curve to the left, lowering the real wage.</label><br>
+                <label><input type="radio" name="q26" value="b" data-correct="true"> b) Shift the labor demand curve to the right, raising the real wage and employment.</label><br>
+                <label><input type="radio" name="q26" value="c"> c) Shift the labor supply curve to the right, lowering the real wage.</label><br>
+                <label><input type="radio" name="q26" value="d"> d) Have no effect on the labor market.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>A technological improvement raises the marginal product of labor (MPL) at every level of employment. Since the labor demand curve is the MPL curve, it shifts to the right. This leads to a higher equilibrium real wage and a higher level of employment, which in turn increases the natural rate of output.</p>
+                    <p><em>Source: McCallum, Monetary Economics, pp. 90-92.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">27. The defining feature of a "real" business cycle model, as opposed to a "monetary" one, is that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q27" value="a"> a) It assumes prices are sticky.</label><br>
+                <label><input type="radio" name="q27" value="b"> b) It assumes agents have adaptive expectations.</label><br>
+                <label><input type="radio" name="q27" value="c" data-correct="true"> c) The original source of fluctuations is a real shock (e.g., to technology or preferences) rather than a nominal shock (e.g., to the money supply).</label><br>
+                <label><input type="radio" name="q27" value="d"> d) It ignores the role of capital accumulation.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The key distinction lies in the "impulse" or initial shock that drives the cycle. Monetary business cycle models (like the Lucas misperceptions model) trace fluctuations back to unexpected changes in the money supply. Real business cycle models trace fluctuations back to real shocks, such as shocks to technology, government spending, or tastes.</p>
+                    <p><em>Source: Hoover, The New Classical Macroeconomics, p. 42.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">28. If an announced, systematic monetary expansion has no real effects, this is an example of:</p>
+            <form class="answers">
+                <label><input type="radio" name="q28" value="a"> a) The liquidity trap.</label><br>
+                <label><input type="radio" name="q28" value="b"> b) The Phillips Curve tradeoff.</label><br>
+                <label><input type="radio" name="q28" value="c" data-correct="true"> c) The policy-ineffectiveness proposition.</label><br>
+                <label><input type="radio" name="q28" value="d"> d) Time inconsistency.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>This is the core of the policy-ineffectiveness proposition. Because the policy is systematic and announced, rational agents anticipate its effects on the price level. They adjust their expectations and nominal wage demands upwards, leaving the real wage, employment, and output unchanged. The policy is "ineffective" in altering real variables.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, pp. 61-62.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">29. In the Long and Plosser (1983) model, how does a positive productivity shock in one sector spread to other sectors?</p>
+            <form class="answers">
+                <label><input type="radio" name="q29" value="a"> a) Through changes in the money supply.</label><br>
+                <label><input type="radio" name="q29" value="b"> b) Through government redistribution policies.</label><br>
+                <label><input type="radio" name="q29" value="c" data-correct="true"> c) Because the output of one sector is used as an input in other sectors.</label><br>
+                <label><input type="radio" name="q29" value="d"> d) Because all shocks are perfectly correlated across sectors.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The model emphasizes the input-output structure of the economy. A positive shock increases the output of, say, steel. Since steel is an input for making cars, machine tools, and buildings, the increased availability and lower relative price of steel stimulates production in those other sectors. This is the primary propagation mechanism that creates comovement.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 55.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">30. The "natural rate of unemployment" is the unemployment rate that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q30" value="a"> a) Is equal to zero.</label><br>
+                <label><input type="radio" name="q30" value="b" data-correct="true"> b) Would be "ground out by the Walrasian system of general equilibrium equations."</label><br>
+                <label><input type="radio" name="q30" value="c"> c) Exists when prices are sticky.</label><br>
+                <label><input type="radio" name="q30" value="d"> d) Can be permanently lowered by expansionary monetary policy.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>This is Friedman's (1968) definition. The natural rate is the equilibrium rate of unemployment determined by real factors in the economy, such as market imperfections, search costs, and information flows. It is the unemployment rate consistent with the economy's long-run, flexible-price equilibrium.</p>
+                    <p><em>Source: Hoover, The New Classical Macroeconomics, p. 25.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">31. In the Lucas misperceptions model, an unexpected increase in the money supply leads to a temporary increase in output because:</p>
+            <form class="answers">
+                <label><input type="radio" name="q31" value="a"> a) The real interest rate falls, stimulating investment.</label><br>
+                <label><input type="radio" name="q31" value="b"> b) The government increases its spending.</label><br>
+                <label><input type="radio" name="q31" value="c" data-correct="true"> c) Producers misinterpret the general price increase as a relative price increase for their own goods.</label><br>
+                <label><input type="radio" name="q31" value="d"> d) Nominal wages are sticky and do not adjust immediately.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>This is the essence of the Lucas misperceptions model. The monetary shock is unexpected, so it is not factored into agents' price expectations. When the general price level rises, individual producers see their own price rising but, due to imperfect information, cannot be sure if it's a general inflation or a specific increase in demand for their product. They rationally assume it's partly a relative price increase and raise output.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 7.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">32. A key assumption in the Long and Plosser (1983) RBC model is that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q32" value="a"> a) All commodities are durable.</label><br>
+                <label><input type="radio" name="q32" value="b" data-correct="true"> b) All commodities are perishable (100% depreciation).</label><br>
+                <label><input type="radio" name="q32" value="c"> c) There is no technological change.</label><br>
+                <label><input type="radio" name="q32" value="d"> d) Agents have incomplete information.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>To simplify their model and isolate the propagation mechanism of the input-output structure, Long and Plosser assume that all commodities are perishable, meaning the capital stock depreciates fully (100%) in each period. This removes capital accumulation as a separate source of persistence, allowing them to focus on how shocks spread through the production matrix.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 43.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">33. In the classical model, the demand for labor is a ________ function of the real wage, and the supply of labor is a ________ function of the real wage.</p>
+            <form class="answers">
+                <label><input type="radio" name="q33" value="a"> a) decreasing; decreasing</label><br>
+                <label><input type="radio" name="q33" value="b"> b) increasing; decreasing</label><br>
+                <label><input type="radio" name="q33" value="c" data-correct="true"> c) decreasing; increasing</label><br>
+                <label><input type="radio" name="q33" value="d"> d) increasing; increasing</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The demand for labor is downward sloping (a decreasing function) because of the diminishing marginal product of labor. The supply of labor is upward sloping (an increasing function) because a higher real wage increases the opportunity cost of leisure, inducing individuals to work more.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 3.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">34. The "neutrality of money" refers to the proposition that a one-time change in the money stock affects:</p>
+            <form class="answers">
+                <label><input type="radio" name="q34" value="a"> a) Only real variables.</label><br>
+                <label><input type="radio" name="q34" value="b" data-correct="true"> b) Only nominal variables.</label><br>
+                <label><input type="radio" name="q34" value="c"> c) Both nominal and real variables.</label><br>
+                <label><input type="radio" name="q34" value="d"> d) Neither nominal nor real variables.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Monetary neutrality is a central tenet of the classical model. It states that a change in the level of the money supply ultimately leads to a proportional change in all nominal variables (prices, nominal wages, nominal GDP) but leaves all real variables (output, employment, real wages, real interest rates) unchanged.</p>
+                    <p><em>Source: McCallum, Monetary Economics, p. 95.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">35. What is a primary "impulse" mechanism in Real Business Cycle theory?</p>
+            <form class="answers">
+                <label><input type="radio" name="q35" value="a"> a) Unexpected changes in the money supply.</label><br>
+                <label><input type="radio" name="q35" value="b"> b) Changes in consumer sentiment or "animal spirits".</label><br>
+                <label><input type="radio" name="q35" value="c" data-correct="true"> c) Shocks to total factor productivity (technology shocks).</label><br>
+                <label><input type="radio" name="q35" value="d"> d) Fiscal policy shocks from government spending.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>While RBC models can incorporate various real shocks, the primary and most studied impulse mechanism is shocks to technology, also known as total factor productivity (TFP) shocks. These shocks directly alter the economy's production possibilities and set in motion the dynamic responses that constitute the business cycle.</p>
+                    <p><em>Source: Plosser, 'Understanding real business cycles', p. 55.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">36. In the classical model, an increase in government spending financed by lump-sum taxes will:</p>
+            <form class="answers">
+                <label><input type="radio" name="q36" value="a"> a) Increase output and employment.</label><br>
+                <label><input type="radio" name="q36" value="b"> b) Decrease the real interest rate.</label><br>
+                <label><input type="radio" name="q36" value="c" data-correct="true"> c) Increase the real interest rate and "crowd out" private investment.</label><br>
+                <label><input type="radio" name="q36" value="d"> d) Increase the price level and the money supply.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>In the classical model, output (y) is fixed at the full-employment level \(y^*\). An increase in government spending (g) shifts the IS curve to the right. Since output cannot change, the only way to restore equilibrium in the goods market is for the real interest rate (r) to rise, which reduces (crowds out) private investment (i) to make room for the increased government spending. The equation is \(y^* = C(y^* - \tau) + i(r) + g\). As g increases, r must rise to decrease i.</p>
+                    <p><em>Source: McCallum, Monetary Economics, pp. 93-95.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">37. The "Lucas critique" suggests that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q37" value="a"> a) The classical model is empirically false.</label><br>
+                <label><input type="radio" name="q37" value="b" data-correct="true"> b) Traditional macroeconometric models are unreliable for policy evaluation because their estimated parameters will change when policy rules change.</label><br>
+                <label><input type="radio" name="q37" value="c"> c) Rational expectations is an unrealistic assumption.</label><br>
+                <label><input type="radio" name="q37" value="d"> d) Business cycles are caused by real shocks, not monetary shocks.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The Lucas critique is a fundamental argument against using traditional econometric models for policy advice. Lucas argued that the parameters of these models (e.g., the slope of the Phillips curve) are not structural but are reduced-form parameters that depend on agents' expectations, which in turn depend on the policy regime. If the policy regime changes, agents' expectations will change, causing the model's parameters to shift and rendering policy simulations invalid.</p>
+                    <p><em>Source: Hoover, The New Classical Macroeconomics, p. 185; McCallum, Monetary Economics, p. 228.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">38. In the context of business cycle facts, "comovement" refers to:</p>
+            <form class="answers">
+                <label><input type="radio" name="q38" value="a"> a) The tendency for inflation and unemployment to move in opposite directions.</label><br>
+                <label><input type="radio" name="q38" value="b" data-correct="true"> b) The tendency for many aggregate economic variables to move together over the business cycle.</label><br>
+                <label><input type="radio" name="q38" value="c"> c) The movement of the economy from one steady state to another.</label><br>
+                <label><input type="radio" name="q38" value="d"> d) The correlation between monetary policy and fiscal policy.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Comovement is a key stylized fact of business cycles. It describes the observation that many macroeconomic time series, such as output, consumption, investment, and employment, tend to move up and down together. For example, when output is above its trend, consumption and investment also tend to be above their trends.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 40.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">39. In a flexible-price model where money has real effects due to "limited participation," who are the agents that are "limited"?</p>
+            <form class="answers">
+                <label><input type="radio" name="q39" value="a"> a) Firms, who cannot access financial markets.</label><br>
+                <label><input type="radio" name="q39" value="b"> b) The government, which cannot control the money supply perfectly.</label><br>
+                <label><input type="radio" name="q39" value="c" data-correct="true"> c) Households, who cannot immediately adjust their asset portfolios in response to a monetary shock.</label><br>
+                <label><input type="radio" name="q39" value="d"> d) Banks, who are limited by reserve requirements.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>In limited participation models, it is assumed that when the central bank conducts an open market operation, the initial liquidity injection goes to financial intermediaries (banks). Households are "limited" in that they do not participate in these asset markets continuously and only adjust their portfolios (cash holdings vs. bonds) with a lag. This segmentation allows the monetary shock to have a short-run liquidity effect on interest rates, which then affects real activity.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, pp. 8-9.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">40. The assumption that preferences are "time-separable" in many RBC models means that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q40" value="a"> a) The utility from consumption is separate from the utility of leisure.</label><br>
+                <label><input type="radio" name="q40" value="b" data-correct="true"> b) The marginal utility of consumption in one period is not affected by consumption in other periods.</label><br>
+                <label><input type="radio" name="q40" value="c"> c) Agents do not discount the future.</label><br>
+                <label><input type="radio" name="q40" value="d"> d) Preferences change randomly over time.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Time-separable preferences, often represented by a utility function like \(U = \sum \beta^t u(C_t, L_t)\), mean that the utility gained in period \(t\) depends only on consumption and leisure in that same period. It does not depend on past consumption or leisure. This simplifies the analysis of intertemporal choice but rules out phenomena like habit formation.</p>
+                    <p><em>Source: Plosser, 'Understanding real business cycles', Appendix.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">41. In the classical model, the real interest rate is determined by the intersection of:</p>
+            <form class="answers">
+                <label><input type="radio" name="q41" value="a"> a) The labor supply and labor demand curves.</label><br>
+                <label><input type="radio" name="q41" value="b"> b) The money supply and money demand curves.</label><br>
+                <label><input type="radio" name="q41" value="c" data-correct="true"> c) The saving and investment curves.</label><br>
+                <label><input type="radio" name="q41" value="d"> d) The aggregate demand and aggregate supply curves.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The real interest rate is the price that equilibrates the goods market for loanable funds. It adjusts to ensure that the amount of output households wish to save is equal to the amount of output firms wish to invest (plus any government borrowing). This is represented by the IS curve, which shows the combinations of r and y that clear the goods market.</p>
+                    <p><em>Source: McCallum, Monetary Economics, pp. 78-83.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">42. A key feature of the business cycles produced by the Long and Plosser (1983) model is:</p>
+            <form class="answers">
+                <label><input type="radio" name="q42" value="a"> a) Negative correlation between consumption and investment.</label><br>
+                <label><input type="radio" name="q42" value="b"> b) Countercyclical employment.</label><br>
+                <label><input type="radio" name="q42" value="c" data-correct="true"> c) Positive comovement between outputs of different sectors.</label><br>
+                <label><input type="radio" name="q42" value="d"> d) A strong role for monetary policy in stabilizing output.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The model's input-output structure is crucial for generating comovement. A shock to one sector propagates to others because its output is an input for them. This leads to the empirically observed fact that different sectors of the economy tend to expand and contract together over the business cycle.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 57.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">43. Why might a government with discretion choose an inflationary policy that is known to be Pareto-inferior to a zero-inflation policy?</p>
+            <form class="answers">
+                <label><input type="radio" name="q43" value="a"> a) Because inflation reduces government debt.</label><br>
+                <label><input type="radio" name="q43" value="b" data-correct="true"> b) Because of the time-inconsistency problem; it cannot credibly commit to zero inflation.</label><br>
+                <label><input type="radio" name="q43" value="c"> c) Because the government does not have rational expectations.</label><br>
+                <label><input type="radio" name="q43" value="d"> d) Because the model of the economy is wrong.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>This is the central puzzle of the time-inconsistency literature. Even though everyone would be better off if the government committed to zero inflation, such a commitment is not credible. If the public were to believe the zero-inflation promise, the government would then have an incentive to create surprise inflation to get a temporary output boost. Knowing this, the public expects inflation, and the government's best response is to validate those expectations, leading to an equilibrium with positive inflation.</p>
+                    <p><em>Source: Hargreaves Heap, The New Keynesian Macroeconomics, pp. 65-66.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">44. In the classical model, what ensures that the labor market always clears?</p>
+            <form class="answers">
+                <label><input type="radio" name="q44" value="a"> a) The vertical aggregate supply curve.</label><br>
+                <label><input type="radio" name="q44" value="b"> b) The quantity theory of money.</label><br>
+                <label><input type="radio" name="q44" value="c" data-correct="true"> c) The perfect flexibility of the real wage.</label><br>
+                <label><input type="radio" name="q44" value="d"> d) Rational expectations.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The mechanism that ensures equilibrium in the classical labor market is the assumption that the real wage (W/P) is perfectly flexible. It can instantly rise or fall to equate the quantity of labor supplied by households with the quantity of labor demanded by firms, eliminating any excess supply (unemployment) or excess demand.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 3.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">45. In RBC theory, business cycles are:</p>
+            <form class="answers">
+                <label><input type="radio" name="q45" value="a"> a) A sign of market failure that should be eliminated by policy.</label><br>
+                <label><input type="radio" name="q45" value="b"> b) Caused by irrational "animal spirits" of investors.</label><br>
+                <label><input type="radio" name="q45" value="c" data-correct="true"> c) The optimal, Pareto-efficient response of the economy to real shocks.</label><br>
+                <label><input type="radio" name="q45" value="d"> d) Primarily the result of unpredictable government policy changes.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>A striking conclusion of RBC theory is that the fluctuations we observe are not suboptimal deviations from a smooth trend. Instead, they represent the best possible (Pareto-efficient) response of rational, maximizing agents to the real shocks (like technology changes) that hit the economy. In this view, policies aimed at "stabilizing" the cycle would only make people worse off.</p>
+                    <p><em>Source: Plosser, 'Understanding real business cycles', p. 56; Long and Plosser, 'Real Business Cycles', p. 68.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">46. In the Lucas misperceptions model, if a monetary expansion is fully anticipated:</p>
+            <form class="answers">
+                <label><input type="radio" name="q46" value="a"> a) Output increases, but prices do not.</label><br>
+                <label><input type="radio" name="q46" value="b"> b) Both output and prices increase.</label><br>
+                <label><input type="radio" name="q46" value="c" data-correct="true"> c) Prices increase, but output does not.</label><br>
+                <label><input type="radio" name="q46" value="d"> d) Neither prices nor output are affected.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>If the monetary expansion is anticipated, it is no longer a "surprise." Rational agents will factor the expected increase in the money supply into their expectation of the aggregate price level, \(E_{t-1}[P_t]\). Therefore, when the actual price level \(P_t\) rises, there is no price surprise (\(P_t - E_{t-1}[P_t] = 0\)). Without a price surprise, there is no reason for producers to change their output level, so output remains at \(y^*\) and the policy is neutral.</p>
+                    <p><em>Source: EC3115 - Ch 8 Classical models and monetary policy-1.pdf, p. 8.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">47. The "persistence" of business cycles refers to the empirical fact that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q47" value="a"> a) Recessions have persisted throughout history.</label><br>
+                <label><input type="radio" name="q47" value="b" data-correct="true"> b) Deviations of output from its trend are serially correlated; a period of above-trend output is likely to be followed by another.</label><br>
+                <label><input type="radio" name="q47" value="c"> c) The effects of monetary policy persist for many years.</label><br>
+                <label><input type="radio" name="q47" value="d"> d) It is difficult to persuade the economy to move away from the natural rate of unemployment.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Persistence, or positive serial correlation, is a key stylized fact. It means that economic movements are not random period-to-period. If the economy is in a boom (output above trend) in one quarter, it is more likely to be in a boom in the next quarter than to switch immediately to a recession. This inertia is what propagation mechanisms in business cycle models are designed to explain.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 40.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">48. In the classical model, a fall in the price level (deflation) will:</p>
+            <form class="answers">
+                <label><input type="radio" name="q48" value="a"> a) Increase real money balances, shift the LM curve right, and increase output.</label><br>
+                <label><input type="radio" name="q48" value="b" data-correct="true"> b) Lead to a proportional fall in nominal wages, leaving all real variables unchanged.</label><br>
+                <label><input type="radio" name="q48" value="c"> c) Cause a recession due to wage stickiness.</label><br>
+                <label><input type="radio" name="q48" value="d"> d) Shift the IS curve to the left.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>Due to perfect price and wage flexibility, a fall in the price level (P) will be met by an immediate and proportional fall in the nominal wage (W). This keeps the real wage (W/P) constant at its market-clearing level. Since the real wage, employment, and output are determined by real factors, they remain unchanged. The fall in P increases real balances (M/P), but this is offset by a fall in the nominal interest rate, leaving the goods and money markets in equilibrium at the same real output level.</p>
+                    <p><em>Source: McCallum, Monetary Economics, pp. 93-95.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">49. A major difference between the RBC model of Long and Plosser (1983) and the misperceptions model of Lucas is that:</p>
+            <form class="answers">
+                <label><input type="radio" name="q49" value="a"> a) Long and Plosser assume irrational expectations.</label><br>
+                <label><input type="radio" name="q49" value="b" data-correct="true"> b) Long and Plosser's model has complete information and no money, while Lucas's model has incomplete information and money.</label><br>
+                <label><input type="radio" name="q49" value="c"> c) The Long and Plosser model cannot generate comovement.</label><br>
+                <label><input type="radio" name="q49" value="d"> d) The Lucas model assumes technology shocks are the main driver of cycles.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>The models differ fundamentally in their core assumptions. The Lucas model generates cycles from monetary shocks combined with imperfect information (the signal extraction problem). The Long and Plosser model deliberately abstracts from these factors, assuming no money and complete information, to show how cycles can be generated purely from real shocks propagated through the economy's real production structure.</p>
+                    <p><em>Source: Long and Plosser, 'Real Business Cycles', p. 43; Hoover, The New Classical Macroeconomics, p. 54.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <p class="question">50. In a classical world, what is the effect of a minimum wage law set above the market-clearing real wage?</p>
+            <form class="answers">
+                <label><input type="radio" name="q50" value="a"> a) It will have no effect, as firms will ignore it.</label><br>
+                <label><input type="radio" name="q50" value="b" data-correct="true"> b) It will create unemployment by causing the quantity of labor supplied to exceed the quantity demanded.</label><br>
+                <label><input type="radio" name="q50" value="c"> c) It will cause inflation.</label><br>
+                <label><input type="radio" name="q50" value="d"> d) It will increase both employment and output.</label><br>
+            </form>
+            <div class="feedback" style="display: none;">
+                <p class="result"></p>
+                <div class="explanation">
+                    <p><strong>Explanation:</strong></p>
+                    <p>A binding minimum wage (a real wage floor above the equilibrium level) is a classic example of a price control. At this artificially high real wage, firms will demand less labor (moving up their labor demand curve) while more individuals will want to work (moving up the labor supply curve). The resulting excess supply of labor is classical unemployment. This is a case where an institutional friction prevents the wage from being flexible and clearing the market.</p>
+                    <p><em>Source: General application of the classical labor market model, e.g., McCallum, Monetary Economics, pp. 91-92.</em></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button id="clear-button">Clear All Answers</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizContainer = document.getElementById('quiz-container');
+            const clearButton = document.getElementById('clear-button');
+            const questions = quizContainer.querySelectorAll('.question-container');
+
+            function getCookie(name) {
+                const value = "; " + document.cookie;
+                const parts = value.split("; " + name + "=");
+                if (parts.length === 2) return parts.pop().split(";").shift();
+            }
+
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            function loadAnswers() {
+                const savedAnswers = getCookie('quizAnswers');
+                if (savedAnswers) {
+                    const answers = JSON.parse(savedAnswers);
+                    questions.forEach((q, index) => {
+                        const questionNumber = index + 1;
+                        const selectedValue = answers['q' + questionNumber];
+                        if (selectedValue) {
+                            const radio = q.querySelector(`input[name="q${questionNumber}"][value="${selectedValue}"]`);
+                            if (radio) {
+                                radio.checked = true;
+                                checkAnswer(q, radio);
+                            }
+                        }
+                    });
+                }
+            }
+
+            function saveAnswers() {
+                const answers = {};
+                questions.forEach((q, index) => {
+                    const questionNumber = index + 1;
+                    const checkedRadio = q.querySelector(`input[name="q${questionNumber}"]:checked`);
+                    if (checkedRadio) {
+                        answers['q' + questionNumber] = checkedRadio.value;
+                    }
+                });
+                setCookie('quizAnswers', JSON.stringify(answers), 7); // Save for 7 days
+            }
+
+            function checkAnswer(questionContainer, selectedRadio) {
+                const feedbackDiv = questionContainer.querySelector('.feedback');
+                const resultP = feedbackDiv.querySelector('.result');
+                const isCorrect = selectedRadio.hasAttribute('data-correct');
+
+                if (isCorrect) {
+                    resultP.textContent = 'Correct!';
+                    feedbackDiv.className = 'feedback correct';
+                } else {
+                    const correctRadio = questionContainer.querySelector('input[data-correct="true"]');
+                    const correctValue = correctRadio.value;
+                    resultP.textContent = `Incorrect. The correct answer is ${correctValue.toUpperCase()}.`;
+                    feedbackDiv.className = 'feedback incorrect';
+                }
+                feedbackDiv.style.display = 'block';
+            }
+
+            quizContainer.addEventListener('change', function (e) {
+                if (e.target.type === 'radio') {
+                    const questionContainer = e.target.closest('.question-container');
+                    checkAnswer(questionContainer, e.target);
+                    saveAnswers();
+                }
+            });
+
+            clearButton.addEventListener('click', function () {
+                if (confirm('Are you sure you want to clear all your answers? This cannot be undone.')) {
+                    setCookie('quizAnswers', '', -1); // Delete cookie
+                    questions.forEach(q => {
+                        const radios = q.querySelectorAll('input[type="radio"]');
+                        radios.forEach(r => r.checked = false);
+                        q.querySelector('.feedback').style.display = 'none';
+                    });
+                }
+            });
+
+            // Load answers when the page loads
+            loadAnswers();
+        });
+    </script>
+
+</body>
+</html>
