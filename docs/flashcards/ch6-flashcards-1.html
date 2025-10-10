@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 Stylised Facts - Flashcards</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        .slideshow-container {
+            width: 800px;
+            max-width: 90vw;
+            overflow: hidden;
+            position: relative;
+        }
+        .flashcard-stream {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .scene {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 450px;
+            perspective: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+        .card__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: white;
+            overflow-y: auto;
+        }
+        .card__face--front {
+            background-color: #ffffff;
+        }
+        .card__face--back {
+            background-color: #f8f9fa;
+            transform: rotateY(180deg);
+        }
+        .card-question, .card-answer {
+            text-align: left;
+            width: 100%;
+        }
+        .card-question h2, .card-answer h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .card-answer .source {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            text-align: right;
+            width: 100%;
+        }
+        .navigation {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .nav-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #progress-indicator {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 Stylised Facts</h1>
+
+    <div class="slideshow-container">
+        <div class="flashcard-stream">
+
+            <!-- Card 1 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 1</h2>
+                            <p>What is the primary distinction between a 'trend' and a 'business cycle' in macroeconomics?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The 'trend' component of a macroeconomic time series, like real GDP, represents the long-run growth path. This growth is driven by fundamental factors that are not easily controllable by authorities, such as demographic changes and long-term technological progress. The 'business cycle' component represents the short-term, cyclical fluctuations (booms and recessions) of the time series around this trend. The distinction is crucial because monetary and fiscal policy are generally considered to influence short-term fluctuations, but not the long-term trend.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 2</h2>
+                            <p>How is the business cycle component of a time series like real GDP typically extracted from the raw data?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>First, the data is often transformed by taking its natural logarithm. This makes the slope of the series approximate the growth rate. Then, a filter is applied to separate the trend from the cyclical component. A popular method is the Hodrick-Prescott (HP) filter, which removes a time-varying trend from the data. The remaining part, the deviation from the HP-filtered trend, is considered the business cycle component, often referred to as the 'output gap'.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf; Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 3</h2>
+                            <p>What is the formula for calculating the sample mean (\(\bar{x}\)) of a business cycle component (\(x_t^{bc}\))?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The sample mean is the average of the business cycle component over a given period. The formula is:
+                            \( \bar{x} = \frac{1}{T} \sum_{t=1}^{T} x_t^{bc} \)
+                            By construction, since the business cycle component fluctuates around a trend, its sample mean is typically zero.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 4</h2>
+                            <p>How is 'volatility' of a business cycle component measured, and what is the formula for its standard deviation (\(\sigma_x\))?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Volatility measures the degree of fluctuation of a variable over time, essentially the amplitude of its booms and recessions. It is measured by the standard deviation of the business cycle component. The formula for the sample standard deviation is the square root of the variance:
+                            \( \sigma_x = \sqrt{\frac{1}{T-1} \sum_{t=1}^{T} (x_t^{bc} - \bar{x})^2} \)
+                            A more volatile series will have a larger standard deviation.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 5</h2>
+                            <p>Define procyclical, countercyclical, and acyclical variables in the context of business cycles.</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The cyclicality of a variable describes its direction of movement relative to the overall business cycle (real GDP).</p>
+                            <ul>
+                                <li>A <strong>procyclical</strong> variable moves in the same direction as real GDP. Its deviations from trend are positively correlated with real GDP's deviations from trend. (e.g., Consumption, Investment).</li>
+                                <li>A <strong>countercyclical</strong> variable moves in the opposite direction to real GDP. Its deviations from trend are negatively correlated with real GDP's deviations from trend. (e.g., Unemployment).</li>
+                                <li>An <strong>acyclical</strong> variable has no clear, systematic relationship with the business cycle. Its correlation with real GDP is near zero.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 6</h2>
+                            <p>How is the cyclicality of a variable measured statistically? Provide the formula for the correlation coefficient (\(\rho_{xy}\)).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Cyclicality is measured using the correlation coefficient between the business cycle component of a variable (\(x_t^{bc}\)) and the business cycle component of real GDP (\(y_t^{bc}\)). The formula is the covariance divided by the product of the standard deviations:
+                            \( \rho_{xy} = \frac{\sigma_{xy}}{\sigma_x \sigma_y} \)
+                            where \(\sigma_{xy}\) is the covariance. A coefficient close to +1 indicates strong procyclicality, while a coefficient close to -1 indicates strong countercyclicality.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 7</h2>
+                            <p>What does 'persistence' of a business cycle component measure, and how is it calculated?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Persistence measures how long-lasting cyclical fluctuations are. A highly persistent series is likely to remain above (or below) trend in the next period if it is above (or below) trend in the current period. It is measured by the first-order autocorrelation coefficient (\(\rho_x\)), which is the correlation of a variable with its own lagged value. The formula is:
+                            \( \rho_x = \frac{\text{Cov}(x_t^{bc}, x_{t-1}^{bc})}{\sigma_{x_t^{bc}} \sigma_{x_{t-1}^{bc}}} \)
+                            A coefficient close to 1 indicates a high degree of persistence.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 8</h2>
+                            <p>Describe the key business cycle stylised fact regarding consumption (C) in relation to GDP (Y).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Consumption is <strong>procyclical</strong> and <strong>less volatile</strong> than GDP.</p>
+                            <ul>
+                                <li><strong>Procyclical:</strong> Consumption tends to rise during economic booms and fall during recessions, moving in the same direction as overall output. Its correlation with GDP is positive.</li>
+                                <li><strong>Less Volatile:</strong> The fluctuations in consumption around its trend are smaller in amplitude than the fluctuations in GDP. The standard deviation of cyclical consumption is typically less than the standard deviation of cyclical GDP. This is often interpreted as evidence of 'consumption smoothing'.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf; ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 9</h2>
+                            <p>Describe the key business cycle stylised fact regarding investment (I) in relation to GDP (Y).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Investment is <strong>procyclical</strong>, <strong>coincident</strong>, and <strong>more volatile</strong> than GDP.</p>
+                            <ul>
+                                <li><strong>Procyclical:</strong> Investment spending rises during booms and falls sharply during recessions.</li>
+                                <li><strong>Coincident:</strong> The turning points in investment tend to occur at roughly the same time as the turning points in GDP.</li>
+                                <li><strong>More Volatile:</strong> Investment is significantly more volatile than GDP. Its percentage deviations from trend are much larger than those for GDP, often by a factor of 3 or more.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf; ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 10</h2>
+                            <p>What is the stylised fact about the cyclicality of the price level (e.g., GDP deflator)? What is a 'reverse Phillips curve'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The cyclicality of the price level is ambiguous and has changed over time. In the post-war US data, the price level has been found to be <strong>countercyclical</strong>. This means prices tend to be high (relative to trend) when output is low (relative to trend). This observed negative correlation between the price level and real GDP is sometimes referred to as a 'reverse Phillips curve', as it contradicts the traditional Phillips curve notion of a positive relationship between inflation (changes in price) and economic activity.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 11</h2>
+                            <p>What is the stylised fact about the cyclicality of the inflation rate?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The inflation rate is generally found to be <strong>procyclical</strong>. This means that inflation tends to be high when real GDP is high (relative to trend) and low when real GDP is low. This positive correlation conforms to the conventional view of the Phillips curve relationship, where higher economic activity puts upward pressure on prices.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 12</h2>
+                            <p>Describe the cyclical behavior of employment and the real wage.</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <ul>
+                                <li><strong>Employment:</strong> Employment is <strong>procyclical</strong>, <strong>lagging</strong>, and <strong>less volatile</strong> than real GDP. It moves in the same direction as output, but its turning points tend to occur after the turning points in GDP.</li>
+                                <li><strong>Real Wage:</strong> The real wage is <strong>procyclical</strong>. It tends to rise when the economy is in a boom and fall during a recession. There is no strong consensus on whether it is a leading or lagging variable.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 13</h2>
+                            <p>What is the stylised fact about the cyclicality of average labor productivity?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Average labor productivity, measured as output per worker (Y/N), is <strong>procyclical</strong> and <strong>coincident</strong> with the business cycle. It is less volatile than real GDP. This means that on average, workers are more productive during economic booms than they are during recessions.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 14</h2>
+                            <p>According to the Quantity Theory of Money (QTM), what is the long-run relationship between money growth and inflation?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Quantity Theory of Money (QTM) posits a <strong>proportional</strong> long-run relationship between money growth and inflation. This is based on the equation of exchange \(MV = PY\). In growth rates, this is \(m + v = p + y\). The theory assumes that in the long run, velocity (v) is stable and money is neutral (does not affect real output growth, y). Therefore, a permanent 1% increase in the money growth rate (m) will lead to a 1% increase in the inflation rate (p).</p>
+                            <p class="source">Source: de Grauwe, P. and Polan, M. (2005)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 15</h2>
+                            <p>Does the strong link between money growth and inflation hold for all countries? Explain the findings of De Grauwe and Polan (2005).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>No, the strong link is not universal. De Grauwe and Polan (2005) found that the strong positive relationship between money growth and inflation is almost entirely driven by data from <strong>high-inflation (or hyperinflation) countries</strong>. For countries with a history of low inflation (e.g., average inflation below 10% per year), the relationship is very weak, if not absent. In these low-inflation environments, changes in the velocity of money appear to be a more significant factor, and money growth is not a reliable signal of inflationary pressures.</p>
+                            <p class="source">Source: de Grauwe, P. and Polan, M. (2005)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 16</h2>
+                            <p>What has happened to the relationship between monetary aggregates and real output in the US since the early 1980s?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The strong positive short-term relationship between US monetary aggregates (like M1 and M2) and real output, famously documented by Friedman and Schwartz, largely disappeared after the early 1980s. Friedman and Kuttner (1992) show that including data from the 1980s onwards sharply weakens or destroys the predictive power of monetary aggregates for future movements in real income. This breakdown in the relationship is a key reason why many central banks, including the Federal Reserve, shifted away from monetary targeting.</p>
+                            <p class="source">Source: Friedman, B. and Kuttner, K. N. (1992)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 17</h2>
+                            <p>What is the "paper-bill spread" and what is its relevance as a policy indicator according to Friedman and Kuttner (1992)?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The "paper-bill spread" is the difference between the interest rate on short-term commercial paper and the interest rate on Treasury bills. Friedman and Kuttner (1992) found that this spread consistently contained highly significant information about future movements in real income, even after the traditional money-income relationships broke down. A widening spread, indicating higher perceived risk in private credit markets relative to government debt, tends to precede economic downturns.</p>
+                            <p class="source">Source: Friedman, B. and Kuttner, K. N. (1992)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 18</h2>
+                            <p>Aksoy and Piskorski (2006) argue that the breakdown of the money-income relationship is partly a measurement issue. What is their main argument?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Their main argument is that standard US monetary aggregates are "noisy" because they fail to account for the large and unstable foreign holdings of US dollars. The US dollar's role as an international currency means a significant portion of it circulates abroad. By correcting the monetary base for these foreign holdings to create a measure of "domestic money," they find that the relationship between money, inflation, and real output is re-established. They argue that domestic money contains valuable information about future US inflation and output, suggesting the Friedman-Schwartz stylized facts can be revived if the correct measure of money is used.</p>
+                            <p class="source">Source: Aksoy, Y. and Piskorski, T. (2006)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 19 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 19</h2>
+                            <p>What is the "Great Moderation"?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Great Moderation refers to a period of reduced macroeconomic volatility in the United States, starting from the mid-1980s and lasting until the global financial crisis of 2008. During this time, the fluctuations in real GDP around its trend were significantly smaller (deviations were typically no more than ±2%) compared to the period from 1947 to the early 1980s (where deviations could be ±4% or more). The period was also characterized by a relatively low and stable rate of inflation.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 20 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 20</h2>
+                            <p>What is the "flattening of the Phillips curve"? What are its policy implications?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The "flattening of the Phillips curve" refers to the observation in recent decades that inflation has become less responsive to fluctuations in the output gap or unemployment.
+                            <strong>Policy Implications:</strong>
+                            </p>
+                            <ul>
+                                <li><strong>Benefit:</strong> A positive output gap (an economy running "hot") is less inflationary than it used to be, giving central banks more leeway to allow unemployment to fall without fearing an immediate surge in inflation.</li>
+                                <li><strong>Cost:</strong> The cost of reducing inflation, once it becomes established, is higher. A larger and more prolonged period of negative output gap (a recession) would be required to bring inflation down.</li>
+                            </ul>
+                            <p class="source">Source: Kuttner, K. N. and Robinson, T. (2010)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 21 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 21</h2>
+                            <p>What is a 'recession' and a 'boom' in the context of business cycle analysis?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A recession is a series of negative deviations from trend in real GDP, culminating in a trough. It represents a period of below-average economic activity. A boom is a series of positive deviations from trend in real GDP, culminating in a peak. It represents a period of above-average economic activity.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 22 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 22</h2>
+                            <p>According to Calderón and Fuentes (2014), how do recessions in Emerging Market Economies (EMEs) compare to those in industrial countries?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Recessions in EMEs tend to be deeper, steeper, and consequently costlier than those in industrial countries, although they have a similar average duration. For example, the median drop in real GDP during a recession is significantly larger in EMEs. However, the ensuing recoveries in EMEs are typically swifter and stronger, partly due to a larger rebound effect from a lower base.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 23 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 23</h2>
+                            <p>What is a leading variable in business cycle analysis? Give an example.</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A leading variable is a macroeconomic variable whose turning points (peaks and troughs) tend to precede the turning points of real GDP. It is useful for forecasting the future path of the economy. A key example is residential investment (or housing starts), which tends to fall before the onset of a recession and rise before the start of a recovery.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 24 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 24</h2>
+                            <p>What is the "Lucas critique" and why is it important for macroeconomic modeling?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Lucas critique, advanced by Robert Lucas, Jr., argues that it is naive to try to predict the effects of a change in economic policy entirely on the basis of relationships observed in historical data. The reason is that the structure of econometric models, including the observed relationships between variables, often depends on the policy regime in place. When the policy changes, the behavior of individuals and firms changes, which in turn changes the relationships themselves. This critique highlights the importance of building "structural" models based on microeconomic principles (optimization and equilibrium) that are immune to this problem.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 25 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 25</h2>
+                            <p>Why is it useful to log-transform a time series like real GDP before analyzing it?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Log-transforming a time series has several benefits:</p>
+                            <ul>
+                                <li>The slope of the logged series is a good approximation of the percentage growth rate of the original series, which is often the variable of economic interest.</li>
+                                <li>It rescales the data, making series with large absolute values easier to manage and visualize without losing their essential properties.</li>
+                                <li>It can help to stabilize the variance of a series that grows over time.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf; ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 26 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 26</h2>
+                            <p>What is the Beveridge Curve and what does it represent?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Beveridge curve depicts the relationship between the unemployment rate and the job vacancy rate. It is a downward-sloping curve, representing the fact that periods of high unemployment tend to coincide with periods of low job vacancies, and vice-versa. The position of the curve is seen as an indicator of the efficiency of the labor market. A shift of the curve to the right means that for any given level of vacancies, the unemployment rate is higher, suggesting a decrease in matching efficiency in the labor market.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 27 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 27</h2>
+                            <p>How did the behavior of financial cycles (credit and asset prices) relate to real output cycles in the lead-up to the 2008 crisis?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Calderón and Fuentes (2014) find that peaks in financial cycles tend to precede peaks in real output cycles, particularly in downturns associated with crises. In the lead-up to the 2008 crisis, many countries experienced booms in credit and housing prices. The subsequent downturns in these financial cycles (i.e., credit contractions and housing price busts) preceded the sharp downturn in real GDP, highlighting the role of financial factors as a source of business cycle fluctuations.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 28 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 28</h2>
+                            <p>Why might the flattening of the Phillips curve be related to better-anchored inflation expectations?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>If a central bank has high credibility and the public believes it is committed to its inflation target, inflation expectations become "well-anchored." When expectations are anchored, they are less responsive to temporary shocks in demand or supply. In a new-Keynesian framework, where current inflation depends on expected future inflation (\(\pi_t = \beta E_t \pi_{t+1} + \lambda mc_t\)), anchored expectations mean that a temporary rise in marginal costs (mc) from a positive output gap will have a smaller effect on current inflation, as it won't significantly shift expectations about future inflation. This results in a flatter reduced-form Phillips curve.</p>
+                            <p class="source">Source: Kuttner, K. N. and Robinson, T. (2010)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 29 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 29</h2>
+                            <p>What is a "jobless recovery" and what is a potential explanation for this phenomenon in recent US recessions?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A "jobless recovery" is a situation where, following a recession, real GDP begins to grow but employment growth is sluggish or non-existent, taking an abnormally long time to return to its pre-recession trend. One potential explanation is structural change in the labor market, such as skill polarization. Recessions may accelerate the decline of middle-skill jobs (e.g., clerical, routine manufacturing). Displaced workers may not have the skills for new high-skill jobs and may need a long period of retraining or may leave the labor force, thus slowing the recovery in aggregate employment.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 30 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 30</h2>
+                            <p>Why is it important for monetary policy makers to distinguish between domestic and foreign holdings of their currency?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>It is important because only the domestic portion of the money supply directly affects the domestic economy (inflation and output). If a large and volatile portion of the currency is held abroad, as is the case with the US dollar, then the total monetary aggregate can be a misleading indicator of domestic monetary conditions. A surge in total money growth might reflect increased foreign demand rather than an expansionary domestic monetary policy. As Aksoy and Piskorski (2006) argue, failing to correct for foreign holdings can lead to the incorrect conclusion that the relationship between money and the economy has broken down.</p>
+                            <p class="source">Source: Aksoy, Y. and Piskorski, T. (2006)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 31 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 31</h2>
+                            <p>What is the difference between a lagging and a coincident indicator?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>coincident</strong> indicator is a variable whose turning points occur at roughly the same time as the turning points in real GDP (e.g., consumption). A <strong>lagging</strong> indicator is a variable whose turning points tend to occur after the turning points in real GDP (e.g., employment). While leading indicators are useful for forecasting, lagging indicators are useful for confirming that a turning point has occurred.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 32 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 32</h2>
+                            <p>What is the main stylised fact about the persistence of real GDP fluctuations?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The deviations from trend in real GDP are <strong>persistent</strong>. This means that if real GDP is currently above its trend, it is likely to remain above trend in the next period. Similarly, if it is below trend, it is likely to stay below trend. This persistence is reflected in a high, positive first-order autocorrelation coefficient for the cyclical component of GDP.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 33 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 33</h2>
+                            <p>Why did the use of monetary aggregates (like M1, M2) as intermediate targets for monetary policy fall out of favor?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The use of monetary aggregates fell out of favor primarily because the stable relationship between these aggregates and nominal income broke down, particularly from the 1980s onwards. Financial innovation, deregulation, and the internationalization of the dollar made the velocity of money unstable and unpredictable. As a result, fluctuations in money growth no longer provided a reliable signal for future movements in income or prices, making monetary aggregates ineffective as policy targets.</p>
+                            <p class="source">Source: Friedman, B. and Kuttner, K. N. (1992)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 34 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 34</h2>
+                            <p>What is the difference between the product approach, expenditure approach, and income approach to measuring GDP?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>All three are different ways of measuring the same thing: total economic activity.</p>
+                            <ul>
+                                <li><strong>Product (Value-Added) Approach:</strong> Sums the value added by all producers in the economy (value of gross output minus the value of intermediate inputs).</li>
+                                <li><strong>Expenditure Approach:</strong> Sums the total spending on all final goods and services produced in the economy (Y = C + I + G + NX).</li>
+                                <li><strong>Income Approach:</strong> Sums all income received by economic agents contributing to production (e.g., wages, profits, interest, taxes).</li>
+                            </ul>
+                            <p>In principle, all three approaches yield the same GDP figure.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 35 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 35</h2>
+                            <p>What is the main difference between GDP and GNP?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p><strong>GDP (Gross Domestic Product)</strong> measures the value of output produced within a country's borders, regardless of who produced it. <strong>GNP (Gross National Product)</strong> measures the value of output produced by a country's residents (or 'nationals'), regardless of where it is produced. The relationship is: \(GNP = GDP + NFP\), where NFP is Net Factor Payments from abroad (income earned by domestic residents from abroad minus income earned by foreign residents domestically).</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 36 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 36</h2>
+                            <p>What is the 'low wage growth puzzle' observed in recent years?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The 'low wage growth puzzle' refers to the recent phenomenon in many advanced economies where unemployment has been declining to low levels, but without the expected corresponding increase in wage growth or inflation. This challenges the traditional Phillips curve relationship, which suggests that a tight labor market (low unemployment) should lead to workers demanding higher wages, thus pushing up inflation.</p>
+                            <p class="source">Source: EC3115 - Monetary Economics Unit F Lectures.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 37 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 37</h2>
+                            <p>How might the rise of automation ('robots in the workplace') explain the flattening of the Phillips curve?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The threat of automation can erode the wage bargaining power of workers. If workers fear being replaced by machines, they are less likely to demand higher wages even when the labor market is tight (low unemployment). This weakened bargaining power means that a decrease in unemployment yields a smaller increase in wage growth and inflation than it did historically. This leads to a flattening of the Phillips curve and a potential decrease in the natural rate of unemployment.</p>
+                            <p class="source">Source: EC3115 - Monetary Economics Unit F Lectures.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 38 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 38</h2>
+                            <p>What is the difference between a 'regular' recession and a 'crisis-related' recession?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Calderón and Fuentes (2014) show that recessions associated with a financial, currency, or debt crisis are significantly different from 'regular' recessions. Crisis-related recessions tend to be much deeper, steeper, and have a larger cumulative output loss. For example, the median peak-to-trough drop in GDP is much larger during a crisis-related recession. Recoveries from these recessions also tend to be slower.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 39 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 39</h2>
+                            <p>What is the difference between the CPI and the GDP deflator as measures of the price level?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <ul>
+                                <li><strong>Scope:</strong> The CPI (Consumer Price Index) measures the price of a fixed basket of goods and services purchased by a typical consumer. The GDP deflator measures the prices of all goods and services produced domestically (including investment goods and government purchases).</li>
+                                <li><strong>Weights:</strong> The CPI uses a fixed basket of goods (a Laspeyres index), while the GDP deflator allows the basket of goods to change each period as the composition of GDP changes (a Paasche index, though modern measures use chain-weighting).</li>
+                            </ul>
+                            <p>The CPI tends to overstate inflation due to substitution bias.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 40 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 40</h2>
+                            <p>Why are business cycles described as being 'irregular' in amplitude and frequency?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Business cycles are irregular because there is no predictable pattern in their severity or timing.</p>
+                            <ul>
+                                <li><strong>Irregular Amplitude:</strong> Some recessions are deep (e.g., 2008-2009), while others are mild (e.g., 2001). The size of the deviation from trend varies considerably from one cycle to the next.</li>
+                                <li><strong>Irregular Frequency:</strong> The length of time between successive peaks or troughs varies. There is no fixed period for a business cycle; expansions and contractions can last for different lengths of time.</li>
+                            </ul>
+                            <p>This irregularity makes long-term forecasting of business cycles extremely difficult.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... 60 more cards ... -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 100</h2>
+                            <p>Summarize the key business cycle facts for the main components of GDP (Consumption and Investment).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <ul>
+                                <li><strong>Consumption (C):</strong> Procyclical, coincident, and less volatile than GDP.</li>
+                                <li><strong>Investment (I):</strong> Procyclical, coincident, and much more volatile than GDP.</li>
+                            </ul>
+                            <p>These facts indicate that while both consumption and investment move with the economy, investment spending accounts for a much larger share of the cyclical fluctuations in GDP than its share of total GDP would suggest.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf; ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 42 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 42</h2>
+                            <p>What is 'consumption smoothing' and how does it relate to the stylised facts of consumption?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Consumption smoothing is the economic concept that households prefer a stable path of consumption over time. To achieve this, they save during periods of high income and dissave (or borrow) during periods of low income. This behavior explains the stylised fact that consumption is procyclical but less volatile than GDP. When GDP rises, consumption rises, but by less than the increase in income as households save a portion of the windfall. When GDP falls, consumption falls, but by less as households draw on savings to support their spending.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 43 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 43</h2>
+                            <p>Why is investment so much more volatile than GDP?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Investment is highly volatile because it is very sensitive to firms' expectations about the future. A small change in expected future profitability can lead to a large change in current investment decisions. Unlike consumption, investment can often be postponed. If the economic outlook is uncertain, firms can delay building new factories or buying new equipment. This leads to large swings in investment spending as expectations shift, making it a major driver of the business cycle.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 44 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 44</h2>
+                            <p>What is the stylised fact regarding government spending (G) over the business cycle?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Government spending (G) is generally found to be <strong>procyclical</strong>. This means that government purchases of goods and services tend to increase when the economy is in a boom and decrease during a recession. This is a stylised fact about the actual behavior of government spending, not necessarily about optimal fiscal policy (which might suggest countercyclical spending).</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 45 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 45</h2>
+                            <p>What is the stylised fact regarding net exports (NX) over the business cycle?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Net exports (NX) are <strong>countercyclical</strong>. This means that during a domestic economic boom (when GDP is high), net exports tend to be low or negative because imports rise as domestic consumers and firms buy more foreign goods. Conversely, during a domestic recession, imports fall and net exports tend to rise.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 46 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 46</h2>
+                            <p>What is the difference between a structural and a reduced-form econometric model?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>structural model</strong> is built based on economic theory, describing the underlying relationships and behavior of agents (e.g., utility maximization, profit maximization). Its parameters have a direct economic interpretation. A <strong>reduced-form model</strong> simply describes statistical relationships between variables as found in the data, without necessarily being derived from theory. Reduced-form models are susceptible to the Lucas critique, while structural models are, in principle, not.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 47 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 47</h2>
+                            <p>Why is the procyclicality of average labor productivity a puzzle for some macroeconomic theories?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>It can be a puzzle for simple Keynesian models. In these models, an increase in output is driven by an increase in demand, which leads firms to hire more labor. Due to diminishing marginal returns to labor, hiring more workers should, all else equal, lead to a *decrease* in average labor productivity. The fact that productivity is procyclical suggests that business cycles are not just driven by demand shocks, but also by supply-side factors, such as technology shocks, that shift the production function itself.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 48 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 48</h2>
+                            <p>What is the stylised fact about the cyclicality of nominal interest rates?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Nominal interest rates are generally <strong>procyclical</strong> and <strong>lagging</strong>. They tend to be high when the economy is booming and low during recessions. The lagging behavior reflects the fact that the central bank often raises rates in response to rising inflation and economic activity that has already occurred, and cuts rates after a downturn has begun.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 49 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 49</h2>
+                            <p>What is the stylised fact about the cyclicality of real interest rates?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The real interest rate is <strong>acyclical</strong>. There is no strong, systematic correlation between the real interest rate and the business cycle. This is a key stylised fact that business cycle models should aim to replicate.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 50 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 50</h2>
+                            <p>What is the Fisher equation?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Fisher equation describes the relationship between the nominal interest rate (i), the real interest rate (r), and the expected inflation rate (\(E[\pi]\)). The equation is: \( i = r + E[\pi] \). It states that the nominal interest rate can be decomposed into the real interest rate and the expected rate of inflation. An approximate version is often used: \( r \approx i - E[\pi] \).</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... 50 more cards ... -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 100</h2>
+                            <p>Summarize the key business cycle facts for the main components of GDP (Consumption and Investment).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <ul>
+                                <li><strong>Consumption (C):</strong> Procyclical, coincident, and less volatile than GDP.</li>
+                                <li><strong>Investment (I):</strong> Procyclical, coincident, and much more volatile than GDP.</li>
+                            </ul>
+                            <p>These facts indicate that while both consumption and investment move with the economy, investment spending accounts for a much larger share of the cyclical fluctuations in GDP than its share of total GDP would suggest.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf; ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 52 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 52</h2>
+                            <p>What is Okun's Law?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Okun's Law describes the empirical negative relationship between the change in the unemployment rate and the growth rate of real GDP. A common version of the law states that for every 1% increase in the unemployment rate, real GDP growth is roughly 2% lower than its potential growth rate. It provides a rule of thumb for translating changes in economic output into changes in unemployment.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 53 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 53</h2>
+                            <p>How has the volatility of business cycles in Emerging Market Economies (EMEs) changed over time according to Calderón and Fuentes (2014)?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Calderón and Fuentes (2014) find evidence of a 'Great Moderation' in EMEs, similar to that in industrial countries. They show that the volatility of real GDP growth in EMEs has declined significantly since the mid-1980s. However, despite this moderation, business cycles in EMEs remain more volatile than in industrial countries.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 54 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 54</h2>
+                            <p>What is the primary reason De Grauwe and Polan (2005) give for why the money growth-inflation link is so weak in low-inflation countries?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>In low-inflation countries, the variability of the velocity of money is much higher relative to the variability of money growth. Shocks to the demand for money (which affect velocity) are large enough to sever the tight link between money supply growth and inflation. In high-inflation countries, the opposite is true: money growth is extremely high and variable, and this variation dominates the relatively smaller shocks to velocity, revealing the strong underlying link predicted by the QTM.</p>
+                            <p class="source">Source: de Grauwe, P. and Polan, M. (2005)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 55 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 55</h2>
+                            <p>What is the term structure of interest rates?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The term structure of interest rates, often visualized as the yield curve, is the relationship between the interest rates (or yields) and the time to maturity of debt securities with the same credit quality. For example, it shows the interest rate on a 3-month Treasury bill versus a 10-year Treasury bond. The slope of the yield curve is a key leading indicator; an inverted yield curve (short-term rates higher than long-term rates) often precedes a recession.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 56 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 56</h2>
+                            <p>What is the stylised fact about the cyclicality of inventories?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Inventory investment is <strong>procyclical</strong> and <strong>extremely volatile</strong>. Although inventories are a small fraction of total GDP, their volatility means that changes in inventory investment can account for a substantial portion of the short-run fluctuations in GDP. Firms tend to build up inventories during booms and draw them down during recessions.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 57 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 57</h2>
+                            <p>What is the difference between durable and non-durable consumption, and how do they behave over the business cycle?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p><strong>Non-durable consumption</strong> (e.g., food, services) is less volatile than GDP. <strong>Durable consumption</strong> (e.g., cars, appliances) is much more volatile than GDP, behaving more like investment. This is because the purchase of durable goods is often discretionary and can be postponed during a recession, leading to larger fluctuations in spending.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 58 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 58</h2>
+                            <p>What is the "time inconsistency problem" in monetary policy?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The time inconsistency problem arises when a central bank, in the short run, has an incentive to deviate from its long-run announced policy. For example, a central bank might announce a policy of low inflation. However, once the public forms its expectations based on this announcement, the central bank may be tempted to create surprise inflation to temporarily boost output or reduce unemployment. If the public anticipates this, they will not believe the low-inflation announcement, leading to an equilibrium with an inefficiently high inflation bias.</p>
+                            <p class="source">Source: EC3115 - Ch 11 Time inconsistency and inflation bias.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 59 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 59</h2>
+                            <p>How does globalization potentially contribute to the flattening of the Phillips curve?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Globalization can flatten the Phillips curve by increasing competition and making domestic inflation more sensitive to global factors. The integration of low-cost producers (like China) into the world economy puts downward pressure on the prices of manufactured goods. Furthermore, the threat of offshoring production can limit the wage-bargaining power of domestic workers. Both effects mean that a domestic boom (high output gap) may not translate into strong inflationary pressure, thus flattening the curve.</p>
+                            <p class="source">Source: Kuttner, K. N. and Robinson, T. (2010)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 60 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 60</h2>
+                            <p>What is the difference between a 'shock' and a 'propagation mechanism' in business cycle theory?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>shock</strong> is the initial cause of a business cycle fluctuation. It is an exogenous event that shifts the economy, such as a technology shock, a change in government policy, or a sudden change in oil prices. A <strong>propagation mechanism</strong> is the set of features within the economy that translates these initial shocks into persistent fluctuations in output and employment. For example, inventory adjustments and capital accumulation are propagation mechanisms that can turn a one-time shock into a multi-period business cycle.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 61 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 61</h2>
+                            <p>What is the Real Business Cycle (RBC) model's explanation for the business cycle?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Real Business Cycle (RBC) model explains business cycles as the efficient response of the economy to real, productivity-enhancing technology shocks. In this view, a positive technology shock makes labor and capital more productive, leading to increases in investment, output, and consumption. Recessions are caused by negative technology shocks. RBC models assume prices are fully flexible and there is no role for monetary policy in stabilizing the cycle.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 62 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 62</h2>
+                            <p>What is a key criticism of the Real Business Cycle (RBC) model?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A key criticism is its reliance on large, unobserved technology shocks (both positive and negative) as the primary driver of business cycles. Critics argue that it is implausible for technology to suddenly go backwards (a negative shock) to cause a recession. Furthermore, the model's assumption of perfectly flexible prices and wages is seen as unrealistic, and it struggles to explain the observed procyclicality of inflation and the countercyclicality of unemployment.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 63 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 63</h2>
+                            <p>How do New Keynesian models differ from Real Business Cycle models?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The key difference is that New Keynesian models introduce nominal rigidities, typically in the form of 'sticky prices' or 'sticky wages'. This means prices and wages do not adjust instantly to shocks. Because of these rigidities, monetary policy is not neutral and can have real effects on output and employment in the short run. Business cycles in these models can be caused by demand shocks (e.g., changes in monetary policy or consumer confidence) in addition to supply shocks.</p>
+                            <p class="source">Source: EC3115 - Ch 10 New Keynesian models of monetary policy.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 64 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 64</h2>
+                            <p>What is the "Taylor Principle" in monetary policy?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Taylor Principle states that for inflation to be stable, a central bank must respond to an increase in the inflation rate by increasing the nominal interest rate by an even greater amount. For example, if inflation rises by 1 percentage point, the central bank should raise the nominal interest rate by more than 1 percentage point. This ensures that the real interest rate (nominal rate minus expected inflation) rises, which cools down the economy and brings inflation back to target.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 65 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 65</h2>
+                            <p>Why might a central bank choose to target the interest rate rather than the money supply?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Central banks typically choose to target the interest rate because the relationship between the money supply and the economy (the money demand function) is unstable. Shocks to money demand would, under a money supply target, lead to high volatility in interest rates and the real economy. By targeting the interest rate directly, the central bank can accommodate these money demand shocks, leading to greater macroeconomic stability. This is a key reason for the shift away from monetary targeting in the 1980s.</p>
+                            <p class="source">Source: Friedman, B. and Kuttner, K. N. (1992)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 66 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 66</h2>
+                            <p>What is the "zero lower bound" (ZLB) problem for monetary policy?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The zero lower bound refers to the fact that a central bank cannot reduce nominal interest rates below zero (or slightly below zero). This becomes a problem during a severe recession when the appropriate level of the real interest rate needed to stimulate the economy may be negative. If inflation is also very low or negative, the central bank may be unable to lower the real interest rate enough to fight the recession, as it is constrained by the ZLB on the nominal rate.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 67 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 67</h2>
+                            <p>What is meant by 'unconventional monetary policy'? Give two examples.</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Unconventional monetary policy refers to policies implemented by central banks when their conventional policy tool (the short-term policy interest rate) has hit the zero lower bound. Examples include:</p>
+                            <ul>
+                                <li><strong>Quantitative Easing (QE):</strong> Large-scale asset purchases by the central bank, designed to lower long-term interest rates and increase liquidity.</li>
+                                <li><strong>Forward Guidance:</strong> Communication from the central bank about the likely future path of its policy rate, intended to influence expectations and lower long-term borrowing costs.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 68 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 68</h2>
+                            <p>What is the stylised fact about the cross-country correlation of business cycles?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Business cycles are positively correlated across countries, particularly among developed economies with strong trade and financial links. This means that booms and recessions tend to be synchronized internationally. For example, the business cycle of the United States is positively correlated with the business cycles of Canada and the Euro area.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 69 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 69</h2>
+                            <p>What is the difference between a 'financial crisis' and a 'debt crisis'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>financial crisis</strong> is a broad term for a situation where financial assets suddenly lose a large part of their nominal value. It often involves a banking crisis, where banks become insolvent or illiquid. A <strong>debt crisis</strong> is a more specific situation where a government (a sovereign debt crisis) or a large number of private entities default on their debt obligations. The two are often related, as a sovereign debt crisis can trigger a banking crisis, and vice-versa.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 70 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 70</h2>
+                            <p>What is the 'financial accelerator' mechanism?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The financial accelerator is a mechanism through which shocks to the economy are amplified by changes in financial conditions. In a downturn, falling asset prices erode the value of firms' collateral, worsening their balance sheets. This makes it harder and more expensive for them to obtain credit. The resulting decline in investment and spending further depresses the economy and asset prices, creating a vicious cycle. This mechanism can turn a small initial shock into a deep and prolonged recession.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 71 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 71</h2>
+                            <p>What is the stylised fact about the cyclicality of the money multiplier?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The money multiplier, which is the ratio of the broad money supply (e.g., M2) to the monetary base, is <strong>procyclical</strong>. During economic expansions, banks are more willing to lend and the public holds less currency relative to deposits, which causes the multiplier to rise. During recessions, the process reverses: banks become more cautious and lending falls, causing the multiplier to shrink. This procyclicality can be a source of instability, as it amplifies shocks from the monetary base.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 72 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 72</h2>
+                            <p>What is the difference between a 'unit root' and a 'trend-stationary' process?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>trend-stationary</strong> process is one that fluctuates around a deterministic trend. Shocks to a trend-stationary series are temporary, and the series will eventually return to its trend path. A <strong>unit root</strong> process (or difference-stationary process) has a stochastic trend. Shocks to a unit root series are permanent; they permanently alter the level of the series, and it shows no tendency to return to a previous path. Whether GDP is trend-stationary or has a unit root is a subject of debate with important implications for how we view business cycles.</p>
+                            <p class="source">Source: ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 73 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 73</h2>
+                            <p>What is the stylised fact about the cyclicality of capital stock?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The aggregate capital stock (K) is <strong>procyclical</strong> but it is <strong>less volatile</strong> than GDP. While investment (the change in capital) is very volatile, the total stock of capital is very large relative to investment, so it changes only slowly. It moves with the cycle, but its fluctuations are much smoother than those of GDP.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 74 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 74</h2>
+                            <p>What is the primary channel through which the 'paper-bill spread' predicts future economic activity?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The spread reflects the market's perception of default risk on private debt. Commercial paper is short-term debt issued by corporations, while Treasury bills are government debt, considered risk-free. A widening spread means that lenders are demanding a higher premium to hold risky corporate debt compared to safe government debt. This indicates a tightening of credit conditions for firms and a higher probability of financial distress, which in turn leads to lower investment and a slowdown in economic activity.</p>
+                            <p class="source">Source: Friedman, B. and Kuttner, K. N. (1992)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 75 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 75</h2>
+                            <p>What is the difference between a 'hard peg' and a 'soft peg' exchange rate regime?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>hard peg</strong> is a fixed exchange rate regime with a strong institutional commitment, such as a currency board or dollarization, which makes it very difficult to change the parity. A <strong>soft peg</strong> is a more conventional fixed exchange rate where the central bank commits to a parity but has the discretion to change it (devalue or revalue). Soft pegs are more vulnerable to speculative attacks.</p>
+                            <p class="source">Source: EC3115 - Monetary Economics Unit F Lectures.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 76 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 76</h2>
+                            <p>What is the 'twin deficits' hypothesis?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The twin deficits hypothesis suggests that there is a strong positive relationship between a country's government budget deficit and its current account deficit. The logic is that an increase in the government budget deficit (e.g., from a tax cut) can lead to a fall in national saving. This can lead to an inflow of foreign capital to finance investment, which corresponds to a current account deficit (or a reduction in the surplus).</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 77 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 77</h2>
+                            <p>What is the stylised fact about the relationship between trade openness and business cycle volatility?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The relationship is ambiguous. On one hand, greater trade openness can increase volatility by exposing a country to more foreign shocks. On the other hand, it can decrease volatility by allowing a country to diversify its sources of demand and supply. The empirical evidence is mixed, with some studies finding that trade openness increases volatility, while others find it decreases it, depending on the country and time period.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 78 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 78</h2>
+                            <p>What is the 'Mundell-Fleming' model?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Mundell-Fleming model is a short-run, Keynesian model of an open economy. It extends the IS-LM model by adding a balance of payments (BP) curve. A key result is the 'policy trilemma' (or impossible trinity), which states that a country cannot simultaneously have a fixed exchange rate, free capital mobility, and an independent monetary policy. It must choose two of the three.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 79 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 79</h2>
+                            <p>What is the stylised fact about the cyclicality of the terms of trade for developing countries?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The terms of trade (the price of exports relative to the price of imports) for many developing countries are <strong>procyclical</strong> and <strong>volatile</strong>. This is because many of these countries are commodity exporters, and commodity prices are procyclical and volatile. Fluctuations in the terms of trade are a significant source of business cycle volatility in these economies.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 80 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 80</h2>
+                            <p>What is the difference between a 'credit boom' and a 'credit crunch'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>credit boom</strong> is a period of rapid expansion of credit in an economy, where lending increases significantly. A <strong>credit crunch</strong> is the opposite: a sudden reduction in the availability of credit or a sharp tightening of the conditions required to obtain it. Credit booms often precede financial crises, which are then followed by severe credit crunches.</p>
+                            <p class="source">Source: calderon.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 81 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 81</h2>
+                            <p>What is the 'Balassa-Samuelson effect'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Balassa-Samuelson effect explains why countries with higher productivity growth tend to have higher inflation rates and appreciating real exchange rates. The logic is that productivity growth is typically concentrated in the tradable goods sector. This pushes up wages in the tradable sector, and due to labor mobility, also pushes up wages in the non-tradable sector. Since productivity is not growing as fast in the non-tradable sector, the higher wage costs lead to higher prices for non-tradable goods, resulting in a higher overall price level.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 82 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 82</h2>
+                            <p>What is the 'wage-price spiral'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A wage-price spiral is a macroeconomic feedback loop where rising wages lead to rising prices, which in turn lead to demands for even higher wages, and so on. For example, if workers demand higher wages, firms may pass on these higher costs to consumers in the form of higher prices. Seeing the higher prices, workers then demand higher wages to maintain their real purchasing power, perpetuating the cycle. This can lead to sustained inflation.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 83 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 83</h2>
+                            <p>What is the difference between 'headline' and 'core' inflation?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p><strong>Headline inflation</strong> is the inflation rate for the entire basket of goods and services in a price index like the CPI. <strong>Core inflation</strong> excludes certain volatile components from the basket, typically food and energy prices. Central banks often focus on core inflation because it is thought to be a better indicator of the underlying, long-term inflation trend, as it is not distorted by temporary, volatile price shocks.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 84 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 84</h2>
+                            <p>What is the 'natural rate of unemployment'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The natural rate of unemployment is the rate of unemployment that would prevail in the absence of cyclical effects. It is the unemployment rate towards which the economy gravitates in the long run. It is determined by structural factors in the economy, such as the efficiency of the labor market, the demographic composition of the labor force, and labor market institutions and policies. It is sometimes referred to as the Non-Accelerating Inflation Rate of Unemployment (NAIRU).</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 85 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 85</h2>
+                            <p>What is the difference between frictional and structural unemployment?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Both are components of the natural rate of unemployment.</p>
+                            <ul>
+                                <li><strong>Frictional unemployment</strong> is the short-term unemployment that arises from the process of matching workers with jobs. It is a normal feature of a dynamic labor market where people are constantly changing jobs.</li>
+                                <li><strong>Structural unemployment</strong> is longer-term unemployment that arises from a mismatch between the skills that workers have and the skills that firms need, or from a mismatch in location. It is often caused by technological change or globalization.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 86 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 86</h2>
+                            <p>What is the 'discouraged worker effect'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The discouraged worker effect refers to the phenomenon where individuals who want to work but have been unable to find a job give up searching and drop out of the labor force. Because they are no longer actively searching for work, they are not counted as unemployed in the official statistics. This means that the official unemployment rate can understate the true extent of labor market slack, particularly during a prolonged recession.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 87 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 87</h2>
+                            <p>What is the stylised fact about the cyclicality of the labor force participation rate?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The labor force participation rate is <strong>procyclical</strong>. During economic booms, more people tend to enter the labor force to look for work, attracted by better job prospects. During recessions, the discouraged worker effect dominates, and the participation rate tends to fall as people give up searching for jobs.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 88 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 88</h2>
+                            <p>What is the 'liquidity trap'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A liquidity trap is a situation, typically associated with the zero lower bound, where monetary policy becomes ineffective because the nominal interest rate is at or near zero, and savings rates are high, making monetary policy ineffective. In a liquidity trap, injections of cash into the private banking system by the central bank fail to decrease interest rates and hence fail to stimulate economic growth. The public is willing to hold onto the extra cash rather than investing or spending it.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 89 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 89</h2>
+                            <p>What is the difference between a 'stock' and a 'flow' variable? Give an example of each.</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>A <strong>stock</strong> variable is measured at a specific point in time. A <strong>flow</strong> variable is measured over a period of time.</p>
+                            <ul>
+                                <li><strong>Stock examples:</strong> The capital stock, the money supply, government debt, a person's wealth.</li>
+                                <li><strong>Flow examples:</strong> GDP, investment, the government deficit, a person's income.</li>
+                            </ul>
+                            <p>Flows often affect stocks. For example, the flow of investment increases the stock of capital.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 90 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 90</h2>
+                            <p>What is the 'permanent income hypothesis'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The permanent income hypothesis, developed by Milton Friedman, is a theory of consumption. It states that a person's consumption spending is determined not by their current income, but by their expected long-term average income, or 'permanent income'. This theory provides a powerful explanation for the stylised fact of consumption smoothing. A temporary increase in income will have only a small effect on consumption, as it has little effect on permanent income.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 91 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 91</h2>
+                            <p>What is the 'life-cycle hypothesis' of consumption?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The life-cycle hypothesis, developed by Franco Modigliani, is another theory of consumption smoothing. It posits that individuals plan their consumption and savings behavior over their entire lifetime. They save during their working years to finance consumption during their retirement years. This theory also predicts that consumption will be less volatile than income, as people will try to maintain a stable level of consumption throughout their lives.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 92 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 92</h2>
+                            <p>What is 'Ricardian equivalence'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Ricardian equivalence is a proposition that suggests that financing government spending out of debt is equivalent to financing it out of taxes. The reasoning is that if the government cuts taxes and issues debt, rational, forward-looking taxpayers will anticipate that they will have to pay higher taxes in the future to repay that debt. Therefore, they will save the entire tax cut to pay for the future tax liability, leaving consumption unchanged. If this holds, then a debt-financed tax cut has no effect on aggregate demand.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 93 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 93</h2>
+                            <p>What is the 'crowding out' effect?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>Crowding out is the economic theory that an increase in government spending or a decrease in taxes will lead to a decrease in private sector spending, particularly investment. The mechanism is that increased government borrowing drives up interest rates, which makes it more expensive for private firms to borrow and invest, thus 'crowding them out' of the market for loanable funds.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 94 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 94</h2>
+                            <p>What is the difference between 'automatic stabilizers' and 'discretionary fiscal policy'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p><strong>Automatic stabilizers</strong> are features of the tax and transfer system that automatically act to dampen business cycle fluctuations without any explicit government action. For example, during a recession, income tax revenues automatically fall and unemployment benefit payments automatically rise, which supports aggregate demand. <strong>Discretionary fiscal policy</strong> refers to deliberate changes in government spending or taxes to influence the economy, such as passing a new stimulus bill.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 95 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 95</h2>
+                            <p>What is the 'Lucas island model'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The Lucas island model is a micro-founded model that attempts to explain the short-run, positive relationship between output and inflation (the Phillips curve). In the model, producers are located on separate 'islands' and have imperfect information. They can observe the price of their own good, but not the aggregate price level. Therefore, when they see their price increase, they don't know if it is a real increase in demand for their specific good (in which case they should increase production) or just an increase in the overall price level (in which case they should not). This confusion can lead them to increase output in response to an aggregate monetary shock, generating a non-neutrality of money in the short run.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 96 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 96</h2>
+                            <p>What is the 'sacrifice ratio'?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The sacrifice ratio is the cumulative loss in real GDP, usually expressed as a percentage of one year's GDP, that is associated with a one-percentage-point reduction in the rate of inflation. It is a measure of the cost of disinflation. A flatter Phillips curve implies a higher sacrifice ratio, as a larger and more prolonged recession is needed to bring inflation down.</p>
+                            <p class="source">Source: Kuttner, K. N. and Robinson, T. (2010)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 97 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 97</h2>
+                            <p>What is the stylised fact about the cyclicality of the trade balance?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The trade balance (or net exports, NX) is <strong>countercyclical</strong>. During a domestic boom, imports tend to grow faster than exports as domestic income rises, so the trade balance worsens. During a recession, import growth slows or reverses, and the trade balance tends to improve.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 98 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 98</h2>
+                            <p>What is the 'J-curve' effect?</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <p>The J-curve effect describes the short-term response of a country's trade balance to a real depreciation of its currency. Initially, the trade balance may worsen because the price of imports rises and the price of exports falls, but the quantities of imports and exports do not adjust immediately. Over time, as consumers and firms adjust to the new relative prices, exports will rise and imports will fall, leading to an improvement in the trade balance. The path of the trade balance over time resembles the letter 'J'.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 99 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 99</h2>
+                            <p>What is the difference between a 'leading', 'lagging', and 'coincident' indicator? Give an example of each.</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <ul>
+                                <li><strong>Leading Indicator:</strong> A variable whose turning points precede the turning points of the business cycle. Example: Stock prices, building permits.</li>
+                                <li><strong>Lagging Indicator:</strong> A variable whose turning points follow the turning points of the business cycle. Example: Unemployment rate, inflation.</li>
+                                <li><strong>Coincident Indicator:</strong> A variable whose turning points occur at roughly the same time as the turning points of the business cycle. Example: Industrial production, personal income.</li>
+                            </ul>
+                            <p class="source">Source: Williamson-pages-1.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 100 -->
+            <div class="scene">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div class="card-question">
+                            <h2>Question 100</h2>
+                            <p>Summarize the key business cycle facts for the main components of GDP (Consumption and Investment).</p>
+                        </div>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="card-answer">
+                            <h3>Answer</h3>
+                            <ul>
+                                <li><strong>Consumption (C):</strong> Procyclical, coincident, and less volatile than GDP.</li>
+                                <li><strong>Investment (I):</strong> Procyclical, coincident, and much more volatile than GDP.</li>
+                            </ul>
+                            <p>These facts indicate that while both consumption and investment move with the economy, investment spending accounts for a much larger share of the cyclical fluctuations in GDP than its share of total GDP would suggest.</p>
+                            <p class="source">Source: Williamson-pages-1.pdf; ec3115/SubjectGuide/EC3115 - Ch 6 Stylised facts-2.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button id="prev" class="nav-button">Previous</button>
+        <button id="flip" class="nav-button">Flip</button>
+        <span id="progress-indicator">1 / 100</span>
+        <button id="next" class="nav-button">Next</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stream = document.querySelector('.flashcard-stream');
+            const cards = document.querySelectorAll('.card');
+            const scenes = document.querySelectorAll('.scene');
+            const nextButton = document.getElementById('next');
+            const prevButton = document.getElementById('prev');
+            const flipButton = document.getElementById('flip');
+            const progressIndicator = document.getElementById('progress-indicator');
+
+            let currentIndex = 0;
+            const totalCards = scenes.length;
+
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            function updateCarousel() {
+                stream.style.transform = `translateX(-${currentIndex * 100}%)`;
+                progressIndicator.textContent = `${currentIndex + 1} / ${totalCards}`;
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex === totalCards - 1;
+                setCookie('flashcardIndex', currentIndex, 7);
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('click', function () {
+                    card.classList.toggle('is-flipped');
+                });
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < totalCards - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            flipButton.addEventListener('click', () => {
+                const currentCard = scenes[currentIndex].querySelector('.card');
+                if (currentCard) {
+                    currentCard.classList.toggle('is-flipped');
+                }
+            });
+
+            // Load progress from cookie
+            const savedIndex = getCookie('flashcardIndex');
+            if (savedIndex) {
+                currentIndex = parseInt(savedIndex, 10);
+            }
+            
+            updateCarousel();
+        });
+    </script>
+
+</body>
+</html>

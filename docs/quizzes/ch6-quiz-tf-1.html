@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 Stylised Facts - True/False Quiz (Static)</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .explanation {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            display: none; /* Hidden by default */
+        }
+        .explanation.correct {
+            border-left: 5px solid #28a745;
+        }
+        .explanation.incorrect {
+            border-left: 5px solid #dc3545;
+        }
+        .explanation p {
+            margin: 0;
+        }
+        .explanation .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+        }
+        #clear-storage {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            border-radius: 5px;
+            transition: width 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 Stylised Facts - True/False Quiz (Static)</h1>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar">0%</div>
+    </div>
+    <div class="quiz-container" id="quiz-container">
+        <!-- Question 1 -->
+        <div class="question-block" id="q0" data-answer="false">
+            <p class="question-text">1. A time series' trend component represents the short-run ups and downs, or booms and recessions, in aggregate economic activity.</p>
+            <div class="explanation-content" style="display: none;">This is false. The trend component of a time series, often called potential output, represents the long-run growth path of the economy. It is driven by slow-moving factors like capital accumulation, population growth, and technological progress. The business cycle component, by contrast, captures the shorter-term, recurrent but non-periodic fluctuations (booms and recessions) of actual output around this long-run trend. The entire purpose of business cycle analysis is to separate these two components to study the nature of the fluctuations. (Source: Williamson, Macroeconomics, Ch 1 & 3; EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q0">
+                <label><input type="radio" name="answer_q0" value="true" onchange="checkAnswer(0)"> True</label>
+                <label><input type="radio" name="answer_q0" value="false" onchange="checkAnswer(0)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q0"></div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-block" id="q1" data-answer="true">
+            <p class="question-text">2. The Hodrick-Prescott (HP) filter is a common method for separating a time series into its trend and cyclical components.</p>
+            <div class="explanation-content" style="display: none;">This is true. The HP filter is a widely used statistical tool in macroeconomics to decompose a time series \(Y_t\) into a trend component (\(\tau_t\)) and a cyclical component (\(c_t\)). It does so by solving a minimization problem that penalizes both the deviation of the series from its trend and the variability of the trend itself. The trade-off is controlled by a smoothing parameter, \(\lambda\). (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q1">
+                <label><input type="radio" name="answer_q1" value="true" onchange="checkAnswer(1)"> True</label>
+                <label><input type="radio" name="answer_q1" value="false" onchange="checkAnswer(1)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q1"></div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-block" id="q2" data-answer="true">
+            <p class="question-text">3. In business cycle analysis, volatility refers to the standard deviation of the cyclical component of a macroeconomic variable.</p>
+            <div class="explanation-content" style="display: none;">This is true. Volatility is a measure of the amplitude of the business cycle fluctuations. It is calculated as the standard deviation of the cyclical component of a variable (which is usually in log form, making it an approximation of percentage deviations). It allows us to compare the size of fluctuations across different variables, such as consumption and investment. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q2">
+                <label><input type="radio" name="answer_q2" value="true" onchange="checkAnswer(2)"> True</label>
+                <label><input type="radio" name="answer_q2" value="false" onchange="checkAnswer(2)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q2"></div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-block" id="q3" data-answer="false">
+            <p class="question-text">4. A variable is considered 'procyclical' if its cyclical component is negatively correlated with the cyclical component of GDP.</p>
+            <div class="explanation-content" style="display: none;">This is false. A variable is procyclical if its cyclical component is positively correlated with the cyclical component of GDP. This means it tends to be above its trend when GDP is above its trend (expansion) and below its trend when GDP is below its trend (recession). A negative correlation defines a countercyclical variable. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q3">
+                <label><input type="radio" name="answer_q3" value="true" onchange="checkAnswer(3)"> True</label>
+                <label><input type="radio" name="answer_q3" value="false" onchange="checkAnswer(3)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q3"></div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-block" id="q4" data-answer="true">
+            <p class="question-text">5. 'Persistence' in a time series refers to the degree to which the current value of the series is correlated with its past values.</p>
+            <div class="explanation-content" style="display: none;">This is true. Persistence, measured by the first-order autocorrelation of the cyclical component, describes the tendency for deviations from trend to be prolonged. A high positive persistence (e.g., +0.9) means that if a variable is above its trend today, it is very likely to still be above its trend in the next period. GDP and its components show strong persistence. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q4">
+                <label><input type="radio" name="answer_q4" value="true" onchange="checkAnswer(4)"> True</label>
+                <label><input type="radio" name="answer_q4" value="false" onchange="checkAnswer(4)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q4"></div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-block" id="q5" data-answer="true">
+            <p class="question-text">6. A key stylised fact of business cycles is that consumption is less volatile than GDP.</p>
+            <div class="explanation-content" style="display: none;">This is true. Empirical evidence for most developed countries shows that aggregate consumption is smoother (has a lower standard deviation) than aggregate output (GDP). This is a crucial fact that macroeconomic models must explain, and it provides support for theories of consumption smoothing like the Permanent Income Hypothesis. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q5">
+                <label><input type="radio" name="answer_q5" value="true" onchange="checkAnswer(5)"> True</label>
+                <label><input type="radio" name="answer_q5" value="false" onchange="checkAnswer(5)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q5"></div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-block" id="q6" data-answer="true">
+            <p class="question-text">7. Investment is typically found to be countercyclical.</p>
+            <div class="explanation-content" style="display: none;">This is false. Investment is one of the most strongly procyclical components of GDP. It rises significantly during economic expansions as firms build new capacity and falls sharply during recessions. Furthermore, it is far more volatile than GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q6">
+                <label><input type="radio" name="answer_q6" value="true" onchange="checkAnswer(6)"> True</label>
+                <label><input type="radio" name="answer_q6" value="false" onchange="checkAnswer(6)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q6"></div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-block" id="q7" data-answer="true">
+            <p class="question-text">8. Total hours worked is a procyclical variable.</p>
+            <div class="explanation-content" style="display: none;">This is true. Total hours worked, a measure of labor input, moves closely with the business cycle. Firms employ more labor (both by hiring more people and increasing hours per worker) during booms and reduce labor input during recessions. Its volatility is typically similar to that of GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q7">
+                <label><input type="radio" name="answer_q7" value="true" onchange="checkAnswer(7)"> True</label>
+                <label><input type="radio" name="answer_q7" value="false" onchange="checkAnswer(7)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q7"></div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-block" id="q8" data-answer="false">
+            <p class="question-text">9. The price level is consistently and strongly procyclical across all historical periods and countries.</p>
+            <div class="explanation-content" style="display: none;">This is false. The cyclicality of the price level (or inflation) is not a settled fact and has changed over time. For the US, the price level was generally procyclical before World War II but has been generally countercyclical in the post-war period. This change may reflect a shift from demand-driven cycles to supply-driven cycles. (Source: Williamson, Macroeconomics, Ch 3; EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q8">
+                <label><input type="radio" name="answer_q8" value="true" onchange="checkAnswer(8)"> True</label>
+                <label><input type="radio" name="answer_q8" value="false" onchange="checkAnswer(8)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q8"></div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-block" id="q9" data-answer="true">
+            <p class="question-text">10. Money supply (e.g., M1 or M2) is generally a procyclical and leading variable.</p>
+            <div class="explanation-content" style="display: none;">This is true. Historically, the money supply has tended to be procyclical, expanding in booms and contracting in recessions. It is also often found to be a leading variable, meaning its cyclical movements tend to precede those of GDP. However, the stability and usefulness of this relationship for policymaking has been questioned since the 1980s. (Source: Williamson, Macroeconomics, Ch 3; Friedman & Kuttner).</div>
+            <form name="form_q9">
+                <label><input type="radio" name="answer_q9" value="true" onchange="checkAnswer(9)"> True</label>
+                <label><input type="radio" name="answer_q9" value="false" onchange="checkAnswer(9)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q9"></div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question-block" id="q10" data-answer="false">
+            <p class="question-text">11. The correlation between the cyclical components of two variables is sufficient to establish a causal relationship between them.</p>
+            <div class="explanation-content" style="display: none;">This is false. This is a classic statistics fallacy. Correlation does not imply causation. While stylised facts document correlations (e.g., money leads output), they do not, by themselves, tell us whether one variable causes the other, if there is reverse causation, or if both are driven by a third, omitted factor. Establishing causality requires economic theory and more advanced econometric techniques. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q10">
+                <label><input type="radio" name="answer_q10" value="true" onchange="checkAnswer(10)"> True</label>
+                <label><input type="radio" name="answer_q10" value="false" onchange="checkAnswer(10)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q10"></div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question-block" id="q11" data-answer="true">
+            <p class="question-text">12. Real wages are generally found to be procyclical.</p>
+            <div class="explanation-content" style="display: none;">This is true. Most studies for the US and other developed countries find that real wages are procyclical, meaning they tend to rise during expansions and fall during recessions. However, the correlation with GDP is often not very strong, and some early Keynesian theories predicted countercyclical real wages, making this an important area of research. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q11">
+                <label><input type="radio" name="answer_q11" value="true" onchange="checkAnswer(11)"> True</label>
+                <label><input type="radio" name="answer_q11" value="false" onchange="checkAnswer(11)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q11"></div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question-block" id="q12" data-answer="false">
+            <p class="question-text">13. Government spending is more volatile than GDP.</p>
+            <div class="explanation-content" style="display: none;">This is false. Generally, government consumption and investment spending is found to be less volatile than GDP. Its cyclicality can vary; in the US, it is often found to be procyclical, though this can be heavily influenced by large military expenditures. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q12">
+                <label><input type="radio" name="answer_q12" value="true" onchange="checkAnswer(12)"> True</label>
+                <label><input type="radio" name="answer_q12" value="false" onchange="checkAnswer(12)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q12"></div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question-block" id="q13" data-answer="true">
+            <p class="question-text">14. The term 'acyclical' describes a variable whose cyclical component has no clear correlation (i.e., close to zero) with the business cycle.</p>
+            <div class="explanation-content" style="display: none;">This is true. Acyclical variables are those that do not move in a predictable pro- or counter-cyclical way with the business cycle. Their correlation with the cyclical component of GDP is near zero. Some studies find real interest rates to be acyclical. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q13">
+                <label><input type="radio" name="answer_q13" value="true" onchange="checkAnswer(13)"> True</label>
+                <label><input type="radio" name="answer_q13" value="false" onchange="checkAnswer(13)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q13"></div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question-block" id="q14" data-answer="true">
+            <p class="question-text">15. The cyclical component of a macroeconomic variable is often expressed as the percentage deviation from its trend.</p>
+            <div class="explanation-content" style="display: none;">This is true. This is a standard practice for comparability. After taking natural logs of a series, the cyclical component is calculated as the actual log value minus the log trend value. This difference, when small, is a close approximation of the percentage deviation from the trend. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q14">
+                <label><input type="radio" name="answer_q14" value="true" onchange="checkAnswer(14)"> True</label>
+                <label><input type="radio" name="answer_q14" value="false" onchange="checkAnswer(14)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q14"></div>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question-block" id="q15" data-answer="false">
+            <p class="question-text">16. In the context of business cycles, a 'leading' variable is one that is more volatile than GDP.</p>
+            <div class="explanation-content" style="display: none;">This is false. A 'leading' variable is one whose cyclical turning points (peaks and troughs) occur before the turning points of GDP. It helps predict the future path of the economy. Volatility refers to the amplitude of fluctuations, not the timing. A variable can be leading and less volatile than GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q15">
+                <label><input type="radio" name="answer_q15" value="true" onchange="checkAnswer(15)"> True</label>
+                <label><input type="radio" name="answer_q15" value="false" onchange="checkAnswer(15)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q15"></div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question-block" id="q16" data-answer="true">
+            <p class="question-text">17. Labor productivity, measured as output per hour worked, is a procyclical variable.</p>
+            <div class="explanation-content" style="display: none;">This is true. Labor productivity tends to be procyclical. In booms, output often rises by more than the increase in labor input, leading to a rise in average productivity. This can be due to factors like increasing returns or labor hoarding, where firms utilize their existing workforce more intensively. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q16">
+                <label><input type="radio" name="answer_q16" value="true" onchange="checkAnswer(16)"> True</label>
+                <label><input type="radio" name="answer_q16" value="false" onchange="checkAnswer(16)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q16"></div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question-block" id="q17" data-answer="false">
+            <p class="question-text">18. The smoothing parameter \(\lambda\) (lambda) in the Hodrick-Prescott filter is typically set to 100 for annual data.</p>
+            <div class="explanation-content" style="display: none;">This is false. The conventional value for the smoothing parameter \(\lambda\), established by Hodrick and Prescott, is 1600 for quarterly data. While there is less agreement for other frequencies, a common rule of thumb suggests 6.25 for annual data and 129,600 for monthly data. A value of 100 is sometimes used for annual data, but 1600 is the most famous convention and it applies specifically to quarterly data. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q17">
+                <label><input type="radio" name="answer_q17" value="true" onchange="checkAnswer(17)"> True</label>
+                <label><input type="radio" name="answer_q17" value="false" onchange="checkAnswer(17)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q17"></div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question-block" id="q18" data-answer="true">
+            <p class="question-text">19. The unemployment rate is a countercyclical variable.</p>
+            <div class="explanation-content" style="display: none;">This is true. The unemployment rate is strongly and reliably countercyclical. It rises during recessions (when GDP is falling) and falls during expansions (when GDP is rising). It is also considered a lagging indicator, as its turning points tend to occur after the turning points in GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q18">
+                <label><input type="radio" name="answer_q18" value="true" onchange="checkAnswer(18)"> True</label>
+                <label><input type="radio" name="answer_q18" value="false" onchange="checkAnswer(18)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q18"></div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question-block" id="q19" data-answer="false">
+            <p class="question-text">20. The 'Great Moderation' refers to the period of increased macroeconomic volatility in the US starting in the mid-1980s.</p>
+            <div class="explanation-content" style="display: none;">This is false. The 'Great Moderation' refers to a period of a significant *decrease* in macroeconomic volatility in the US and other developed economies, which began in the mid-1980s and lasted until the financial crisis of 2007-2008. The reasons for this moderation are debated but may include better monetary policy, structural changes in the economy, and good luck. (Source: EC3115 Monetary Economics Unit F Lectures).</div>
+            <form name="form_q19">
+                <label><input type="radio" name="answer_q19" value="true" onchange="checkAnswer(19)"> True</label>
+                <label><input type="radio" name="answer_q19" value="false" onchange="checkAnswer(19)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q19"></div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question-block" id="q20" data-answer="true">
+            <p class="question-text">21. Nominal interest rates are generally procyclical and leading.</p>
+            <div class="explanation-content" style="display: none;">This is true. Nominal interest rates tend to be procyclical, rising in booms and falling in recessions. They are also often found to be leading variables. This is partly because monetary policy is forward-looking: central banks often raise rates to cool an overheating economy before inflation becomes a major problem. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q20">
+                <label><input type="radio" name="answer_q20" value="true" onchange="checkAnswer(20)"> True</label>
+                <label><input type="radio" name="answer_q20" value="false" onchange="checkAnswer(20)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q20"></div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question-block" id="q21" data-answer="false">
+            <p class="question-text">22. The business cycle component of a time series must sum to zero over the long run.</p>
+            <div class="explanation-content" style="display: none;">This is false. While the cyclical component represents deviations from the trend, and will have an average value of approximately zero over the sample period *by construction* (especially with methods like the HP filter), there is no theoretical requirement that it must sum to exactly zero. A long recession followed by a weak recovery could result in a negative sum over that period. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q21">
+                <label><input type="radio" name="answer_q21" value="true" onchange="checkAnswer(21)"> True</label>
+                <label><input type="radio" name="answer_q21" value="false" onchange="checkAnswer(21)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q21"></div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question-block" id="q22" data-answer="true">
+            <p class="question-text">23. The Aksoy et al. (2012) paper finds that the link between credit and the business cycle has strengthened over time for emerging markets.</p>
+            <div class="explanation-content" style="display: none;">This is true. The Aksoy, Basso, and Coto-Martinez paper (2012) documents that financial cycles, particularly the cycle in private credit, have become more synchronised with and have a larger impact on business cycles in emerging market economies, especially in the period after widespread financial liberalisation. (Source: Aksoy et al., "Financial cycles: What are they and what do they mean for business cycles?").</div>
+            <form name="form_q22">
+                <label><input type="radio" name="answer_q22" value="true" onchange="checkAnswer(22)"> True</label>
+                <label><input type="radio" name="answer_q22" value="false" onchange="checkAnswer(22)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q22"></div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question-block" id="q23" data-answer="false">
+            <p class="question-text">24. According to the stylised facts, imports are countercyclical.</p>
+            <div class="explanation-content" style="display: none;">This is false. Imports are procyclical. When domestic income and consumption rise during an economic expansion, households and firms increase their spending on all goods, including those produced abroad. Therefore, imports tend to rise in booms and fall in recessions. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q23">
+                <label><input type="radio" name="answer_q23" value="true" onchange="checkAnswer(23)"> True</label>
+                <label><input type="radio" name="answer_q23" value="false" onchange="checkAnswer(23)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q23"></div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question-block" id="q24" data-answer="true">
+            <p class="question-text">25. The volatility of GDP is higher in emerging market economies than in advanced economies.</p>
+            <div class="explanation-content" style="display: none;">This is true. A well-documented fact is that business cycles, measured by the volatility of GDP growth or its cyclical component, are significantly more pronounced in developing and emerging economies compared to developed, advanced economies. This can be due to factors like less diversified economies, weaker institutions, and less stable policies. (Source: Calderon & De Grauwe, "Financial Liberalization and Business Cycles").</div>
+            <form name="form_q24">
+                <label><input type="radio" name="answer_q24" value="true" onchange="checkAnswer(24)"> True</label>
+                <label><input type="radio" name="answer_q24" value="false" onchange="checkAnswer(24)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q24"></div>
+        </div>
+
+        <!-- Question 26 -->
+        <div class="question-block" id="q25" data-answer="false">
+            <p class="question-text">26. The primary goal of detrending a time series is to make it stationary by removing its long-run growth component.</p>
+            <div class="explanation-content" style="display: none;">This is false. While detrending does remove the non-stationary long-run growth component, its primary goal in business cycle analysis is to *isolate* the short- to medium-term fluctuations (the business cycle) for analysis. A detrended series is not necessarily stationary (for example, its variance might not be constant over time, a condition for stationarity). (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q25">
+                <label><input type="radio" name="answer_q25" value="true" onchange="checkAnswer(25)"> True</label>
+                <label><input type="radio" name="answer_q25" value="false" onchange="checkAnswer(25)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q25"></div>
+        </div>
+
+        <!-- Question 27 -->
+        <div class="question-block" id="q26" data-answer="true">
+            <p class="question-text">27. The cross-correlation function is used to determine if a variable is leading, lagging, or coincident with GDP.</p>
+            <div class="explanation-content" style="display: none;">This is true. The cross-correlation function measures the correlation between one series (e.g., investment) at time t and another series (e.g., GDP) at time t+k for various leads and lags (k). If the peak correlation occurs at a negative k, the variable is leading. If it peaks at k=0, it is coincident. If it peaks at a positive k, it is lagging. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q26">
+                <label><input type="radio" name="answer_q26" value="true" onchange="checkAnswer(26)"> True</label>
+                <label><input type="radio" name="answer_q26" value="false" onchange="checkAnswer(26)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q26"></div>
+        </div>
+
+        <!-- Question 28 -->
+        <div class="question-block" id="q27" data-answer="false">
+            <p class="question-text">28. The consumer price index (CPI) and the GDP deflator are expected to have identical cyclical properties.</p>
+            <div class="explanation-content" style="display: none;">This is false. While both are measures of the price level, they differ in composition, which can lead to different cyclical behaviors. The CPI measures the price of a fixed basket of consumer goods, including imports. The GDP deflator measures the price of all domestically produced goods and services (consumption, investment, government). The treatment of import prices is a key difference. (Source: Williamson, Macroeconomics, Ch 2).</div>
+            <form name="form_q27">
+                <label><input type="radio" name="answer_q27" value="true" onchange="checkAnswer(27)"> True</label>
+                <label><input type="radio" name="answer_q27" value="false" onchange="checkAnswer(27)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q27"></div>
+        </div>
+
+        <!-- Question 29 -->
+        <div class="question-block" id="q28" data-answer="true">
+            <p class="question-text">29. Friedman and Kuttner (1992) argue that the correlation between money and output weakened significantly after the 1970s.</p>
+            <div class="explanation-content" style="display: none;">This is true. A key finding of their influential paper is that the simple, stable, and predictive relationship between money growth and income growth that seemed to exist before the 1980s largely broke down afterwards. This finding was a major blow to monetarism and contributed to the shift by central banks towards using interest rates as their primary policy instrument. (Source: Friedman and Kuttner, "Money, Income, Prices, and Interest Rates").</div>
+            <form name="form_q28">
+                <label><input type="radio" name="answer_q28" value="true" onchange="checkAnswer(28)"> True</label>
+                <label><input type="radio" name="answer_q28" value="false" onchange="checkAnswer(28)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q28"></div>
+        </div>
+
+        <!-- Question 30 -->
+        <div class="question-block" id="q29" data-answer="false">
+            <p class="question-text">30. A 'stylised fact' is a theoretical prediction derived from a macroeconomic model.</p>
+            <div class="explanation-content" style="display: none;">This is false. The roles are reversed. A 'stylised fact' is a broad empirical regularity or pattern observed in economic data (e.g., investment is more volatile than GDP). Macroeconomic models are then built to try and provide a theoretical explanation for these observed facts. The facts are the target that the models aim to match. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q29">
+                <label><input type="radio" name="answer_q29" value="true" onchange="checkAnswer(29)"> True</label>
+                <label><input type="radio" name="answer_q29" value="false" onchange="checkAnswer(29)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q29"></div>
+        </div>
+
+        <!-- Question 31 -->
+        <div class="question-block" id="q30" data-answer="true">
+            <p class="question-text">31. The standard deviation of the cyclical component of investment is typically several times larger than that of GDP.</p>
+            <div class="explanation-content" style="display: none;">This is true. This is one of the most prominent stylised facts. Investment is highly volatile. For the US, the standard deviation of detrended investment is about 3 times that of detrended GDP. This high volatility means that fluctuations in investment account for a large share of the overall fluctuations in GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q30">
+                <label><input type="radio" name="answer_q30" value="true" onchange="checkAnswer(30)"> True</label>
+                <label><input type="radio" name="answer_q30" value="false" onchange="checkAnswer(30)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q30"></div>
+        </div>
+
+        <!-- Question 32 -->
+        <div class="question-block" id="q31" data-answer="false">
+            <p class="question-text">32. The cyclical component of a variable is independent of the method used for detrending.</p>
+            <div class="explanation-content" style="display: none;">This is false. The properties of the resulting cyclical component can be quite sensitive to the detrending method used. For example, using a linear trend, the HP filter, or first-differencing can produce different results for a variable's volatility and cyclicality. This is a key methodological issue in business cycle research. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q31">
+                <label><input type="radio" name="answer_q31" value="true" onchange="checkAnswer(31)"> True</label>
+                <label><input type="radio" name="answer_q31" value="false" onchange="checkAnswer(31)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q31"></div>
+        </div>
+
+        <!-- Question 33 -->
+        <div class="question-block" id="q32" data-answer="true">
+            <p class="question-text">33. In most countries, private consumption is the largest component of GDP.</p>
+            <div class="explanation-content" style="display: none;">This is true. For most economies, particularly developed ones, private consumption expenditure by households is the largest single component of aggregate demand and GDP, typically accounting for 60-70% of total output. This makes understanding consumption behavior critical to understanding the overall economy. (Source: Williamson, Macroeconomics, Ch 2).</div>
+            <form name="form_q32">
+                <label><input type="radio" name="answer_q32" value="true" onchange="checkAnswer(32)"> True</label>
+                <label><input type="radio" name="answer_q32" value="false" onchange="checkAnswer(32)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q32"></div>
+        </div>
+
+        <!-- Question 34 -->
+        <div class="question-block" id="q33" data-answer="false">
+            <p class="question-text">34. The concept of 'persistence' is measured by the cross-correlation of a variable with GDP.</p>
+            <div class="explanation-content" style="display: none;">This is false. Persistence is measured by the autocorrelation of a series (its correlation with its own past values, e.g., corr(c_t, c_{t-1})). Cross-correlation with GDP measures co-movement (cyclicality) and lead/lag relationships. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q33">
+                <label><input type="radio" name="answer_q33" value="true" onchange="checkAnswer(33)"> True</label>
+                <label><input type="radio" name="answer_q33" value="false" onchange="checkAnswer(33)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q33"></div>
+        </div>
+
+        <!-- Question 35 -->
+        <div class="question-block" id="q34" data-answer="true">
+            <p class="question-text">35. The term 'business cycle' refers to the observation that expansions and contractions in economic activity occur at irregular intervals.</p>
+            <div class="explanation-content" style="display: none;">This is true. A defining feature of business cycles is that they are recurrent but not periodic. The fluctuations do not have a fixed or predictable length, which is why they are called 'cycles' rather than, for example, 'waves'. This irregularity makes forecasting them notoriously difficult. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q34">
+                <label><input type="radio" name="answer_q34" value="true" onchange="checkAnswer(34)"> True</label>
+                <label><input type="radio" name="answer_q34" value="false" onchange="checkAnswer(34)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q34"></div>
+        </div>
+
+        <!-- Question 36 -->
+        <div class="question-block" id="q35" data-answer="false">
+            <p class="question-text">36. The real interest rate is always procyclical.</p>
+            <div class="explanation-content" style="display: none;">This is false. The cyclicality of the real interest rate is ambiguous and a subject of much debate. Theoretically, its behavior depends on the nature of the shocks hitting the economy. A technology shock might raise it, while a monetary policy shock might lower it. Empirically, many studies for the US find it to be acyclical or weakly procyclical. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q35">
+                <label><input type="radio" name="answer_q35" value="true" onchange="checkAnswer(35)"> True</label>
+                <label><input type="radio" name="answer_q35" value="false" onchange="checkAnswer(35)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q35"></div>
+        </div>
+
+        <!-- Question 37 -->
+        <div class="question-block" id="q36" data-answer="true">
+            <p class="question-text">37. Financial liberalisation in emerging markets has often been associated with an increase in the volatility of consumption.</p>
+            <div class="explanation-content" style="display: none;">This is true. The paper by Calderon and De Grauwe (2003) suggests that while financial liberalisation can lead to higher long-run growth, it may also be associated with more pronounced business cycles and higher consumption volatility, particularly in the short run as the economy adjusts and if the institutional framework is weak. (Source: Calderon & De Grauwe, "Financial Liberalization and Business Cycles").</div>
+            <form name="form_q36">
+                <label><input type="radio" name="answer_q36" value="true" onchange="checkAnswer(36)"> True</label>
+                <label><input type="radio" name="answer_q36" value="false" onchange="checkAnswer(36)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q36"></div>
+        </div>
+
+        <!-- Question 38 -->
+        <div class="question-block" id="q37" data-answer="false">
+            <p class="question-text">38. The 'Lucas critique' suggests that stylised facts are stable and can be reliably used for policy evaluation.</p>
+            <div class="explanation-content" style="display: none;">This is false. The Lucas critique argues the opposite: that statistical relationships observed in the data (like stylised facts) are not deep structural parameters but are reduced-form correlations that depend on the policy regime. If the policy regime changes, the behavior of agents will change, and thus the statistical relationships will change. Therefore, using historical correlations to predict the effects of a new policy can be dangerously misleading. (Source: EC3115 Monetary Economics Unit F Lectures).</div>
+            <form name="form_q37">
+                <label><input type="radio" name="answer_q37" value="true" onchange="checkAnswer(37)"> True</label>
+                <label><input type="radio" name="answer_q37" value="false" onchange="checkAnswer(37)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q37"></div>
+        </div>
+
+        <!-- Question 39 -->
+        <div class="question-block" id="q38" data-answer="true">
+            <p class="question-text">39. The correlation between inventories and GDP is procyclical.</p>
+            <div class="explanation-content" style="display: none;">This is true. Inventory investment is a strongly procyclical component of GDP. Firms build up inventories during expansions in anticipation of future sales and draw them down during contractions. Although small on average, inventory investment is highly volatile and accounts for a disproportionate share of the fall in GDP during recessions. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q38">
+                <label><input type="radio" name="answer_q38" value="true" onchange="checkAnswer(38)"> True</label>
+                <label><input type="radio" name="answer_q38" value="false" onchange="checkAnswer(38)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q38"></div>
+        </div>
+
+        <!-- Question 40 -->
+        <div class="question-block" id="q39" data-answer="false">
+            <p class="question-text">40. The volatility of hours worked is typically greater than the volatility of employment.</p>
+            <div class="explanation-content" style="display: none;">This is false. The volatility of total hours worked is typically greater than the volatility of employment (the number of people working). This is because firms adjust labor input on two margins: the extensive margin (hiring/firing people) and the intensive margin (changing hours per worker). Total hours captures both effects, making it more volatile than the number of employees alone. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q39">
+                <label><input type="radio" name="answer_q39" value="true" onchange="checkAnswer(39)"> True</label>
+                <label><input type="radio" name="answer_q39" value="false" onchange="checkAnswer(39)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q39"></div>
+        </div>
+
+        <!-- Question 41 -->
+        <div class="question-block" id="q40" data-answer="true">
+            <p class="question-text">41. The common finding is that net exports are countercyclical.</p>
+            <div class="explanation-content" style="display: none;">This is true. Net exports (exports minus imports) are typically countercyclical for most large economies. During a domestic boom, income rises, and demand for imports increases sharply (imports are procyclical). This increase in imports often outweighs any increase in exports, causing the trade balance (net exports) to worsen. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q40">
+                <label><input type="radio" name="answer_q40" value="true" onchange="checkAnswer(40)"> True</label>
+                <label><input type="radio" name="answer_q40" value="false" onchange="checkAnswer(40)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q40"></div>
+        </div>
+
+        <!-- Question 42 -->
+        <div class="question-block" id="q41" data-answer="false">
+            <p class="question-text">42. The use of logarithms in business cycle analysis is primarily to increase the volatility of the data.</p>
+            <div class="explanation-content" style="display: none;">This is false. Logarithms are used because changes in the log of a variable are a close approximation to percentage changes. This transformation allows for a more meaningful comparison of fluctuations in variables that have different units or vastly different scales (e.g., comparing GDP in trillions of dollars to the unemployment rate in percent). It standardizes the measure of fluctuation. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q41">
+                <label><input type="radio" name="answer_q41" value="true" onchange="checkAnswer(41)"> True</label>
+                <label><input type="radio" name="answer_q41" value="false" onchange="checkAnswer(41)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q41"></div>
+        </div>
+
+        <!-- Question 43 -->
+        <div class="question-block" id="q42" data-answer="true">
+            <p class="question-text">43. The 'co-movement' of economic variables is a central feature of business cycles.</p>
+            <div class="explanation-content" style="display: none;">This is true. Business cycles are not just fluctuations in GDP, but are characterized by the fact that many aggregate macroeconomic variables (consumption, investment, employment, etc.) move together in a systematic, predictable way. The study of this co-movement (cyclicality, leads/lags) is the main purpose of documenting stylised facts. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q42">
+                <label><input type="radio" name="answer_q42" value="true" onchange="checkAnswer(42)"> True</label>
+                <label><input type="radio" name="answer_q42" value="false" onchange="checkAnswer(42)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q42"></div>
+        </div>
+
+        <!-- Question 44 -->
+        <div class="question-block" id="q43" data-answer="false">
+            <p class="question-text">44. The persistence of GDP's cyclical component is typically negative, meaning a boom is followed immediately by a slump.</p>
+            <div class="explanation-content" style="display: none;">This is false. The cyclical component of GDP exhibits strong positive persistence. The first-order autocorrelation is high and positive (e.g., > 0.8 for the US). This means that if GDP is above trend in one quarter, it is very likely to be above trend in the next quarter. Business cycles have momentum. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q43">
+                <label><input type="radio" name="answer_q43" value="true" onchange="checkAnswer(43)"> True</label>
+                <label><input type="radio" name="answer_q43" value="false" onchange="checkAnswer(43)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q43"></div>
+        </div>
+
+        <!-- Question 45 -->
+        <div class="question-block" id="q44" data-answer="true">
+            <p class="question-text">45. The term 'financial cycle' often refers to the co-movement in credit and asset prices.</p>
+            <div class="explanation-content" style="display: none;">This is true. While there is no single definition, the term 'financial cycle' is typically used to describe the co-movement, often self-reinforcing, between credit aggregates (like bank lending) and asset prices (like house prices or stock prices). These cycles are often longer and have larger amplitudes than traditional business cycles. (Source: Aksoy et al., "Financial cycles: What are they and what do they mean for business cycles?").</div>
+            <form name="form_q44">
+                <label><input type="radio" name="answer_q44" value="true" onchange="checkAnswer(44)"> True</label>
+                <label><input type="radio" name="answer_q44" value="false" onchange="checkAnswer(44)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q44"></div>
+        </div>
+
+        <!-- Question 46 -->
+        <div class="question-block" id="q45" data-answer="false">
+            <p class="question-text">46. The volatility of government transfers (like unemployment benefits) is procyclical.</p>
+            <div class="explanation-content" style="display: none;">This is false. Government transfers are strongly countercyclical. They act as 'automatic stabilizers'. During recessions, as unemployment rises, more people become eligible for unemployment benefits and other forms of social assistance, so government transfer payments automatically increase, cushioning the fall in household income. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q45">
+                <label><input type="radio" name="answer_q45" value="true" onchange="checkAnswer(45)"> True</label>
+                <label><input type="radio" name="answer_q45" value="false" onchange="checkAnswer(45)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q45"></div>
+        </div>
+
+        <!-- Question 47 -->
+        <div class="question-block" id="q46" data-answer="true">
+            <p class="question-text">47. The idea that monetary policy should focus on interest rates rather than monetary aggregates gained traction partly due to the instability of the money-income relationship.</p>
+            <div class="explanation-content" style="display: none;">This is true. The breakdown of the stable and predictable relationship between money and income in the 1980s, as documented by authors like Friedman and Kuttner, was a major reason for the practical shift by most central banks away from monetary targeting and towards using a short-term interest rate as the main instrument of policy. (Source: Friedman and Kuttner, "Money, Income, Prices, and Interest Rates").</div>
+            <form name="form_q46">
+                <label><input type="radio" name="answer_q46" value="true" onchange="checkAnswer(46)"> True</label>
+                <label><input type="radio" name="answer_q46" value="false" onchange="checkAnswer(46)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q46"></div>
+        </div>
+
+        <!-- Question 48 -->
+        <div class="question-block" id="q47" data-answer="false">
+            <p class="question-text">48. A 'unit root' in a time series implies that the series is stationary around a trend.</p>
+            <div class="explanation-content" style="display: none;">This is false. A unit root implies that the series is non-stationary (specifically, that it has a stochastic trend). Shocks to a unit root process have permanent effects, and the series wanders without a tendency to return to a deterministic long-run trend. A series that is stationary around a trend will always revert back to that trend line. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q47">
+                <label><input type="radio" name="answer_q47" value="true" onchange="checkAnswer(47)"> True</label>
+                <label><input type="radio" name="answer_q47" value="false" onchange="checkAnswer(47)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q47"></div>
+        </div>
+
+        <!-- Question 49 -->
+        <div class="question-block" id="q48" data-answer="true">
+            <p class="question-text">49. The cyclical behavior of macroeconomic variables can differ between fixed and flexible exchange rate regimes.</p>
+            <div class="explanation-content" style="display: none;">This is true. The exchange rate regime is a crucial part of the policy framework and can significantly influence business cycle characteristics. For example, under a fixed regime, a country gives up its ability to use independent monetary policy to stabilize its economy, which can affect the volatility and persistence of output and inflation. (Source: De Grauwe, "Exchange Rate Regimes and the Persistence of Inflation and Output").</div>
+            <form name="form_q48">
+                <label><input type="radio" name="answer_q48" value="true" onchange="checkAnswer(48)"> True</label>
+                <label><input type="radio" name="answer_q48" value="false" onchange="checkAnswer(48)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q48"></div>
+        </div>
+
+        <!-- Question 50 -->
+        <div class="question-block" id="q49" data-answer="false">
+            <p class="question-text">50. The stylised facts of business cycles are identical for all countries.</p>
+            <div class="explanation-content" style="display: none;">This is false. While there are broad similarities that justify the term 'business cycle' (e.g., investment is almost always more volatile than GDP), there are also important and systematic differences, particularly between developed and developing countries (e.g., GDP is more volatile, consumption is less smooth, and prices are more often procyclical in developing countries). (Source: Calderon & De Grauwe, "Financial Liberalization and Business Cycles").</div>
+            <form name="form_q49">
+                <label><input type="radio" name="answer_q49" value="true" onchange="checkAnswer(49)"> True</label>
+                <label><input type="radio" name="answer_q49" value="false" onchange="checkAnswer(49)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q49"></div>
+        </div>
+
+        <!-- Question 51 -->
+        <div class="question-block" id="q50" data-answer="true">
+            <p class="question-text">51. The 'intensive margin' of labor adjustment refers to changes in hours worked per employee.</p>
+            <div class="explanation-content" style="display: none;">This is true. The 'intensive margin' is about changing the intensity of use of existing factors, such as asking workers to work more or fewer hours (overtime vs. short-time). The 'extensive margin' refers to changing the number of factors, i.e., hiring or firing workers. Both margins are used over the business cycle. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q50">
+                <label><input type="radio" name="answer_q50" value="true" onchange="checkAnswer(50)"> True</label>
+                <label><input type="radio" name="answer_q50" value="false" onchange="checkAnswer(50)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q50"></div>
+        </div>
+
+        <!-- Question 52 -->
+        <div class="question-block" id="q51" data-answer="false">
+            <p class="question-text">52. The correlation between labor productivity and employment is strongly positive.</p>
+            <div class="explanation-content" style="display: none;">This is false. The correlation between labor productivity and employment (or hours) is a well-known puzzle. While both variables are procyclical, their contemporaneous correlation is often found to be close to zero or even negative in some studies for some countries. This is sometimes referred to as the 'productivity puzzle' and is a challenging fact for business cycle models to explain. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q51">
+                <label><input type="radio" name="answer_q51" value="true" onchange="checkAnswer(51)"> True</label>
+                <label><input type="radio" name="answer_q51" value="false" onchange="checkAnswer(51)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q51"></div>
+        </div>
+
+        <!-- Question 53 -->
+        <div class="question-block" id="q52" data-answer="true">
+            <p class="question-text">53. The term 'comovement' implies that variables move together, but not necessarily at the same time.</p>
+            <div class="explanation-content" style="display: none;">This is true. Comovement refers to the general tendency of variables to move together in a systematic way over the business cycle. The analysis of leads and lags using cross-correlations is specifically designed to understand the timing differences within this general pattern of comovement. For example, investment and consumption both co-move with GDP, but investment leads GDP while consumption is coincident. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q52">
+                <label><input type="radio" name="answer_q52" value="true" onchange="checkAnswer(52)"> True</label>
+                <label><input type="radio" name="answer_q52" value="false" onchange="checkAnswer(52)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q52"></div>
+        </div>
+
+        <!-- Question 54 -->
+        <div class="question-block" id="q53" data-answer="false">
+            <p class="question-text">54. The HP filter removes high-frequency fluctuations, leaving only the long-term trend.</p>
+            <div class="explanation-content" style="display: none;">This is false. The HP filter is a low-pass filter, meaning it separates the low-frequency component (the trend) from the higher-frequency component (the cycle). It doesn't just remove high-frequency noise; it specifically isolates the business cycle frequencies (typically fluctuations between 6 and 32 quarters) as the cyclical component, while the trend captures the even lower-frequency movements. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q53">
+                <label><input type="radio" name="answer_q53" value="true" onchange="checkAnswer(53)"> True</label>
+                <label><input type="radio" name="answer_q53" value="false" onchange="checkAnswer(53)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q53"></div>
+        </div>
+
+        <!-- Question 55 -->
+        <div class="question-block" id="q54" data-answer="true">
+            <p class="question-text">55. The stock market index is a procyclical and leading indicator of economic activity.</p>
+            <div class="explanation-content" style="display: none;">This is true. Stock prices are typically procyclical, rising in good economic times and falling in bad times. They are also a classic leading indicator, as stock market movements reflect the collective, forward-looking expectations of investors about future corporate profits and overall economic growth. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q54">
+                <label><input type="radio" name="answer_q54" value="true" onchange="checkAnswer(54)"> True</label>
+                <label><input type="radio" name="answer_q54" value="false" onchange="checkAnswer(54)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q54"></div>
+        </div>
+
+        <!-- Question 56 -->
+        <div class="question-block" id="q55" data-answer="false">
+            <p class="question-text">56. The volatility of consumption relative to GDP is roughly the same in emerging and developed economies.</p>
+            <div class="explanation-content" style="display: none;">This is false. Consumption tends to be more volatile relative to GDP in emerging economies than in developed ones. In developed economies, consumption is significantly smoother than GDP. In emerging economies, it is often as volatile as, or even more volatile than, GDP. This is sometimes linked to less developed financial markets and a reduced ability for households to smooth consumption against income shocks. (Source: Calderon & De Grauwe, "Financial Liberalization and Business Cycles").</div>
+            <form name="form_q55">
+                <label><input type="radio" name="answer_q55" value="true" onchange="checkAnswer(55)"> True</label>
+                <label><input type="radio" name="answer_q55" value="false" onchange="checkAnswer(55)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q55"></div>
+        </div>
+
+        <!-- Question 57 -->
+        <div class="question-block" id="q56" data-answer="true">
+            <p class="question-text">57. The 'spread' between the commercial paper rate and the Treasury bill rate is considered a useful leading indicator for economic activity.</p>
+            <div class="explanation-content" style="display: none;">This is true. This spread (often called the TED spread or a credit spread) is a measure of perceived credit risk and financial market stress. It tends to widen significantly before recessions as lenders become more risk-averse and demand a higher premium for lending to private firms compared to the government. Friedman and Kuttner (1992) highlight its superior predictive power compared to monetary aggregates in the later part of their sample. (Source: Friedman and Kuttner, "Money, Income, Prices, and Interest Rates").</div>
+            <form name="form_q56">
+                <label><input type="radio" name="answer_q56" value="true" onchange="checkAnswer(56)"> True</label>
+                <label><input type="radio" name="answer_q56" value="false" onchange="checkAnswer(56)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q56"></div>
+        </div>
+
+        <!-- Question 58 -->
+        <div class="question-block" id="q57" data-answer="false">
+            <p class="question-text">58. If a variable's cyclical component has a standard deviation of 1.5% and GDP's has a standard deviation of 2.0%, the variable is considered more volatile than GDP.</p>
+            <div class="explanation-content" style="display: none;">This is false. Volatility is measured directly by the standard deviation. Since the standard deviation of the variable (1.5%) is less than the standard deviation of GDP (2.0%), this variable is less volatile than GDP. Its relative volatility would be 1.5 / 2.0 = 0.75. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q57">
+                <label><input type="radio" name="answer_q57" value="true" onchange="checkAnswer(57)"> True</label>
+                <label><input type="radio" name="answer_q57" value="false" onchange="checkAnswer(57)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q57"></div>
+        </div>
+
+        <!-- Question 59 -->
+        <div class="question-block" id="q58" data-answer="true">
+            <p class="question-text">59. The cyclicality of inflation can depend on whether shocks to the economy are primarily from the demand side or the supply side.</p>
+            <div class="explanation-content" style="display: none;">This is true. This is a crucial point for understanding price behavior. A positive aggregate demand shock (e.g., a consumption boom) tends to be inflationary, pushing output and prices up together (procyclical prices). A positive aggregate supply shock (e.g., a technology improvement) can lower costs and prices while increasing output (countercyclical prices). The observed cyclicality of prices depends on the relative importance of these two types of shocks in a given period. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q58">
+                <label><input type="radio" name="answer_q58" value="true" onchange="checkAnswer(58)"> True</label>
+                <label><input type="radio" name="answer_q58" value="false" onchange="checkAnswer(58)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q58"></div>
+        </div>
+
+        <!-- Question 60 -->
+        <div class="question-block" id="q59" data-answer="false">
+            <p class="question-text">60. The fact that consumption is procyclical proves that consumption drives the business cycle.</p>
+            <div class="explanation-content" style="display: none;">This is false. This is another example of the 'correlation is not causation' fallacy. While consumption moves with the cycle, this fact alone does not tell us whether shocks to consumption are the primary cause of the cycle or whether consumption is simply responding to other shocks (like technology or investment shocks) that are the true drivers of the cycle. Most modern business cycle models view consumption as responding to, rather than causing, the cycle. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q59">
+                <label><input type="radio" name="answer_q59" value="true" onchange="checkAnswer(59)"> True</label>
+                <label><input type="radio" name="answer_q59" value="false" onchange="checkAnswer(59)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q59"></div>
+        </div>
+
+        <!-- Question 61 -->
+        <div class="question-block" id="q60" data-answer="true">
+            <p class="question-text">61. The duration of business cycles is variable and hard to predict.</p>
+            <div class="explanation-content" style="display: none;">This is true. A key feature of business cycles is their irregularity in both amplitude (depth) and duration (length). While statistical agencies like the NBER identify turning points, and we can calculate average durations, predicting the length of any specific expansion or recession in advance is notoriously difficult. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q60">
+                <label><input type="radio" name="answer_q60" value="true" onchange="checkAnswer(60)"> True</label>
+                <label><input type="radio" name="answer_q60" value="false" onchange="checkAnswer(60)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q60"></div>
+        </div>
+
+        <!-- Question 62 -->
+        <div class="question-block" id="q61" data-answer="false">
+            <p class="question-text">62. The 'extensive margin' of labor adjustment refers to firms changing the capital intensity of production.</p>
+            <div class="explanation-content" style="display: none;">This is false. The 'extensive margin' of labor adjustment refers to firms changing the number of workers they employ (i.e., hiring new workers or laying off existing ones). The 'intensive margin' refers to changing the hours worked by the existing workforce. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q61">
+                <label><input type="radio" name="answer_q61" value="true" onchange="checkAnswer(61)"> True</label>
+                <label><input type="radio" name="answer_q61" value="false" onchange="checkAnswer(61)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q61"></div>
+        </div>
+
+        <!-- Question 63 -->
+        <div class="question-block" id="q62" data-answer="true">
+            <p class="question-text">63. The fact that money is a leading variable for output is consistent with the view that monetary policy actions affect the economy with a lag.</p>
+            <div class="explanation-content" style="display: none;">This is true. This is a cornerstone of the traditional monetary view of business cycles. If changes in the money supply (or the central bank's policy interest rate) take time to work their way through the economy to influence aggregate demand and output, we would expect to see changes in monetary variables precede, or 'lead', changes in output. (Source: EC3115 Monetary Economics Unit F Lectures).</div>
+            <form name="form_q62">
+                <label><input type="radio" name="answer_q62" value="true" onchange="checkAnswer(62)"> True</label>
+                <label><input type="radio" name="answer_q62" value="false" onchange="checkAnswer(62)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q62"></div>
+        </div>
+
+        <!-- Question 64 -->
+        <div class="question-block" id="q63" data-answer="false">
+            <p class="question-text">64. The HP filter's main drawback is that it cannot be used on series that have a unit root.</p>
+            <div class="explanation-content" style="display: none;">This is false. On the contrary, the HP filter is specifically designed to be applied to non-stationary data, including series with a unit root (stochastic trends). A key drawback is the 'end-point problem', where the trend estimate is unreliable at the very beginning and end of a data sample because the filter lacks sufficient future or past data points for an accurate calculation. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q63">
+                <label><input type="radio" name="answer_q63" value="true" onchange="checkAnswer(63)"> True</label>
+                <label><input type="radio" name="answer_q63" value="false" onchange="checkAnswer(63)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q63"></div>
+        </div>
+
+        <!-- Question 65 -->
+        <div class="question-block" id="q64" data-answer="true">
+            <p class="question-text">65. The cyclical component of residential investment is more volatile than non-residential investment.</p>
+            <div class="explanation-content" style="display: none;">This is true. Residential investment (i.e., construction of new housing) is known to be extremely volatile and highly sensitive to interest rates. It is one of the most volatile components of GDP, and its fluctuations are typically larger in percentage terms than those of business fixed investment (non-residential structures and equipment). (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q64">
+                <label><input type="radio" name="answer_q64" value="true" onchange="checkAnswer(64)"> True</label>
+                <label><input type="radio" name="answer_q64" value="false" onchange="checkAnswer(64)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q64"></div>
+        </div>
+
+        <!-- Question 66 -->
+        <div class="question-block" id="q65" data-answer="false">
+            <p class="question-text">66. If a variable is procyclical, it must also be a leading indicator.</p>
+            <div class="explanation-content" style="display: none;">This is false. There is no necessary link between the two properties. Cyclicality (pro-, counter-, or a-cyclical) refers to the direction of co-movement with GDP. The lead/lag relationship refers to the timing of that co-movement. For example, consumption is procyclical and coincident, while employment is procyclical and lagging. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q65">
+                <label><input type="radio" name="answer_q65" value="true" onchange="checkAnswer(65)"> True</label>
+                <label><input type="radio" name="answer_q65" value="false" onchange="checkAnswer(65)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q65"></div>
+        </div>
+
+        <!-- Question 67 -->
+        <div class="question-block" id="q66" data-answer="true">
+            <p class="question-text">67. The 'stylised facts' of business cycles serve as a benchmark for evaluating the performance of macroeconomic models.</p>
+            <div class="explanation-content" style="display: none;">This is true. A primary goal of modern macroeconomics is to build theoretical models (like RBC or New Keynesian models) that can explain the empirical regularities we observe in the data. A model is considered successful if its simulated data can replicate the key business cycle facts (e.g., the relative volatility of consumption and investment, the cyclicality of employment, etc.). (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q66">
+                <label><input type="radio" name="answer_q66" value="true" onchange="checkAnswer(66)"> True</label>
+                <label><input type="radio" name="answer_q66" value="false" onchange="checkAnswer(66)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q66"></div>
+        </div>
+
+        <!-- Question 68 -->
+        <div class="question-block" id="q67" data-answer="false">
+            <p class="question-text">68. The volatility of real wages is greater than the volatility of hours worked.</p>
+            <div class="explanation-content" style="display: none;">This is false. A key stylised fact is that quantities are more volatile than prices in labor markets. Hours worked (quantity) are significantly more volatile than real wages (price). This implies that the labor supply curve is relatively elastic, and that the quantity of labor adjusts more over the business cycle than its price. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q67">
+                <label><input type="radio" name="answer_q67" value="true" onchange="checkAnswer(67)"> True</label>
+                <label><input type="radio" name="answer_q67" value="false" onchange="checkAnswer(67)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q67"></div>
+        </div>
+
+        <!-- Question 69 -->
+        <div class="question-block" id="q68" data-answer="true">
+            <p class="question-text">69. The persistence of inflation tends to be higher under fixed exchange rate regimes compared to flexible ones.</p>
+            <div class="explanation-content" style="display: none;">This is true. De Grauwe's research suggests that fixed exchange rate regimes can force a country to 'import' the monetary policy and inflation persistence of the anchor country. If the anchor country has persistent inflation, the pegging country will likely experience it too. Countries with flexible rates and independent monetary policy have more power to break inflation persistence. (Source: De Grauwe, "Exchange Rate Regimes and the Persistence of Inflation and Output").</div>
+            <form name="form_q68">
+                <label><input type="radio" name="answer_q68" value="true" onchange="checkAnswer(68)"> True</label>
+                <label><input type="radio" name="answer_q68" value="false" onchange="checkAnswer(68)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q68"></div>
+        </div>
+
+        <!-- Question 70 -->
+        <div class="question-block" id="q69" data-answer="false">
+            <p class="question-text">70. The existence of a 'financial cycle' implies that financial variables are always perfectly synchronised with the real business cycle.</p>
+            <div class="explanation-content" style="display: none;">This is false. A key finding in the literature is that financial cycles can have different frequencies and amplitudes than traditional business cycles (they are often longer and larger). While they are linked, a financial bust does not always coincide with a real recession, and vice versa. However, recessions that are accompanied by financial crises tend to be unusually deep and long-lasting. (Source: Aksoy et al., "Financial cycles: What are they and what do they mean for business cycles?").</div>
+            <form name="form_q69">
+                <label><input type="radio" name="answer_q69" value="true" onchange="checkAnswer(69)"> True</label>
+                <label><input type="radio" name="answer_q69" value="false" onchange="checkAnswer(69)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q69"></div>
+        </div>
+
+        <!-- Question 71 -->
+        <div class="question-block" id="q70" data-answer="true">
+            <p class="question-text">71. The 'end-point problem' of the HP filter refers to the unreliability of the trend estimate at the beginning and end of a data sample.</p>
+            <div class="explanation-content" style="display: none;">This is true. The HP filter is two-sided, meaning it uses past, present, and future data to determine the trend at any given point. At the end of the sample, there is no 'future' data available, so the estimate of the trend is less reliable and can change significantly as new data points are added. The same problem occurs at the start of the sample. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q70">
+                <label><input type="radio" name="answer_q70" value="true" onchange="checkAnswer(70)"> True</label>
+                <label><input type="radio" name="answer_q70" value="false" onchange="checkAnswer(70)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q70"></div>
+        </div>
+
+        <!-- Question 72 -->
+        <div class="question-block" id="q71" data-answer="false">
+            <p class="question-text">72. The cyclical component of capital stock is highly volatile.</p>
+            <div class="explanation-content" style="display: none;">This is false. The aggregate capital stock is a very large and slow-moving variable that is the accumulation of many years of investment. While investment (the flow that adds to capital) is very volatile, the capital stock itself is one of the least volatile variables over the business cycle. Its standard deviation is much smaller than that of GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q71">
+                <label><input type="radio" name="answer_q71" value="true" onchange="checkAnswer(71)"> True</label>
+                <label><input type="radio" name="answer_q71" value="false" onchange="checkAnswer(71)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q71"></div>
+        </div>
+
+        <!-- Question 73 -->
+        <div class="question-block" id="q72" data-answer="true">
+            <p class="question-text">73. The fact that investment is procyclical is consistent with firms being more willing to invest when they are optimistic about future demand.</p>
+            <div class="explanation-content" style="display: none;">This is true. During economic expansions, firms become more optimistic about future sales and profits. This increases the expected return on new capital, which in turn stimulates investment spending. This forward-looking behavior of firms is a key transmission mechanism in many business cycle models that helps explain the strong procyclicality of investment. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q72">
+                <label><input type="radio" name="answer_q72" value="true" onchange="checkAnswer(72)"> True</label>
+                <label><input type="radio" name="answer_q72" value="false" onchange="checkAnswer(72)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q72"></div>
+        </div>
+
+        <!-- Question 74 -->
+        <div class="question-block" id="q73" data-answer="false">
+            <p class="question-text">74. A first-difference filter is a type of low-pass filter, similar to the HP filter.</p>
+            <div class="explanation-content" style="display: none;">This is false. First-differencing (calculating \(Y_t - Y_{t-1}\)) is a high-pass filter. It removes the low-frequency trend (or unit root) and emphasizes the high-frequency, period-to-period changes. The HP filter, by contrast, is a low-pass filter for the trend and a band-pass filter for the cycle, designed to isolate fluctuations at typical business cycle frequencies. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q73">
+                <label><input type="radio" name="answer_q73" value="true" onchange="checkAnswer(73)"> True</label>
+                <label><input type="radio" name="answer_q73" value="false" onchange="checkAnswer(73)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q73"></div>
+        </div>
+
+        <!-- Question 75 -->
+        <div class="question-block" id="q74" data-answer="true">
+            <p class="question-text">75. The procyclicality of labor productivity could be explained by labor hoarding by firms.</p>
+            <div class="explanation-content" style="display: none;">This is true. Labor hoarding, where firms are reluctant to fire skilled workers during a temporary downturn due to hiring and training costs, can explain procyclical productivity. In a downturn, firms keep workers on but they are under-utilized, lowering output per worker. In an upturn, these same workers can increase their effort and output without a corresponding increase in hiring, thus raising measured productivity. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q74">
+                <label><input type="radio" name="answer_q74" value="true" onchange="checkAnswer(74)"> True</label>
+                <label><input type="radio" name="answer_q74" value="false" onchange="checkAnswer(74)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q74"></div>
+        </div>
+
+        <!-- Question 76 -->
+        <div class="question-block" id="q75" data-answer="false">
+            <p class="question-text">76. The 'business cycle' and the 'trade cycle' are completely unrelated concepts.</p>
+            <div class="explanation-content" style="display: none;">This is false. The terms are often used interchangeably, particularly in older literature. 'Business cycle' is the more modern and general term for fluctuations in aggregate economic activity. 'Trade cycle' is an older term that arose from the study of cycles in trade and commerce. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q75">
+                <label><input type="radio" name="answer_q75" value="true" onchange="checkAnswer(75)"> True</label>
+                <label><input type="radio" name="answer_q75" value="false" onchange="checkAnswer(75)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q75"></div>
+        </div>
+
+        <!-- Question 77 -->
+        <div class="question-block" id="q76" data-answer="true">
+            <p class="question-text">77. The relative volatility of a variable is its standard deviation divided by the standard deviation of GDP.</p>
+            <div class="explanation-content" style="display: none;">This is true. This ratio is a standard way to normalize volatility and make it comparable across different datasets and countries. A value greater than 1 means the variable is more volatile than GDP (e.g., investment); a value less than 1 means it is less volatile, or smoother, than GDP (e.g., consumption). (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q76">
+                <label><input type="radio" name="answer_q76" value="true" onchange="checkAnswer(76)"> True</label>
+                <label><input type="radio" name="answer_q76" value="false" onchange="checkAnswer(76)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q76"></div>
+        </div>
+
+        <!-- Question 78 -->
+        <div class="question-block" id="q77" data-answer="false">
+            <p class="question-text">78. The finding that consumption is smoother than income contradicts the Permanent Income Hypothesis.</p>
+            <div class="explanation-content" style="display: none;">This is false. The opposite is true. The Permanent Income Hypothesis, developed by Milton Friedman, predicts that forward-looking consumers will base their consumption on their long-run expected ('permanent') income, and will use saving and borrowing to smooth consumption in the face of temporary income shocks. The stylised fact that consumption is less volatile than GDP is key evidence in favor of this theory. (Source: Williamson, Macroeconomics, Ch 8).</div>
+            <form name="form_q77">
+                <label><input type="radio" name="answer_q77" value="true" onchange="checkAnswer(77)"> True</label>
+                <label><input type="radio" name="answer_q77" value="false" onchange="checkAnswer(77)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q77"></div>
+        </div>
+
+        <!-- Question 79 -->
+        <div class="question-block" id="q78" data-answer="true">
+            <p class="question-text">79. The cyclical properties of real variables can be influenced by nominal price and wage rigidities.</p>
+            <div class="explanation-content" style="display: none;">This is true. This is a central tenet of New Keynesian economics. If prices and wages are 'sticky' and do not adjust instantly to shocks, then nominal shocks (like unexpected changes in the money supply or monetary policy) can have real effects on output and employment. This provides a channel through which monetary policy can influence the business cycle, in contrast to Real Business Cycle models where money is neutral. (Source: EC3115 Monetary Economics Unit F Lectures).</div>
+            <form name="form_q78">
+                <label><input type="radio" name="answer_q78" value="true" onchange="checkAnswer(78)"> True</label>
+                <label><input type="radio" name="answer_q78" value="false" onchange="checkAnswer(78)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q78"></div>
+        </div>
+
+        <!-- Question 80 -->
+        <div class="question-block" id="q79" data-answer="false">
+            <p class="question-text">80. The unemployment rate is a lagging indicator because it is very difficult to measure in real time.</p>
+            <div class="explanation-content" style="display: none;">This is false. The unemployment rate is considered a lagging indicator, but the reason is related to business behavior, not measurement issues. Firms are often slow to hire new workers at the start of a recovery until they are confident it will last, and they are also reluctant to fire workers at the start of a recession. This makes the turning points in unemployment happen after the turning points in GDP. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q79">
+                <label><input type="radio" name="answer_q79" value="true" onchange="checkAnswer(79)"> True</label>
+                <label><input type="radio" name="answer_q79" value="false" onchange="checkAnswer(79)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q79"></div>
+        </div>
+
+        <!-- Question 81 -->
+        <div class="question-block" id="q80" data-answer="true">
+            <p class="question-text">81. The term 'business cycle asymmetry' refers to the idea that expansions might be different from contractions (e.g., longer or slower).</p>
+            <div class="explanation-content" style="display: none;">This is true. Some research suggests that business cycles are asymmetric. A common finding is that contractions (recessions) are sharper and shorter, while expansions are longer and more gradual. This is sometimes summarized as 'economies take the stairs up and the elevator down'. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q80">
+                <label><input type="radio" name="answer_q80" value="true" onchange="checkAnswer(80)"> True</label>
+                <label><input type="radio" name="answer_q80" value="false" onchange="checkAnswer(80)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q80"></div>
+        </div>
+
+        <!-- Question 82 -->
+        <div class="question-block" id="q81" data-answer="false">
+            <p class="question-text">82. The 'Goodwin cycle' describes the co-movement of investment and consumption.</p>
+            <div class="explanation-content" style="display: none;">This is false. The Goodwin model (1967) is a famous early model of endogenous cycles that describes a predator-prey-like relationship between the employment rate and the workers' share of national income. High employment erodes profits, which reduces investment and employment, which in turn restores profits, starting the cycle again. It is not about investment and consumption directly. (Source: General macroeconomic knowledge).</div>
+            <form name="form_q81">
+                <label><input type="radio" name="answer_q81" value="true" onchange="checkAnswer(81)"> True</label>
+                <label><input type="radio" name="answer_q81" value="false" onchange="checkAnswer(81)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q81"></div>
+        </div>
+
+        <!-- Question 83 -->
+        <div class="question-block" id="q82" data-answer="true">
+            <p class="question-text">83. The international synchronization of business cycles has generally increased over time with globalization.</p>
+            <div class="explanation-content" style="display: none;">This is true. A common finding in the international macroeconomics literature is that as countries become more integrated through trade and financial links (i.e., globalization), their business cycles tend to become more synchronized. A boom or bust in a large economy like the US is more likely to be transmitted to its trading and financial partners. (Source: Aksoy et al., "Financial cycles: What are they and what do they mean for business cycles?").</div>
+            <form name="form_q82">
+                <label><input type="radio" name="answer_q82" value="true" onchange="checkAnswer(82)"> True</label>
+                <label><input type="radio" name="answer_q82" value="false" onchange="checkAnswer(82)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q82"></div>
+        </div>
+
+        <!-- Question 84 -->
+        <div class="question-block" id="q83" data-answer="false">
+            <p class="question-text">84. The primary purpose of calculating business cycle statistics is to forecast the exact timing of the next recession.</p>
+            <div class="explanation-content" style="display: none;">This is false. The purpose is not to forecast specific turning points, which is extremely difficult, but to provide a systematic, quantitative summary of the characteristics of economic fluctuations. These summary statistics, the 'stylised facts', are then used to guide the development of macroeconomic theory and to evaluate the performance of macroeconomic models. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q83">
+                <label><input type="radio" name="answer_q83" value="true" onchange="checkAnswer(83)"> True</label>
+                <label><input type="radio" name="answer_q83" value="false" onchange="checkAnswer(83)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q83"></div>
+        </div>
+
+        <!-- Question 85 -->
+        <div class="question-block" id="q84" data-answer="true">
+            <p class="question-text">85. The cyclical component of tax revenues is procyclical.</p>
+            <div class="explanation-content" style="display: none;">This is true. Tax revenues are procyclical. During an expansion, incomes, profits, and consumption rise, leading to higher collections from income taxes, corporate taxes, and sales taxes. During a recession, tax revenues fall. This procyclicality of tax revenues makes them an 'automatic stabilizer'. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q84">
+                <label><input type="radio" name="answer_q84" value="true" onchange="checkAnswer(84)"> True</label>
+                <label><input type="radio" name="answer_q84" value="false" onchange="checkAnswer(84)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q84"></div>
+        </div>
+
+        <!-- Question 86 -->
+        <div class="question-block" id="q85" data-answer="false">
+            <p class="question-text">86. If a variable's cross-correlation with GDP peaks at k = -2, the variable is a lagging indicator.</p>
+            <div class="explanation-content" style="display: none;">This is false. A peak at a negative lag (k = -2) means the variable's correlation with GDP is highest when the variable is lagged by -2 periods, i.e., when the variable is two periods ahead of GDP. This means the variable moves *before* GDP, so it is a leading indicator. A lagging indicator would have its peak correlation at a positive lag (k > 0). (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q85">
+                <label><input type="radio" name="answer_q85" value="true" onchange="checkAnswer(85)"> True</label>
+                <label><input type="radio" name="answer_q85" value="false" onchange="checkAnswer(85)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q85"></div>
+        </div>
+
+        <!-- Question 87 -->
+        <div class="question-block" id="q86" data-answer="true">
+            <p class="question-text">87. The 'credit-to-GDP gap' is a measure sometimes used to signal the build-up of financial cycle risks.</p>
+            <div class="explanation-content" style="display: none;">This is true. The credit-to-GDP gap, which measures the deviation of the private credit-to-GDP ratio from its long-term trend, is a key indicator used by the Bank for International Settlements (BIS) and other regulators. A positive and growing gap is seen as an early warning indicator of a potential build-up of systemic financial risk. (Source: Aksoy et al., "Financial cycles: What are they and what do they mean for business cycles?").</div>
+            <form name="form_q86">
+                <label><input type="radio" name="answer_q86" value="true" onchange="checkAnswer(86)"> True</label>
+                <label><input type="radio" name="answer_q86" value="false" onchange="checkAnswer(86)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q86"></div>
+        </div>
+
+        <!-- Question 88 -->
+        <div class="question-block" id="q87" data-answer="false">
+            <p class="question-text">88. Real Business Cycle (RBC) theory argues that the primary source of business cycles is unexpected changes in monetary policy.</p>
+            <div class="explanation-content" style="display: none;">This is false. RBC theory, pioneered by Kydland and Prescott, argues that the primary source of business cycles is real shocks, particularly shocks to total factor productivity (technology). In its purest form, RBC theory assumes money is neutral and has no effect on real variables, so monetary policy cannot be a source of fluctuations. (Source: Williamson, Macroeconomics, Ch 5).</div>
+            <form name="form_q87">
+                <label><input type="radio" name="answer_q87" value="true" onchange="checkAnswer(87)"> True</label>
+                <label><input type="radio" name="answer_q87" value="false" onchange="checkAnswer(87)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q87"></div>
+        </div>
+
+        <!-- Question 89 -->
+        <div class="question-block" id="q88" data-answer="true">
+            <p class="question-text">89. The volatility of durable goods consumption is higher than that of non-durable goods consumption.</p>
+            <div class="explanation-content" style="display: none;">This is true. Consumption of durable goods (like cars, furniture, and appliances) is much more volatile and procyclical than consumption of non-durables (like food and clothing) and services. Purchases of durables are more like investment decisions for households and can be easily postponed during bad economic times, leading to high volatility. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q88">
+                <label><input type="radio" name="answer_q88" value="true" onchange="checkAnswer(88)"> True</label>
+                <label><input type="radio" name="answer_q88" value="false" onchange="checkAnswer(88)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q88"></div>
+        </div>
+
+        <!-- Question 90 -->
+        <div class="question-block" id="q89" data-answer="false">
+            <p class="question-text">90. The 'Phillips Curve' describes a positive relationship between unemployment and inflation.</p>
+            <div class="explanation-content" style="display: none;">This is false. The traditional Phillips Curve, based on the work of A.W. Phillips, describes a stable negative (inverse) relationship between the unemployment rate and the rate of wage inflation (and by extension, price inflation). High unemployment is associated with low inflation, and vice versa. (Source: Williamson, Macroeconomics, Ch 16).</div>
+            <form name="form_q89">
+                <label><input type="radio" name="answer_q89" value="true" onchange="checkAnswer(89)"> True</label>
+                <label><input type="radio" name="answer_q89" value="false" onchange="checkAnswer(89)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q89"></div>
+        </div>
+
+        <!-- Question 91 -->
+        <div class="question-block" id="q90" data-answer="true">
+            <p class="question-text">91. The choice of a base year for calculating real GDP can affect growth rates but does not fundamentally alter the stylised facts of business cycles.</p>
+            <div class="explanation-content" style="display: none;">This is true. While the choice of base year affects the measured level of real GDP, the cyclical patterns (which are measured in percentage deviations from trend and correlations) are largely insensitive to this choice. Modern statistical agencies now use chain-weighting to minimize base-year effects, but the core stylised facts are robust to these measurement details. (Source: General macroeconomic knowledge).</div>
+            <form name="form_q90">
+                <label><input type="radio" name="answer_q90" value="true" onchange="checkAnswer(90)"> True</label>
+                <label><input type="radio" name="answer_q90" value="false" onchange="checkAnswer(90)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q90"></div>
+        </div>
+
+        <!-- Question 92 -->
+        <div class="question-block" id="q91" data-answer="false">
+            <p class="question-text">92. The term 'seasonal adjustment' is another name for the Hodrick-Prescott filter.</p>
+            <div class="explanation-content" style="display: none;">This is false. Seasonal adjustment is a separate, preliminary statistical procedure applied to data to remove predictable fluctuations related to the time of year (e.g., the spike in retail sales before Christmas, the fall in construction in winter). Business cycle analysis, including the use of the HP filter, is performed on seasonally adjusted data. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q91">
+                <label><input type="radio" name="answer_q91" value="true" onchange="checkAnswer(91)"> True</label>
+                <label><input type="radio" name="answer_q91" value="false" onchange="checkAnswer(91)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q91"></div>
+        </div>
+
+        <!-- Question 93 -->
+        <div class="question-block" id="q92" data-answer="true">
+            <p class="question-text">93. The procyclicality of employment is a key reason why the unemployment rate is countercyclical.</p>
+            <div class="explanation-content" style="display: none;">This is true. The two facts are mechanically linked. When the economy expands (procyclical GDP), firms hire more workers, so employment rises (procyclical employment). By definition, if more people are employed out of a given labor force, the number of people unemployed falls, causing the unemployment rate to be countercyclical. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q92">
+                <label><input type="radio" name="answer_q92" value="true" onchange="checkAnswer(92)"> True</label>
+                <label><input type="radio" name="answer_q92" value="false" onchange="checkAnswer(92)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q92"></div>
+        </div>
+
+        <!-- Question 94 -->
+        <div class="question-block" id="q93" data-answer="false">
+            <p class="question-text">94. The stylised facts of business cycles imply that all recessions are caused by the same type of shock.</p>
+            <div class="explanation-content" style="display: none;">This is false. The stylised facts are average patterns observed over many business cycle episodes. Individual recessions can have very different primary causes, such as oil price shocks (1970s), tight monetary policy to fight inflation (early 1980s), financial crises (2008), or global pandemics (2020). The facts represent the common features of the economy's response across these varied events. (Source: EC3115 Monetary Economics Unit F Lectures).</div>
+            <form name="form_q93">
+                <label><input type="radio" name="answer_q93" value="true" onchange="checkAnswer(93)"> True</label>
+                <label><input type="radio" name="answer_q93" value="false" onchange="checkAnswer(93)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q93"></div>
+        </div>
+
+        <!-- Question 95 -->
+        <div class="question-block" id="q94" data-answer="true">
+            <p class="question-text">95. The term 'output gap' is conceptually similar to the cyclical component of GDP obtained from a detrending procedure.</p>
+            <div class="explanation-content" style="display: none;">This is true. The output gap is typically defined as the percentage deviation of actual GDP from 'potential' GDP. This is conceptually the same as the cyclical component derived from filtering, where 'potential GDP' is represented by the estimated long-run trend (e.g., the HP trend). Both are measures of how far the economy is operating above or below its sustainable long-run capacity. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q94">
+                <label><input type="radio" name="answer_q94" value="true" onchange="checkAnswer(94)"> True</label>
+                <label><input type="radio" name="answer_q94" value="false" onchange="checkAnswer(94)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q94"></div>
+        </div>
+
+        <!-- Question 96 -->
+        <div class="question-block" id="q95" data-answer="false">
+            <p class="question-text">96. The volatility of exports is typically much lower than the volatility of imports.</p>
+            <div class="explanation-content" style="display: none;">This is false. Both exports and imports are quite volatile, typically more so than GDP. The relative volatility can vary by country and time period, depending on factors like the exchange rate regime and the types of goods traded. There is no general rule that exports are significantly less volatile than imports. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q95">
+                <label><input type="radio" name="answer_q95" value="true" onchange="checkAnswer(95)"> True</label>
+                <label><input type="radio" name="answer_q95" value="false" onchange="checkAnswer(95)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q95"></div>
+        </div>
+
+        <!-- Question 97 -->
+        <div class="question-block" id="q96" data-answer="true">
+            <p class="question-text">97. The fact that many macroeconomic variables move together suggests the existence of a common, aggregate driving force.</p>
+            <div class="explanation-content" style="display: none;">This is true. The widespread comovement observed in the data is the primary reason economists believe in the concept of an aggregate 'business cycle' driven by one or more common shocks. If fluctuations in different sectors of the economy were all independent, we would not expect to see such strong and predictable patterns of comovement in the aggregate data. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q96">
+                <label><input type="radio" name="answer_q96" value="true" onchange="checkAnswer(96)"> True</label>
+                <label><input type="radio" name="answer_q96" value="false" onchange="checkAnswer(96)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q96"></div>
+        </div>
+
+        <!-- Question 98 -->
+        <div class="question-block" id="q97" data-answer="false">
+            <p class="question-text">98. The 'persistence' of a series is high if its autocorrelation is close to zero.</p>
+            <div class="explanation-content" style="display: none;">This is false. High persistence means the series has a long memory, so its current value is highly correlated with its past values. This corresponds to a first-order autocorrelation coefficient that is positive and close to 1. An autocorrelation close to zero implies no persistence; the series is close to a random walk. (Source: EC3115 Subject Guide, Ch 6).</div>
+            <form name="form_q97">
+                <label><input type="radio" name="answer_q97" value="true" onchange="checkAnswer(97)"> True</label>
+                <label><input type="radio" name="answer_q97" value="false" onchange="checkAnswer(97)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q97"></div>
+        </div>
+
+        <!-- Question 99 -->
+        <div class="question-block" id="q98" data-answer="true">
+            <p class="question-text">99. The countercyclical behavior of the price level in the post-war US could be attributed to the prevalence of aggregate supply shocks.</p>
+            <div class="explanation-content" style="display: none;">This is true. This is a crucial point for understanding price behavior. A positive aggregate demand shock (e.g., a consumption boom) tends to be inflationary, pushing output and prices up together (procyclical prices). A positive aggregate supply shock (e.g., a technology improvement) can lower costs and prices while increasing output (countercyclical prices). The observed cyclicality of prices depends on the relative importance of these two types of shocks in a given period. (Source: Williamson, Macroeconomics, Ch 3).</div>
+            <form name="form_q98">
+                <label><input type="radio" name="answer_q98" value="true" onchange="checkAnswer(98)"> True</label>
+                <label><input type="radio" name="answer_q98" value="false" onchange="checkAnswer(98)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q98"></div>
+        </div>
+
+        <!-- Question 100 -->
+        <div class="question-block" id="q99" data-answer="false">
+            <p class="question-text">100. The stylised facts of business cycles imply that investment is highly volatile implies that policies aimed at stabilizing investment would eliminate the business cycle.</p>
+            <div class="explanation-content" style="display: none;">This is false. While investment volatility is a key feature and a major contributor to business cycles, it is not the only feature. Other shocks (to consumption, government spending, technology) and propagation mechanisms are also at play. Therefore, completely stabilizing investment, even if possible, would likely dampen the business cycle significantly, but it would not necessarily eliminate it entirely. (Source: General macroeconomic understanding).</div>
+            <form name="form_q99">
+                <label><input type="radio" name="answer_q99" value="true" onchange="checkAnswer(99)"> True</label>
+                <label><input type="radio" name="answer_q99" value="false" onchange="checkAnswer(99)"> False</label>
+            </form>
+            <div class="explanation" id="exp_q99"></div>
+        </div>
+
+    </div>
+    <button id="clear-storage" onclick="clearAnswers()">Clear Answers and Restart</button>
+
+    <script>
+        function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        }
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function clearAnswers() {
+            setCookie('quizAnswers_static', '', -1);
+            location.reload();
+        }
+
+        let userAnswers = JSON.parse(getCookie('quizAnswers_static') || '{}');
+        const questionBlocks = document.querySelectorAll('.question-block');
+
+        function updateProgress() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const totalCount = questionBlocks.length;
+            const progress = totalCount > 0 ? (answeredCount / totalCount) * 100 : 0;
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = `${progress}%`;
+            progressBar.textContent = `${Math.round(progress)}%`;
+        }
+
+        function checkAnswer(index) {
+            const questionBlock = document.getElementById(`q${index}`);
+            const form = questionBlock.querySelector('form');
+            const userAnswerNode = form.querySelector(`input[name="answer_q${index}"]:checked`);
+
+            if (!userAnswerNode) {
+                // This case is now unlikely as the function is triggered by a selection
+                return;
+            }
+            const userAnswer = userAnswerNode.value;
+            
+            const correctAnswer = questionBlock.getAttribute('data-answer');
+            const explanationDiv = document.getElementById(`exp_q${index}`);
+            const explanationContent = questionBlock.querySelector('.explanation-content').innerHTML;
+
+            // Only save cookie if the answer is not already stored
+            if (userAnswers[index] !== userAnswer) {
+                userAnswers[index] = userAnswer;
+                setCookie('quizAnswers_static', JSON.stringify(userAnswers), 7);
+                updateProgress();
+            }
+
+            let resultText = '';
+            if (userAnswer === correctAnswer) {
+                explanationDiv.className = 'explanation correct';
+                resultText = '<strong>Correct!</strong> ';
+            } else {
+                explanationDiv.className = 'explanation incorrect';
+                resultText = `<strong>Incorrect.</strong> The correct answer is ${correctAnswer}. `;
+            }
+
+            explanationDiv.innerHTML = `<p>${resultText}</p><p>${explanationContent}</p>`;
+            explanationDiv.style.display = 'block';
+            // Re-render LaTeX if MathJax is used in the explanation
+            if (window.MathJax) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, explanationDiv]);
+            }
+        }
+
+        // On page load, restore state
+        window.onload = function() {
+            Object.keys(userAnswers).forEach(index => {
+                const questionBlock = document.getElementById(`q${index}`);
+                if (!questionBlock) return;
+
+                const form = document.forms[`form_q${index}`];
+                const userAnswer = userAnswers[index];
+                
+                if (form && userAnswer) {
+                    const radio = form.querySelector(`input[value="${userAnswer}"]`);
+                    if(radio) {
+                        radio.checked = true;
+                        // Call checkAnswer to show the explanation for restored answers
+                        checkAnswer(parseInt(index));
+                    }
+                }
+            });
+            updateProgress();
+        };
+
+    </script>
+
+</body>
+</html>

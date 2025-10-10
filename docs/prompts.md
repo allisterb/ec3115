@@ -88,7 +88,7 @@ Generate a set of 50 multiple-choice quiz questions to help me prepare for my EC
  ````
   
  ````
- You are a university lecturer on monetary economics. R@ec3115/SubjectGuide/EC3115\ -\ Ch\ 8\ Classical\ models\ and\ monetary\ policy-1.pdf and @ec3115/Books/mccallum-pages-1.pdf   and @ec3115/Books/mccallum-pages-2.pdf and @ec3115/Books/hargreaves-pages-1.pdf and @ec3115/Papers/plosser.pdf and @ec3115/Papers/long.pdf  and @ec3115/Papers/kydland1.pdf. 
+ You are a university lecturer on monetary economics. Read the PDF files @ec3115/SubjectGuide/EC3115\ -\ Ch\ 8\ Classical\ models\ and\ monetary\ policy-1.pdf and @ec3115/Books/mccallum-pages-1.pdf   and @ec3115/Books/mccallum-pages-2.pdf and @ec3115/Books/hargreaves-pages-1.pdf and @ec3115/Papers/plosser.pdf and @ec3115/Papers/long.pdf  and @ec3115/Papers/kydland1.pdf. 
  Generate a set of 100 flashcards to help me prepare for my EC3115 exam on the subject of "Classical models and monetary policy". The questions should cover the following topics:  
  * describe how, in the classical economy, output is determined by the factor markets  
  * describe and discuss the effects of monetary policy, with reference to the effects of  
@@ -102,4 +102,22 @@ Generate a set of 50 multiple-choice quiz questions to help me prepare for my EC
  Allow the user to flip a card by either pressing a button or clicking on the card itself. 
  Each flashcard answer should be as detailed as possible and include the sources used to generate the answer. 
  Save the flashcards to the file ec3115\ch8-flashcards-1.html
+ ````
+ 
+ ````
+ You are a university lecturer on monetary economics. Read the PDF files @ec3115/SubjectGuide/EC3115\Ch6.pdf and @ec3115/SubjectGuide/LectureSlides\F.pdf and @ec3115/Books/williamson-pages-1.pdf and @ec3115/Papers/askoy.pdf and @ec3115/Papers/calderon.pdf and @ec3115/Papers/degrauwe.pdf and @ec3115/Papers/friedman.pdf  and @ec3115/Papers/kuttner.pdf. 
+ Generate a set of 100 flashcards to help me prepare for my EC3115 exam on the subject of "Stylised facts". The questions should cover the following topics:  
+* describe trends versus business cycles
+* calculate the means, volatility, cyclicality and persistence of business cycle
+* components of macro-variables
+* list key business cycle stylised facts
+* discuss the relevance of monetary aggregates and short-term interest rates as potential policy instruments.
+ 
+The flashcards should be an interactive HTML page and display as a slideshow moving left-to-right. 
+Each flashcard answer should be as detailed as possible and include the sources used to generate the answer. 
+Use LaTeX and the MathJax library for math equations. 
+LaTeX equations in cards should render inline. 
+The flashcard questions and answers should be stored statically using HTML elements, not as JavaScript strings or HTML attribute values. 
+Allow the user to flip a card by either pressing a button or clicking on the card itself. 
+Use cookies to store the user's progress through the flashcards.
  ````
