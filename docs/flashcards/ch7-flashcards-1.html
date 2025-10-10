@@ -1631,7 +1631,38 @@
     </div>
 
     <script>
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
         let slideIndex = 1;
+        // Read cookie before showing slides
+        const slidesForLength = document.getElementsByClassName("flashcard-slide");
+        const savedPosition = getCookie('flashcard_ch7_position');
+        if (savedPosition) {
+            let savedIndex = parseInt(savedPosition, 10);
+            if (!isNaN(savedIndex) && savedIndex > 0 && savedIndex <= slidesForLength.length) {
+                slideIndex = savedIndex;
+            }
+        }
+
         showSlides(slideIndex);
 
         function plusSlides(n) {
@@ -1660,6 +1691,9 @@
 
             slides[slideIndex - 1].style.display = "block";
             
+            // Save progress in cookie
+            setCookie('flashcard_ch7_position', slideIndex, 7);
+
             // Update progress text
             const progressText = document.getElementById("progress-text");
             if(progressText) {

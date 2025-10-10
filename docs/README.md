@@ -3,7 +3,8 @@
 This site contains study materials for the EC3115 Monetary Economics course.
 
 *   [Flashcards](./flashcards/)
-    *   [The Supply of Money and Monetary Standards](./flashcards/ch4-flashcards.html)
+    *   [The Supply of Money and Monetary Standards 1](./flashcards/ch4-flashcards-1.html)
+	*   [The Supply of Money and Monetary Standards 2](./flashcards/ch4-flashcards-2.html)
 	*   [Classical Theory](./flashcards/ch5-flashcards-1.html)
     *   [Money, Inflation and Welfare](./flashcards/ch7-flashcards-1.html)
 	*   [Classical Models and Monetary Policy](./flashcards/ch8-flashcards-1.html)

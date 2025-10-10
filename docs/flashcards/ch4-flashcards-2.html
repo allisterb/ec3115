@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Money Supply Flashcards</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+
+        }
+        .slide {
+            display: none;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+        .card {
+            position: relative;
+            width: 100%;
+            min-height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .card-face-back {
+            transform: rotateY(180deg);
+        }
+        .question, .answer {
+            text-align: center;
+        }
+        .answer {
+           font-size: 0.9em;
+        }
+        .source {
+            font-style: italic;
+            font-size: 0.8em;
+            color: #555;
+            margin-top: 20px;
+        }
+        .navigation {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .navigation button {
+            min-width: 150px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .slide-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>EC3115 - Money Supply & Monetary Standards</h1>
+
+    <div class="slideshow-container">
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">1 / 100</div>
+                    <div class="question"><strong>Q:</strong> What are the three main roles of financial intermediaries?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">1 / 100</div>
+                    <div class="answer"><strong>A:</strong> Financial intermediaries perform three main functions: <br>1. They alleviate market imperfections caused by economies of scale in transactions and in information gathering and portfolio management. <br>2. They provide insurance services. <br>3. They reconcile the differing holding period preferences of savers and lenders, a process known as maturity transformation.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 104, 113.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">2 / 100</div>
+                    <div class="question"><strong>Q:</strong> Why is maturity transformation a crucial function of financial intermediaries like banks?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">2 / 100</div>
+                    <div class="answer"><strong>A:</strong> Maturity transformation is vital because savers (lenders) generally prefer to keep their assets in liquid, short-term forms for transaction and precautionary purposes. In contrast, borrowers (e.g., firms financing investment projects) prefer to issue long-term liabilities to match the expected life of their investments. Banks bridge this gap by accepting short-term deposits and providing long-term loans, transforming maturities to meet the divergent needs of both parties.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 105; EC3115 - Ch 4 Supply of money.pdf, p. 3.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">3 / 100</div>
+                    <div class="question"><strong>Q:</strong> On a commercial bank's balance sheet, on which side do customer deposits appear, and on which side do loans made by the bank appear? Explain why.</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">3 / 100</div>
+                    <div class="answer"><strong>A:</strong> Deposits appear on the <strong>liabilities</strong> side of a bank's balance sheet. This is because deposits represent money that the bank owes to its customers. <br>Loans appear on the <strong>assets</strong> side. This is because loans are money that is owed <em>to</em> the bank by its borrowers, representing a future stream of income for the bank.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 4.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">4 / 100</div>
+                    <div class="question"><strong>Q:</strong> Explain the fundamental reason why a bank's balance sheet must always balance.</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">4 / 100</div>
+                    <div class="answer"><strong>A:</strong> A balance sheet is an accounting identity. It must balance by definition because the value of a bank's assets (what it owns and what is owed to it) must equal the sum of its liabilities (what it owes to others) and its own net worth (or equity capital). The equation is: Assets = Liabilities + Net Worth. Any change on one side must be met with an equal change on the other.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 4; McCallum, B. T. Monetary Economics, p. 57.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">5 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the monetary base (or high-powered money), and what are its components?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">5 / 100</div>
+                    <div class="answer"><strong>A:</strong> The monetary base (H), also known as high-powered money, consists of the total liabilities of the central bank. It is comprised of two main components: <br>1. Currency in circulation (C): Notes and coins held by the non-bank public. <br>2. Total Reserves (R): These are the commercial banks' holdings of vault cash plus their deposits at the central bank.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 5; McCallum, B. T. Monetary Economics, p. 56.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">6 / 100</div>
+                    <div class="question"><strong>Q:</strong> How can a central bank increase the money supply by changing the monetary base through an open market operation?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">6 / 100</div>
+                    <div class="answer"><strong>A:</strong> A central bank can increase the monetary base by conducting an open market purchase. It buys government bonds from commercial banks in the open market. The central bank pays for these bonds by crediting the reserve accounts of the commercial banks. This action directly increases the reserves (R) of the banking system, and therefore increases the monetary base (H = C + R). With more reserves, banks can create more loans and deposits, expanding the overall money supply through the money multiplier effect.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slides 8-10.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">7 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the money multiplier and what is its basic formula?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">7 / 100</div>
+                    <div class="answer"><strong>A:</strong> The money multiplier (m) describes the relationship between the total money supply (M) and the monetary base (H). It shows how much the money supply changes for a given change in the monetary base. The formula is: \(M = m \times H\). The size of the multiplier is determined by the currency-deposit ratio and the reserve-deposit ratio.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 56; EC3115 - Ch 4 Supply of money.pdf, p. 4.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">8 / 100</div>
+                    <div class="question"><strong>Q:</strong> Explain the concept of a mandatory reserve ratio. How does imposing or increasing this ratio affect the money supply?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">8 / 100</div>
+                    <div class="answer"><strong>A:</strong> A mandatory reserve ratio (r*) is a regulation set by the central bank that requires commercial banks to hold a certain fraction of their deposit liabilities as reserves, which cannot be lent out. Imposing or increasing the reserve ratio reduces the amount of excess reserves a bank has available for lending. This restricts the bank's capacity to create new loans and deposits. As a result, the money multiplier decreases, and for any given monetary base, the total money supply contracts.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 8; Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 34.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">9 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'currency-deposit ratio' (cr) and how does an increase in it affect the money multiplier?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">9 / 100</div>
+                    <div class="answer"><strong>A:</strong> The currency-deposit ratio (cr = C/D) is the ratio of currency held by the public (C) to the amount of checkable deposits they hold in banks (D). It reflects the public's preference for holding cash versus deposits. When the public decides to hold more currency (an increase in cr), less money is deposited in the banking system. This reduces the amount of reserves available for banks to lend out, thereby shrinking the base for multiple deposit creation. A higher currency-deposit ratio leads to a smaller money multiplier.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 57; EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 31.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">10 / 100</div>
+                    <div class="question"><strong>Q:</strong> Derive the money multiplier, m, in terms of the currency-deposit ratio (cr) and the reserve-deposit ratio (rr).</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">10 / 100</div>
+                    <div class="answer"><strong>A:</strong> We start with the definitions: <br>Money Supply: \(M = C + D\) <br>Monetary Base: \(H = C + R\) <br>Let \(cr = C/D\) and \(rr = R/D\). <br>Divide M by H: \(m = \frac{M}{H} = \frac{C+D}{C+R}\) <br>Divide the numerator and denominator by D: \(m = \frac{C/D + D/D}{C/D + R/D} = \frac{cr + 1}{cr + rr}\)</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 56.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">11 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'fiat money' standard?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">11 / 100</div>
+                    <div class="answer"><strong>A:</strong> A fiat money system is one where the money (e.g., paper notes, coins) is not convertible by law into anything other than itself and has no fixed value in terms of any objective standard or commodity. Its value comes from the social convention of being generally accepted for payments and its status as legal tender, ultimately resting on the trust that the issuing authority (the central bank) will manage its supply to maintain its purchasing power.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 27, 43.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">12 / 100</div>
+                    <div class="question"><strong>Q:</strong> Contrast a fiat money standard with a commodity money standard, such as the gold standard.</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">12 / 100</div>
+                    <div class="answer"><strong>A:</strong> Under a commodity money standard, the monetary unit has a value tied to a specific commodity, like gold. The currency is convertible into a specified amount of that commodity, which anchors its value. Under a fiat money standard, the currency has no intrinsic value and is not convertible into any commodity. Its value is based on trust and legal decree. The supply of commodity money is constrained by the physical availability of the commodity, while the supply of fiat money is controlled by the monetary authority.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 23; Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 29.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">13 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the primary role of a financial intermediary in an economy?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">13 / 100</div>
+                    <div class="answer"><strong>A:</strong> The primary role of a financial intermediary is to channel funds from surplus units (savers) to deficit units (borrowers). They do this by accepting deposits from savers and making loans to borrowers, transforming the nature of the assets and liabilities to make them more suitable for each party.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 3.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">14 / 100</div>
+                    <div class="question"><strong>Q:</strong> How do financial intermediaries create value through 'economies of scale'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">14 / 100</div>
+                    <div class="answer"><strong>A:</strong> Financial intermediaries achieve economies of scale in two main ways: <br>1. <strong>Transaction Costs:</strong> By pooling the small savings of many individuals, they can make large loans, which is more efficient than many small individuals trying to lend directly. <br>2. <strong>Information Costs:</strong> They specialize in assessing the creditworthiness of borrowers, a task that would be costly and difficult for individual savers to perform. This specialization reduces the overall cost of information gathering in the economy.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 107; EC3115 - Ch 4 Supply of money.pdf, p. 3.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">15 / 100</div>
+                    <div class="question"><strong>Q:</strong> Explain how banks provide 'insurance' to depositors.</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">15 / 100</div>
+                    <div class="answer"><strong>A:</strong> Banks provide insurance to depositors by guaranteeing a rate of return on their deposits, even if some of the loans the bank makes to borrowers turn out to be bad and are defaulted on. The bank absorbs the default risk, which would otherwise be borne entirely by the individual saver if they lent directly to the borrower. This service reduces the risk for depositors and provides them with a higher level of utility.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 114; EC3115 - Ch 4 Supply of money.pdf, p. 3.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">16 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'reserve-deposit ratio' (rr) and what determines its size?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">16 / 100</div>
+                    <div class="answer"><strong>A:</strong> The reserve-deposit ratio (rr = R/D) is the fraction of deposits that banks hold as reserves (R). It is determined by two factors: <br>1. <strong>Regulatory Requirements:</strong> The central bank often mandates a minimum required reserve ratio. <br>2. <strong>Bank Policy:</strong> Banks may choose to hold excess reserves above the required minimum for precautionary reasons, to manage liquidity and ensure they can meet unexpected withdrawals. The level of excess reserves is typically an inverse function of the interest rate, as holding reserves has an opportunity cost (forgone interest on loans).</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 58; EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 12.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">17 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'classical dichotomy'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">17 / 100</div>
+                    <div class="answer"><strong>A:</strong> The classical dichotomy is the theoretical separation between the real and monetary sides of the economy. In this view, real variables (like output, employment, and relative prices) are determined purely by real factors (like technology, resource endowments, and preferences). Monetary variables (like the money supply) are thought to only influence nominal variables (like the absolute price level), but have no effect on real outcomes. This concept implies the neutrality of money.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 63; EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 62.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">18 / 100</div>
+                    <div class="question"><strong>Q:</strong> How did Patinkin challenge the logical consistency of the classical dichotomy?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">18 / 100</div>
+                    <div class="answer"><strong>A:</strong> Patinkin argued the classical dichotomy was logically inconsistent. He pointed out a contradiction: <br>1. According to Walras's Law in classical models, demand functions, including the demand for money, should depend only on relative prices. <br>2. According to the Quantity Theory of Money, the demand for money depends on the absolute price level. <br>To resolve this, Patinkin introduced the 'Real Balance Effect', where individuals' real money balances (M/P) are an argument in their demand functions for goods, thus building a bridge between the monetary and real sectors.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 73-74; EC3115 - Monetary Economics Unit E Lectures.pdf, Slides 63-65.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">19 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the Real Balance Effect?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">19 / 100</div>
+                    <div class="answer"><strong>A:</strong> The Real Balance Effect, proposed by Don Patinkin, states that the real value of money balances (M/P) held by the public is a component of their wealth. Therefore, a change in the price level (P) alters real wealth, which in turn affects households' spending decisions (demand for goods). For example, a fall in the price level increases real balances, making people feel wealthier and causing them to increase their consumption spending.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 78; EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 65.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">20 / 100</div>
+                    <div class="question"><strong>Q:</strong> Under a gold standard, what is the 'mint par of exchange'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">20 / 100</div>
+                    <div class="answer"><strong>A:</strong> The mint par of exchange is the exchange rate between two currencies that is determined by the ratio of their legally defined gold content. For example, if the pound sterling was defined as 113 grains of gold and the US dollar as 23.22 grains of gold, the mint par of exchange would be 113 / 23.22 = $4.8665 per £1.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 35.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">21 / 100</div>
+                    <div class="question"><strong>Q:</strong> What are 'gold points' in the context of the gold standard?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">21 / 100</div>
+                    <div class="answer"><strong>A:</strong> 'Gold points' refer to the narrow range within which the market exchange rate could fluctuate around the mint par. The 'gold export point' is the exchange rate at which it becomes cheaper to settle a foreign debt by physically shipping gold rather than buying foreign currency. The 'gold import point' is the rate at which it becomes profitable to convert foreign currency into gold and ship it home. These points are determined by the mint par plus or minus the costs of transporting gold (freight, insurance, interest forgone).</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 36.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">22 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'fractional reserve banking'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">22 / 100</div>
+                    <div class="answer"><strong>A:</strong> Fractional reserve banking is a system in which commercial banks are required to hold only a fraction (a percentage) of their deposit liabilities in the form of liquid reserves (either as vault cash or as deposits with the central bank). The remaining portion of the deposits can be lent out. This system allows banks to create money by making new loans.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 11.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">23 / 100</div>
+                    <div class="question"><strong>Q:</strong> Describe the process of multiple deposit creation in a fractional reserve banking system.</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">23 / 100</div>
+                    <div class="answer"><strong>A:</strong> When the central bank injects new reserves into the banking system (e.g., via an open market purchase), the initial bank receiving the reserves now has excess reserves. It lends out these excess reserves. The borrower spends the money, and the recipient deposits it in a second bank. This second bank now has increased deposits and reserves, and it too lends out its new excess reserves. This process of re-lending and re-depositing continues from bank to bank, with each round creating new deposits, leading to a total expansion of deposits that is a multiple of the initial injection of reserves.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slides 13-18.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">24 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'simple deposit multiplier' and what is its formula?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">24 / 100</div>
+                    <div class="answer"><strong>A:</strong> The simple deposit multiplier shows the maximum amount of new deposits that can be created by the banking system from an initial increase in reserves, assuming the public holds no currency. It is the reciprocal of the required reserve ratio (r). <br>Formula: \(\Delta D = \frac{1}{r} \times \Delta R\) <br>Where \(\Delta D\) is the total change in deposits and \(\Delta R\) is the change in reserves.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 21.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">25 / 100</div>
+                    <div class="question"><strong>Q:</strong> Why is the actual money multiplier smaller than the simple deposit multiplier?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">25 / 100</div>
+                    <div class="answer"><strong>A:</strong> The actual money multiplier is smaller because the simple deposit multiplier makes two simplifying assumptions: <br>1. It assumes banks hold no excess reserves. <br>2. It assumes the public holds no currency (i.e., all money is held as deposits). <br>In reality, both banks holding excess reserves and the public holding currency act as 'leaks' from the multiple deposit creation process, reducing the size of the multiplier.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 27.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">26 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'gold exchange standard'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">26 / 100</div>
+                    <div class="answer"><strong>A:</strong> A gold exchange standard is a monetary system where a country's currency is not directly convertible into gold for its own citizens, but the monetary authority maintains convertibility for other central banks or governments into a foreign currency that is itself convertible into gold. The US dollar under the Bretton Woods system served this role, making it a gold exchange standard for other member countries.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 28, 35.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">27 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'bimetallism'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">27 / 100</div>
+                    <div class="answer"><strong>A:</strong> Bimetallism is a monetary standard where the monetary unit is defined in terms of, and freely convertible into, two different metals, typically gold and silver, at a legally fixed ratio of values. This system was prone to instability due to Gresham's Law.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 28, 31.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">28 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is Gresham's Law and how did it affect bimetallic standards?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">28 / 100</div>
+                    <div class="answer"><strong>A:</strong> Gresham's Law is the principle that 'bad money drives out good'. In a bimetallic system, if the legally fixed mint ratio of gold to silver differs from the market ratio, one metal will be overvalued at the mint and the other undervalued. The undervalued metal ('good money') will be hoarded, melted down, or exported, disappearing from circulation. The overvalued metal ('bad money') will be the one predominantly used for transactions. This often caused bimetallic systems to degenerate into de facto monometallic (gold or silver) standards.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 31.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">29 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'transmission mechanism' of monetary policy?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">29 / 100</div>
+                    <div class="answer"><strong>A:</strong> The transmission mechanism of monetary policy describes the channels through which policy actions taken by the central bank (e.g., changing the monetary base or interest rates) affect the broader economy, ultimately influencing aggregate demand, output, employment, and the price level.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 112.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">30 / 100</div>
+                    <div class="question"><strong>Q:</strong> In the context of monetary policy, what is the difference between an 'instrument' and a 'target'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">30 / 100</div>
+                    <div class="answer"><strong>A:</strong> An 'instrument' is a variable that the central bank can control directly or very closely, such as the monetary base or a short-term interest rate (like the central bank's policy rate). A 'target' is the ultimate goal variable that the central bank wishes to influence, such as the inflation rate or the level of unemployment. Central banks use their instruments to try and achieve their targets.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 112.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">31 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is an 'intermediate target' in monetary policy?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">31 / 100</div>
+                    <div class="answer"><strong>A:</strong> An intermediate target is a variable that is not directly controlled by the central bank but is closely linked to its ultimate policy goals and is responsive to its instruments. Examples include the money supply (like M2 or M3) or the exchange rate. The idea is that by hitting a target for the intermediate variable, the central bank can achieve its ultimate goal for inflation or output.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 112.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">32 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'Goodhart's Law'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">32 / 100</div>
+                    <div class="answer"><strong>A:</strong> Goodhart's Law, named after economist Charles Goodhart, states that 'Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.' In the context of monetary policy, it means that when a central bank tries to control an economic variable (like a particular monetary aggregate) that was previously a reliable indicator, the relationship between that indicator and the ultimate policy goal will break down because economic agents will change their behaviour in response to the new policy regime.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 116.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">33 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'symmetallism' as proposed by Alfred Marshall?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">33 / 100</div>
+                    <div class="answer"><strong>A:</strong> Symmetallism was a monetary standard proposed by Alfred Marshall as an alternative to bimetallism. The monetary unit would be defined as a physical combination of gold and silver (e.g., a bar containing one ounce of gold and fifteen ounces of silver). Unlike bimetallism, the relative price of gold and silver would be free to vary. The goal was to create a more stable price level by broadening the commodity base of the currency.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 33.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">34 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'tabular standard' or 'compensated dollar' as proposed by Irving Fisher?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">34 / 100</div>
+                    <div class="answer"><strong>A:</strong> A tabular standard, or 'compensated dollar', was a proposal by Irving Fisher to achieve price stability. The idea was to have a dollar that was convertible into gold, but the gold content of the dollar would be adjusted periodically to offset changes in the general price level. If a price index rose, the gold content of the dollar would be increased (making the dollar more valuable) to bring the price level back down, and vice versa.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 33.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">35 / 100</div>
+                    <div class="question"><strong>Q:</strong> What are the resource costs associated with a commodity money standard like the gold standard?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">35 / 100</div>
+                    <div class="answer"><strong>A:</strong> The primary resource cost is that a valuable commodity, which could be used for consumption or production (e.g., gold for jewelry or industrial uses), is instead tied up to serve as money. This involves the real costs of mining, refining, and storing the commodity. As Sir Roy Harrod noted, it involves digging gold out of the ground only to rebury it in central bank vaults.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 34.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">36 / 100</div>
+                    <div class="question"><strong>Q:</strong> How does a fractional reserve system help to reduce the resource costs of a commodity money standard?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">36 / 100</div>
+                    <div class="answer"><strong>A:</strong> A fractional reserve system allows the total money supply (including bank deposits) to be a multiple of the actual commodity money (e.g., gold) held in reserve. By creating credit money (banknotes and deposits) on top of a smaller base of commodity money, the system economizes on the amount of the valuable commodity that needs to be held for monetary purposes, thus reducing the overall resource cost to society.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 34.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">37 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'wholesale banking' and how does it differ from 'retail banking'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">37 / 100</div>
+                    <div class="answer"><strong>A:</strong> Wholesale banking involves transactions in large denominations with a small number of large customers (e.g., corporations, other banks). Retail banking involves a large number of small individual accounts (households and small firms). A key theoretical difference is that retail banks can use the law of large numbers to predict deposit withdrawals and determine reserve holdings, a principle that is not applicable to the large, lumpy transactions in wholesale banking.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 34-35.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">38 / 100</div>
+                    <div class="question"><strong>Q:</strong> In wholesale banking, what is meant by 'riding the yield curve'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">38 / 100</div>
+                    <div class="answer"><strong>A:</strong> 'Riding the yield curve' is a strategy used by wholesale banks to profit from the term structure of interest rates. If the yield curve is upward sloping (long-term interest rates are higher than short-term rates), a bank can borrow funds at short-term rates and lend them out at longer-term rates. This positive maturity transformation creates a profitable interest rate differential, or spread, for the bank.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 36.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">39 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'direct' method of monetary control?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">39 / 100</div>
+                    <div class="answer"><strong>A:</strong> Direct methods of monetary control involve regulations that directly constrain the balance sheets of banks. Examples include imposing ceilings on bank lending, setting mandatory reserve requirements, or using special deposit schemes (like the UK's 'corset'). These methods often act as a tax on banking intermediation.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 42, 44.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">40 / 100</div>
+                    <div class="question"><strong>Q:</strong> What was the 'corset' (Supplementary Special Deposits scheme) in the UK?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">40 / 100</div>
+                    <div class="answer"><strong>A:</strong> The 'corset' was a direct monetary control used in the UK. It imposed a progressive penalty (in the form of non-interest-bearing special deposits at the Bank of England) on banks whose interest-bearing eligible liabilities (IBELs) grew faster than a predetermined allowable rate. It was designed to make it costly for banks to bid for wholesale deposits to fund lending, thereby restraining credit and money growth.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 46.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">41 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'disintermediation' in the context of direct monetary controls?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">41 / 100</div>
+                    <div class="answer"><strong>A:</strong> Disintermediation is the process whereby financial flows are diverted away from traditional intermediaries (like banks) and into other channels. Direct controls like the 'corset' encouraged this by making bank intermediation more costly. For example, instead of a company borrowing from a bank, the bank might arrange for the company to issue a commercial bill which is then sold directly to a non-bank lender, bypassing the bank's balance sheet. This is also known as 're-routing' of credit.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 47.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">42 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'credit counterparts' approach to analyzing the money supply?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">42 / 100</div>
+                    <div class="answer"><strong>A:</strong> The credit counterparts approach, derived from national flow-of-funds accounts, breaks down the change in the money supply into its sources. It expresses the change in money (e.g., M3) as the sum of: the Public Sector Borrowing Requirement (PSBR), minus sales of public debt to the non-bank private sector, plus bank lending to the private sector, plus/minus external flows, and other counterparts. It highlights the links between fiscal policy, bank lending, and money growth.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 50-52.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">43 / 100</div>
+                    <div class="question"><strong>Q:</strong> According to the credit counterparts identity, what was the primary 'driving force' behind the growth of the broad money supply (£M3) in the UK during the 1980s?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">43 / 100</div>
+                    <div class="answer"><strong>A:</strong> In terms of proximate determinants, the main driving force behind the growth of £M3 during most of the 1980s was a significant expansion in bank lending to the private sector. This often occurred even when the Public Sector Borrowing Requirement (PSBR) was low or negative.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 54.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">44 / 100</div>
+                    <div class="question"><strong>Q:</strong> Why might bank lending be unresponsive (inelastic) to increases in interest rates, particularly in the short run?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">44 / 100</div>
+                    <div class="answer"><strong>A:</strong> Bank lending can be inelastic to interest rate rises for several reasons: <br>1. <strong>Distress Borrowing:</strong> Firms facing rising costs (wages, materials) may be forced to borrow more to maintain operations, regardless of the interest rate. <br>2. <strong>Low Real Rates:</strong> If nominal interest rates are high but inflation is also high, the real interest rate (adjusted for inflation) may still be low, providing little disincentive to borrow. <br>3. <strong>Precautionary Borrowing:</strong> Firms may borrow in anticipation of future credit restrictions, fearing it will be harder to get loans later.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 54, 57.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">45 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'monetary base control'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">45 / 100</div>
+                    <div class="answer"><strong>A:</strong> Monetary base control is a framework for monetary policy where the central bank focuses on controlling the quantity of the monetary base (high-powered money) as its primary instrument. The idea is that by controlling the base, and given a reasonably stable money multiplier, the central bank can achieve its desired target for the broader money supply. This contrasts with a system where the central bank's primary instrument is a short-term interest rate.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 58.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">46 / 100</div>
+                    <div class="question"><strong>Q:</strong> What are the three sources of base money available to commercial banks?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">46 / 100</div>
+                    <div class="answer"><strong>A:</strong> The three sources from which commercial banks can obtain base money are: <br>1. The non-bank private sector (by inducing them to hold fewer notes and coins). <br>2. The overseas sector (by borrowing from abroad and exchanging for domestic currency). <br>3. The monetary authorities (the central bank), which acts as the ultimate source of supply.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 58.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">47 / 100</div>
+                    <div class="question"><strong>Q:</strong> In what sense are monetary base control and interest rate control considered 'policy duals'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">47 / 100</div>
+                    <div class="answer"><strong>A:</strong> They are considered 'duals' because, in a simple framework, choosing a quantity (the monetary base) implies a resulting price (the interest rate), and choosing a price (the interest rate) implies a resulting quantity (the monetary base). If the long-run demand function for base money is stable, setting one should be equivalent to setting the other. However, the two regimes are different in practice because they imply different behaviors and responses to shocks from the central bank and private sector.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 59.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">48 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a key practical difference between a regime of monetary base control and one of interest rate control?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">48 / 100</div>
+                    <div class="answer"><strong>A:</strong> A key difference is the degree of discretion and the number of factors considered by the central bank. Under interest rate control, the central bank is inclined to take many factors (e.g., political pressure, current economic data) into account when setting the rate. A monetary base control regime is seen as a way of forcing the authorities to be less discretionary and to focus solely on the quantity of base money, thereby purging the interest rate reaction function of other arguments.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 59.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">49 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'liability management' in banking?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">49 / 100</div>
+                    <div class="answer"><strong>A:</strong> Liability management is the practice by which banks, when they need more reserves, actively bid for funds in the wholesale money markets (e.g., the interbank market) to support their lending, rather than selling off assets. This practice is possible in modern financial systems where central banks typically accommodate the system's demand for reserves at a price (the policy interest rate) to ensure financial stability.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 59.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">50 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'unit of account' function of money?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">50 / 100</div>
+                    <div class="answer"><strong>A:</strong> The unit of account function of money is its role as the common measure in which the values of goods, services, and debts are expressed and compared. It provides a common language of value, which simplifies economic calculations and facilitates rational decision-making.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 6.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">51 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'medium of exchange' function of money?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">51 / 100</div>
+                    <div class="answer"><strong>A:</strong> The medium of exchange function is money's role as the asset that is generally accepted as payment for goods and services or in the settlement of debts. This function avoids the inefficiencies of a barter system, where a 'double coincidence of wants' is required for a trade to occur.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 8.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">52 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'store of value' function of money?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">52 / 100</div>
+                    <div class="answer"><strong>A:</strong> The store of value function is money's ability to hold its value over time, allowing purchasing power to be transferred from the present to the future. While money serves this function, it is often an imperfect store of value, especially during periods of inflation. Many other assets, such as bonds, stocks, and real estate, also serve as stores of value, often more effectively.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 11.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">53 / 100</div>
+                    <div class="question"><strong>Q:</strong> Why is the 'medium of exchange' considered the most distinctive function of money?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">53 / 100</div>
+                    <div class="answer"><strong>A:</strong> It is the most distinctive function because it is unique to money. While many assets can serve as a store of value, and artificial constructs can serve as a unit of account, only money is generally accepted as the medium for finalizing transactions. This role is what separates money from other financial assets.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 18.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">54 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'money market'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">54 / 100</div>
+                    <div class="answer"><strong>A:</strong> The term 'money market' is somewhat of a misnomer. It does not refer to a market for money itself, but rather to the market for short-term debt securities, such as Treasury bills, commercial paper, and interbank loans. It is a crucial part of the financial system where liquidity is traded.</div>
+                    <div class="source">Source: Artis, M.J. and Lewis, M.K. Monetary Policy in Britain, p. 49.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">55 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'goods standard' for a monetary system?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">55 / 100</div>
+                    <div class="answer"><strong>A:</strong> A 'goods standard' is a monetary system where the quantity of money is regulated with reference to the prices of a selected group of goods, rather than to a commodity like gold. The goal is to maintain the stability of the internal value of money in terms of its purchasing power over goods and services.</div>
+                    <div class="source">Source: Artis, M.J. and Lewis, M.K. Monetary Policy in Britain, p. 50.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">56 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'fiduciary' money?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">56 / 100</div>
+                    <div class="answer"><strong>A:</strong> Fiduciary money is money that is not backed by a physical commodity but is accepted as a medium of exchange based on the trust of the holders and the issuing authority. Banknotes and bank deposits are forms of fiduciary money, as their value relies on the confidence that the bank can honor its obligation to pay.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 34.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">57 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'law of one price' and how does it relate to monetary theory?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">57 / 100</div>
+                    <div class="answer"><strong>A:</strong> The Law of One Price states that in the absence of trade barriers and transaction costs, identical goods will sell for the same price in different markets when expressed in a common currency. In monetary theory, it implies that competition will tend to equalize the prices of traded goods internationally, linking domestic prices to foreign prices and the exchange rate. It is a key component of the purchasing power parity theory.</div>
+                    <div class="source">Source: Artis, M.J. and Lewis, M.K. Monetary Policy in Britain, p. 63.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">58 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'asset approach' to exchange rate determination?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">58 / 100</div>
+                    <div class="answer"><strong>A:</strong> The asset approach views the exchange rate as a relative asset price, determined in financial markets by the supply and demand for assets denominated in different currencies. This approach emphasizes the role of expectations, interest rates, and capital flows, in contrast to older theories that focused primarily on trade flows.</div>
+                    <div class="source">Source: Artis, M.J. and Lewis, M.K. Monetary Policy in Britain, p. 49; Laidler, D.E.W. Taking money seriously and other essays, p. 120.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">59 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'buffer stock' model of money demand?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">59 / 100</div>
+                    <div class="answer"><strong>A:</strong> A buffer stock model of money demand views money holdings as a 'buffer' that absorbs short-term shocks and discrepancies between income and expenditure. In this view, individuals do not continuously adjust their money holdings to a desired target level but tolerate deviations within certain upper and lower bounds. This approach helps explain why money holdings can deviate systematically from their long-run demand function in the short run.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 81, 104.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">60 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'repurchase agreement' or 'repo'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">60 / 100</div>
+                    <div class="answer"><strong>A:</strong> A repurchase agreement (repo) is a form of short-term borrowing, mainly in government securities. The dealer sells the government securities to investors, usually on an overnight basis, and buys them back the following day at a slightly higher price. For the party selling the security (and agreeing to repurchase it in the future) it is a repo; for the party on the other end of the transaction (buying the security and agreeing to sell in the future) it is a reverse repurchase agreement.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 97.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">61 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'seigniorage'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">61 / 100</div>
+                    <div class="answer"><strong>A:</strong> Seigniorage is the profit that a government or monetary authority makes from issuing currency. It arises from the difference between the face value of a coin or note and its cost of production. In a broader sense, it can also refer to the real resources a government gains by printing money to finance expenditure, which imposes an 'inflation tax' on the holders of money.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 177.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">62 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'inflation tax'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">62 / 100</div>
+                    <div class="answer"><strong>A:</strong> The inflation tax is not a literal tax but the loss in the real value of money holdings due to inflation. When a government prints money to finance its spending, it increases the money supply, which leads to a rise in the price level. This inflation erodes the purchasing power of the money held by the public, which is equivalent to a tax on holding money.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 177.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">63 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'monetarist superneutrality'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">63 / 100</div>
+                    <div class="answer"><strong>A:</strong> Monetarist superneutrality is the proposition that real economic outcomes (like output and the real interest rate) are independent of the *rate of change* of the money supply, not just its level. This implies that a steady, predictable rate of inflation (caused by a steady rate of money growth) will have no long-run effects on real variables.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 19.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">64 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'legal tender'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">64 / 100</div>
+                    <div class="answer"><strong>A:</strong> Legal tender is any form of money that a government has declared to be legally valid for the settlement of debts. A creditor is legally obligated to accept legal tender in payment of a debt. However, this does not force private parties to accept it in new transactions. Its main role is to provide a default means of settling contracts denominated in the currency.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 24.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">65 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'pyramid of credit'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">65 / 100</div>
+                    <div class="answer"><strong>A:</strong> The 'pyramid of credit' is a concept describing the hierarchical structure of the financial system. At the base is high-powered money issued by the central bank. On top of this base, clearing banks create deposits. On top of that, other non-bank financial intermediaries hold deposits with the clearing banks as their reserves and create their own liabilities. This layering creates a pyramid of credit and debt relationships.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 34.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">66 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'monetary neutrality'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">66 / 100</div>
+                    <div class="answer"><strong>A:</strong> Monetary neutrality is the idea that a one-time change in the stock of money affects only nominal variables, such as the price level, but does not affect real variables like real output, employment, or real interest rates. In essence, if the money supply doubles, the only long-run effect will be a doubling of all prices.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 18.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">67 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'term structure of interest rates' (or yield curve)?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">67 / 100</div>
+                    <div class="answer"><strong>A:</strong> The term structure of interest rates, often visualized as the yield curve, shows the relationship between the interest rates (or yields) and the time to maturity of debt securities of the same credit quality. An upward-sloping yield curve indicates that long-term rates are higher than short-term rates.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 36.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">68 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'credit spread'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">68 / 100</div>
+                    <div class="answer"><strong>A:</strong> A credit spread is the difference between the interest rate a bank charges on loans and the interest rate it pays on deposits. This spread is the bank's gross profit margin for its service of intermediation.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 3.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">69 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'inside money' versus 'outside money'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">69 / 100</div>
+                    <div class="answer"><strong>A:</strong> 'Outside money' (or high-powered money) is a net asset for the private sector, as it is a liability of the government/central bank. 'Inside money' is created by the private banking system (e.g., commercial bank deposits) and is not net wealth for the private sector, as each deposit liability of a bank is matched by a loan asset.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 2.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">70 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'bank run'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">70 / 100</div>
+                    <div class="answer"><strong>A:</strong> A bank run is a situation where a large number of a bank's depositors, fearing the bank may become insolvent, simultaneously attempt to withdraw their funds. Because banks operate on a fractional reserve basis and engage in maturity transformation (holding illiquid long-term assets against liquid short-term liabilities), they cannot satisfy all withdrawal requests at once, leading to the bank's failure even if it was originally solvent.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 115.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">71 / 100</div>
+                    <div class="question"><strong>Q:</strong> How does deposit insurance help prevent bank runs?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">71 / 100</div>
+                    <div class="answer"><strong>A:</strong> Deposit insurance, typically provided by a government agency, guarantees that depositors will receive their money back up to a certain limit, even if their bank fails. This removes the incentive for depositors to rush to withdraw their funds at the first sign of trouble, thereby reducing the likelihood of a bank run and promoting financial stability.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 115.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">72 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'lender of last resort'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">72 / 100</div>
+                    <div class="answer"><strong>A:</strong> A lender of last resort, typically the central bank, provides liquidity to solvent but illiquid financial institutions that are unable to obtain funding from the market during a financial crisis. This function is crucial for preventing the failure of sound institutions and stopping a liquidity crisis from turning into a solvency crisis that could destabilize the entire financial system.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 58.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">73 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'monetary standard'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">73 / 100</div>
+                    <div class="answer"><strong>A:</strong> A monetary standard is the ultimate reference point or criterion that guides a country's monetary arrangements. It is the ultimate asset that combines the functions of a standard of value and a means of payment, providing the anchor for the entire monetary system (e.g., gold in the gold standard, or the commitment to price stability in a modern fiat system).</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 27.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">74 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'free banking'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">74 / 100</div>
+                    <div class="answer"><strong>A:</strong> Free banking is a monetary arrangement where there is no central bank and commercial banks are free to issue their own paper currency (banknotes) and deposits, subject only to general banking laws and the requirement to redeem their liabilities for some base money on demand. Scotland in the first half of the 19th century is a historical example.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 26.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">75 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'currency board'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">75 / 100</div>
+                    <div class="answer"><strong>A:</strong> A currency board is a monetary arrangement where a country's currency is required to be backed 100% by foreign reserve assets of a specific anchor currency, to which it is pegged at a fixed exchange rate. The currency board has no discretionary monetary policy powers; the domestic money supply can only change in response to flows in the balance of payments.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 389.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">76 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'dollarization'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">76 / 100</div>
+                    <div class="answer"><strong>A:</strong> Dollarization is the process where a foreign currency, typically the US dollar, replaces a country's domestic currency, serving as the unit of account, medium of exchange, and store of value. This often occurs unofficially in countries with a history of high inflation and currency instability, as citizens lose faith in their own money.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 29.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">77 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'Quantity Theory of Money' in its simplest form?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">77 / 100</div>
+                    <div class="answer"><strong>A:</strong> The Quantity Theory of Money posits a direct, proportional relationship between the quantity of money in an economy and the general level of prices. In its equation of exchange form, it is expressed as \(MV = PY\), where M is the money supply, V is the velocity of money, P is the price level, and Y is real output. Assuming V and Y are stable or predictable, changes in M lead directly to proportional changes in P.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 59.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">78 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'velocity of money'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">78 / 100</div>
+                    <div class="answer"><strong>A:</strong> The velocity of money (V) is a measure of the rate at which money is exchanged in an economy. It represents the average number of times a unit of money is used to purchase final goods and services during a given period. It is calculated as the ratio of nominal GDP (PY) to the money supply (M): \(V = \frac{PY}{M}\) </div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 47.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">79 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'credit crunch'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">79 / 100</div>
+                    <div class="answer"><strong>A:</strong> A credit crunch is a sudden reduction in the general availability of loans (or credit) or a sudden tightening of the conditions required to obtain a loan from banks. A credit crunch can be caused by a contractionary monetary policy, a loss of confidence in the banking system, or a widespread re-evaluation of risk by lenders.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 123.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">80 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'financial fragility'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">80 / 100</div>
+                    <div class="answer"><strong>A:</strong> Financial fragility, a concept particularly associated with Hyman Minsky, refers to the idea that periods of economic stability and prosperity can encourage excessive risk-taking, borrowing, and leveraging by firms and banks. This builds up a fragile financial structure that is vulnerable to shocks, potentially leading to a financial crisis and economic downturn.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 16.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">81 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'bank's net worth' or 'capital'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">81 / 100</div>
+                    <div class="answer"><strong>A:</strong> A bank's net worth, or capital, is the difference between its total assets and its total liabilities. It represents the ownership stake in the bank. Bank capital serves as a crucial buffer to absorb losses from bad loans or other investments, protecting depositors and maintaining the bank's solvency.</div>
+                    <div class="source">Source: EC3115 - Monetary Economics Unit E Lectures.pdf, Slide 4.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">82 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'NOW account'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">82 / 100</div>
+                    <div class="answer"><strong>A:</strong> A NOW (Negotiable Order of Withdrawal) account is a type of deposit account that is functionally equivalent to a checking account but which earns interest. They were an important financial innovation in the US that blurred the distinction between checking and savings accounts.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 19.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">83 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'money market mutual fund' (MMMF)?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">83 / 100</div>
+                    <div class="answer"><strong>A:</strong> A money market mutual fund is a type of mutual fund that invests in short-term, high-quality debt instruments such as Treasury bills and commercial paper. They offer shareholders a high degree of liquidity and a market-based rate of return, and often include limited check-writing privileges, making them a close substitute for traditional bank deposits.</div>
+                    <div class="source">Source: McCallum, B. T. Monetary Economics, p. 21.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">84 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'securitization'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">84 / 100</div>
+                    <div class="answer"><strong>A:</strong> Securitization is the process of taking an illiquid asset, or group of assets, and through financial engineering, transforming them into a security. A typical example is a mortgage-backed security (MBS), where many individual mortgage loans are pooled together and sold as a tradable bond to investors.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 120.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">85 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'moral hazard' in the context of banking and deposit insurance?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">85 / 100</div>
+                    <div class="answer"><strong>A:</strong> Moral hazard is a situation where one party gets involved in a risky event knowing that it is protected against the risk and the other party will incur the cost. In banking, deposit insurance can create moral hazard by giving bank managers an incentive to take on excessive risk, knowing that if the risks pay off, the bank profits, but if they fail, the deposit insurance fund (and ultimately, taxpayers) will cover the losses to depositors.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 119.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">86 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'adverse selection' in financial markets?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">86 / 100</div>
+                    <div class="answer"><strong>A:</strong> Adverse selection is a problem that arises in markets where there is asymmetric information before a transaction occurs. In lending, it's the tendency for those who are the most eager to borrow money to be the riskiest borrowers (i.e., those most likely to default). Lenders have difficulty distinguishing good from bad credit risks, which can lead to a reduction in the overall level of lending.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 117.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">87 / 100</div>
+                    <div class="question"><strong>Q:</strong> How do banks help to overcome the problem of adverse selection?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">87 / 100</div>
+                    <div class="answer"><strong>A:</strong> Banks specialize in gathering information to screen and monitor borrowers. By developing expertise in credit analysis and building long-term relationships with customers, they can better distinguish between high-risk and low-risk borrowers than individual savers could. This specialized function helps to mitigate the adverse selection problem and allows for a more efficient allocation of credit.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 117.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">88 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'credit rationing'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">88 / 100</div>
+                    <div class="answer"><strong>A:</strong> Credit rationing occurs when a lender limits the supply of loans to borrowers, even if those borrowers are willing to pay a higher interest rate. This can happen in markets with imperfect information, where raising the interest rate might worsen the adverse selection problem (by attracting even riskier borrowers) or the moral hazard problem (by incentivizing borrowers to take on more risk).</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 116.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">89 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'bank lending channel' of monetary policy?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">89 / 100</div>
+                    <div class="answer"><strong>A:</strong> The bank lending channel is a component of the monetary transmission mechanism. It suggests that when the central bank tightens monetary policy (e.g., by draining reserves), it reduces the supply of loanable funds from the banking system. This reduction in the supply of bank loans, particularly for smaller firms that are dependent on bank credit, can lead to a contraction in investment and economic activity, even if market interest rates do not rise significantly.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 117.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">90 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'sterilization' in the context of the balance of payments?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">90 / 100</div>
+                    <div class="answer"><strong>A:</strong> Sterilization is a monetary policy action taken by a central bank to insulate the domestic money supply from the effects of foreign exchange interventions. For example, if a country has a balance of payments surplus and the central bank is buying foreign currency, this would normally increase the domestic monetary base. To sterilize this inflow, the central bank would conduct a simultaneous open market sale of domestic bonds to drain the extra liquidity from the system.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 38.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">91 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'hot money'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">91 / 100</div>
+                    <div class="answer"><strong>A:</strong> Hot money refers to short-term capital flows that move quickly between countries in search of the highest short-term interest rates or in anticipation of exchange rate changes. These flows can be highly volatile and can create instability for a country's exchange rate and monetary policy, particularly under a fixed exchange rate regime.</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 52.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">92 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'Eurodollar' market?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">92 / 100</div>
+                    <div class="answer"><strong>A:</strong> The Eurodollar market is the market for U.S. dollar-denominated deposits held in banks outside the United States. It is a major component of the offshore, largely unregulated, international banking system. The 'Euro-' prefix is now used more generally to refer to any currency held outside its home country (e.g., Euroyen).</div>
+                    <div class="source">Source: EC3115 - Ch 4 Supply of money.pdf, p. 47.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">93 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'financial repression'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">93 / 100</div>
+                    <div class="answer"><strong>A:</strong> Financial repression refers to a set of government policies that distort a country's financial system and prevent it from operating at its full potential. These policies often include interest rate ceilings, high reserve requirements, directed credit, and capital controls. The goal is often to provide the government with a cheap source of financing for its debt.</div>
+                    <div class="source">Source: Goodhart, C.A.E. Money, Information and Uncertainty, p. 122.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">94 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'liquidity' in the context of financial assets?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">94 / 100</div>
+                    <div class="answer"><strong>A:</strong> Liquidity refers to the ease, speed, and cost with which an asset can be converted into a medium of exchange (cash) without a significant loss of its market value. Key characteristics of a liquid asset include marketability, predictability of value, reversibility, and divisibility. Cash is the most liquid asset.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 12.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">95 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'IS-LM' model?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">95 / 100</div>
+                    <div class="answer"><strong>A:</strong> The IS-LM model is a macroeconomic framework that shows how the market for economic goods (IS curve) interacts with the market for money (LM curve) to determine the equilibrium levels of interest rates and output in the short run. The IS curve represents equilibrium in the goods market, and the LM curve represents equilibrium in the money market.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 97.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">96 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is a 'liquidity trap'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">96 / 100</div>
+                    <div class="answer"><strong>A:</strong> A liquidity trap is a hypothetical situation, first suggested by Keynes, where monetary policy becomes ineffective because the nominal interest rate is at or near zero. In this situation, the public is willing to hold any amount of money supplied by the central bank rather than buying bonds, because the opportunity cost of holding money is virtually zero. This means the central bank cannot lower interest rates any further to stimulate the economy.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 98.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">97 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'rational expectations'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">97 / 100</div>
+                    <div class="answer"><strong>A:</strong> The theory of rational expectations posits that economic agents use all available and relevant information, including their understanding of how the economy works, to form their expectations about the future. This implies that agents' expectations are not systematically biased and that they do not make persistent, predictable errors. Unforeseen errors can only arise from random, unpredictable shocks.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 59.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">98 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is the 'policy ineffectiveness proposition'?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">98 / 100</div>
+                    <div class="answer"><strong>A:</strong> The policy ineffectiveness proposition, associated with new classical economists like Thomas Sargent and Neil Wallace, argues that systematic, predictable monetary policy actions will have no effect on real economic variables like output and employment, even in the short run. This is because, under rational expectations, agents will fully anticipate the effects of the policy on prices and wages and adjust their behavior accordingly, neutralizing any real effects.</div>
+                    <div class="source">Source: Laidler, D.E.W. Taking money seriously and other essays, p. 86.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">99 / 100</div>
+                    <div class="question"><strong>Q:</strong> What is 'time inconsistency' in monetary policy?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">99 / 100</div>
+                    <div class="answer"><strong>A:</strong> Time inconsistency is a problem that arises when a monetary policy that seems optimal for the future is no longer optimal when the future arrives. For example, a central bank may announce a policy of zero inflation to anchor public expectations. However, once the public has formed its expectations, the central bank may have an incentive to create a 'surprise' inflation to temporarily boost output. Rational agents will anticipate this incentive, making the initial low-inflation promise not credible.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 236.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-face card-face-front">
+                    <div class="slide-number">100 / 100</div>
+                    <div class="question"><strong>Q:</strong> How can central bank 'independence' help to solve the time inconsistency problem?</div>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="slide-number">100 / 100</div>
+                    <div class="answer"><strong>A:</strong> A legally independent central bank, with a strong mandate to pursue price stability and insulation from short-term political pressures, is seen as a way to enhance the credibility of low-inflation promises. By delegating monetary policy to a 'conservative' central banker who places a high weight on fighting inflation, a government can commit itself more credibly to not creating surprise inflation, thereby solving the time inconsistency problem and achieving lower inflation on average.</div>
+                    <div class="source">Source: Lewis, M. K. and Mizen, P. D. Monetary Economics, p. 243.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <button onclick="plusSlides(-1)">&#10094; Previous</button>
+        <button onclick="flipCurrentCard()">Flip to Answer</button>
+        <button onclick="plusSlides(1)">Next &#10095;</button>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for(let i=0;i < ca.length;i++) {
+                let c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            setCookie('flashcard_position', slideIndex, 7);
+            let allCards = document.querySelectorAll('.card');
+            allCards.forEach(card => card.classList.remove('is-flipped'));
+            MathJax.typesetPromise([slides[slideIndex-1]]);
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function flipCard(cardElement) {
+            cardElement.classList.toggle('is-flipped');
+        }
+
+        function flipCurrentCard() {
+            const currentSlide = document.querySelector('.slide[style*="display: block"]');
+            if (currentSlide) {
+                const card = currentSlide.querySelector('.card');
+                if (card) {
+                    flipCard(card);
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let savedPosition = getCookie('flashcard_position');
+            if (savedPosition) {
+                slideIndex = parseInt(savedPosition, 10);
+            }
+            showSlides(slideIndex);
+        });
+    </script>
+
+</body>
+</html>
