@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Stylised Facts of Business Cycles - Quiz 2</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #005a9c;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .explanation {
+            margin-top: 15px;
+            padding: 10px;
+            border-left: 4px solid #ddd;
+            background-color: #f9f9f9;
+            display: none; /* Hidden by default */
+        }
+        .explanation .correct {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .explanation .incorrect {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .explanation .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #clear-storage {
+            background-color: #dc3545;
+            margin-top: 20px;
+        }
+        #clear-storage:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>EC3115 - Stylised Facts of Business Cycles (Quiz 2)</h1>
+    <h2>Multiple Choice Quiz</h2>
+    <div id="quiz"></div>
+    <button id="clear-storage">Clear All Answers and Restart</button>
+</div>
+
+<script>
+const quizData = [
+    {
+        question: "In the context of the representative consumer model, what is the consumer's fundamental trade-off?",
+        options: [
+            "Between two different consumption goods.",
+            "Between consumption and saving.",
+            "Between consumption and leisure.",
+            "Between domestic and imported goods."
+        ],
+        correct: 2,
+        explanation: "In a one-period, static model, there is no future, so the concept of saving (forgoing consumption today for consumption tomorrow) does not exist. The consumer's only choice is how to allocate their available time between working to earn income for consumption and not working (leisure). To consume more, one must work more, which necessarily means having less leisure time.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'The Representative Consumer'."
+    },
+    {
+        question: "What condition is met at the optimal consumption bundle for the representative consumer?",
+        options: [
+            "The marginal rate of substitution of leisure for consumption equals the quantity of taxes (MRS_l,C = T).",
+            "The marginal rate of substitution of leisure for consumption equals the real wage (MRS_l,C = w).",
+            "The marginal product of labor equals the marginal rate of substitution (MPN = MRS_l,C).",
+            "The real wage equals the dividend income (w = \pi)."
+        ],
+        correct: 1,
+        explanation: "The optimum occurs at the tangency point between the budget constraint and an indifference curve. The slope of the indifference curve is the negative of the Marginal Rate of Substitution (MRS), representing the rate at which the consumer is *willing* to trade leisure for consumption. The slope of the budget constraint is the negative of the real wage (-w), representing the rate at which the market *allows* them to trade leisure for consumption. At the optimum, these two must be equal: MRS_l,C = w.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'Consumer Optimization'."
+    },
+    {
+        question: "An increase in real non-wage income (e.g., higher dividend income or lower lump-sum taxes) has what effect on the consumer's budget constraint?",
+        options: [
+            "It becomes steeper.",
+            "It becomes flatter.",
+            "It shifts outward in a parallel fashion.",
+            "It pivots around the endowment point."
+        ],
+        correct: 2,
+        explanation: "The slope of the budget constraint is determined by the real wage (-w), which dictates the trade-off between consumption and leisure. Non-wage income (like dividends, \pi, or lump-sum taxes, T) is a pure income effect. It changes the total resources available to the consumer without altering the market price of leisure. Therefore, the entire budget line shifts outward, parallel to the original line, allowing more of both goods to be consumed.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'How Does the Representative Consumer Respond to a Change in Real Dividends or Taxes?'."
+    },
+    {
+        question: "Assuming consumption and leisure are normal goods, what is the effect of an increase in the real wage on the quantity of consumption and labor supply?",
+        options: [
+            "Consumption increases, labor supply increases.",
+            "Consumption decreases, labor supply is ambiguous.",
+            "Consumption increases, labor supply is ambiguous.",
+            "Consumption is ambiguous, labor supply increases."
+        ],
+        correct: 2,
+        explanation: "An increase in the real wage has two opposing effects on leisure (and thus labor supply): 1) The Substitution Effect: The opportunity cost of leisure is now higher, so the consumer substitutes away from leisure and towards work (labor supply increases). 2) The Income Effect: The consumer is wealthier and, since leisure is a normal good, they 'buy' more of it (labor supply decreases). The net effect on labor supply is ambiguous. However, for consumption, both effects are positive: the substitution effect encourages more consumption, and the income effect also encourages more consumption (as it's a normal good).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'The Representative Consumer and Changes in the Real Wage'."
+    },
+    {
+        question: "What is the profit-maximizing condition for the representative firm?",
+        options: [
+            "It hires labor until the marginal product of labor equals total factor productivity (MPN = z).",
+            "It hires labor until the marginal product of labor equals the real wage (MPN = w).",
+            "It hires labor until the marginal product of capital equals the real wage (MPK = w).",
+            "It hires labor until total revenue equals total cost."
+        ],
+        correct: 1,
+        explanation: "A firm maximizes profit by applying the marginal principle. It will hire an additional unit of labor as long as the marginal benefit (the extra output produced, MPN) is greater than or equal to the marginal cost (the real wage, w, it must pay). The firm stops hiring when the output from the last worker is exactly equal to their wage, i.e., MPN = w. Hiring beyond this point would mean paying the worker more than they produce, resulting in a loss on that unit.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'The Profit Maximization Problem of the Representative Firm'."
+    },
+    {
+        question: "The property of 'constant returns to scale' in a production function Y = zF(K, N) means that if all inputs are doubled, output will:",
+        options: [
+            "More than double.",
+            "Less than double.",
+            "Exactly double.",
+            "Remain unchanged."
+        ],
+        correct: 2,
+        explanation: "Constant returns to scale is a homogeneity property. It means that if all inputs (K and N) are multiplied by a factor 'x', output (Y) will be multiplied by the same factor 'x'. Formally, zF(xK, xN) = x * zF(K, N). In this case, x=2, so output exactly doubles. This property is a standard assumption in many macroeconomic models.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'The Representative Firm'."
+    },
+    {
+        question: "What does an increase in Total Factor Productivity (TFP), z, do to the production function graph (with output on the vertical axis and labor on the horizontal axis)?",
+        options: [
+            "Shifts it down and makes it flatter.",
+            "Shifts it up and makes it steeper.",
+            "Causes a movement along the curve.",
+            "Makes it linear."
+        ],
+        correct: 1,
+        explanation: "TFP (z) acts as a multiplier on the production function, Y = zF(K,N). An increase in 'z' means more output can be produced for any given level of labor input, causing the entire function to shift upward. Furthermore, the slope of the production function is the Marginal Product of Labor (MPN). Since MPN = z * F_N(K,N), an increase in 'z' also increases the MPN for any given N, making the curve steeper.",
+        source: "Williamson,S.D. Macroeconomics, Chapter 4, 'The Effect of a Change in Total Factor Productivity on the Production Function'."
+    },
+    {
+        question: "In the one-period model, what is the equilibrium effect of an increase in government purchases (G) on consumption and employment?",
+        options: [
+            "Consumption increases, employment increases.",
+            "Consumption increases, employment decreases.",
+            "Consumption decreases, employment increases.",
+            "Consumption decreases, employment decreases."
+        ],
+        correct: 2,
+        explanation: "In this model, government spending is financed by lump-sum taxes (G=T). An increase in G causes an equal increase in T, which acts as a pure negative income effect on the representative consumer. Since both consumption and leisure are assumed to be normal goods, the consumer responds to this negative income shock by reducing their consumption of both. A reduction in leisure implies an increase in labor supply, and thus employment.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Working with the Model: The Effects of a Change in Government Purchases'."
+    },
+    {
+        question: "The First Fundamental Theorem of Welfare Economics states that, under certain conditions, a competitive equilibrium is:",
+        options: [
+            "Pareto optimal.",
+            "Always equitable.",
+            "Achieved only with government intervention.",
+            "Characterized by zero unemployment."
+        ],
+        correct: 0,
+        explanation: "This theorem is the formal expression of Adam Smith's 'invisible hand'. It states that if markets are complete and all agents are price-takers (i.e., there are no externalities or market power), the resulting competitive equilibrium allocation is Pareto optimal. This means it's impossible to reallocate resources to make someone better off without making at least one person worse off. It does not, however, make any claims about the fairness or equity of the outcome.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Optimality'."
+    },
+    {
+        question: "Which of the following is a reason why a competitive equilibrium might NOT be Pareto optimal in the real world?",
+        options: [
+            "The existence of a single numeraire good.",
+            "The presence of externalities like pollution.",
+            "The assumption of rational consumers.",
+            "The law of one price."
+        ],
+        correct: 1,
+        explanation: "A key condition for the First Welfare Theorem to hold is the absence of externalities. An externality occurs when an economic activity imposes a cost or benefit on a third party not involved in the transaction. Since the market price does not reflect this external cost (e.g., a factory polluting a river), the private incentives of the firm do not align with the social good, leading to an inefficient outcome (e.g., overproduction and too much pollution).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Sources of Social Inefficiencies'."
+    },
+    {
+        question: "The 'Laffer Curve' illustrates the relationship between:",
+        options: [
+            "The tax rate and total tax revenue.",
+            "Government spending and GDP.",
+            "Inflation and unemployment.",
+            "The real wage and labor supply."
+        ],
+        correct: 0,
+        explanation: "The Laffer Curve shows the theoretical relationship between tax rates and the resulting level of tax revenue. It posits that at tax rates of 0% and 100%, tax revenue is zero. As the rate increases from 0%, revenue rises, but after a certain point, the high tax rate discourages work and investment so much that the tax base shrinks, causing total revenue to fall. The curve highlights that a tax rate cut could, in some circumstances, increase tax revenue.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'A Distorting Tax on Wage Income, Tax Rate Changes, and the Laffer Curve'."
+    },
+    {
+        question: "In the one-sided search model, the 'reservation wage' (w*) is the wage at which the worker is:",
+        options: [
+            "Indifferent between accepting the job and continuing to search.",
+            "Guaranteed to receive a job offer.",
+            "Able to maximize their unemployment benefits.",
+            "Willing to enter the labor force."
+        ],
+        correct: 0,
+        explanation: "The reservation wage is the critical threshold for a job seeker. It is the wage that makes the value of being employed exactly equal to the value of remaining unemployed and continuing to search. A worker will accept any offer at or above w* and reject any offer below it. It is the point of indifference.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'The Reservation Wage'."
+    },
+    {
+        question: "In the one-sided search model, what is the effect of an increase in unemployment insurance (UI) benefits?",
+        options: [
+            "It decreases the reservation wage and decreases the unemployment rate.",
+            "It increases the reservation wage and decreases the unemployment rate.",
+            "It decreases the reservation wage and increases the unemployment rate.",
+            "It increases the reservation wage and increases the unemployment rate."
+        ],
+        correct: 3,
+        explanation: "An increase in UI benefits makes the state of being unemployed less costly and more attractive. This increases the value of unemployment (V_u), making workers more selective about the jobs they accept. They will hold out for a better offer, which means their reservation wage (w*) increases. Because they now reject a larger fraction of job offers, the average duration of an unemployment spell lengthens, leading to a higher aggregate unemployment rate.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'An Increase in Unemployment Insurance Benefits'."
+    },
+    {
+        question: "The 'low wage growth puzzle' observed in recent years refers to:",
+        options: [
+            "Rising unemployment with rising inflation.",
+            "Declining unemployment without a significant increase in wage growth or inflation.",
+            "A flattening of the yield curve.",
+            "A decrease in labor force participation."
+        ],
+        correct: 1,
+        explanation: "This refers to the post-2008 financial crisis period in many advanced economies. Standard economic theory, particularly the Phillips Curve, suggests that as labor markets tighten and unemployment falls, there should be upward pressure on wages, which then feeds into price inflation. The puzzle was the empirical observation that unemployment rates fell to multi-decade lows, yet wage growth and inflation remained stubbornly low.",
+        source: "EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "One proposed explanation for the flattening of the Phillips curve and the low wage growth puzzle is:",
+        options: [
+            "An increase in the bargaining power of labor unions.",
+            "A decrease in the natural rate of unemployment due to eroded worker bargaining power from automation.",
+            "A sudden increase in total factor productivity.",
+            "A shift in central bank policy to target M2 growth."
+        ],
+        correct: 1,
+        explanation: "If workers have less power to bargain for higher wages—perhaps due to globalization, de-unionization, or the threat of their jobs being automated—then even a very low unemployment rate will not translate into significant wage pressure. This erosion of bargaining power can effectively lower the 'natural' rate of unemployment (the rate consistent with stable inflation) and cause the observed flattening of the Phillips curve relationship.",
+        source: "EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "What does GDP measurement typically leave out, potentially understating true economic welfare?",
+        options: [
+            "Government spending on defense.",
+            "The value of investment goods.",
+            "The value of non-market activity, such as work in the home.",
+            "The value of exports."
+        ],
+        correct: 2,
+        explanation: "GDP is a measure of market production. It therefore excludes all economic activity that does not have a market price. This includes valuable work done within the home (e.g., childcare, cooking), illegal activities, and the informal or 'underground' economy. It also fails to account for environmental degradation or changes in leisure time, making it an imperfect measure of overall societal well-being.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'What Does GDP Leave Out?'."
+    },
+    {
+        question: "The difference between Gross Domestic Product (GDP) and Gross National Product (GNP) is:",
+        options: [
+            "Depreciation of the capital stock.",
+            "Net factor payments from abroad.",
+            "Indirect business taxes.",
+            "The statistical discrepancy."
+        ],
+        correct: 1,
+        explanation: "GDP measures the value of production that occurs within a country's geographical borders. GNP measures the value of production by a country's citizens and firms, regardless of where it occurs. The difference is Net Factor Payments (NFP), which is income earned by domestic residents from their foreign assets minus income paid to foreign residents for their domestic assets. For example, the profits of a Toyota plant in the US are part of US GDP but Japanese GNP.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'Gross National Product'."
+    },
+    {
+        question: "A key problem with using a fixed-weight price index like the Consumer Price Index (CPI) is that it:",
+        options: [
+            "Does not account for government purchases.",
+            "Is updated too frequently.",
+            "Does not account for consumer substitution away from goods that have become relatively more expensive.",
+            "Only includes the prices of durable goods."
+        ],
+        correct: 2,
+        explanation: "The CPI measures the cost of a fixed basket of goods over time. However, when the price of a good (e.g., apples) rises relative to another (e.g., bananas), consumers naturally buy fewer apples and more bananas. Because the CPI basket is fixed, it doesn't capture this substitution and continues to assign the original high weight to the now-expensive apples, thus overstating the true increase in the cost of living. This is known as substitution bias.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'Problems with Measuring Real GDP and the Price Level'."
+    },
+    {
+        question: "In the income-expenditure identity Y = C + I + G + NX, what does NX represent?",
+        options: [
+            "National Income",
+            "Net Taxes",
+            "Nominal Exports",
+            "Net Exports (Exports minus Imports)"
+        ],
+        correct: 3,
+        explanation: "This is the expenditure approach to calculating GDP. Y (GDP) is the sum of all spending: C (Consumption by households), I (Investment by firms and households), G (Government purchases), and NX (Net Exports). NX represents the net spending by the rest of the world on this country's goods and services, calculated as total exports minus total imports.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'The Expenditure Approach'."
+    },
+    {
+        question: "Which of the following is an example of 'inventory investment'?",
+        options: [
+            "A household buying a new car.",
+            "A firm building a new factory.",
+            "A car manufacturer producing a car that is not sold by the end of the year.",
+            "The government purchasing a new fighter jet."
+        ],
+        correct: 2,
+        explanation: "Investment (I) in the national accounts includes fixed investment (new structures and equipment) and inventory investment. Inventory investment is the change in the stock of unsold goods. A car produced but not sold is added to the firm's inventory. For accounting purposes, it is treated as if the firm 'bought' the car from itself. This ensures that production (which adds to GDP) is matched by a corresponding expenditure.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'An Example with Inventory Investment'."
+    },
+    {
+        question: "The national saving identity is S = I + CA. What does CA represent?",
+        options: [
+            "Capital Account",
+            "Current Account Surplus",
+            "Capital Accumulation",
+            "Consumer Assets"
+        ],
+        correct: 1,
+        explanation: "This identity shows the two uses of a nation's saving. National saving (S) is the portion of income not consumed by households or the government. This saving can either be used to fund domestic capital formation (Investment, I) or to lend to foreigners by acquiring foreign assets. The net acquisition of foreign assets is the Current Account Surplus (CA). If CA is positive, the country is a net lender to the world; if negative, it is a net borrower.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'Savings, Wealth, and Capital'."
+    },
+    {
+        question: "In the two-sided search model, 'labor market tightness' (j) is defined as:",
+        options: [
+            "The ratio of unemployed workers to employed workers.",
+            "The ratio of job vacancies to the number of unemployed workers.",
+            "The average duration of unemployment.",
+            "The job separation rate."
+        ],
+        correct: 1,
+        explanation: "Labor market tightness, j = A/Q, where A is the number of vacancies and Q is the number of unemployed workers, measures the state of the labor market. If j is high (many vacancies per searcher), it is a 'tight' market for firms (hard to fill positions) but an 'easy' market for workers (easy to find a job). If j is low, the opposite is true.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'The Supply Side of the Labor Market'."
+    },
+    {
+        question: "In the two-sided search model with Nash bargaining, the wage paid to a worker depends on:",
+        options: [
+            "Only the firm's productivity.",
+            "Only the worker's reservation wage.",
+            "The total surplus from the match and the relative bargaining power of the worker and the firm.",
+            "The level of government spending."
+        ],
+        correct: 2,
+        explanation: "The wage is determined by a bargain that splits the total surplus of the match. The surplus is the difference between the output produced (z) and the worker's outside option (unemployment benefit, b). The wage is then w = b + a(z-b), where 'a' is the worker's bargaining power. The wage is a weighted average of the worker's outside option and their productivity, with the weights determined by bargaining power.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'Equilibrium'."
+    },
+    {
+        question: "In the two-sided search model, an increase in firm productivity (z) leads to:",
+        options: [
+            "Lower labor market tightness and a lower labor force.",
+            "Higher labor market tightness and a higher labor force.",
+            "Lower labor market tightness and a higher labor force.",
+            "Higher labor market tightness and a lower labor force."
+        ],
+        correct: 1,
+        explanation: "An increase in productivity (z) raises the potential profit from creating a job. This incentivizes firms to post more vacancies (A increases). The increase in vacancies relative to the number of unemployed workers (Q) raises labor market tightness (j = A/Q). The better job-finding prospects and higher potential wages then encourage more people to enter the labor force and search for work (Q increases).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'An Increase in Productivity'."
+    },
+    {
+        question: "The concept of 'crowding out' in the one-period model refers to the idea that an increase in government spending (G):",
+        options: [
+            "Increases private consumption.",
+            "Reduces private consumption.",
+            "Has no effect on private consumption.",
+            "Reduces the real wage."
+        ],
+        correct: 1,
+        explanation: "In the simple one-period model, Y = C + G. An increase in G is financed by higher taxes, which reduces household disposable income. This pure income effect causes households to reduce consumption (C). Because total output (Y) does not increase one-for-one with G, the increase in government consumption must come at the expense of private consumption. G 'crowds out' C.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Working with the Model: The Effects of a Change in Government Purchases'."
+    },
+    {
+        question: "The 'Penn Effect' refers to the empirical regularity that:",
+        options: [
+            "Prices tend to be higher in high-income countries than in low-income countries, after converting to a common currency.",
+            "All countries experience business cycles of the same duration.",
+            "Inflation is always and everywhere a monetary phenomenon.",
+            "Exchange rates perfectly reflect purchasing power parity."
+        ],
+        correct: 0,
+        explanation: "This effect, named after the Penn World Table, shows that when you convert prices from different countries into a single currency (e.g., USD), the overall price level is systematically higher in richer countries. This is often explained by the Balassa-Samuelson effect: high productivity in tradable goods in rich countries drives up wages in all sectors, making non-tradable services (like haircuts or restaurant meals) much more expensive than in poor countries.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'MACROECONOMICS IN ACTION: Comparing Real GDP Across Countries and the Penn Effect'."
+    },
+    {
+        question: "What is the primary reason that the unemployment rate is considered a countercyclical variable?",
+        options: [
+            "It tends to rise during economic expansions and fall during recessions.",
+            "It tends to fall during economic expansions and rise during recessions.",
+            "It moves independently of the business cycle.",
+            "It is less volatile than real GDP."
+        ],
+        correct: 1,
+        explanation: "A variable is countercyclical if its correlation with GDP is negative. During an economic expansion, GDP is rising, firms are hiring, and the unemployment rate falls. During a recession, GDP is falling, firms are laying off workers, and the unemployment rate rises. Because it moves in the opposite direction of GDP, it is countercyclical.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'."
+    },
+    {
+        question: "The labor force participation rate is defined as:",
+        options: [
+            "The number of employed people divided by the total population.",
+            "The number of unemployed people divided by the labor force.",
+            "The labor force (employed plus unemployed) divided by the working-age population.",
+            "The number of employed people divided by the working-age population."
+        ],
+        correct: 2,
+        explanation: "The labor force consists of everyone who is either employed or unemployed (actively seeking work). The labor force participation rate measures what fraction of the potential workforce (the civilian, non-institutionalized, working-age population) is actually part of the labor force. It is a key measure of labor market engagement.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'Labor Market Measurement'."
+    },
+    {
+        question: "How does the cyclical behavior of the labor force participation rate compare to that of the employment/population ratio?",
+        options: [
+            "The participation rate is much more cyclically volatile.",
+            "The participation rate is much less cyclically volatile.",
+            "Both have the same cyclical volatility.",
+            "The participation rate is countercyclical while the employment/population ratio is procyclical."
+        ],
+        correct: 1,
+        explanation: "The employment/population ratio is strongly procyclical. In a recession, employment falls sharply. The participation rate is also procyclical but much less volatile. This is because of offsetting effects: the 'discouraged worker' effect (people stop searching and leave the labor force) and the 'added worker' effect (a second household member starts searching when the primary earner loses their job). These effects dampen the cyclical movements of the participation rate.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'Labor Market Facts'."
+    },
+    {
+        question: "The term 'jobless recovery' refers to a period after a recession where:",
+        options: [
+            "Real GDP grows, but employment growth is abnormally slow to recover.",
+            "Both real GDP and employment fall simultaneously.",
+            "Employment recovers quickly, but real GDP remains stagnant.",
+            "The unemployment rate falls, but the vacancy rate also falls."
+        ],
+        correct: 0,
+        explanation: "This phenomenon, observed in several recent US recoveries, describes a situation where the recession's trough in output has passed and real GDP begins to grow, but the labor market remains weak, with employment recovering much more slowly than usual or even continuing to decline for a time. It breaks the typical pattern where employment and output move closely together.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'MACROECONOMICS IN ACTION: Jobless Recoveries'."
+    },
+    {
+        question: "What is the effect of a proportional wage tax in the simplified one-period model?",
+        options: [
+            "It leads to a Pareto optimal outcome.",
+            "It creates a wedge between the MRS and MPN, leading to an inefficiently low level of labor.",
+            "It encourages more work by creating a positive income effect.",
+            "It has no effect on the consumer's decisions."
+        ],
+        correct: 1,
+        explanation: "A proportional wage tax is a distorting tax. The firm's hiring decision is based on the pre-tax wage (MPN = w). The consumer's work-leisure decision is based on the after-tax wage (MRS_l,C = w(1-t)). This means in equilibrium, MRS_l,C < MPN. The tax creates a 'wedge' between what the firm pays and what the worker receives, leading to an inefficiently low level of employment and output compared to the Pareto optimal outcome where MRS_l,C = MPN.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Sources of Social Inefficiencies'."
+    },
+    {
+        question: "If an economy is on the 'bad side' of the Laffer curve, a decrease in the tax rate will lead to:",
+        options: [
+            "A decrease in tax revenue.",
+            "An increase in tax revenue.",
+            "No change in tax revenue.",
+            "A proportional decrease in government spending."
+        ],
+        correct: 1,
+        explanation: "The 'bad side' of the Laffer curve is the downward-sloping portion, where tax rates are already very high. In this region, the negative economic effect of the tax (discouraging work) is so large that it outweighs the positive arithmetic effect (collecting more per dollar earned). Therefore, cutting the tax rate can spur so much additional economic activity that the tax base expands enough to generate a net increase in total tax revenue.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Income Tax Revenue and the Laffer Curve'."
+    },
+    {
+        question: "The income approach to measuring GDP sums up:",
+        options: [
+            "Spending on all final goods and services.",
+            "The value added by all productive units in the economy.",
+            "All income received by economic agents contributing to production.",
+            "Consumption, investment, and government spending."
+        ],
+        correct: 2,
+        explanation: "In principle, the total value of all production must equal the total value of all income earned from that production. The income approach adds up all these income sources: compensation of employees (wages and salaries), proprietors' income, rental income, corporate profits, net interest, and taxes on production. After adjusting for depreciation and statistical discrepancies, this sum equals GDP.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 2, 'The Income Approach'."
+    },
+    {
+        question: "In the two-sided search model, a decrease in matching efficiency (e) will cause:",
+        options: [
+            "A higher labor force and lower unemployment rate.",
+            "A lower labor force and lower unemployment rate.",
+            "A lower labor force and higher unemployment rate.",
+            "A higher labor force and higher unemployment rate."
+        ],
+        correct: 2,
+        explanation: "Matching efficiency (e) represents how effectively the market matches unemployed workers with vacant jobs. A decrease in 'e' (e.g., due to skill mismatches) makes it harder for firms to find workers and for workers to find jobs. This reduces the expected payoff from searching, causing some individuals to drop out of the labor force (Q falls). For those still searching, the lower job-finding rate increases the average duration of unemployment, leading to a higher unemployment rate.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'Decrease in Matching Efficiency'."
+    },
+    {
+        question: "Which of the following is a key assumption about consumer preferences in the standard one-period model?",
+        options: [
+            "The consumer prefers less to more.",
+            "The consumer dislikes diversity in their consumption bundle.",
+            "Consumption and leisure are normal goods.",
+            "Leisure is an inferior good."
+        ],
+        correct: 2,
+        explanation: "A normal good is a good for which demand increases when income increases. The standard model assumes that if a consumer receives a pure income windfall (e.g., winning the lottery), they will choose to consume more goods AND take more leisure time. This assumption is crucial for analyzing the effects of income changes.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'The Representative Consumer's Preferences'."
+    },
+    {
+        question: "The convexity of a consumer's indifference curve represents which property of preferences?",
+        options: [
+            "More is always preferred to less.",
+            "The consumer likes diversity in their consumption bundle.",
+            "Consumption is a normal good.",
+            "The consumer is a price-taker."
+        ],
+        correct: 1,
+        explanation: "A convex indifference curve (bowed toward the origin) implies a diminishing marginal rate of substitution. This means the consumer prefers averages to extremes. For example, they would be happier with a balanced bundle of 4 hours of leisure and 4 units of consumption than with an extreme bundle of 1 hour of leisure and 7 units of consumption, or 7 hours of leisure and 1 unit of consumption. This reflects a preference for diversity.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'The Representative Consumer's Preferences'."
+    },
+    {
+        question: "In the one-period model, an increase in total factor productivity (z) causes the real wage to:",
+        options: [
+            "Increase",
+            "Decrease",
+            "Remain unchanged",
+            "The effect is ambiguous"
+        ],
+        correct: 0,
+        explanation: "The chain of events is as follows: An increase in TFP (z) directly increases the marginal product of labor (MPN) at any given level of employment. This shifts the labor demand curve (which is the MPN curve) to the right. With a higher demand for labor, firms compete for workers, bidding up the equilibrium real wage (w).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Working with the Model: A Change in Total Factor Productivity'."
+    },
+    {
+        question: "The fact that consumption is less volatile than GDP is often referred to as:",
+        options: [
+            "The Lucas critique",
+            "The Penn effect",
+            "Consumption smoothing",
+            "The Great Moderation"
+        ],
+        correct: 2,
+        explanation: "This is a key stylized fact of business cycles. Households use saving and borrowing to smooth their consumption over time. When they experience a temporary increase in income (a boom), they save a portion of it. When they experience a temporary drop in income (a recession), they draw on their savings or borrow to maintain their consumption level. This behavior makes the path of consumption much smoother (less volatile) than the path of income (GDP).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Components of GDP'."
+    },
+    {
+        question: "What is the primary reason that short-term interest rates are considered a more relevant policy instrument than monetary aggregates in many modern central banks?",
+        options: [
+            "The relationship between interest rates and inflation is perfectly stable.",
+            "The information content of monetary aggregates has proven to be unstable over time.",
+            "Central banks cannot control the money supply.",
+            "Interest rates are easier to measure than monetary aggregates."
+        ],
+        correct: 1,
+        explanation: "The stable, predictable relationship between monetary aggregates (like M1 or M2) and nominal income, which was a cornerstone of monetarism in the 1970s, broke down in the 1980s and 1990s. Financial innovation and deregulation made the velocity of money unstable and unpredictable. As Friedman and Kuttner (1992) showed, the information content of money vanished, while interest rate spreads remained informative. This led central banks to switch their focus to using short-term interest rates as their primary policy lever.",
+        source: "Friedman, B. and K. N. Kuttner ‘Money, income, prices and interest rates’. and EC3115 - Ch 6 Stylised facts-2.pdf"
+    },
+    {
+        question: "The term 'amplitude' of a business cycle refers to:",
+        options: [
+            "The duration of a recession.",
+            "The number of peaks that occur per year.",
+            "The maximum deviation from the trend.",
+            "The speed of the recovery phase."
+        ],
+        correct: 2,
+        explanation: "Amplitude measures the size or severity of a business cycle fluctuation. It is the magnitude of the gap between the peak of a boom (or the trough of a recession) and the economy's long-run trend line. A deep recession has a large amplitude.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Regularities in GDP Fluctuations'."
+    },
+    {
+        question: "The 'frequency' of a business cycle refers to:",
+        options: [
+            "The maximum deviation from trend.",
+            "The number of peaks in real GDP that occur per year.",
+            "The slope of the recovery.",
+            "The correlation with inflation."
+        ],
+        correct: 1,
+        explanation: "Frequency measures how often business cycles occur. It is defined as the number of cycles (e.g., measured from peak to peak) that happen within a specific period of time, such as a year or a decade. It is the inverse of the cycle's period or duration.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Regularities in GDP Fluctuations'."
+    },
+    {
+        question: "A key finding in Calderon and Fuertes (2014) is that recessions associated with financial crises, compared to regular recessions, are:",
+        options: [
+            "Shorter and milder.",
+            "Longer and milder.",
+            "Deeper and costlier.",
+            "Identical in all respects."
+        ],
+        correct: 2,
+        explanation: "The paper provides evidence that business cycles are not all alike. Specifically, recessions that are linked to financial crises (e.g., banking crises, credit crunches) tend to be significantly more severe. They are characterized by a larger drop in output (deeper), a longer duration, and a larger cumulative output loss (costlier) than recessions that do not have a financial crisis component.",
+        source: "Calderon, C. and R. Fuertes ‘Have business cycles changed over the last two decades?'."
+    },
+    {
+        question: "The production possibilities frontier (PPF) in the one-period model shows the technological trade-off between:",
+        options: [
+            "Consumption and Investment",
+            "Consumption and Leisure",
+            "Work and Saving",
+            "Domestic goods and Foreign goods"
+        ],
+        correct: 1,
+        explanation: "The PPF represents the economy's technological constraints, not its budget. It shows the maximum amount of consumption that can be produced for any given amount of leisure time, given the economy's production function Y = zF(K, N). Since N = h - l (total hours minus leisure), the PPF maps out all feasible (leisure, consumption) pairs.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Competitive Equilibrium'."
+    },
+    {
+        question: "The slope of the Production Possibilities Frontier (PPF) represents:",
+        options: [
+            "The real wage (w)",
+            "The marginal rate of substitution (MRS_l,C)",
+            "The negative of the marginal product of labor (-MPN)",
+            "Total factor productivity (z)"
+        ],
+        correct: 2,
+        explanation: "The slope of the PPF shows the rate at which the economy can technologically transform one good (leisure) into another (consumption). To get one more unit of leisure, one hour of work must be given up. The amount of consumption lost is the output that hour of work would have produced, which is, by definition, the marginal product of labor (MPN). Therefore, the slope is -MPN.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Competitive Equilibrium'."
+    },
+    {
+        question: "In the one-period model, what is the effect of an increase in government spending (G) on the real wage (w)?",
+        options: [
+            "The real wage increases.",
+            "The real wage decreases.",
+            "The real wage is unchanged.",
+            "The effect is ambiguous."
+        ],
+        correct: 1,
+        explanation: "The logic is as follows: 1) An increase in G leads to a negative income effect, causing consumers to take less leisure and work more. 2) The increase in total labor supply (N) means the economy is operating at a point further to the right on the production function. 3) Due to the diminishing marginal product of labor, the MPN is lower at this higher level of employment. 4) In equilibrium, firms set the real wage equal to the MPN. Therefore, the real wage must decrease.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 5, 'Working with the Model: The Effects of a Change in Government Purchases'."
+    },
+    {
+        question: "The fact that the money-inflation relationship is weak in low-inflation countries suggests that for these countries:",
+        options: [
+            "Monetary policy is completely ineffective.",
+            "The Quantity Theory of Money holds perfectly in the short run.",
+            "Money growth is not a useful signal of inflationary conditions.",
+            "Velocity of money is constant."
+        ],
+        correct: 2,
+        explanation: "The Quantity Theory of Money (MV=PY) implies a tight link between money growth (M) and inflation (P) if velocity (V) and real output (Y) are stable. De Grauwe and Polan (2005) show this link only holds in high-inflation countries where huge changes in M dominate everything else. In low-inflation countries, shifts in money demand (i.e., changes in V) are large relative to money growth, making the relationship between M and P unstable and weak. Therefore, M is not a useful indicator for policy.",
+        source: "de Grauwe, P. and Polan, M. (2005) ‘Is inflation always and everywhere a monetary phenomenon?'."
+    },
+    {
+        question: "Which of the following is NOT a property of the matching function M = em(Q, A) in the two-sided search model?",
+        options: [
+            "Constant returns to scale.",
+            "The number of matches M increases when Q or A increases.",
+            "The number of matches is zero if either Q or A is zero.",
+            "Increasing marginal products of Q and A."
+        ],
+        correct: 3,
+        explanation: "The matching function is assumed to have diminishing marginal returns to each input. This means that holding the number of vacancies (A) constant, each additional unemployed worker (Q) adds fewer new matches than the previous one. This reflects a congestion externality: the more workers there are searching, the harder it is for any one of them to find a job.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'Matching'."
+    },
+    {
+        question: "The empirical observation that investment is procyclical means that:",
+        options: [
+            "Investment falls when GDP rises.",
+            "Investment rises when GDP rises.",
+            "Investment is unrelated to GDP.",
+            "Investment is less volatile than GDP."
+        ],
+        correct: 1,
+        explanation: "Procyclical means that a variable moves in the same direction as the overall economy. Its cyclical component is positively correlated with the cyclical component of GDP. When the economy is in a boom (GDP is above trend), investment spending by firms tends to be high. When the economy is in a recession (GDP is below trend), investment falls sharply. Note that investment is also much MORE volatile than GDP, but that is a separate fact from its procyclicality.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Components of GDP'."
+    }
+];
+
+const quizContainer = document.getElementById('quiz');
+const clearButton = document.getElementById('clear-storage');
+const cookieName = 'ec3115_quiz_ch6c_answers';
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function renderQuiz() {
+    const userAnswers = JSON.parse(getCookie(cookieName) || '{}');
+    quizContainer.innerHTML = ''; // Clear previous content
+    const optionLabels = ['A', 'B', 'C', 'D'];
+
+    quizData.forEach((q, index) => {
+        const questionBlock = document.createElement('div');
+        questionBlock.className = 'question-block';
+        questionBlock.id = `q${index}`;
+
+        const questionText = document.createElement('div');
+        questionText.className = 'question-text';
+        questionText.innerHTML = `Q${index + 1}: ${q.question}`;
+        questionBlock.appendChild(questionText);
+
+        const optionsForm = document.createElement('form');
+        optionsForm.className = 'options';
+        optionsForm.name = `q${index}_form`;
+
+        q.options.forEach((option, i) => {
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = `q${index}_option`;
+            input.value = i;
+            
+            input.onchange = () => handleAnswer(index, i);
+
+            if (userAnswers[index] && userAnswers[index].selected == i) {
+                input.checked = true;
+            }
+
+            label.appendChild(input);
+            label.append(` ${optionLabels[i]}. ${option}`);
+            optionsForm.appendChild(label);
+        });
+
+        questionBlock.appendChild(optionsForm);
+
+        const explanationDiv = document.createElement('div');
+        explanationDiv.className = 'explanation';
+        explanationDiv.id = `exp${index}`;
+        questionBlock.appendChild(explanationDiv);
+
+        quizContainer.appendChild(questionBlock);
+
+        // If answer is already in cookie, show the result
+        if (userAnswers[index]) {
+            showExplanation(index, userAnswers[index].selected);
+        }
+    });
+}
+
+function handleAnswer(questionIndex, selectedAnswerIndex) {
+    const userAnswers = JSON.parse(getCookie(cookieName) || '{}');
+    userAnswers[questionIndex] = { selected: selectedAnswerIndex };
+    setCookie(cookieName, JSON.stringify(userAnswers), 30);
+    showExplanation(questionIndex, selectedAnswerIndex);
+}
+
+function showExplanation(questionIndex, selectedAnswerIndex) {
+    const qData = quizData[questionIndex];
+    const explanationDiv = document.getElementById(`exp${questionIndex}`);
+    const form = document.forms[`q${questionIndex}_form`];
+    const isCorrect = selectedAnswerIndex === qData.correct;
+    const optionLabels = ['A', 'B', 'C', 'D'];
+    const correctLabel = optionLabels[qData.correct];
+
+    let resultHTML = isCorrect
+        ? '<p class="correct">Correct!</p>'
+        : `<p class="incorrect">Incorrect.</p><p>The correct answer is: <strong>${correctLabel}. ${qData.options[qData.correct]}</strong></p>`;
+
+    explanationDiv.innerHTML = `
+        ${resultHTML}
+        <p>${qData.explanation}</p>
+        <p class="source">Source: ${qData.source}</p>
+    `;
+    explanationDiv.style.display = 'block';
+
+    // Disable form elements after answering
+    Array.from(form.elements).forEach(el => {
+        if (el.type === 'radio') {
+            el.disabled = true;
+        }
+    });
+}
+
+clearButton.addEventListener('click', () => {
+    if (confirm('Are you sure you want to clear all your saved answers and restart the quiz?')) {
+        setCookie(cookieName, '', -1); // Delete the cookie
+        location.reload();
+    }
+});
+
+// Initial render
+document.addEventListener('DOMContentLoaded', renderQuiz);
+
+</script>
+
+</body>
+</html>

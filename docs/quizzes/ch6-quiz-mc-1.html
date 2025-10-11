@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC3115 - Stylised Facts of Business Cycles - Multiple Choice Quiz</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #005a9c;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .explanation {
+            margin-top: 15px;
+            padding: 10px;
+            border-left: 4px solid #ddd;
+            background-color: #f9f9f9;
+            display: none; /* Hidden by default */
+        }
+        .explanation .correct {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .explanation .incorrect {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .explanation .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #clear-storage {
+            background-color: #dc3545;
+            margin-top: 20px;
+        }
+        #clear-storage:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>EC3115 - Stylised Facts of Business Cycles</h1>
+    <h2>Multiple Choice Quiz</h2>
+    <div id="quiz"></div>
+    <button id="clear-storage">Clear All Answers and Restart</button>
+</div>
+
+<script>
+const quizData = [
+    {
+        question: "What is the primary defining feature of business cycles?",
+        options: [
+            "Fluctuations in the nominal GDP growth rate.",
+            "Fluctuations of real GDP around a smooth trend.",
+            "Long-run increases in a nation's productive capacity.",
+            "Seasonal variations in employment and production."
+        ],
+        correct: 1,
+        explanation: "Business cycles are specifically about the fluctuations in *real* economic activity, not nominal, to remove the effects of inflation. They are defined as deviations from a long-run growth trend, which represents the economy's potential output. Seasonal variations are predictable and are statistically removed from the data before analyzing business cycles.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Regularities in GDP Fluctuations'. and EC3115 - Ch 6 Stylised facts-2.pdf"
+    },
+    {
+        question: "When analysing a time series that exhibits growth, taking the natural logarithm is useful because the slope of the log-transformed series approximates what?",
+        options: [
+            "The absolute level of the variable.",
+            "The growth rate of the variable.",
+            "The volatility of the variable.",
+            "The long-run trend of the variable."
+        ],
+        correct: 1,
+        explanation: "A key mathematical property is that for small changes, the change in the log of a variable is approximately equal to its percentage growth rate (i.e., \(\Delta \ln(Y) \approx \Delta Y / Y\)). This transformation converts a variable with exponential growth into a series that is approximately linear in time, where the slope of the line represents the average growth rate.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 1, 'Gross Domestic Product, Economic Growth, and Business Cycles'."
+    },
+    {
+        question: "The Hodrick-Prescott (HP) filter is a common method for what purpose in business cycle analysis?",
+        options: [
+            "Calculating the inflation rate.",
+            "Forecasting future GDP.",
+            "Separating a time series into its trend and cyclical components.",
+            "Measuring the amplitude of seasonal fluctuations."
+        ],
+        correct: 2,
+        explanation: "The HP filter is a data-smoothing technique that decomposes a time series into two parts: a smooth, long-term trend component and a short-term cyclical component. The business cycle is then identified with this cyclical component. It works by fitting a trend line that balances the trade-off between fitting the data closely and being smooth.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 1, Figure 1.3 footnote. and EC3115 - Ch 6 Stylised facts-2.pdf"
+    },
+    {
+        question: "If a macroeconomic variable's deviations from trend are positively correlated with the deviations from trend in real GDP, the variable is said to be:",
+        options: [
+            "Acyclical",
+            "Countercyclical",
+            "Procyclical",
+            "A leading indicator"
+        ],
+        correct: 2,
+        explanation: "Procyclical means 'moving with the cycle'. A positive correlation indicates that when GDP is above its trend (a boom), the variable also tends to be above its trend, and vice versa for recessions. Consumption and investment are classic examples of procyclical variables.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'. and EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "Which statistical moment is typically used to measure the volatility of a business cycle component?",
+        options: [
+            "The mean",
+            "The standard deviation",
+            "The covariance",
+            "The autocorrelation coefficient"
+        ],
+        correct: 1,
+        explanation: "Volatility measures the size of fluctuations, or the typical magnitude of a variable's deviation from its trend. The standard deviation is the standard statistical measure of dispersion around a mean. A higher standard deviation implies larger and more volatile swings.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'. and EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "The persistence of a business cycle component is measured by its:",
+        options: [
+            "Correlation with GDP",
+            "Standard deviation",
+            "Autocorrelation coefficient",
+            "Covariance with inflation"
+        ],
+        correct: 2,
+        explanation: "Persistence captures the 'momentum' of a cycle. A persistent variable, if above trend today, is likely to remain above trend tomorrow. This is measured by the autocorrelation coefficient, which calculates the correlation of the variable with its own past values (e.g., the correlation between GDP cycle at time t and at time t-1).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Regularities in GDP Fluctuations'. and EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "Which of the following is a key business cycle stylised fact regarding consumption?",
+        options: [
+            "It is countercyclical and more volatile than GDP.",
+            "It is procyclical and more volatile than GDP.",
+            "It is procyclical and less volatile than GDP.",
+            "It is acyclical and less volatile than GDP."
+        ],
+        correct: 2,
+        explanation: "Consumption is procyclical (it rises in booms and falls in recessions). However, it is significantly less volatile (smoother) than GDP. This is attributed to 'consumption-smoothing' behavior, where households save during good times to support their consumption during bad times.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Components of GDP'."
+    },
+    {
+        question: "How does the volatility of investment typically compare to the volatility of GDP?",
+        options: [
+            "Investment is significantly less volatile than GDP.",
+            "Investment has approximately the same volatility as GDP.",
+            "Investment is significantly more volatile than GDP.",
+            "The volatility relationship is acyclical and unpredictable."
+        ],
+        correct: 2,
+        explanation: "Investment spending is notoriously volatile, with its standard deviation being about three times that of GDP. This is because investment decisions are forward-looking, depend on volatile expectations of future profits, and can be easily postponed by firms during times of uncertainty.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Components of GDP'."
+    },
+    {
+        question: "According to the stylised facts for the US economy, employment is:",
+        options: [
+            "Procyclical and leading",
+            "Countercyclical and lagging",
+            "Procyclical and lagging",
+            "Acyclical and coincident"
+        ],
+        correct: 2,
+        explanation: "Employment is procyclical, as more workers are needed during expansions. It is considered a lagging indicator because firms are often cautious and wait to confirm a recovery is robust before hiring new workers, and they are reluctant to fire workers at the beginning of a downturn.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Labor Market Variables'."
+    },
+    {
+        question: "The 'output gap' is a term commonly used to refer to:",
+        options: [
+            "The difference between nominal and real GDP.",
+            "The business cycle component of a log-transformed real output series.",
+            "The difference between a country's GDP and its main trading partner's GDP.",
+            "The amount of output lost due to seasonal adjustments."
+        ],
+        correct: 1,
+        explanation: "The output gap is the percentage deviation of actual real GDP from its potential (or trend) level. It is a key indicator of an economy's state in the business cycle. A positive gap suggests the economy is overheating (inflationary), while a negative gap suggests slack (unemployment).",
+        source: "EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "What does a correlation coefficient of -0.8 between a variable and real GDP imply?",
+        options: [
+            "The variable is strongly procyclical.",
+            "The variable is strongly countercyclical.",
+            "The variable is acyclical.",
+            "The variable leads the business cycle."
+        ],
+        correct: 1,
+        explanation: "The correlation coefficient ranges from -1 to +1. A negative value indicates that the two variables move in opposite directions. A value of -0.8 is close to -1, indicating a strong negative relationship. This is the definition of a strongly countercyclical variable (e.g., the unemployment rate).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'. and EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "The stylised facts for the US indicate that the price level is ________, and the inflation rate is ________.",
+        options: [
+            "procyclical; procyclical",
+            "countercyclical; procyclical",
+            "procyclical; countercyclical",
+            "countercyclical; countercyclical"
+        ],
+        correct: 1,
+        explanation: "This is a subtle but important fact. The overall price level tends to be countercyclical (below trend in a boom). However, the rate of change of prices, inflation, tends to be procyclical (it accelerates during a boom). This can happen if productivity shocks are driving the cycle.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Price Level and Inflation'."
+    },
+    {
+        question: "What is the 'Phillips Curve' in its traditional, empirical form?",
+        options: [
+            "A positive relationship between inflation and money supply.",
+            "A negative relationship between the unemployment rate and the inflation rate.",
+            "A positive relationship between consumption and investment.",
+            "A negative relationship between real wages and employment."
+        ],
+        correct: 1,
+        explanation: "The original Phillips curve, based on empirical data from the UK by A.W. Phillips, showed a stable inverse relationship between the rate of wage inflation and the unemployment rate. This was later adapted to be a relationship between price inflation and unemployment, suggesting a policy trade-off between the two.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Price Level and Inflation'. and EC3115 - Ch 6 Stylised facts-2.pdf"
+    },
+    {
+        question: "According to Friedman and Kuttner (1992), what happened to the relationship between monetary aggregates and nominal income in the US after the 1980s?",
+        options: [
+            "The relationship became much stronger and more predictable.",
+            "The relationship remained stable and unchanged.",
+            "The relationship sharply weakened and became unreliable for policy.",
+            "The relationship inverted, with money growth negatively predicting income."
+        ],
+        correct: 2,
+        explanation: "This paper is famous for documenting the 'breakdown' of the money-income relationship. The previously stable correlation that had supported monetarist policy ideas disappeared, likely due to financial innovations and deregulation that made the velocity of money unstable. This rendered monetary aggregates poor information variables for policy.",
+        source: "Friedman, B. and K. N. Kuttner ‘Money, income, prices and interest rates’."
+    },
+    {
+        question: "What variable did Friedman and Kuttner (1992) find to be a consistently significant predictor of future movements in real income?",
+        options: [
+            "The M1 money supply.",
+            "The growth rate of the monetary base.",
+            "The spread between the commercial paper rate and the Treasury bill rate.",
+            "The 30-year government bond yield."
+        ],
+        correct: 2,
+        explanation: "While the monetary aggregates lost their predictive power, the authors found that the spread between the commercial paper rate (a rate on short-term private debt) and the Treasury bill rate (risk-free government debt) remained a robust predictor. This spread is seen as an indicator of financial market stress and default risk.",
+        source: "Friedman, B. and K. N. Kuttner ‘Money, income, prices and interest rates’."
+    },
+    {
+        question: "Aksoy and Piskorski (2006) argue that the breakdown in the money-income relationship can be partially explained by what factor?",
+        options: [
+            "The shift from a manufacturing to a service economy.",
+            "The failure to account for foreign holdings of U.S. dollars.",
+            "Changes in the calculation of the Consumer Price Index (CPI).",
+            "The adoption of inflation targeting by the Federal Reserve."
+        ],
+        correct: 1,
+        explanation: "They argue that a large and fluctuating portion of the US currency stock is held abroad. Changes in foreign demand for dollars can distort the measured money supply, breaking its link with the domestic US economy. By estimating and removing these foreign holdings, they construct a 'domestic money' measure that shows a more stable relationship with US output and inflation.",
+        source: "Aksoy, Y. and T. Piskorski ‘US domestic money, inflation and output’."
+    },
+    {
+        question: "According to De Grauwe and Polan (2005), the strong link between money growth and inflation is almost wholly due to what?",
+        options: [
+            "The data from OECD countries.",
+            "The inclusion of high-inflation (or hyperinflation) countries in the sample.",
+            "The use of M1 instead of M2 as the monetary aggregate.",
+            "The period after the year 2000."
+        ],
+        correct: 1,
+        explanation: "Their key finding is that the famous monetarist dictum 'inflation is always and everywhere a monetary phenomenon' is context-dependent. When they split their cross-country sample, the strong positive correlation between money growth and inflation is driven entirely by countries that have experienced periods of high inflation. For countries that have consistently maintained low inflation, the relationship is very weak or non-existent.",
+        source: "de Grauwe, P. and Polan, M. (2005) ‘Is inflation always and everywhere a monetary phenomenon?’."
+    },
+    {
+        question: "What is the 'flattening' of the Phillips curve, as documented by Kuttner and Robinson (2010)?",
+        options: [
+            "Inflation has become more responsive to fluctuations in the output gap.",
+            "The long-run Phillips curve is no longer vertical.",
+            "Inflation has become less responsive to fluctuations in the output gap.",
+            "The unemployment rate has become more volatile."
+        ],
+        correct: 2,
+        explanation: "A 'flat' Phillips curve means its slope is close to zero. This implies that even a large change in the output gap (or unemployment rate) will only produce a small change in the rate of inflation. This has been a key feature of many advanced economies in recent decades, making it harder for central banks to influence inflation by managing aggregate demand.",
+        source: "Kuttner, K.N. and T. Robinson ‘Understanding the flattening of Phillips curve’."
+    },
+    {
+        question: "Which of the following is a key business cycle stylised fact regarding average labor productivity?",
+        options: [
+            "It is countercyclical and lagging.",
+            "It is procyclical and leading.",
+            "It is acyclical.",
+            "It is procyclical and coincident."
+        ],
+        correct: 3,
+        explanation: "Average labor productivity (output per worker, Y/N) is procyclical. It tends to rise in expansions and fall in recessions. This is partly because firms can use their existing workforce more intensively during a boom before hiring new workers. Its timing is generally coincident with the overall cycle.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Labor Market Variables'."
+    },
+    {
+        question: "The term 'comovement' in business cycle analysis refers to:",
+        options: [
+            "The tendency for GDP to revert to its trend.",
+            "The tendency for macroeconomic variables to move together in predictable patterns over the business cycle.",
+            "The movement of two different countries' GDPs in sync.",
+            "The idea that all components of GDP have the same volatility."
+        ],
+        correct: 1,
+        explanation: "Comovement is about identifying stable patterns of correlation among different macroeconomic variables. Analyzing which variables are procyclical, countercyclical, or acyclical, and which are leading, lagging, or coincident, helps us understand the underlying structure of the economy and provides facts that business cycle models should be able to replicate.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'."
+    },
+    {
+        question: "What does a high autocorrelation coefficient (close to 1) for the cyclical component of real GDP indicate?",
+        options: [
+            "High volatility",
+            "Acyclicality",
+            "High persistence",
+            "A leading indicator"
+        ],
+        correct: 2,
+        explanation: "A high autocorrelation means that the value of the series in one period is highly correlated with its value in the previous period. For the GDP cycle, this means a boom or recession has momentum: if GDP is above trend today, it is very likely to be above trend next quarter. This property is known as persistence.",
+        source: "EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "According to Calderon and Fuertes (2014), how do recessions in Emerging Market Economies (EMEs) typically compare to those in industrial countries?",
+        options: [
+            "They are shorter in duration and less deep.",
+            "They have a similar duration but are deeper and steeper.",
+            "They are longer in duration but less deep.",
+            "They are identical in all major characteristics."
+        ],
+        correct: 1,
+        explanation: "The study finds that while the length of recessions is not systematically different, the severity is. Recessions in EMEs are characterized by a larger drop in output (deeper) and a faster rate of decline (steeper), leading to a greater overall output loss compared to recessions in advanced, industrial economies.",
+        source: "Calderon, C. and R. Fuertes ‘Have business cycles changed over the last two decades?’."
+    },
+    {
+        question: "What is a key implication of a flatter Phillips curve for monetary policy?",
+        options: [
+            "Reducing inflation has become less costly in terms of lost output.",
+            "A positive output gap is now much more inflationary.",
+            "The cost of reducing inflation, once it is established, has increased.",
+            "Monetary policy can no longer affect the unemployment rate."
+        ],
+        correct: 2,
+        explanation: "A flatter Phillips curve means that a given change in unemployment or the output gap has a smaller effect on inflation. This implies a higher 'sacrifice ratio'. To achieve a 1% reduction in inflation, the central bank must now engineer a much larger and more painful increase in unemployment than in the past.",
+        source: "Kuttner, K.N. and T. Robinson ‘Understanding the flattening of Phillips curve’."
+    },
+    {
+        question: "The 'Lucas critique', in essence, argues that:",
+        options: [
+            "Macroeconomic models should be built on sound microeconomic principles.",
+            "The Phillips curve is always vertical.",
+            "Monetary policy is always neutral.",
+            "Historical data is irrelevant for modern policymaking."
+        ],
+        correct: 0,
+        explanation: "The Lucas critique is a powerful argument against using purely empirical, reduced-form models for policy advice. Lucas argued that the parameters of such models (e.g., the slope of the Phillips curve) are not structural but depend on agents' expectations, which in turn depend on the policy regime. If the policy changes, the parameters will change, making the model useless for predicting the effects of the policy change. The solution is to build models on 'deep' microeconomic parameters of preferences and technology.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 1, 'Microeconomic Principles'."
+    },
+    {
+        question: "Which component of GDP is the most volatile over the business cycle?",
+        options: [
+            "Consumption of services",
+            "Government purchases",
+            "Consumption of non-durables",
+            "Investment"
+        ],
+        correct: 3,
+        explanation: "Investment spending is by far the most volatile component of aggregate GDP. While it constitutes a smaller fraction of GDP than consumption, its large swings account for a disproportionate share of business cycle fluctuations. Consumption of services and non-durables is relatively smooth, while government purchases are less volatile and driven by political decisions.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Components of GDP'."
+    },
+    {
+        question: "The 'Great Moderation' refers to a period in the US (roughly 1985-2007) characterized by:",
+        options: [
+            "High and stable inflation.",
+            "A reduction in the volatility of real GDP fluctuations.",
+            "Rapid growth in government spending.",
+            "A steepening of the Phillips curve."
+        ],
+        correct: 1,
+        explanation: "The Great Moderation was a notable period in US economic history where the volatility of most macroeconomic variables, particularly real GDP growth, significantly declined compared to the preceding decades. The reasons are debated but include better monetary policy, structural economic changes, and good luck (fewer large shocks).",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Great Moderation and the 2008-2009 Recession'."
+    },
+    {
+        question: "In business cycle analysis, a 'trough' represents:",
+        options: [
+            "A relatively large positive deviation from trend.",
+            "The point where the cycle crosses the trend line.",
+            "A relatively large negative deviation from trend.",
+            "The period of fastest growth in an expansion."
+        ],
+        correct: 2,
+        explanation: "A trough is the lower turning point of a business cycle. It marks the end of a period of recession and the beginning of a period of expansion. It corresponds to a large negative deviation of real GDP from its trend.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Regularities in GDP Fluctuations'."
+    },
+    {
+        question: "If the correlation coefficient between the cyclical component of government spending and real GDP is -0.2, then government spending is considered:",
+        options: [
+            "Procyclical",
+            "Acyclical",
+            "Countercyclical",
+            "Persistent"
+        ],
+        correct: 2,
+        explanation: "A negative correlation means the variable moves in the opposite direction to GDP. This is the definition of countercyclical. The value of -0.2 is close to zero, so it would be described as weakly countercyclical. This is often due to automatic stabilizers like unemployment benefits increasing during recessions.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'."
+    },
+    {
+        question: "Why might the relationship between money growth and inflation be weak in low-inflation countries, according to De Grauwe and Polan (2005)?",
+        options: [
+            "These countries do not use fiat money.",
+            "Changes in money growth are offset by opposite changes in velocity, driven by financial innovation.",
+            "Output growth perfectly absorbs all changes in money growth.",
+            "Their central banks perfectly target the money supply."
+        ],
+        correct: 1,
+        explanation: "From the quantity equation in growth rates (m+v=p+y), for the link between money growth (m) and inflation (p) to be strong, the growth of velocity (v) must be stable and predictable. The authors argue that in low-inflation countries with sophisticated financial systems, velocity is highly unstable and often moves to offset changes in money supply, thus breaking the link between money and inflation.",
+        source: "de Grauwe, P. and Polan, M. (2005) ‘Is inflation always and everywhere a monetary phenomenon?’."
+    },
+    {
+        question: "A 'leading variable' in business cycle analysis is one that:",
+        options: [
+            "Has the highest correlation with GDP.",
+            "Is the most volatile component of GDP.",
+            "Tends to have turning points that precede the turning points of real GDP.",
+            "Tends to have turning points that occur after the turning points of real GDP."
+        ],
+        correct: 2,
+        explanation: "A leading variable is a valuable forecasting tool because its peaks and troughs tend to happen before the corresponding peaks and troughs in the overall economy (real GDP). Examples include stock prices, manufacturing orders, and building permits.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'."
+    },
+    {
+        question: "Which of the following is a well-known leading indicator of the business cycle in the US?",
+        options: [
+            "The unemployment rate",
+            "Real consumption",
+            "Residential investment (housing starts)",
+            "The inflation rate"
+        ],
+        correct: 2,
+        explanation: "Residential investment is highly sensitive to interest rates and consumer expectations about the future. A decline in housing starts is often one of the first signs that an economic downturn is approaching, making it a key leading indicator.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Comovement'."
+    },
+    {
+        question: "The 'Solow residual' is a common measure for which of the following?",
+        options: [
+            "The capital stock",
+            "The output gap",
+            "Total factor productivity (TFP)",
+            "The natural rate of unemployment"
+        ],
+        correct: 2,
+        explanation: "Given a production function Y = zF(K, N), if we can measure output (Y), capital (K), and labor (N), we can calculate the Solow residual as z = Y / F(K, N). It is the 'residual' portion of output that isn't explained by the measured inputs, and is therefore used as a proxy for unobservable Total Factor Productivity (TFP) or technological change.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 4, 'THEORY CONFRONTS THE DATA: Total Factor Productivity and the U.S. Aggregate Production Function'."
+    },
+    {
+        question: "What does the term 'persistence' imply for forecasting?",
+        options: [
+            "Long-term forecasting is highly accurate.",
+            "Short-term forecasting is relatively easy, but long-term forecasting is difficult.",
+            "Forecasting is impossible due to random fluctuations.",
+            "Only the trend component can be forecasted."
+        ],
+        correct: 1,
+        explanation: "Persistence (high autocorrelation) means that the near-term future is likely to be similar to the recent past. This makes it relatively easy to forecast that a boom or recession will continue into the next quarter. However, predicting the turning points far in advance remains very difficult due to the irregular nature of cycles.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Regularities in GDP Fluctuations'."
+    },
+    {
+        question: "According to the stylised facts, which statement about the cyclical components of consumption and investment is true?",
+        options: [
+            "Consumption is smoother than GDP, and investment is smoother than GDP.",
+            "Consumption is more volatile than GDP, and investment is more volatile than GDP.",
+            "Consumption is smoother than GDP, but investment is more volatile than GDP.",
+            "Consumption is more volatile than GDP, but investment is smoother than GDP."
+        ],
+        correct: 2,
+        explanation: "This question summarizes two of the most important stylized facts. Consumption is less volatile (smoother) than GDP due to consumption-smoothing behavior. Investment is much more volatile than GDP because it is forward-looking and can be easily postponed. Any credible business cycle model must be able to replicate this fact.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'The Components of GDP'."
+    },
+    {
+        question: "The 'Beveridge curve' describes a negative relationship between which two labor market variables?",
+        options: [
+            "Unemployment rate and participation rate",
+            "Vacancy rate and unemployment rate",
+            "Job separation rate and job finding rate",
+            "Real wage and employment"
+        ],
+        correct: 1,
+        explanation: "The Beveridge curve plots the job vacancy rate on one axis and the unemployment rate on the other. It is typically downward sloping because periods of high vacancies (many unfilled jobs) tend to coincide with periods of low unemployment, and vice versa.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'The Vacancy Rate and the Beveridge Curve'."
+    },
+    {
+        question: "A rightward shift in the Beveridge curve, as observed in the US after the 2008-2009 recession, suggests what?",
+        options: [
+            "An improvement in matching efficiency in the labor market.",
+            "A decrease in the job separation rate.",
+            "A decrease in matching efficiency in the labor market (structural mismatch).",
+            "A fall in the labor force participation rate."
+        ],
+        correct: 2,
+        explanation: "A rightward shift means that for any given level of job openings (vacancies), there is now a higher level of unemployment. This indicates that the labor market has become less efficient at matching workers to jobs. This could be due to a structural mismatch between the skills of the unemployed and the needs of employers.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'Decrease in Matching Efficiency'."
+    },
+    {
+        question: "The term 'procyclical' means that a variable's cyclical component is:",
+        options: [
+            "Positively correlated with the cyclical component of real GDP.",
+            "Negatively correlated with the cyclical component of real GDP.",
+            "Uncorrelated with the cyclical component of real GDP.",
+            "More volatile than the cyclical component of real GDP."
+        ],
+        correct: 0,
+        explanation: "This is the definition of procyclicality. It describes the direction of comovement. A positive correlation means the variable tends to be above its trend when GDP is above its trend (expansion) and below its trend when GDP is below its trend (recession). Volatility is a separate concept measured by standard deviation.",
+        source: "EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "Which of the following best describes the cyclical behavior of the unemployment rate in the US?",
+        options: [
+            "Procyclical and leading",
+            "Countercyclical and coincident",
+            "Procyclical and lagging",
+            "Countercyclical and lagging"
+        ],
+        correct: 1,
+        explanation: "The unemployment rate is strongly countercyclical: it rises when GDP falls and falls when GDP rises. Its turning points are roughly coincident with, or slightly lagging, the turning points of the business cycle. It is not a leading indicator.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 6, 'The Unemployment Rate, Participation Rate, and Employment/Population Ratio'."
+    },
+    {
+        question: "The 'information value' of a monetary aggregate as a policy instrument depends on:",
+        options: [
+            "The central bank's ability to control it perfectly.",
+            "Its stability and reliable correlation with ultimate policy goals like inflation and income.",
+            "Its inclusion in the government's budget.",
+            "Its use as a unit of account."
+        ],
+        correct: 1,
+        explanation: "For an indicator to be useful for guiding policy, it must have a stable and predictable relationship with the final targets of policy (like inflation or unemployment). If this relationship breaks down, as it did for monetary aggregates, the indicator loses its information value and is no longer a reliable guide for the central bank.",
+        source: "Friedman, B. and K. N. Kuttner ‘Money, income, prices and interest rates’."
+    },
+    {
+        question: "What is the 'real wage'?",
+        options: [
+            "The wage rate in money terms.",
+            "The purchasing power of the wage earned per hour.",
+            "The total income earned by a worker in a year.",
+            "The minimum wage set by the government."
+        ],
+        correct: 1,
+        explanation: "The real wage adjusts the nominal (dollar) wage for the cost of living. It is calculated as the nominal wage divided by the price level (W/P). It measures the quantity of goods and services that can be bought with one hour of labor, representing the true purchasing power of the wage.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Labor Market Variables'."
+    },
+    {
+        question: "The stylised fact about the real wage over the business cycle is that it is:",
+        options: [
+            "Strongly countercyclical",
+            "Acyclical",
+            "Procyclical",
+            "Highly volatile and leading"
+        ],
+        correct: 2,
+        explanation: "The real wage is mildly procyclical, meaning it tends to rise in expansions and fall in recessions. This is a key fact that different business cycle theories try to explain. For example, in Real Business Cycle theory, a technology shock directly increases labor productivity and thus the real wage, making it procyclical.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Labor Market Variables'."
+    },
+    {
+        question: "What does it mean to say a time series is 'seasonally adjusted'?",
+        options: [
+            "The data has been corrected for inflation.",
+            "The long-run trend has been removed from the data.",
+            "Predictable seasonal patterns have been removed from the data.",
+            "The data has been averaged over a four-quarter period."
+        ],
+        correct: 2,
+        explanation: "Many economic activities have predictable patterns related to the time of year (e.g., retail sales peak before Christmas, construction peaks in the summer). Seasonal adjustment is a statistical procedure to filter out these regular, calendar-based fluctuations to get a clearer view of the underlying trend and business cycle.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3, 'Seasonal Adjustment'."
+    },
+    {
+        question: "According to Calderon and Fuertes (2014), how do recoveries in EMEs compare to those in industrial countries after a recession?",
+        options: [
+            "Slower and weaker",
+            "Faster and weaker",
+            "Slower but stronger",
+            "Faster and stronger"
+        ],
+        correct: 2,
+        explanation: "This is a nuanced finding. While recessions in Emerging Market Economies (EMEs) are deeper and steeper, the paper notes that the subsequent recovery phase is often stronger, though it may take longer to materialize. This could reflect a stronger 'rebound' from a lower base.",
+        source: "Calderon, C. and R. Fuertes ‘Have business cycles changed over the last two decades?’."
+    },
+    {
+        question: "The 'New Keynesian Phillips Curve' differs from the traditional one by relating inflation to:",
+        options: [
+            "Past unemployment",
+            "The money supply",
+            "Expected future marginal costs",
+            "Government debt"
+        ],
+        correct: 2,
+        explanation: "The traditional Phillips curve was a backward-looking empirical relationship. The New Keynesian Phillips Curve is derived from a microfounded model of firms that face costs to changing their prices. As a result, firms' pricing decisions are forward-looking. Inflation today depends on what firms expect their marginal costs to be in the future, making expectations a central element.",
+        source: "Kuttner, K.N. and T. Robinson ‘Understanding the flattening of Phillips curve’."
+    },
+    {
+        question: "What is the primary tool for measuring the 'cyclicality' of a macroeconomic variable?",
+        options: [
+            "Its standard deviation.",
+            "Its mean.",
+            "Its correlation coefficient with real GDP.",
+            "Its autocorrelation."
+        ],
+        correct: 2,
+        explanation: "Cyclicality is all about comovement with the broader economy. The correlation coefficient between the cyclical component of a variable and the cyclical component of real GDP provides a quantitative measure of this. A positive value implies procyclical, negative implies countercyclical, and near-zero implies acyclical.",
+        source: "EC3115 - Monetary Economics Unit F Lectures.pdf"
+    },
+    {
+        question: "The finding that the money-income relationship broke down in the 1980s is a major challenge to which monetary policy strategy?",
+        options: [
+            "Inflation targeting",
+            "Using the Taylor rule",
+            "Monetary aggregate targeting",
+            "Exchange rate pegging"
+        ],
+        correct: 2,
+        explanation: "The strategy of monetary aggregate targeting, advocated by monetarists like Milton Friedman, relies on the existence of a stable, predictable relationship between a monetary aggregate (like M1) and nominal income. When this relationship collapsed, it became impossible to know what growth rate of M1 would deliver the desired outcome for income or inflation, making the strategy untenable.",
+        source: "Friedman, B. and K. N. Kuttner ‘Money, income, prices and interest rates’."
+    },
+    {
+        question: "Which of the following is NOT considered a 'stylised fact' of US business cycles?",
+        options: [
+            "Consumption is procyclical and less volatile than GDP.",
+            "Investment is procyclical and more volatile than GDP.",
+            "Employment is procyclical and lagging.",
+            "The price level is procyclical."
+        ],
+        correct: 3,
+        explanation: "The first three options are standard, well-established stylized facts. The price level, however, is generally found to be countercyclical. This means it tends to be below its long-run trend during an economic boom, a fact that some business cycle models struggle to explain.",
+        source: "Williamson, S.D. Macroeconomics, Chapter 3."
+    },
+    {
+        question: "The 'Quantity Theory of Money' (QTM) in its simplest long-run form predicts that the coefficient on money growth in a regression with inflation as the dependent variable should be:",
+        options: [
+            "Zero",
+            "One",
+            "Negative one",
+            "Equal to the growth rate of real output"
+        ],
+        correct: 1,
+        explanation: "The QTM posits a proportional relationship between the money supply and the price level. In growth rates, this means that (holding velocity and real output growth constant) a 1% increase in the money growth rate should lead to a 1% increase in the inflation rate. Therefore, in a regression of inflation on money growth, the coefficient on money growth is predicted to be one.",
+        source: "de Grauwe, P. and Polan, M. (2005) ‘Is inflation always and everywhere a monetary phenomenon?’."
+    },
+    {
+        question: "What is a key difference between the business cycles of emerging market economies (EMEs) and industrial countries, according to Calderon and Fuertes (2014)?",
+        options: [
+            "Recessions in EMEs are typically associated with currency appreciation.",
+            "Consumption is more volatile than output in EMEs.",
+            "Recessions are much shorter in EMEs.",
+            "Peaks in financial cycles (e.g., credit) tend to precede peaks in real output cycles in EMEs."
+        ],
+        correct: 3,
+        explanation: "The authors find that in EMEs, financial cycles have a particularly strong influence on real business cycles. Specifically, the peaks of financial cycles (like credit booms) tend to lead the peaks of the real output cycle, suggesting that boom-bust financial cycles are a key driver of business cycles in these economies.",
+        source: "Calderon, C. and R. Fuertes ‘Have business cycles changed over the last two decades?’."
+    },
+    {
+        question: "The 'orthogonality' proposition of the Quantity Theory of Money states that in the long run, money growth is unrelated to:",
+        options: [
+            "The inflation rate.",
+            "The nominal interest rate.",
+            "The growth rate of real output and velocity.",
+            "The price level."
+        ],
+        correct: 2,
+        explanation: "Orthogonality, or the superneutrality of money, is a strong claim that money is separate from the real side of the economy in the long run. It implies that a change in the long-run growth rate of the money supply affects only nominal variables (like inflation) and has no effect on the long-run growth rates of real variables like real output or the velocity of money.",
+        source: "de Grauwe, P. and Polan, M. (2005) ‘Is inflation always and everywhere a monetary phenomenon?’."
+    }
+];
+
+const quizContainer = document.getElementById('quiz');
+const clearButton = document.getElementById('clear-storage');
+const cookieName = 'ec3115_quiz_ch6b_answers';
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function renderQuiz() {
+    const userAnswers = JSON.parse(getCookie(cookieName) || '{}');
+    quizContainer.innerHTML = ''; // Clear previous content
+    const optionLabels = ['A', 'B', 'C', 'D'];
+
+    quizData.forEach((q, index) => {
+        const questionBlock = document.createElement('div');
+        questionBlock.className = 'question-block';
+        questionBlock.id = `q${index}`;
+
+        const questionText = document.createElement('div');
+        questionText.className = 'question-text';
+        questionText.innerHTML = `Q${index + 1}: ${q.question}`;
+        questionBlock.appendChild(questionText);
+
+        const optionsForm = document.createElement('form');
+        optionsForm.className = 'options';
+        optionsForm.name = `q${index}_form`;
+
+        q.options.forEach((option, i) => {
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = `q${index}_option`;
+            input.value = i;
+            
+            input.onchange = () => handleAnswer(index, i);
+
+            if (userAnswers[index] && userAnswers[index].selected == i) {
+                input.checked = true;
+            }
+
+            label.appendChild(input);
+            label.append(` ${optionLabels[i]}. ${option}`);
+            optionsForm.appendChild(label);
+        });
+
+        questionBlock.appendChild(optionsForm);
+
+        const explanationDiv = document.createElement('div');
+        explanationDiv.className = 'explanation';
+        explanationDiv.id = `exp${index}`;
+        questionBlock.appendChild(explanationDiv);
+
+        quizContainer.appendChild(questionBlock);
+
+        // If answer is already in cookie, show the result
+        if (userAnswers[index]) {
+            showExplanation(index, userAnswers[index].selected);
+        }
+    });
+}
+
+function handleAnswer(questionIndex, selectedAnswerIndex) {
+    const userAnswers = JSON.parse(getCookie(cookieName) || '{}');
+    userAnswers[questionIndex] = { selected: selectedAnswerIndex };
+    setCookie(cookieName, JSON.stringify(userAnswers), 30);
+    showExplanation(questionIndex, selectedAnswerIndex);
+}
+
+function showExplanation(questionIndex, selectedAnswerIndex) {
+    const qData = quizData[questionIndex];
+    const explanationDiv = document.getElementById(`exp${questionIndex}`);
+    const form = document.forms[`q${questionIndex}_form`];
+    const isCorrect = selectedAnswerIndex === qData.correct;
+    const optionLabels = ['A', 'B', 'C', 'D'];
+    const correctLabel = optionLabels[qData.correct];
+
+    let resultHTML = isCorrect
+        ? '<p class="correct">Correct!</p>'
+        : `<p class="incorrect">Incorrect.</p><p>The correct answer is: <strong>${correctLabel}. ${qData.options[qData.correct]}</strong></p>`;
+
+    explanationDiv.innerHTML = `
+        ${resultHTML}
+        <p>${qData.explanation}</p>
+        <p class="source">Source: ${qData.source}</p>
+    `;
+    explanationDiv.style.display = 'block';
+
+    // Disable form elements after answering
+    Array.from(form.elements).forEach(el => {
+        if (el.type === 'radio') {
+            el.disabled = true;
+        }
+    });
+}
+
+clearButton.addEventListener('click', () => {
+    if (confirm('Are you sure you want to clear all your saved answers and restart the quiz?')) {
+        setCookie(cookieName, '', -1); // Delete the cookie
+        location.reload();
+    }
+});
+
+// Initial render
+document.addEventListener('DOMContentLoaded', renderQuiz);
+
+</script>
+
+</body>
+</html>

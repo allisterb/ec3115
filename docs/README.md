@@ -25,6 +25,8 @@ This site contains study materials for the EC3115 Monetary Economics course.
     *   [Classical Theory Multiple Choice](./quizzes/ch5-quiz-mc-1.html)
 	*   [Classical Theory Multiple Choice 2](./quizzes/ch5-quiz-mc-2.html)
 	*   [Stylised Facts True/False](./quizzes/ch6-quiz-tf-1.html)
+    *   [Stylised Facts Multiple Choice 1](./quizzes/ch6-quiz-mc-1.html)
+	*   [Stylised Facts Multiple Choice 2](./quizzes/ch6-quiz-mc-2.html)
 	*   [Money, Inflation and Welfare True/False](./quizzes/ch7-quiz-tf-1.html)
 	*   [Money, Inflation and Welfare True/False 2](./quizzes/ch7-quiz-tf-2.html)
     *   [Money, Inflation and Welfare Multiple Choice](./quizzes/ch7-quiz-mc-1.html)
