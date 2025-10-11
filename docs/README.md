@@ -16,7 +16,9 @@ This site contains study materials for the EC3115 Monetary Economics course.
 	* [Money, Inflation and Welfare](https://ajb.nyc3.cdn.digitaloceanspaces.com/ec3115/ch7.m4a)
 	* [Classical Models and Monetary Policy](https://ajb.nyc3.cdn.digitaloceanspaces.com/ec3115/ch8.m4a)
 *   [Quizzes](./quizzes/)
-    *   [The Supply of Money and Monetary Standards True/False](./quizzes/ch4-quiz-tf.html)
+    *   [The Nature of Money True/False](./quizzes/ch2-quiz-tf.html)
+	*   [The Nature of Money True/False 2](./quizzes/ch2-quiz-tf-2.html)
+	*   [The Supply of Money and Monetary Standards True/False](./quizzes/ch4-quiz-tf.html)
 	*   [The Supply of Money and Monetary Standards Multiple Choice](./quizzes/ch4-quiz-mc2.html)
 	*   [Classical Theory True/False](./quizzes/ch5-quiz-tf-1.html)
 	*   [Classical Theory True/False 2](./quizzes/ch5-quiz-tf-2.html)
@@ -34,3 +36,4 @@ This site contains study materials for the EC3115 Monetary Economics course.
 
 
 *   [Prompts](./prompts.md)
+
